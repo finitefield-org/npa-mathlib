@@ -2,9 +2,12 @@
 
 `npa-mathlib` is the public theorem-library package for NPA.
 
-This repository contains the Layer 0 public package:
+This repository contains the Layer 1 public package:
 
 ```text
+Mathlib.Algebra.Ring
+Mathlib.Algebra.Square
+Mathlib.Algebra.OrderedField
 Mathlib.Logic.Basic
 Mathlib.Logic.Prop
 Mathlib.Logic.Eq
@@ -16,7 +19,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.0"
+version = "0.1.1"
 schema = "npa.package.v0.1"
 ```
 
@@ -78,10 +81,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 
 ## Downstream Smoke Fixture
 
-`fixtures/downstream-smoke/` models a downstream package that consumes only the
-vendored `Mathlib.Logic.Basic` certificate artifact. It does not vendor
-`npa-mathlib` source, replay, meta, theorem index, registry state, or package
-source tree.
+`fixtures/downstream-smoke/` models a downstream package that consumes the
+vendored `Mathlib.Algebra.OrderedField` Layer 1 import closure. It does not
+vendor `npa-mathlib` source, replay, meta, theorem index, registry state, or
+package source tree.
 
 To verify it:
 

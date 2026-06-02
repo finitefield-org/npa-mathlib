@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.0"
+version = "0.1.1"
 license = "Apache-2.0"
-description = "Public theorem-library fixture for NPA mathlib Layer 0."
+description = "Public theorem-library package for NPA mathlib Layer 1."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -112,4 +112,56 @@ expected_certificate_hash = "sha256:a30a2ceacf391a9635367aa4f760ccf60431809c27f9
 imports = ["Std.Nat.Basic"]
 definitions = ["reduction_id_nat"]
 theorems = ["beta_id_nat", "beta_const_nat", "let_id_nat", "let_const_nat", "delta_id_nat"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.Ring"
+source = "Mathlib/Algebra/Ring/source.npa"
+certificate = "Mathlib/Algebra/Ring/certificate.npcert"
+meta = "Mathlib/Algebra/Ring/meta.json"
+replay = "Mathlib/Algebra/Ring/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:11a390c4500a45c5ceabdb73d88385b518125c3a0c0413bea03f30ac28a30759"
+expected_certificate_file_hash = "sha256:008d0b9772d28c099b9786c60822639e2c9f22e3fdf6cd49cec929b7e01defac"
+expected_export_hash = "sha256:31b1b21b1c480f86e1c9c806d9148af51e770b9f99a4353dee8608072342ed7b"
+expected_axiom_report_hash = "sha256:2eb8901dcadbaffb969aabfd5e10172a4e17abc50558a0954952232d438fa2ed"
+expected_certificate_hash = "sha256:a398203c5207b4954cda0d6f8064d866d6954556452cc274d204bf081e9d12b8"
+imports = ["Std.Logic.Eq"]
+inductives = ["RingElem"]
+definitions = ["zero", "one", "add", "neg", "sub", "mul"]
+theorems = ["sub_eq_add_neg", "add_assoc", "add_comm", "add_zero", "zero_add", "neg_add_cancel", "add_neg_cancel", "sub_self", "mul_assoc", "mul_comm", "mul_one", "one_mul", "mul_zero", "zero_mul", "left_distrib", "right_distrib", "add_left_cancel", "mul_add", "add_mul", "ring_normalize_add_mul3"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.Square"
+source = "Mathlib/Algebra/Square/source.npa"
+certificate = "Mathlib/Algebra/Square/certificate.npcert"
+meta = "Mathlib/Algebra/Square/meta.json"
+replay = "Mathlib/Algebra/Square/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:516c0677168b95ec3d47befd07c2823effd4ac76c307270458973e2d85ad552e"
+expected_certificate_file_hash = "sha256:384ae8e01a55ce066f1bc1cb41759c88f7c5480e1cce055f5520c89e757547b6"
+expected_export_hash = "sha256:787b772cee6d3eeb9d8a533e2445dd26d55accc8ee8fc370ff1bac46ff420c18"
+expected_axiom_report_hash = "sha256:e73446550ebd2b8f59300fca0b3c3199e0a7a6f7722008c664f50b8a67fd00b9"
+expected_certificate_hash = "sha256:f8880c76da58811dbe8c8d221e269793a577ae6332f30e2e22745b267f9bd926"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring"]
+definitions = ["two", "sq"]
+theorems = ["square_def", "mul_self_eq_square", "sq_zero", "sq_one", "sq_neg", "two_mul", "sq_add", "sq_sub", "sum_two_squares_comm", "sq_eq_sq_of_eq_or_neg_eq", "square_nonneg"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.OrderedField"
+source = "Mathlib/Algebra/OrderedField/source.npa"
+certificate = "Mathlib/Algebra/OrderedField/certificate.npcert"
+meta = "Mathlib/Algebra/OrderedField/meta.json"
+replay = "Mathlib/Algebra/OrderedField/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:38b9b897053e42b44d734ad16f55b22e0671b7b01cd2e94e26e2a1ba9cf77b68"
+expected_certificate_file_hash = "sha256:2015b97b9573a9c926a9a7f190d1f9c5d261048dfdde4c6aeeec899e4a09fc42"
+expected_export_hash = "sha256:d6b08e865fb570cb11e57e903463edcd77f6f821126d9375dde24d73055ebf3f"
+expected_axiom_report_hash = "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07"
+expected_certificate_hash = "sha256:111e0cb6227f6f80201a307469ec4a866f094a42a68dd49e7c4d092bfba5559a"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square"]
+definitions = ["le", "lt", "sqrt"]
+theorems = ["le_refl", "le_trans", "add_nonneg", "mul_nonneg", "le_square_nonneg", "sqrt_nonneg", "sqrt_square_of_nonneg", "sqrt_mul_self", "eq_of_square_eq_square_nonneg"]
 axioms = []

@@ -1,0 +1,8 @@
+import Std.Logic.Eq
+import Mathlib.Algebra.Ring
+import Mathlib.Algebra.Square
+import Mathlib.Algebra.OrderedField
+
+theorem ordered_field_le_refl_passthrough :
+  forall (a : RingElem), le a a :=
+  fun a => le_refl a

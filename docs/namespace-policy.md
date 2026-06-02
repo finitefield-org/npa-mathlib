@@ -55,9 +55,9 @@ Each module directory may contain authoring helpers such as `source.npa`,
 `replay.json`, and `meta.json`, but proof acceptance depends on canonical
 certificate bytes and verifier results, not on those helpers.
 
-## Fixed Layer 0 Modules
+## Released Modules
 
-The first public release is limited to these modules:
+The `v0.1.0` release fixed these Layer 0 modules:
 
 ```text
 Mathlib.Logic.Basic
@@ -67,7 +67,15 @@ Mathlib.Data.Nat.Basic
 Mathlib.Core.Reduction
 ```
 
-This mapping is fixed:
+The `v0.1.1` release adds these Layer 1 modules:
+
+```text
+Mathlib.Algebra.Ring
+Mathlib.Algebra.Square
+Mathlib.Algebra.OrderedField
+```
+
+The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
@@ -76,6 +84,14 @@ This mapping is fixed:
 | `Proofs.Ai.Eq` | `Mathlib.Logic.Eq` | `Mathlib/Logic/Eq/` |
 | `Proofs.Ai.Nat` | `Mathlib.Data.Nat.Basic` | `Mathlib/Data/Nat/Basic/` |
 | `Proofs.Ai.Reduction` | `Mathlib.Core.Reduction` | `Mathlib/Core/Reduction/` |
+
+The Layer 1 mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Ring` | `Mathlib.Algebra.Ring` | `Mathlib/Algebra/Ring/` |
+| `Proofs.Ai.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
+| `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField` | `Mathlib/Algebra/OrderedField/` |
 
 ## Category Rules
 
