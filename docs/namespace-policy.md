@@ -75,6 +75,13 @@ Mathlib.Algebra.Square
 Mathlib.Algebra.OrderedField
 ```
 
+The `v0.1.2` release adds these Layer 2A modules:
+
+```text
+Mathlib.Vector.Basic
+Mathlib.Vector.Dot
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -92,6 +99,13 @@ The Layer 1 mapping is fixed:
 | `Proofs.Ai.Algebra.Ring` | `Mathlib.Algebra.Ring` | `Mathlib/Algebra/Ring/` |
 | `Proofs.Ai.Algebra.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
 | `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField` | `Mathlib/Algebra/OrderedField/` |
+
+The Layer 2A mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Vector.Basic` | `Mathlib.Vector.Basic` | `Mathlib/Vector/Basic/` |
+| `Proofs.Ai.Vector.Dot` | `Mathlib.Vector.Dot` | `Mathlib/Vector/Dot/` |
 
 ## Category Rules
 

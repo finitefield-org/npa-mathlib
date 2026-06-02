@@ -1,0 +1,10 @@
+import Std.Logic.Eq
+import Mathlib.Algebra.Ring
+import Mathlib.Algebra.Square
+import Mathlib.Algebra.OrderedField
+import Mathlib.Vector.Basic
+import Mathlib.Vector.Dot
+
+theorem vector_norm_sq_nonneg_passthrough :
+  forall (v : Vec), le zero (normSq v) :=
+  fun v => norm_sq_nonneg v

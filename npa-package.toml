@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.1"
+version = "0.1.2"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 1."
+description = "Public theorem-library package for NPA mathlib Layer 2A."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -164,4 +164,39 @@ expected_certificate_hash = "sha256:111e0cb6227f6f80201a307469ec4a866f094a42a68d
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square"]
 definitions = ["le", "lt", "sqrt"]
 theorems = ["le_refl", "le_trans", "add_nonneg", "mul_nonneg", "le_square_nonneg", "sqrt_nonneg", "sqrt_square_of_nonneg", "sqrt_mul_self", "eq_of_square_eq_square_nonneg"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Vector.Basic"
+source = "Mathlib/Vector/Basic/source.npa"
+certificate = "Mathlib/Vector/Basic/certificate.npcert"
+meta = "Mathlib/Vector/Basic/meta.json"
+replay = "Mathlib/Vector/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:19db7e04cd08724e4f8e393786e86caac000a62a408b5ac25b9024e741f262a0"
+expected_certificate_file_hash = "sha256:5b5f20f683c498127c652a98d56b2838d098c5b3aa3adaa54dd4675748fdfbab"
+expected_export_hash = "sha256:3ba8f7b514c7f041a1ac86bf1800a21186255bac9ce31e2fea0b7d9c91d4c938"
+expected_axiom_report_hash = "sha256:55932adb6d068a32ac76b43afee2b808d61b89bb36b85b1805fe77d82a1028b3"
+expected_certificate_hash = "sha256:fb89a6e1e47b9622b5e77b7dd8d12acb04073bba76e1ef7cffe76130f981f423"
+imports = ["Std.Logic.Eq"]
+inductives = ["Vec"]
+definitions = ["vec_zero", "vec_add", "vec_neg", "vec_sub"]
+theorems = ["vec_add_assoc", "vec_add_comm", "vec_zero_add", "vec_add_zero", "vec_neg_add_cancel", "vec_add_neg_cancel", "vec_sub_def", "vec_sub_eq_add_neg", "vec_sub_self", "vec_sub_zero", "vec_add_left_cancel", "sub_sub_sub_cancel"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Vector.Dot"
+source = "Mathlib/Vector/Dot/source.npa"
+certificate = "Mathlib/Vector/Dot/certificate.npcert"
+meta = "Mathlib/Vector/Dot/meta.json"
+replay = "Mathlib/Vector/Dot/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:e2a099291cd5b9bbb7cabb0c89bcc8dede989f06631c0cd576e32d94fc092d8e"
+expected_certificate_file_hash = "sha256:69ccee0d0413970d6688bc0542ece3be9a85c2eadb696e58d5e36a381ec97136"
+expected_export_hash = "sha256:9d23eb89f95ae6e1cc171d32c82f8a28fe11bc60d05f3b26fb05640dbc73e63c"
+expected_axiom_report_hash = "sha256:fed11e73accfbfb0dfc28b4f510e151fa33d8af82d58fdb23b92567e04e59e40"
+expected_certificate_hash = "sha256:a7efefe3ee1f35d232c2e4c7e6cc417153c2224a14c6bdc7aa8144cf32e350f1"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square", "Mathlib.Algebra.OrderedField", "Mathlib.Vector.Basic"]
+definitions = ["dot", "normSq", "distSq"]
+theorems = ["dot_comm", "dot_add_left", "dot_add_right", "dot_neg_left", "dot_neg_right", "dot_sub_left", "dot_sub_right", "norm_sq_def", "dist_sq_def", "dot_self_eq_norm_sq", "norm_sq_add", "norm_sq_sub", "norm_sq_add_of_dot_zero", "norm_sq_sub_of_dot_zero", "parallelogram_law", "polarization_identity", "norm_sq_nonneg"]
 axioms = []
