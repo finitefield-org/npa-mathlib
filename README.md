@@ -2,9 +2,11 @@
 
 `npa-mathlib` is the public theorem-library package for NPA.
 
-This repository contains the Layer 2A public package:
+This repository contains the Layer 2B public package:
 
 ```text
+Mathlib.Geometry.RightTriangle
+Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
 Mathlib.Vector.Dot
 Mathlib.Algebra.Ring
@@ -21,7 +23,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.2"
+version = "0.1.3"
 schema = "npa.package.v0.1"
 ```
 
@@ -84,7 +86,7 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Vector.Dot` Layer 2A import closure. It does not vendor
+vendored `Mathlib.Geometry.Metric` Layer 2B import closure. It does not vendor
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
 

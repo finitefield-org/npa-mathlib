@@ -82,6 +82,13 @@ Mathlib.Vector.Basic
 Mathlib.Vector.Dot
 ```
 
+The `v0.1.3` release adds these Layer 2B modules:
+
+```text
+Mathlib.Geometry.RightTriangle
+Mathlib.Geometry.Metric
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -106,6 +113,16 @@ The Layer 2A mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Vector.Basic` | `Mathlib.Vector.Basic` | `Mathlib/Vector/Basic/` |
 | `Proofs.Ai.Vector.Dot` | `Mathlib.Vector.Dot` | `Mathlib/Vector/Dot/` |
+
+The Layer 2B mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Geometry.RightTriangle` | `Mathlib.Geometry.RightTriangle` | `Mathlib/Geometry/RightTriangle/` |
+| `Proofs.Ai.Geometry.Metric` | `Mathlib.Geometry.Metric` | `Mathlib/Geometry/Metric/` |
+
+`Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
+corpus closure belongs to the abstract geometry / law-package track.
 
 ## Category Rules
 

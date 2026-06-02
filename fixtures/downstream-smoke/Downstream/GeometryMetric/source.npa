@@ -1,0 +1,12 @@
+import Std.Logic.Eq
+import Mathlib.Algebra.Ring
+import Mathlib.Algebra.Square
+import Mathlib.Algebra.OrderedField
+import Mathlib.Vector.Basic
+import Mathlib.Vector.Dot
+import Mathlib.Geometry.RightTriangle
+import Mathlib.Geometry.Metric
+
+theorem metric_triangle_inequality_passthrough :
+  forall (A : Vec), forall (B : Vec), forall (C : Vec), le (dist A C) (add (dist A B) (dist B C)) :=
+  fun A => fun B => fun C => triangle_inequality A B C

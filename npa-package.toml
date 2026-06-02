@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.2"
+version = "0.1.3"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 2A."
+description = "Public theorem-library package for NPA mathlib Layer 2B."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -199,4 +199,38 @@ expected_certificate_hash = "sha256:a7efefe3ee1f35d232c2e4c7e6cc417153c2224a14c6
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square", "Mathlib.Algebra.OrderedField", "Mathlib.Vector.Basic"]
 definitions = ["dot", "normSq", "distSq"]
 theorems = ["dot_comm", "dot_add_left", "dot_add_right", "dot_neg_left", "dot_neg_right", "dot_sub_left", "dot_sub_right", "norm_sq_def", "dist_sq_def", "dot_self_eq_norm_sq", "norm_sq_add", "norm_sq_sub", "norm_sq_add_of_dot_zero", "norm_sq_sub_of_dot_zero", "parallelogram_law", "polarization_identity", "norm_sq_nonneg"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Geometry.RightTriangle"
+source = "Mathlib/Geometry/RightTriangle/source.npa"
+certificate = "Mathlib/Geometry/RightTriangle/certificate.npcert"
+meta = "Mathlib/Geometry/RightTriangle/meta.json"
+replay = "Mathlib/Geometry/RightTriangle/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:003407819621af049f08401787721e772fabc41fc85aa35272e39869defd1503"
+expected_certificate_file_hash = "sha256:12db572465c521c2a5208825a5fd8745509699c36cadf60895855b8fdf8efc45"
+expected_export_hash = "sha256:5e6ab1a1dfb6abd0acd0b013523f925050ddfe33f98a1281517c89ecfe088026"
+expected_axiom_report_hash = "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e"
+expected_certificate_hash = "sha256:0ca949e9114f20a0669ffdcc954b06ed3a7922b4588f680b6fe07c21003f3386"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square", "Mathlib.Algebra.OrderedField", "Mathlib.Vector.Basic", "Mathlib.Vector.Dot"]
+definitions = ["Perp", "RightTriangle"]
+theorems = ["perp_iff_dot_eq_zero", "perp_symm", "right_triangle_legs_perp", "hypotenuse_vector_eq_sub_legs", "dist_sq_leg_left", "dist_sq_leg_right", "dist_sq_hypotenuse", "pythagorean_distance_sq", "law_of_cosines", "right_triangle_area", "median_to_hypotenuse", "altitude_on_hypotenuse", "thales_theorem"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Geometry.Metric"
+source = "Mathlib/Geometry/Metric/source.npa"
+certificate = "Mathlib/Geometry/Metric/certificate.npcert"
+meta = "Mathlib/Geometry/Metric/meta.json"
+replay = "Mathlib/Geometry/Metric/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:e352fe72ef42d3bb0659f7f437e6d2044bb52bc6568802a8bf28f9225615a774"
+expected_certificate_file_hash = "sha256:e97cdd60a0b59c933c763ee78c38757bf826c1a6dc4a2f4d94515f42dd66b0e5"
+expected_export_hash = "sha256:c0b02db6d4ea4f7bc99635b66fb43380366f52cfea302d363e29fd21369a37e9"
+expected_axiom_report_hash = "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36"
+expected_certificate_hash = "sha256:8402c1928c8582fe0c8fbcd64c349c8ac1ec8c7c875198ef12889c9a70ab3058"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square", "Mathlib.Algebra.OrderedField", "Mathlib.Vector.Basic", "Mathlib.Vector.Dot", "Mathlib.Geometry.RightTriangle"]
+definitions = ["dist"]
+theorems = ["dist_def", "dist_sq_eq_square_dist", "dist_nonneg", "distance_symm", "distance_zero_iff_eq", "pythagorean_distance", "cauchy_schwarz", "triangle_inequality"]
 axioms = []

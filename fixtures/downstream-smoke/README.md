@@ -8,12 +8,12 @@ This fixture models a downstream package that consumes the local
 Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
-- downstream import bundle module: `Mathlib.Vector.Dot`
+- downstream import bundle module: `Mathlib.Geometry.Metric`
 - source-free proof artifact:
-  `../../Mathlib/Vector/Dot/certificate.npcert`
+  `../../Mathlib/Geometry/Metric/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.Vector.Dot`:
+`Mathlib.Geometry.Metric`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Ring/certificate.npcert`
@@ -21,6 +21,8 @@ The fixture vendors the source-free certificate import closure for
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Vector/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Vector/Dot/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Geometry/RightTriangle/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Geometry/Metric/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -33,5 +35,6 @@ from the vendored dependency tree; source-free verification reads only the
 hash-pinned certificate bytes and the downstream package certificate.
 
 The local theorem
-`Downstream.VectorDot::vector_norm_sq_nonneg_passthrough` imports the Layer 2A
-vector closure and applies the exported theorem `norm_sq_nonneg`.
+`Downstream.GeometryMetric::metric_triangle_inequality_passthrough` imports the
+Layer 2B geometry closure and applies the exported theorem
+`triangle_inequality`.
