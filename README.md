@@ -20,6 +20,10 @@ version = "0.1.0"
 schema = "npa.package.v0.1"
 ```
 
+The public module namespace policy is fixed in
+[`docs/namespace-policy.md`](docs/namespace-policy.md). Released module names
+are stable package identifiers and must not be renamed casually.
+
 ## Toolchain Pin
 
 Package CI builds `npa` from the current public toolchain ref:

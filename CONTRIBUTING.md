@@ -34,6 +34,11 @@ Do not add custom axioms, `sorry`-style placeholders, registry lookup, latest
 version resolution, hidden package caches, plugin loading, or network package
 fetching as part of proof acceptance.
 
+Follow the public module namespace policy in
+[`docs/namespace-policy.md`](docs/namespace-policy.md). In particular, local
+modules in this package must use `Mathlib.*`; `Std.*` stays in `npa-std`; and
+released module names should be treated as stable public API.
+
 For this initial release, keep the public module set limited to:
 
 ```text
