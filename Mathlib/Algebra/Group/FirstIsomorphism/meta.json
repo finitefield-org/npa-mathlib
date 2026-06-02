@@ -1,0 +1,23 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.FirstIsomorphism",
+  "source": "Mathlib/Algebra/Group/FirstIsomorphism/source.npa",
+  "certificate": "Mathlib/Algebra/Group/FirstIsomorphism/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:f705f37a8a5ae4eae70d76e410fc0f5136f094cf9cdee2caf2ff0acf6133efc6",
+  "certificate_file_sha256": "sha256:2d92aeb154f89446b5e2a0ec05df27cd3051cc07e8b146549748b23a9f446310",
+  "export_hash": "sha256:aaf83557307aef06abfc3bf75495930d8d4caa84c45f2d164036b68f67041563",
+  "axiom_report_hash": "sha256:9a0ded81408eba6f81619705659e98a0abcbe93475d802786eea2cf85209e352",
+  "certificate_hash": "sha256:9de6c8ed4c50809451d6ac6e617a2bac85cd117a972c9e2db7e48056ceb9da83",
+  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "first_iso_phi_mul", "kind": "theorem" },
+    { "name": "first_iso_phi_injective", "kind": "theorem" },
+    { "name": "first_iso_phi_hits_image", "kind": "theorem" },
+    { "name": "first_iso_phi_surj_image", "kind": "theorem" },
+    { "name": "first_isomorphism_image_facts", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

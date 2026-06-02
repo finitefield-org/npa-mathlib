@@ -124,6 +124,13 @@ Mathlib.Algebra.Group.Kernel.Quotient.Group
 Mathlib.Algebra.Group.Kernel.Quotient.Hom
 ```
 
+The `v0.1.9` release adds these Layer 3D-C modules:
+
+```text
+Mathlib.Algebra.Group.FirstIsomorphism
+Mathlib.Algebra.Group.FirstIsomorphism.Image
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -191,6 +198,13 @@ The Layer 3D-B mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupQuotientGroup` | `Mathlib.Algebra.Group.Kernel.Quotient.Group` | `Mathlib/Algebra/Group/Kernel/Quotient/Group/` |
 | `Proofs.Ai.Algebra.AbstractGroupQuotientHom` | `Mathlib.Algebra.Group.Kernel.Quotient.Hom` | `Mathlib/Algebra/Group/Kernel/Quotient/Hom/` |
 
+The Layer 3D-C mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupFirstIsoFull` | `Mathlib.Algebra.Group.FirstIsomorphism` | `Mathlib/Algebra/Group/FirstIsomorphism/` |
+| `Proofs.Ai.Algebra.AbstractGroupFirstIsoImage` | `Mathlib.Algebra.Group.FirstIsomorphism.Image` | `Mathlib/Algebra/Group/FirstIsomorphism/Image/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -200,14 +214,19 @@ instead of a broad `Mathlib.Algebra.Group.Quotient.*` surface. The exported
 definitions and theorems are specialized to quotienting by a homomorphism
 kernel and should not be treated as the general normal-subgroup quotient API.
 
+Layer 3D-C intentionally uses `FirstIsomorphism` instead of `FirstIso` in
+public module names. `Proofs.Ai.Algebra.AbstractGroupFirstIso` remains
+unpublished because it exposes the provisional `FirstIsoRepMvp` surface.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including normal quotient, first
-isomorphism, and correspondence modules, are intentionally deferred until the
-`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
-them without overloading `Basic`, `Subgroup`, `Subgroup.Order`, `Kernel`,
-`Image`, or `Kernel.Quotient`.
+The remaining abstract group corpus modules, including normal quotient,
+second/third isomorphism, and correspondence modules, are intentionally
+deferred until the `Mathlib.Algebra.Group.*` namespace has enough stable public
+surface to support them without overloading `Basic`, `Subgroup`,
+`Subgroup.Order`, `Kernel`, `Image`, `Kernel.Quotient`, or
+`FirstIsomorphism`.
 
 ## Category Rules
 

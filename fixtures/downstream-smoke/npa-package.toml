@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
@@ -32,15 +32,23 @@ certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d83
 [[imports]]
 module = "Mathlib.Algebra.Group.Basic"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
 export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
 certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
 
 [[imports]]
+module = "Mathlib.Algebra.Group.Image"
+package = "npa-mathlib"
+version = "0.1.9"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Image/certificate.npcert"
+export_hash = "sha256:0935f963b77bb9ed124d4b38435ad2a9a19f860e1f06de11c1ab8ca3f05cdd0e"
+certificate_hash = "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294245455d1b1b00bd2f588"
+
+[[imports]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert"
 export_hash = "sha256:456e96fbacbb84ec968918cae2b0914f9b851c96f3bdf1fda65be372c247ea48"
 certificate_hash = "sha256:de182e1a592999e7b630930514be307ac7e38c012a6214196397bd96def89ed9"
@@ -48,7 +56,7 @@ certificate_hash = "sha256:de182e1a592999e7b630930514be307ac7e38c012a6214196397b
 [[imports]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Mul"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Mul/certificate.npcert"
 export_hash = "sha256:149df869acd227ea5d7476160595d2338e9c00b1fb2f72d5e4ee6fca5e663c55"
 certificate_hash = "sha256:603136356e732b815a7040c25aa21a055ac9dfa448cfd1f2ae0f8675292d76d8"
@@ -56,7 +64,7 @@ certificate_hash = "sha256:603136356e732b815a7040c25aa21a055ac9dfa448cfd1f2ae0f8
 [[imports]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Group"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Group/certificate.npcert"
 export_hash = "sha256:4e67aa4b715757c1e8d8b4cef1637464a43fe2a4348c909b893e4f4c1330fa69"
 certificate_hash = "sha256:28b4b550a12b0e1cb4ae1624c6cf7007c8262b52254729110cd26fadda72acac"
@@ -64,22 +72,38 @@ certificate_hash = "sha256:28b4b550a12b0e1cb4ae1624c6cf7007c8262b52254729110cd26
 [[imports]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Hom"
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Hom/certificate.npcert"
 export_hash = "sha256:2a0178a6cd6a9fff1e449bffb7a62e25d4e4a944ceb514083db0bcf5b0229700"
 certificate_hash = "sha256:ed2a9ba856a0437961f5b62b26d755e26f5a526274d3b7f0cb2f6f5d960453f7"
 
+[[imports]]
+module = "Mathlib.Algebra.Group.FirstIsomorphism"
+package = "npa-mathlib"
+version = "0.1.9"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/FirstIsomorphism/certificate.npcert"
+export_hash = "sha256:aaf83557307aef06abfc3bf75495930d8d4caa84c45f2d164036b68f67041563"
+certificate_hash = "sha256:9de6c8ed4c50809451d6ac6e617a2bac85cd117a972c9e2db7e48056ceb9da83"
+
+[[imports]]
+module = "Mathlib.Algebra.Group.FirstIsomorphism.Image"
+package = "npa-mathlib"
+version = "0.1.9"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/FirstIsomorphism/Image/certificate.npcert"
+export_hash = "sha256:70278f8ad4b92548010b37f06e2ffa2189fe0ed1750f62e74a7b66ccc3da6bef"
+certificate_hash = "sha256:b3e460432ff79322150001f9a512f6e1a31c17a81881b816daccc194a0b81bd7"
+
 [[modules]]
-module = "Downstream.GroupKernelQuotient"
-source = "Downstream/GroupKernelQuotient/source.npa"
-certificate = "Downstream/GroupKernelQuotient/certificate.npcert"
+module = "Downstream.GroupFirstIsomorphism"
+source = "Downstream/GroupFirstIsomorphism/source.npa"
+certificate = "Downstream/GroupFirstIsomorphism/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom"]
-expected_source_hash = "sha256:19da010820c9c4a337c0e9846b4b8099550da7e0476f40bed057e277735c8797"
-expected_certificate_file_hash = "sha256:a775c98fd5cd8087968ce1afe6be0dff4bbf7fdcf7cbfa7f5ba5430eb7fccd1b"
-expected_export_hash = "sha256:8563e7eb506947057bb31b98736a722f3c145e8d761eeb79844fc08f0d4ee572"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Group.FirstIsomorphism.Image"]
+expected_source_hash = "sha256:01bcb46f5196dd83b74293a0b67fa4b893a79f218605c3b23b10fbf6ed4fce99"
+expected_certificate_file_hash = "sha256:6a40227c32ce207fe162b78ef959103111c7fec075a781878a059b3cfac2de62"
+expected_export_hash = "sha256:93892069a059e548eaf6c3e224fd63581879e9b21f8dc9f9cb03ad761a2ddcd9"
 expected_axiom_report_hash = "sha256:b408438a5a4917333b83a33727d5ead36f243d4f586541df94cea09f8f662651"
-expected_certificate_hash = "sha256:84b5f8dda8048160b2ec0129995ce44494ba7c6644470a1acf893ff94261adad"
+expected_certificate_hash = "sha256:08768bda26708719db0d3101fcf93be74894735cc56f7961df7866a5d6ecc7a1"
 definitions = []
-theorems = ["ker_quot_to_h_mul_passthrough"]
+theorems = ["first_isomorphism_to_image_passthrough"]
 axioms = ["Eq.rec"]

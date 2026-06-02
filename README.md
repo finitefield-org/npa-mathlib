@@ -13,9 +13,11 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3D-B public package:
+This repository contains the Layer 3D-C public package:
 
 ```text
+Mathlib.Algebra.Group.FirstIsomorphism.Image
+Mathlib.Algebra.Group.FirstIsomorphism
 Mathlib.Algebra.Group.Kernel.Quotient.Hom
 Mathlib.Algebra.Group.Kernel.Quotient.Group
 Mathlib.Algebra.Group.Kernel.Quotient.Mul
@@ -44,7 +46,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.8"
+version = "0.1.9"
 schema = "npa.package.v0.1"
 ```
 
@@ -107,7 +109,7 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Group.Kernel.Quotient.*` Layer 3D-B import closure.
+vendored `Mathlib.Algebra.Group.FirstIsomorphism.*` Layer 3D-C import closure.
 It does not vendor `npa-mathlib` source, replay, meta, theorem index, registry
 state, or package source tree.
 
@@ -149,12 +151,13 @@ data, and release audit evidence.
 Custom axioms are not allowed. The package permits the built-in `Eq.rec` axiom
 surface because `Mathlib.Logic.EqReasoning` and
 `Mathlib.Algebra.Group.Basic` / `Mathlib.Algebra.Group.Subgroup` expose
-equality reasoning certificates that use it explicitly. Layer 3D-B keeps the
+equality reasoning certificates that use it explicitly. Layer 3D-C keeps the
 homomorphism law surface in `Mathlib.Algebra.Group.Basic` and adds the
-kernel quotient closure under `Mathlib.Algebra.Group.Kernel.Quotient.*`. The
-package direct axiom surface remains policy-approved, and the new modules only
-carry the expected `Eq.rec` equality-reasoning dependency where their proofs
-require transport.
+first isomorphism-to-image route under
+`Mathlib.Algebra.Group.FirstIsomorphism.*` on top of the Layer 3D-B kernel
+quotient closure. The package direct axiom surface remains policy-approved,
+and the new modules only carry the expected `Eq.rec` equality-reasoning
+dependency where their proofs require transport.
 
 ## License
 
