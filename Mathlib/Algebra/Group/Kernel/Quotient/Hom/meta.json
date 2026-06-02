@@ -1,0 +1,19 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.Kernel.Quotient.Hom",
+  "source": "Mathlib/Algebra/Group/Kernel/Quotient/Hom/source.npa",
+  "certificate": "Mathlib/Algebra/Group/Kernel/Quotient/Hom/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:83535d4f2ef8ed1a9b97f6145b87923c449d502480695320f9046929dba51be2",
+  "certificate_file_sha256": "sha256:cd20fd6f13cb1fbb6d5269bafea245cd6441ced5fc3b91c1a5bb5aa961fe9c06",
+  "export_hash": "sha256:2a0178a6cd6a9fff1e449bffb7a62e25d4e4a944ceb514083db0bcf5b0229700",
+  "axiom_report_hash": "sha256:b8556fe24d881da2124391b4b0d69d4d22f988483234a12d4f565c15909305e6",
+  "certificate_hash": "sha256:ed2a9ba856a0437961f5b62b26d755e26f5a526274d3b7f0cb2f6f5d960453f7",
+  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "ker_quot_to_h_mul", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

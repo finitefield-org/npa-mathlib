@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.7"
+version = "0.1.8"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
@@ -32,38 +32,54 @@ certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d83
 [[imports]]
 module = "Mathlib.Algebra.Group.Basic"
 package = "npa-mathlib"
-version = "0.1.7"
+version = "0.1.8"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
 export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
 certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
 
 [[imports]]
-module = "Mathlib.Algebra.Group.Kernel"
+module = "Mathlib.Algebra.Group.Kernel.Quotient"
 package = "npa-mathlib"
-version = "0.1.7"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/certificate.npcert"
-export_hash = "sha256:5c1a39b0e9f82dc1014e3e63549c71eab3db6383024a87408e4e95e06bc33fbb"
-certificate_hash = "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56fb27f4f514dcd6dbef14d"
+version = "0.1.8"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert"
+export_hash = "sha256:456e96fbacbb84ec968918cae2b0914f9b851c96f3bdf1fda65be372c247ea48"
+certificate_hash = "sha256:de182e1a592999e7b630930514be307ac7e38c012a6214196397bd96def89ed9"
 
 [[imports]]
-module = "Mathlib.Algebra.Group.Image"
+module = "Mathlib.Algebra.Group.Kernel.Quotient.Mul"
 package = "npa-mathlib"
-version = "0.1.7"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Image/certificate.npcert"
-export_hash = "sha256:0935f963b77bb9ed124d4b38435ad2a9a19f860e1f06de11c1ab8ca3f05cdd0e"
-certificate_hash = "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294245455d1b1b00bd2f588"
+version = "0.1.8"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Mul/certificate.npcert"
+export_hash = "sha256:149df869acd227ea5d7476160595d2338e9c00b1fb2f72d5e4ee6fca5e663c55"
+certificate_hash = "sha256:603136356e732b815a7040c25aa21a055ac9dfa448cfd1f2ae0f8675292d76d8"
+
+[[imports]]
+module = "Mathlib.Algebra.Group.Kernel.Quotient.Group"
+package = "npa-mathlib"
+version = "0.1.8"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Group/certificate.npcert"
+export_hash = "sha256:4e67aa4b715757c1e8d8b4cef1637464a43fe2a4348c909b893e4f4c1330fa69"
+certificate_hash = "sha256:28b4b550a12b0e1cb4ae1624c6cf7007c8262b52254729110cd26fadda72acac"
+
+[[imports]]
+module = "Mathlib.Algebra.Group.Kernel.Quotient.Hom"
+package = "npa-mathlib"
+version = "0.1.8"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Hom/certificate.npcert"
+export_hash = "sha256:2a0178a6cd6a9fff1e449bffb7a62e25d4e4a944ceb514083db0bcf5b0229700"
+certificate_hash = "sha256:ed2a9ba856a0437961f5b62b26d755e26f5a526274d3b7f0cb2f6f5d960453f7"
 
 [[modules]]
-module = "Downstream.GroupKernelImage"
-source = "Downstream/GroupKernelImage/source.npa"
-certificate = "Downstream/GroupKernelImage/certificate.npcert"
+module = "Downstream.GroupKernelQuotient"
+source = "Downstream/GroupKernelQuotient/source.npa"
+certificate = "Downstream/GroupKernelQuotient/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel", "Mathlib.Algebra.Group.Image"]
-expected_source_hash = "sha256:d2899f18b88d8348eff7f0e2b8a86d5f98a859d1fa414aff9dc7f99cb1c50920"
-expected_certificate_file_hash = "sha256:7d4d90305dbc09cebb944479283d9eac9f377748aa7a9bad36716e7ec4f9f64f"
-expected_export_hash = "sha256:3d1f4534622d37990f348773b25ede0c0b39f5b614b6ea600ac6539b97b74364"
-expected_axiom_report_hash = "sha256:12c04f7fa1a2504fb0fd5300e5b3a21cb9e2cd18d449d5e6731e6f76f98c311d"
-expected_certificate_hash = "sha256:a8e4ea97238c337eed771aaf3b521a8c604ac023dc760dca06c00b6862b70799"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom"]
+expected_source_hash = "sha256:19da010820c9c4a337c0e9846b4b8099550da7e0476f40bed057e277735c8797"
+expected_certificate_file_hash = "sha256:a775c98fd5cd8087968ce1afe6be0dff4bbf7fdcf7cbfa7f5ba5430eb7fccd1b"
+expected_export_hash = "sha256:8563e7eb506947057bb31b98736a722f3c145e8d761eeb79844fc08f0d4ee572"
+expected_axiom_report_hash = "sha256:b408438a5a4917333b83a33727d5ead36f243d4f586541df94cea09f8f662651"
+expected_certificate_hash = "sha256:84b5f8dda8048160b2ec0129995ce44494ba7c6644470a1acf893ff94261adad"
 definitions = []
-theorems = ["kernel_mul_closed_passthrough", "image_intro_passthrough"]
+theorems = ["ker_quot_to_h_mul_passthrough"]
 axioms = ["Eq.rec"]

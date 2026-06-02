@@ -115,6 +115,15 @@ Mathlib.Algebra.Group.Kernel
 Mathlib.Algebra.Group.Image
 ```
 
+The `v0.1.8` release adds these Layer 3D-B modules:
+
+```text
+Mathlib.Algebra.Group.Kernel.Quotient
+Mathlib.Algebra.Group.Kernel.Quotient.Mul
+Mathlib.Algebra.Group.Kernel.Quotient.Group
+Mathlib.Algebra.Group.Kernel.Quotient.Hom
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -173,18 +182,32 @@ The Layer 3D-A mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupKernel` | `Mathlib.Algebra.Group.Kernel` | `Mathlib/Algebra/Group/Kernel/` |
 | `Proofs.Ai.Algebra.AbstractGroupImage` | `Mathlib.Algebra.Group.Image` | `Mathlib/Algebra/Group/Image/` |
 
+The Layer 3D-B mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupQuotient` | `Mathlib.Algebra.Group.Kernel.Quotient` | `Mathlib/Algebra/Group/Kernel/Quotient/` |
+| `Proofs.Ai.Algebra.AbstractGroupQuotientMul` | `Mathlib.Algebra.Group.Kernel.Quotient.Mul` | `Mathlib/Algebra/Group/Kernel/Quotient/Mul/` |
+| `Proofs.Ai.Algebra.AbstractGroupQuotientGroup` | `Mathlib.Algebra.Group.Kernel.Quotient.Group` | `Mathlib/Algebra/Group/Kernel/Quotient/Group/` |
+| `Proofs.Ai.Algebra.AbstractGroupQuotientHom` | `Mathlib.Algebra.Group.Kernel.Quotient.Hom` | `Mathlib/Algebra/Group/Kernel/Quotient/Hom/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
 
+Layer 3D-B intentionally uses `Mathlib.Algebra.Group.Kernel.Quotient.*`
+instead of a broad `Mathlib.Algebra.Group.Quotient.*` surface. The exported
+definitions and theorems are specialized to quotienting by a homomorphism
+kernel and should not be treated as the general normal-subgroup quotient API.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including quotient, normal
-quotient, isomorphism, and correspondence modules, are intentionally deferred
-until the `Mathlib.Algebra.Group.*` namespace has enough stable public surface
-to support them without overloading `Basic`, `Subgroup`, `Subgroup.Order`,
-`Kernel`, or `Image`.
+The remaining abstract group corpus modules, including normal quotient, first
+isomorphism, and correspondence modules, are intentionally deferred until the
+`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
+them without overloading `Basic`, `Subgroup`, `Subgroup.Order`, `Kernel`,
+`Image`, or `Kernel.Quotient`.
 
 ## Category Rules
 

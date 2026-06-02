@@ -1,0 +1,11 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Group.Kernel.Quotient
+import Mathlib.Algebra.Group.Kernel.Quotient.Mul
+import Mathlib.Algebra.Group.Kernel.Quotient.Group
+import Mathlib.Algebra.Group.Kernel.Quotient.Hom
+
+theorem ker_quot_to_h_mul_passthrough.{u,v} :
+  forall (G : Sort succ u), forall (oneG : G), forall (mulG : forall (a : G), forall (b : G), G), forall (invG : forall (a : G), G), forall (H : Sort succ v), forall (oneH : H), forall (mulH : forall (a : H), forall (b : H), H), forall (invH : forall (a : H), H), forall (f : forall (x : G), H), forall (hom_args : @GroupHomLawArgs.{succ u,succ v} G oneG mulG invG H oneH mulH invH f), forall (q1 : @KerQuot.{u,v} G H f), forall (q2 : @KerQuot.{u,v} G H f), @Eq.{succ v} H (@KerQuotToH.{u,v} G H f (@KerQuotMul.{u,v} G oneG mulG invG H oneH mulH invH f hom_args q1 q2)) (mulH (@KerQuotToH.{u,v} G H f q1) (@KerQuotToH.{u,v} G H f q2)) :=
+  fun G => fun oneG => fun mulG => fun invG => fun H => fun oneH => fun mulH => fun invH => fun f => fun hom_args => fun q1 => fun q2 => @ker_quot_to_h_mul.{u,v} G oneG mulG invG H oneH mulH invH f hom_args q1 q2
