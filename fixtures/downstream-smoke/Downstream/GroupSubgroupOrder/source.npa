@@ -1,0 +1,9 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Group.Subgroup
+import Mathlib.Algebra.Group.Subgroup.Order
+
+theorem subgroup_le_refl_passthrough.{u} :
+  forall (G : Sort u), forall (H : forall (x : G), Prop), @SubgroupLe.{u} G H H :=
+  fun G => fun H => @subgroup_le_refl.{u} G H

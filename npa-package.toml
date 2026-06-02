@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.5"
+version = "0.1.6"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 3B."
+description = "Public theorem-library package for NPA mathlib Layer 3C."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -199,6 +199,23 @@ imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.B
 definitions = ["SubgroupLawArgs", "NormalSubgroupLawArgs", "SubgroupInterPred", "SubgroupProductPred", "NormalRel"]
 theorems = ["subgroup_one", "subgroup_mul_closed", "subgroup_inv_closed", "normal_subgroup_laws", "normal_conj_closed", "normal_inv_conj_closed", "subgroup_inter_intro", "subgroup_inter_left", "subgroup_inter_right", "subgroup_inter_one", "subgroup_inter_mul_closed", "subgroup_inter_inv_closed", "subgroup_inter_normal_in_left", "subgroup_product_intro", "subgroup_product_elim", "subgroup_product_one", "subgroup_product_mul_closed", "subgroup_product_inv_closed", "subgroup_product_laws", "normal_rel_refl", "normal_rel_symm", "normal_rel_trans", "normal_rel_of_eq", "normal_rel_mul_compat", "normal_rel_inv_compat", "normal_rel_one_of_mem", "normal_rel_one_to_mem", "normal_rel_product_right"]
 axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Algebra.Group.Subgroup.Order"
+source = "Mathlib/Algebra/Group/Subgroup/Order/source.npa"
+certificate = "Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert"
+meta = "Mathlib/Algebra/Group/Subgroup/Order/meta.json"
+replay = "Mathlib/Algebra/Group/Subgroup/Order/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:1d351d2165afb4ef7b4dbc3dba8c2f3a2cb30d8d35f90e15ed0cce5c6a8fdebc"
+expected_certificate_file_hash = "sha256:5da33730332206a1debca756d4ff04fbd8fa1b3ea84cb15d92676652f7eb7613"
+expected_export_hash = "sha256:e437fa6d0d71c25cfd931ece5572e3f232a08d7c9c8ece7c3ebf1cd4cf0beee6"
+expected_axiom_report_hash = "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e"
+expected_certificate_hash = "sha256:c501393a7f67b539b33378767cd9a3f89205a604c902036c001aa1d6f4dd84f5"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup"]
+definitions = ["SubgroupLe", "SubgroupEquiv", "NormalContains"]
+theorems = ["subgroup_le_refl", "subgroup_le_trans", "subgroup_equiv_intro", "subgroup_equiv_left", "subgroup_equiv_right", "subgroup_equiv_refl", "subgroup_equiv_symm", "subgroup_equiv_trans", "normal_contains_to_subgroup_le", "subgroup_le_to_normal_contains", "normal_contains_refl", "normal_contains_trans"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.OrderedField"

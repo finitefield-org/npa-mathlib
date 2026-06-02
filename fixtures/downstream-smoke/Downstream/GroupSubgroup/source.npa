@@ -1,8 +1,0 @@
-import Std.Logic.Eq
-import Mathlib.Logic.EqReasoning
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Subgroup
-
-theorem subgroup_one_passthrough.{u} :
-  forall (G : Sort u), forall (one : G), forall (mul : forall (a : G), forall (b : G), G), forall (inv : forall (a : G), G), forall (S : forall (x : G), Prop), forall (subgroup_args : @SubgroupLawArgs.{u} G one mul inv S), S one :=
-  fun G => fun one => fun mul => fun inv => fun S => fun subgroup_args => @subgroup_one.{u} G one mul inv S subgroup_args

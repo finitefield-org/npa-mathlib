@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.5"
+version = "0.1.6"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
@@ -32,7 +32,7 @@ certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d83
 [[imports]]
 module = "Mathlib.Algebra.Group.Basic"
 package = "npa-mathlib"
-version = "0.1.5"
+version = "0.1.6"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
 export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
 certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
@@ -40,22 +40,30 @@ certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7
 [[imports]]
 module = "Mathlib.Algebra.Group.Subgroup"
 package = "npa-mathlib"
-version = "0.1.5"
+version = "0.1.6"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/certificate.npcert"
 export_hash = "sha256:2b527c5b3039075812d564522facb4a41e421e1902f863df111f0e83c5b9d85c"
 certificate_hash = "sha256:b3b47c9d314d69594d1c80e24fd4d1954c242ef289e2031207be9acd798ce2a9"
 
+[[imports]]
+module = "Mathlib.Algebra.Group.Subgroup.Order"
+package = "npa-mathlib"
+version = "0.1.6"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert"
+export_hash = "sha256:e437fa6d0d71c25cfd931ece5572e3f232a08d7c9c8ece7c3ebf1cd4cf0beee6"
+certificate_hash = "sha256:c501393a7f67b539b33378767cd9a3f89205a604c902036c001aa1d6f4dd84f5"
+
 [[modules]]
-module = "Downstream.GroupSubgroup"
-source = "Downstream/GroupSubgroup/source.npa"
-certificate = "Downstream/GroupSubgroup/certificate.npcert"
+module = "Downstream.GroupSubgroupOrder"
+source = "Downstream/GroupSubgroupOrder/source.npa"
+certificate = "Downstream/GroupSubgroupOrder/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup"]
-expected_source_hash = "sha256:a39e007033483163f726f686820cfc6ba05c92b05d1de4343a76ca7b49a17452"
-expected_certificate_file_hash = "sha256:c8f3c42a6a999933fbceaa33ff3942adf24d31b7be99804b48cf4a90131ac5ff"
-expected_export_hash = "sha256:c0ef117edc1ae05a15d788320748f71bb1532284de4409a6c8836f89bf7db290"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Subgroup.Order"]
+expected_source_hash = "sha256:fec09e6e0e4148b4e2c7d55c2f9254ddbcc5dbcd72a130be0124411da040f191"
+expected_certificate_file_hash = "sha256:d8cdc4de4a1a492093c93363719a2be2b91eea9a0e3a992dcaadd765c3be9150"
+expected_export_hash = "sha256:94b6817808116630f4ffb6ba19f95fce475b2b105a463422e8e835eb9ccfe450"
 expected_axiom_report_hash = "sha256:a1ef77782ab68d41aede3e412c79174432934c3cac66c319dd2d406cf514f40e"
-expected_certificate_hash = "sha256:b34a63cd80b10bc5e094d6a8427adc68ff40f17d4a0762bbe00eb31c89772119"
+expected_certificate_hash = "sha256:cc610bb0a6a5e4617e9fa1302764f7cb6c685df59df760a4ca7b044a9640fc86"
 definitions = []
-theorems = ["subgroup_one_passthrough"]
+theorems = ["subgroup_le_refl_passthrough"]
 axioms = []

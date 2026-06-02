@@ -8,17 +8,18 @@ This fixture models a downstream package that consumes the local
 Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
-- downstream import bundle module: `Mathlib.Algebra.Group.Subgroup`
+- downstream import bundle module: `Mathlib.Algebra.Group.Subgroup.Order`
 - source-free proof artifact:
-  `../../Mathlib/Algebra/Group/Subgroup/certificate.npcert`
+  `../../Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.Algebra.Group.Subgroup`:
+`Mathlib.Algebra.Group.Subgroup.Order`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -30,5 +31,7 @@ state are not proof evidence for this fixture. They are deliberately absent
 from the vendored dependency tree; source-free verification reads only the
 hash-pinned certificate bytes and the downstream package certificate.
 
-The local theorem `Downstream.GroupSubgroup::subgroup_one_passthrough` imports
-the Layer 3B subgroup closure and applies the exported theorem `subgroup_one`.
+The local theorem
+`Downstream.GroupSubgroupOrder::subgroup_le_refl_passthrough` imports the
+Layer 3C subgroup-order closure and applies the exported theorem
+`subgroup_le_refl`.

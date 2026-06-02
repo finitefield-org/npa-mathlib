@@ -102,6 +102,12 @@ The `v0.1.5` release adds this Layer 3B module:
 Mathlib.Algebra.Group.Subgroup
 ```
 
+The `v0.1.6` release adds this Layer 3C module:
+
+```text
+Mathlib.Algebra.Group.Subgroup.Order
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -147,14 +153,20 @@ The Layer 3B mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractGroupSubgroup` | `Mathlib.Algebra.Group.Subgroup` | `Mathlib/Algebra/Group/Subgroup/` |
 
+The Layer 3C mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupSubgroupOrder` | `Mathlib.Algebra.Group.Subgroup.Order` | `Mathlib/Algebra/Group/Subgroup/Order/` |
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including subgroup order, kernel,
-image, quotient, normal quotient, isomorphism, and correspondence modules, are
+The remaining abstract group corpus modules, including kernel, image,
+quotient, normal quotient, isomorphism, and correspondence modules, are
 intentionally deferred until the `Mathlib.Algebra.Group.*` namespace has enough
-stable public surface to support them without overloading `Basic` or
-`Subgroup`.
+stable public surface to support them without overloading `Basic`, `Subgroup`,
+or `Subgroup.Order`.
 
 ## Category Rules
 
