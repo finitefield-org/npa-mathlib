@@ -105,6 +105,154 @@ authors, release numbers, or trust levels in module names. For example, do not
 use `Mathlib.Ai.*`, `Mathlib.Generated.*`, `Mathlib.Release0.*`, or
 `Mathlib.Verified.*`.
 
+## Common Module Shape Examples
+
+Use `Basic` for the first stable module in a domain when a more specific name
+would be premature:
+
+```text
+Mathlib.Data.Nat.Basic
+Mathlib.GroupTheory.Basic
+Mathlib.Topology.Basic
+Mathlib.Probability.Basic
+```
+
+Use short mathematical nouns for core objects:
+
+```text
+Mathlib.Algebra.Ring
+Mathlib.Algebra.Field
+Mathlib.Algebra.Polynomial
+Mathlib.Category.Functor
+Mathlib.Geometry.Manifold
+Mathlib.MeasureTheory.Measure
+Mathlib.Optimization.Convex
+```
+
+Use established subdomain names when the area is already large:
+
+```text
+Mathlib.AlgebraicGeometry.Scheme
+Mathlib.Analysis.Functional.Banach
+Mathlib.Analysis.Functional.Hilbert
+Mathlib.DifferentialEquations.ODE
+Mathlib.DifferentialEquations.PDE
+Mathlib.NumberTheory.ModularArithmetic
+Mathlib.Topology.Algebraic.Homology
+```
+
+Use a final topic component for specialized theorem groups:
+
+```text
+Mathlib.Algebra.Ring.Ideal
+Mathlib.Algebra.Ring.Localization
+Mathlib.Analysis.Complex.Holomorphic
+Mathlib.Combinatorics.Graph.Coloring
+Mathlib.Geometry.Convex.Polytope
+Mathlib.GroupTheory.GroupAction
+Mathlib.LinearAlgebra.Matrix.Determinant
+```
+
+Avoid names that describe how a proof was produced:
+
+```text
+Mathlib.Generated.Nat
+Mathlib.Ai.Algebra
+Mathlib.Tactic.Proved
+Mathlib.Search.Result
+```
+
+Use instead:
+
+```text
+Mathlib.Data.Nat.Basic
+Mathlib.Algebra.Basic
+Mathlib.Algebra.Ring
+Mathlib.Logic.Basic
+```
+
+## Field Inventory
+
+The following inventory is based on the MSC2020 two-digit subject areas,
+maintained by Mathematical Reviews and zbMATH. MSC2020 has 63 two-digit
+classifications; this table covers those broad areas as a namespace review
+checklist.
+
+References:
+
+- <https://mathscinet.ams.org/msc/msc2020.html>
+- <https://siam-web.useast01.umbraco.io/publications/siam-news/articles/mathematics-subject-classification-2020/>
+
+This inventory is not a commitment to create every prefix. When a field is not
+yet represented by checked certificates, keep the entry as a naming example
+only.
+
+| MSC area | Field | Preferred prefixes and examples |
+| --- | --- | --- |
+| `00` | General and overarching mathematics | Avoid catch-all modules; prefer the specific mathematical domain. If unavoidable, use `Mathlib.Meta.*` only for formalized mathematical metadata. |
+| `01` | History and biography | Normally documentation, not theorem modules. If formalized, prefer precise domain modules over `Mathlib.History.*`. |
+| `03` | Logic and foundations | `Mathlib.Logic.*`, `Mathlib.Foundation.*`, `Mathlib.SetTheory.*`, `Mathlib.ModelTheory.*`, `Mathlib.ProofTheory.*`, `Mathlib.Computability.*`. |
+| `05` | Combinatorics | `Mathlib.Combinatorics.Basic`, `Mathlib.Combinatorics.Graph`, `Mathlib.Combinatorics.Enumerative`, `Mathlib.Combinatorics.Matroid`, `Mathlib.Combinatorics.Design`. |
+| `06` | Order and lattices | `Mathlib.Order.Basic`, `Mathlib.Order.Lattice`, `Mathlib.Order.BooleanAlgebra`, `Mathlib.Order.OrderedAlgebra`. |
+| `08` | General algebraic systems | `Mathlib.Algebra.Universal`, `Mathlib.Algebra.Magma`, `Mathlib.Algebra.Semigroup`, `Mathlib.Algebra.AlgebraicSystem`. |
+| `11` | Number theory | `Mathlib.NumberTheory.Basic`, `Mathlib.NumberTheory.Prime`, `Mathlib.NumberTheory.ModularArithmetic`, `Mathlib.NumberTheory.Diophantine`. |
+| `12` | Field theory and polynomials | `Mathlib.Algebra.Field`, `Mathlib.Algebra.Polynomial`, `Mathlib.Algebra.Galois`, `Mathlib.Algebra.FiniteField`. |
+| `13` | Commutative algebra | `Mathlib.Algebra.Commutative`, `Mathlib.Algebra.Ideal`, `Mathlib.Algebra.Localization`, `Mathlib.Algebra.Noetherian`. |
+| `14` | Algebraic geometry | `Mathlib.AlgebraicGeometry.Scheme`, `Mathlib.AlgebraicGeometry.Variety`, `Mathlib.AlgebraicGeometry.Sheaf`, `Mathlib.AlgebraicGeometry.Projective`. |
+| `15` | Linear algebra and matrix theory | `Mathlib.LinearAlgebra.Basic`, `Mathlib.LinearAlgebra.Matrix`, `Mathlib.LinearAlgebra.VectorSpace`, `Mathlib.LinearAlgebra.Tensor`, `Mathlib.LinearAlgebra.Determinant`. |
+| `16` | Associative rings and algebras | `Mathlib.Algebra.Ring`, `Mathlib.Algebra.AssociativeAlgebra`, `Mathlib.Algebra.Module`, `Mathlib.Algebra.Representation`. |
+| `17` | Nonassociative rings and algebras | `Mathlib.Algebra.Lie`, `Mathlib.Algebra.Jordan`, `Mathlib.Algebra.NonAssociative`. |
+| `18` | Category theory and homological algebra | `Mathlib.Category.Basic`, `Mathlib.Category.Functor`, `Mathlib.Category.NaturalTransformation`, `Mathlib.Category.Homological`. |
+| `19` | K-theory | `Mathlib.KTheory.Basic`, `Mathlib.KTheory.Algebraic`, `Mathlib.KTheory.Topological`. |
+| `20` | Group theory | `Mathlib.GroupTheory.Basic`, `Mathlib.GroupTheory.Group`, `Mathlib.GroupTheory.Subgroup`, `Mathlib.GroupTheory.Permutation`, `Mathlib.GroupTheory.GroupAction`. |
+| `22` | Topological groups and Lie groups | `Mathlib.TopologicalGroup.Basic`, `Mathlib.TopologicalGroup.Lie`, `Mathlib.LieGroup.Basic`, `Mathlib.LieGroup.LieAlgebra`. |
+| `26` | Real functions | `Mathlib.Analysis.Real`, `Mathlib.Analysis.RealFunction`, `Mathlib.Analysis.Real.Continuity`, `Mathlib.Analysis.Real.Differentiability`. |
+| `28` | Measure and integration | `Mathlib.MeasureTheory.Basic`, `Mathlib.MeasureTheory.Measure`, `Mathlib.MeasureTheory.Integration`, `Mathlib.MeasureTheory.ProbabilityMeasure`. |
+| `30` | One complex variable | `Mathlib.Analysis.Complex`, `Mathlib.Analysis.Complex.Holomorphic`, `Mathlib.Analysis.Complex.Meromorphic`. |
+| `31` | Potential theory | `Mathlib.Analysis.Potential`, `Mathlib.Analysis.Potential.HarmonicFunction`, `Mathlib.Analysis.Potential.Capacity`. |
+| `32` | Several complex variables and analytic spaces | `Mathlib.Analysis.SeveralComplexVariables`, `Mathlib.Analysis.ComplexManifold`, `Mathlib.Analysis.AnalyticSpace`. |
+| `33` | Special functions | `Mathlib.Analysis.SpecialFunctions`, `Mathlib.Analysis.SpecialFunctions.Gamma`, `Mathlib.Analysis.SpecialFunctions.Bessel`, `Mathlib.Analysis.SpecialFunctions.OrthogonalPolynomial`. |
+| `34` | Ordinary differential equations | `Mathlib.DifferentialEquations.ODE`, `Mathlib.DifferentialEquations.ODE.Existence`, `Mathlib.DifferentialEquations.ODE.Stability`. |
+| `35` | Partial differential equations | `Mathlib.DifferentialEquations.PDE`, `Mathlib.DifferentialEquations.PDE.Elliptic`, `Mathlib.DifferentialEquations.PDE.Parabolic`, `Mathlib.DifferentialEquations.PDE.Hyperbolic`. |
+| `37` | Dynamical systems and ergodic theory | `Mathlib.Dynamics.Basic`, `Mathlib.Dynamics.ErgodicTheory`, `Mathlib.Dynamics.Chaos`. |
+| `39` | Difference and functional equations | `Mathlib.Equations.Difference`, `Mathlib.Equations.Functional`, `Mathlib.Equations.Recurrence`. |
+| `40` | Sequences, series, and summability | `Mathlib.Analysis.Sequence`, `Mathlib.Analysis.Series`, `Mathlib.Analysis.Summability`. |
+| `41` | Approximation and expansions | `Mathlib.Approximation.Basic`, `Mathlib.Approximation.Interpolation`, `Mathlib.Approximation.Asymptotic`. |
+| `42` | Euclidean harmonic analysis | `Mathlib.Analysis.Harmonic`, `Mathlib.Analysis.Harmonic.Fourier`, `Mathlib.Analysis.Harmonic.SingularIntegral`. |
+| `43` | Abstract harmonic analysis | `Mathlib.Analysis.AbstractHarmonic`, `Mathlib.Analysis.AbstractHarmonic.LocallyCompactGroup`, `Mathlib.Analysis.AbstractHarmonic.Pontryagin`. |
+| `44` | Integral transforms and operational calculus | `Mathlib.Analysis.IntegralTransform`, `Mathlib.Analysis.IntegralTransform.Laplace`, `Mathlib.Analysis.IntegralTransform.Fourier`. |
+| `45` | Integral equations | `Mathlib.Equations.Integral`, `Mathlib.Equations.Integral.Fredholm`, `Mathlib.Equations.Integral.Volterra`. |
+| `46` | Functional analysis | `Mathlib.Analysis.Functional`, `Mathlib.Analysis.Functional.Banach`, `Mathlib.Analysis.Functional.Hilbert`, `Mathlib.Analysis.Functional.NormedSpace`. |
+| `47` | Operator theory | `Mathlib.Analysis.OperatorTheory`, `Mathlib.Analysis.OperatorTheory.Spectral`, `Mathlib.Analysis.OperatorTheory.CstarAlgebra`. |
+| `49` | Variational methods, control, and optimization | `Mathlib.Optimization.Basic`, `Mathlib.Optimization.Variational`, `Mathlib.Optimization.OptimalControl`, `Mathlib.Optimization.Convex`. |
+| `51` | Geometry | `Mathlib.Geometry.Basic`, `Mathlib.Geometry.Euclidean`, `Mathlib.Geometry.Projective`, `Mathlib.Geometry.Affine`. |
+| `52` | Convex and discrete geometry | `Mathlib.Geometry.Convex`, `Mathlib.Geometry.Convex.Polytope`, `Mathlib.Geometry.Discrete`. |
+| `53` | Differential geometry | `Mathlib.Geometry.Differential`, `Mathlib.Geometry.Differential.Manifold`, `Mathlib.Geometry.Differential.Riemannian`. |
+| `54` | General topology | `Mathlib.Topology.Basic`, `Mathlib.Topology.TopologicalSpace`, `Mathlib.Topology.Separation`. |
+| `55` | Algebraic topology | `Mathlib.Topology.Algebraic`, `Mathlib.Topology.Algebraic.Homotopy`, `Mathlib.Topology.Algebraic.Homology`, `Mathlib.Topology.Algebraic.Cohomology`. |
+| `57` | Manifolds and cell complexes | `Mathlib.Topology.Manifold`, `Mathlib.Topology.CellComplex`, `Mathlib.Topology.Knot`. |
+| `58` | Global analysis and analysis on manifolds | `Mathlib.Analysis.Global`, `Mathlib.Analysis.Manifold`, `Mathlib.Analysis.Global.EllipticOperator`. |
+| `60` | Probability and stochastic processes | `Mathlib.Probability.Basic`, `Mathlib.Probability.RandomVariable`, `Mathlib.Probability.StochasticProcess`, `Mathlib.Probability.Martingale`. |
+| `62` | Statistics | `Mathlib.Statistics.Basic`, `Mathlib.Statistics.Estimator`, `Mathlib.Statistics.HypothesisTesting`, `Mathlib.Statistics.Regression`. |
+| `65` | Numerical analysis | `Mathlib.NumericalAnalysis.Basic`, `Mathlib.NumericalAnalysis.ErrorBounds`, `Mathlib.NumericalAnalysis.LinearAlgebra`. |
+| `68` | Computer science | `Mathlib.ComputerScience.Basic`, `Mathlib.ComputerScience.Automata`, `Mathlib.ComputerScience.Complexity`, `Mathlib.ComputerScience.FormalLanguage`. |
+| `70` | Mechanics of particles and systems | `Mathlib.Mechanics.Particles`, `Mathlib.Mechanics.Classical`, `Mathlib.Mechanics.Hamiltonian`. |
+| `74` | Mechanics of deformable solids | `Mathlib.Mechanics.Solids`, `Mathlib.Mechanics.Solids.Elasticity`, `Mathlib.Mechanics.Continuum`. |
+| `76` | Fluid mechanics | `Mathlib.Mechanics.Fluids`, `Mathlib.Mechanics.Fluids.EulerEquation`, `Mathlib.Mechanics.Fluids.NavierStokes`. |
+| `78` | Optics and electromagnetic theory | `Mathlib.Physics.Electromagnetism`, `Mathlib.Physics.Electromagnetism.Maxwell`, `Mathlib.Physics.Optics`. |
+| `80` | Thermodynamics and heat transfer | `Mathlib.Physics.Thermodynamics`, `Mathlib.Physics.HeatTransfer`, `Mathlib.Physics.HeatEquation`. |
+| `81` | Quantum theory | `Mathlib.Physics.Quantum`, `Mathlib.Physics.Quantum.HilbertSpace`, `Mathlib.Physics.Quantum.QuantumLogic`. |
+| `82` | Statistical mechanics and structure of matter | `Mathlib.Physics.StatisticalMechanics`, `Mathlib.Physics.StatisticalMechanics.PartitionFunction`, `Mathlib.Physics.Matter`. |
+| `83` | Relativity and gravitational theory | `Mathlib.Physics.Relativity`, `Mathlib.Physics.Relativity.LorentzGeometry`, `Mathlib.Physics.Relativity.GeneralRelativity`. |
+| `85` | Astronomy and astrophysics | `Mathlib.Astronomy.Basic`, `Mathlib.Astronomy.CelestialMechanics`, `Mathlib.Astronomy.Cosmology`. |
+| `86` | Geophysics | `Mathlib.Geophysics.Basic`, `Mathlib.Geophysics.Seismology`, `Mathlib.Geophysics.FluidDynamics`. |
+| `90` | Operations research and mathematical programming | `Mathlib.Optimization.OperationsResearch`, `Mathlib.Optimization.LinearProgramming`, `Mathlib.Optimization.IntegerProgramming`. |
+| `91` | Game theory, economics, finance, and social sciences | `Mathlib.GameTheory.Basic`, `Mathlib.Economics.Basic`, `Mathlib.Finance.Mathematical`, `Mathlib.SocialChoice.Basic`. |
+| `92` | Biology and other natural sciences | `Mathlib.Biology.Mathematical`, `Mathlib.Biology.PopulationDynamics`, `Mathlib.Biology.Epidemiology`. |
+| `93` | Systems theory and control | `Mathlib.Control.Basic`, `Mathlib.Control.LinearSystems`, `Mathlib.Control.DynamicalSystems`. |
+| `94` | Information theory, communication, and circuits | `Mathlib.InformationTheory.Basic`, `Mathlib.InformationTheory.CodingTheory`, `Mathlib.InformationTheory.Cryptography`, `Mathlib.Circuits.Basic`. |
+| `97` | Mathematics education | Normally documentation, not theorem modules. If formalized as mathematics, place the theorem under its mathematical domain instead of `Mathlib.Education.*`. |
+
 ## Naming Checklist
 
 Before adding a public module, check:
