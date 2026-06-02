@@ -89,8 +89,8 @@ The Layer 1 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Ring` | `Mathlib.Algebra.Ring` | `Mathlib/Algebra/Ring/` |
-| `Proofs.Ai.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
+| `Proofs.Ai.Algebra.Ring` | `Mathlib.Algebra.Ring` | `Mathlib/Algebra/Ring/` |
+| `Proofs.Ai.Algebra.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
 | `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField` | `Mathlib/Algebra/OrderedField/` |
 
 ## Category Rules
