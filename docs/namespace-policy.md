@@ -96,6 +96,12 @@ Mathlib.Logic.EqReasoning
 Mathlib.Algebra.Group.Basic
 ```
 
+The `v0.1.5` release adds this Layer 3B module:
+
+```text
+Mathlib.Algebra.Group.Subgroup
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -135,13 +141,20 @@ The Layer 3A mapping is fixed:
 | `Proofs.Ai.EqReasoning` | `Mathlib.Logic.EqReasoning` | `Mathlib/Logic/EqReasoning/` |
 | `Proofs.Ai.Algebra.AbstractGroup` | `Mathlib.Algebra.Group.Basic` | `Mathlib/Algebra/Group/Basic/` |
 
+The Layer 3B mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupSubgroup` | `Mathlib.Algebra.Group.Subgroup` | `Mathlib/Algebra/Group/Subgroup/` |
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including subgroup, kernel, image,
-quotient, and isomorphism modules, are intentionally deferred until the
-`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
-them without overloading `Basic`.
+The remaining abstract group corpus modules, including subgroup order, kernel,
+image, quotient, normal quotient, isomorphism, and correspondence modules, are
+intentionally deferred until the `Mathlib.Algebra.Group.*` namespace has enough
+stable public surface to support them without overloading `Basic` or
+`Subgroup`.
 
 ## Category Rules
 

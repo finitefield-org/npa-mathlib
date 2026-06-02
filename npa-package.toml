@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.4"
+version = "0.1.5"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 3A."
+description = "Public theorem-library package for NPA mathlib Layer 3B."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -181,6 +181,23 @@ expected_certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning"]
 definitions = ["GroupLawArgs", "GroupHomLawArgs", "KernelPred", "KerRel"]
 theorems = ["group_mul_assoc", "group_one_mul", "group_mul_one", "group_inv_mul", "group_mul_inv", "group_left_cancel", "group_inv_inv", "group_inv_mul_left_reassoc", "group_conj_slide", "group_product_mul_reassoc", "group_mul_inv_rev", "group_product_inv_reassoc", "group_inv_rel_symm_reassoc", "group_rel_trans_reassoc", "group_rel_mul_reassoc", "group_rel_inv_reassoc", "hom_mul", "hom_one", "hom_inv", "kernel_one", "ker_rel_refl", "ker_rel_symm", "ker_rel_trans"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Algebra.Group.Subgroup"
+source = "Mathlib/Algebra/Group/Subgroup/source.npa"
+certificate = "Mathlib/Algebra/Group/Subgroup/certificate.npcert"
+meta = "Mathlib/Algebra/Group/Subgroup/meta.json"
+replay = "Mathlib/Algebra/Group/Subgroup/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:94093566a05cbfc8f495124578d2614a54e6ebe546e181ba7432e274af25a1bc"
+expected_certificate_file_hash = "sha256:f2a6bb8cd9329c2b9d5cc7c433f2b6ba6d43ecfd1e8fa5c503a1897c2e3326ca"
+expected_export_hash = "sha256:2b527c5b3039075812d564522facb4a41e421e1902f863df111f0e83c5b9d85c"
+expected_axiom_report_hash = "sha256:1298b31aa5ef802d3af57bb01d8cc3f3a11b162f4f51bbe1fd8e650e7f036612"
+expected_certificate_hash = "sha256:b3b47c9d314d69594d1c80e24fd4d1954c242ef289e2031207be9acd798ce2a9"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
+definitions = ["SubgroupLawArgs", "NormalSubgroupLawArgs", "SubgroupInterPred", "SubgroupProductPred", "NormalRel"]
+theorems = ["subgroup_one", "subgroup_mul_closed", "subgroup_inv_closed", "normal_subgroup_laws", "normal_conj_closed", "normal_inv_conj_closed", "subgroup_inter_intro", "subgroup_inter_left", "subgroup_inter_right", "subgroup_inter_one", "subgroup_inter_mul_closed", "subgroup_inter_inv_closed", "subgroup_inter_normal_in_left", "subgroup_product_intro", "subgroup_product_elim", "subgroup_product_one", "subgroup_product_mul_closed", "subgroup_product_inv_closed", "subgroup_product_laws", "normal_rel_refl", "normal_rel_symm", "normal_rel_trans", "normal_rel_of_eq", "normal_rel_mul_compat", "normal_rel_inv_compat", "normal_rel_one_of_mem", "normal_rel_one_to_mem", "normal_rel_product_right"]
 axioms = ["Eq.rec"]
 
 [[modules]]

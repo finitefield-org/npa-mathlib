@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.4"
+version = "0.1.5"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
@@ -32,22 +32,30 @@ certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d83
 [[imports]]
 module = "Mathlib.Algebra.Group.Basic"
 package = "npa-mathlib"
-version = "0.1.4"
+version = "0.1.5"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
 export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
 certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
 
+[[imports]]
+module = "Mathlib.Algebra.Group.Subgroup"
+package = "npa-mathlib"
+version = "0.1.5"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/certificate.npcert"
+export_hash = "sha256:2b527c5b3039075812d564522facb4a41e421e1902f863df111f0e83c5b9d85c"
+certificate_hash = "sha256:b3b47c9d314d69594d1c80e24fd4d1954c242ef289e2031207be9acd798ce2a9"
+
 [[modules]]
-module = "Downstream.GroupBasic"
-source = "Downstream/GroupBasic/source.npa"
-certificate = "Downstream/GroupBasic/certificate.npcert"
+module = "Downstream.GroupSubgroup"
+source = "Downstream/GroupSubgroup/source.npa"
+certificate = "Downstream/GroupSubgroup/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
-expected_source_hash = "sha256:f1f54047a6b9b20c8362fe4ae35675401ad4a8ddb8675d1f88db2109d766b7a7"
-expected_certificate_file_hash = "sha256:021b1e963fca984d96b45edd0581c5265783e1b961951724ccb7601bc07ff0bf"
-expected_export_hash = "sha256:7808a562228c57e12dcc238e171d6a79e73d41e627d0c8d6e5747ddd279990cc"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup"]
+expected_source_hash = "sha256:a39e007033483163f726f686820cfc6ba05c92b05d1de4343a76ca7b49a17452"
+expected_certificate_file_hash = "sha256:c8f3c42a6a999933fbceaa33ff3942adf24d31b7be99804b48cf4a90131ac5ff"
+expected_export_hash = "sha256:c0ef117edc1ae05a15d788320748f71bb1532284de4409a6c8836f89bf7db290"
 expected_axiom_report_hash = "sha256:a1ef77782ab68d41aede3e412c79174432934c3cac66c319dd2d406cf514f40e"
-expected_certificate_hash = "sha256:1fcf9eab202da2a3652dbb456fb5bed49ab61b1f45cad7f05e9b861bfb8b9f13"
+expected_certificate_hash = "sha256:b34a63cd80b10bc5e094d6a8427adc68ff40f17d4a0762bbe00eb31c89772119"
 definitions = []
-theorems = ["group_mul_one_passthrough"]
+theorems = ["subgroup_one_passthrough"]
 axioms = []
