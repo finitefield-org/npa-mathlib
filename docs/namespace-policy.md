@@ -89,6 +89,13 @@ Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 ```
 
+The `v0.1.4` release adds these Layer 3A modules:
+
+```text
+Mathlib.Logic.EqReasoning
+Mathlib.Algebra.Group.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -121,8 +128,20 @@ The Layer 2B mapping is fixed:
 | `Proofs.Ai.Geometry.RightTriangle` | `Mathlib.Geometry.RightTriangle` | `Mathlib/Geometry/RightTriangle/` |
 | `Proofs.Ai.Geometry.Metric` | `Mathlib.Geometry.Metric` | `Mathlib/Geometry/Metric/` |
 
+The Layer 3A mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.EqReasoning` | `Mathlib.Logic.EqReasoning` | `Mathlib/Logic/EqReasoning/` |
+| `Proofs.Ai.Algebra.AbstractGroup` | `Mathlib.Algebra.Group.Basic` | `Mathlib/Algebra/Group/Basic/` |
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
+
+The remaining abstract group corpus modules, including subgroup, kernel, image,
+quotient, and isomorphism modules, are intentionally deferred until the
+`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
+them without overloading `Basic`.
 
 ## Category Rules
 
@@ -140,8 +159,8 @@ certificate-facing semantics, such as reduction examples. Do not place general
 mathematics there.
 
 Use `Mathlib.Algebra.*` for algebraic structures and algebraic theorem groups.
-Prefer names such as `Mathlib.Algebra.Ring` and `Mathlib.Algebra.Square` for
-the next small layer.
+Prefer names such as `Mathlib.Algebra.Ring`, `Mathlib.Algebra.Square`, and
+`Mathlib.Algebra.Group.Basic` for small foundational layers.
 
 Use `Mathlib.Vector.*`, `Mathlib.Geometry.*`, `Mathlib.Analysis.*`, and similar
 domain prefixes when the subject has grown beyond a single algebra or data

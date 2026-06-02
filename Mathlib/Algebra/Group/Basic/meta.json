@@ -1,0 +1,131 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.Basic",
+  "source": "Mathlib/Algebra/Group/Basic/source.npa",
+  "certificate": "Mathlib/Algebra/Group/Basic/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:566c57ad04412e8e71ec892f2817c008ce63e0966b31414dec8e5d31e5cc1ee5",
+  "certificate_file_sha256": "sha256:c6407b46a7421a1a56c16270a481fa9ab4d93249ae0bfe0bbec098e7af6380f0",
+  "export_hash": "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f",
+  "axiom_report_hash": "sha256:63c3ca0596e94ceb5c525266931264176f2096a320083864a9662bbc9db78269",
+  "certificate_hash": "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "GroupLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "GroupHomLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "KernelPred",
+      "kind": "def"
+    },
+    {
+      "name": "KerRel",
+      "kind": "def"
+    },
+    {
+      "name": "group_mul_assoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_one_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_mul_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_inv_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_mul_inv",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_left_cancel",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_inv_inv",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_inv_mul_left_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_conj_slide",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_product_mul_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_mul_inv_rev",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_product_inv_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_inv_rel_symm_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_rel_trans_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_rel_mul_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "group_rel_inv_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "hom_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "hom_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "hom_inv",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "ker_rel_refl",
+      "kind": "theorem"
+    },
+    {
+      "name": "ker_rel_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "ker_rel_trans",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

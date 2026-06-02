@@ -1,0 +1,66 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Logic.EqReasoning",
+  "source": "Mathlib/Logic/EqReasoning/source.npa",
+  "certificate": "Mathlib/Logic/EqReasoning/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:676d15f72088b4f107773ad566920c02a5e29d8773a4c5c24ccb0a1b19de930f",
+  "certificate_file_sha256": "sha256:d864825b1b4618bb7d04c541c74ef3d4dc78076abd458df79bc22d648ae0b23a",
+  "export_hash": "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679",
+  "axiom_report_hash": "sha256:5283e4bbd120c3ffa60356b600be06364c3739f9c1992538f75aa4c7df947968",
+  "certificate_hash": "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad",
+  "imports": [
+    "Std.Logic.Eq"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "eq_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_trans",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_congr_arg",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_congr_fun",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_congr2",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_subst",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_transport_const",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_rewrite_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_rewrite_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_cast_trans",
+      "kind": "theorem"
+    },
+    {
+      "name": "eq_calc3",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

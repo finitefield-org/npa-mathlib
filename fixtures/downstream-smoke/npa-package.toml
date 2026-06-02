@@ -11,7 +11,7 @@ checker_profile = "npa.checker.reference.v0.1"
 
 [policy]
 allow_custom_axioms = false
-allowed_axioms = []
+allowed_axioms = ["Eq.rec"]
 
 [[imports]]
 module = "Std.Logic.Eq"
@@ -22,72 +22,32 @@ export_hash = "sha256:b78b442d5f593458cc12f079b59e3c70259c0bec4967511e1a01d262d2
 certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6bf10058054aa"
 
 [[imports]]
-module = "Mathlib.Algebra.Ring"
+module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/certificate.npcert"
-export_hash = "sha256:31b1b21b1c480f86e1c9c806d9148af51e770b9f99a4353dee8608072342ed7b"
-certificate_hash = "sha256:a398203c5207b4954cda0d6f8064d866d6954556452cc274d204bf081e9d12b8"
+version = "0.1.4"
+certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
+export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
+certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
 
 [[imports]]
-module = "Mathlib.Algebra.Square"
+module = "Mathlib.Algebra.Group.Basic"
 package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Square/certificate.npcert"
-export_hash = "sha256:787b772cee6d3eeb9d8a533e2445dd26d55accc8ee8fc370ff1bac46ff420c18"
-certificate_hash = "sha256:f8880c76da58811dbe8c8d221e269793a577ae6332f30e2e22745b267f9bd926"
-
-[[imports]]
-module = "Mathlib.Algebra.OrderedField"
-package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/certificate.npcert"
-export_hash = "sha256:d6b08e865fb570cb11e57e903463edcd77f6f821126d9375dde24d73055ebf3f"
-certificate_hash = "sha256:111e0cb6227f6f80201a307469ec4a866f094a42a68dd49e7c4d092bfba5559a"
-
-[[imports]]
-module = "Mathlib.Vector.Basic"
-package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Vector/Basic/certificate.npcert"
-export_hash = "sha256:3ba8f7b514c7f041a1ac86bf1800a21186255bac9ce31e2fea0b7d9c91d4c938"
-certificate_hash = "sha256:fb89a6e1e47b9622b5e77b7dd8d12acb04073bba76e1ef7cffe76130f981f423"
-
-[[imports]]
-module = "Mathlib.Vector.Dot"
-package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Vector/Dot/certificate.npcert"
-export_hash = "sha256:9d23eb89f95ae6e1cc171d32c82f8a28fe11bc60d05f3b26fb05640dbc73e63c"
-certificate_hash = "sha256:a7efefe3ee1f35d232c2e4c7e6cc417153c2224a14c6bdc7aa8144cf32e350f1"
-
-[[imports]]
-module = "Mathlib.Geometry.RightTriangle"
-package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Geometry/RightTriangle/certificate.npcert"
-export_hash = "sha256:5e6ab1a1dfb6abd0acd0b013523f925050ddfe33f98a1281517c89ecfe088026"
-certificate_hash = "sha256:0ca949e9114f20a0669ffdcc954b06ed3a7922b4588f680b6fe07c21003f3386"
-
-[[imports]]
-module = "Mathlib.Geometry.Metric"
-package = "npa-mathlib"
-version = "0.1.3"
-certificate = "vendor/npa-mathlib/Mathlib/Geometry/Metric/certificate.npcert"
-export_hash = "sha256:c0b02db6d4ea4f7bc99635b66fb43380366f52cfea302d363e29fd21369a37e9"
-certificate_hash = "sha256:8402c1928c8582fe0c8fbcd64c349c8ac1ec8c7c875198ef12889c9a70ab3058"
+version = "0.1.4"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
+export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
+certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
 
 [[modules]]
-module = "Downstream.GeometryMetric"
-source = "Downstream/GeometryMetric/source.npa"
-certificate = "Downstream/GeometryMetric/certificate.npcert"
+module = "Downstream.GroupBasic"
+source = "Downstream/GroupBasic/source.npa"
+certificate = "Downstream/GroupBasic/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring", "Mathlib.Algebra.Square", "Mathlib.Algebra.OrderedField", "Mathlib.Vector.Basic", "Mathlib.Vector.Dot", "Mathlib.Geometry.RightTriangle", "Mathlib.Geometry.Metric"]
-expected_source_hash = "sha256:0877cf083cf47994c9af47fc2ac86b023992e2575acb1eaf1bd42638a9290ab6"
-expected_certificate_file_hash = "sha256:59bd12324f1d36aa917e84bfa0bca54250c12c68f81d2d5775bf50128a03db27"
-expected_export_hash = "sha256:a9706cdb1221ee224718d8483f003956f7c582fe3411c1f8d39550376d220a52"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
+expected_source_hash = "sha256:f1f54047a6b9b20c8362fe4ae35675401ad4a8ddb8675d1f88db2109d766b7a7"
+expected_certificate_file_hash = "sha256:021b1e963fca984d96b45edd0581c5265783e1b961951724ccb7601bc07ff0bf"
+expected_export_hash = "sha256:7808a562228c57e12dcc238e171d6a79e73d41e627d0c8d6e5747ddd279990cc"
 expected_axiom_report_hash = "sha256:a1ef77782ab68d41aede3e412c79174432934c3cac66c319dd2d406cf514f40e"
-expected_certificate_hash = "sha256:fa75cef8037bb0979474a37def54c4b9502aa99ffb546e1f9fee67c5def85d05"
+expected_certificate_hash = "sha256:1fcf9eab202da2a3652dbb456fb5bed49ab61b1f45cad7f05e9b861bfb8b9f13"
 definitions = []
-theorems = ["metric_triangle_inequality_passthrough"]
+theorems = ["group_mul_one_passthrough"]
 axioms = []

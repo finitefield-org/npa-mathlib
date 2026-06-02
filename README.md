@@ -13,9 +13,11 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 2B public package:
+This repository contains the Layer 3A public package:
 
 ```text
+Mathlib.Logic.EqReasoning
+Mathlib.Algebra.Group.Basic
 Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
@@ -34,7 +36,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.3"
+version = "0.1.4"
 schema = "npa.package.v0.1"
 ```
 
@@ -97,9 +99,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Geometry.Metric` Layer 2B import closure. It does not vendor
-`npa-mathlib` source, replay, meta, theorem index, registry state, or package
-source tree.
+vendored `Mathlib.Algebra.Group.Basic` Layer 3A import closure. It does not
+vendor `npa-mathlib` source, replay, meta, theorem index, registry state, or
+package source tree.
 
 To verify it:
 
@@ -133,6 +135,13 @@ Untrusted helper data remains:
 This package does not emit `verified_high_trust`. High-trust evidence requires
 separate pinned external checker binaries, runner policies, checker registry
 data, and release audit evidence.
+
+## Axiom Policy
+
+Custom axioms are not allowed. The package permits the built-in `Eq.rec` axiom
+surface because `Mathlib.Logic.EqReasoning` and
+`Mathlib.Algebra.Group.Basic` expose equality reasoning certificates that use
+it explicitly.
 
 ## License
 

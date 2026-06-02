@@ -1,0 +1,7 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Group.Basic
+
+theorem group_mul_one_passthrough.{u} :
+  forall (G : Sort u), forall (one : G), forall (mul : forall (a : G), forall (b : G), G), forall (inv : forall (a : G), G), forall (group_args : @GroupLawArgs.{u} G one mul inv), forall (a : G), @Eq.{u} G (mul a one) a :=
+  fun G => fun one => fun mul => fun inv => fun group_args => fun a => @group_mul_one.{u} G one mul inv group_args a
