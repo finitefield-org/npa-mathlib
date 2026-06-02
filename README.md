@@ -2,6 +2,17 @@
 
 `npa-mathlib` is the public theorem-library package for NPA.
 
+`npa-mathlib` is developed by
+[Finite Field K.K.](https://finitefield.org/en/) as part of the NPA project
+family.
+
+Related repositories:
+
+- [npa](https://github.com/finitefield-org/npa): kernel, certificate format,
+  checker, frontend, tactic, and package CLI
+- [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
+  package
+
 This repository contains the Layer 2B public package:
 
 ```text
@@ -122,3 +133,10 @@ Untrusted helper data remains:
 This package does not emit `verified_high_trust`. High-trust evidence requires
 separate pinned external checker binaries, runner policies, checker registry
 data, and release audit evidence.
+
+## License
+
+`npa-mathlib` is licensed under the [Apache License 2.0](LICENSE).
+
+Copyright 2026 [Finite Field K.K.](https://finitefield.org/en/). See
+[NOTICE](NOTICE).
