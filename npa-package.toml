@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.6"
+version = "0.1.7"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 3C."
+description = "Public theorem-library package for NPA mathlib Layer 3D-A."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -216,6 +216,40 @@ imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.B
 definitions = ["SubgroupLe", "SubgroupEquiv", "NormalContains"]
 theorems = ["subgroup_le_refl", "subgroup_le_trans", "subgroup_equiv_intro", "subgroup_equiv_left", "subgroup_equiv_right", "subgroup_equiv_refl", "subgroup_equiv_symm", "subgroup_equiv_trans", "normal_contains_to_subgroup_le", "subgroup_le_to_normal_contains", "normal_contains_refl", "normal_contains_trans"]
 axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.Group.Kernel"
+source = "Mathlib/Algebra/Group/Kernel/source.npa"
+certificate = "Mathlib/Algebra/Group/Kernel/certificate.npcert"
+meta = "Mathlib/Algebra/Group/Kernel/meta.json"
+replay = "Mathlib/Algebra/Group/Kernel/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:962c2db5be02218d92e681a9d92035d12cd06f23515aafad793dd5612ae14736"
+expected_certificate_file_hash = "sha256:66724ebc31b2a845aa5e91dc9468f5470ee1b6ecb22b7b5632dfc912b3f96d0c"
+expected_export_hash = "sha256:5c1a39b0e9f82dc1014e3e63549c71eab3db6383024a87408e4e95e06bc33fbb"
+expected_axiom_report_hash = "sha256:39f92e3a74edf201d900d93abeebb9c404ea8c141bfc46761f7e889c9f8cf9f7"
+expected_certificate_hash = "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56fb27f4f514dcd6dbef14d"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
+definitions = []
+theorems = ["kernel_mul_closed", "kernel_inv_closed", "kernel_conj_closed"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Algebra.Group.Image"
+source = "Mathlib/Algebra/Group/Image/source.npa"
+certificate = "Mathlib/Algebra/Group/Image/certificate.npcert"
+meta = "Mathlib/Algebra/Group/Image/meta.json"
+replay = "Mathlib/Algebra/Group/Image/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:904df4b2602b8e0a7799aaeea9e6e310e61138f497c5fcc6a44d24443c9c3b9c"
+expected_certificate_file_hash = "sha256:c4efe5d45e4dc167cd9137675e993d3ffe5678f4579484814736b72cfc77fa30"
+expected_export_hash = "sha256:0935f963b77bb9ed124d4b38435ad2a9a19f860e1f06de11c1ab8ca3f05cdd0e"
+expected_axiom_report_hash = "sha256:0869976f857fbf07454df1db004a649ae3ee9ede0e1429dbf40af6dfaac5bfeb"
+expected_certificate_hash = "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294245455d1b1b00bd2f588"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
+definitions = ["ImagePred"]
+theorems = ["image_intro", "image_elim", "image_one", "image_mul_closed", "image_inv_closed"]
+axioms = ["Eq.rec"]
 
 [[modules]]
 module = "Mathlib.Algebra.OrderedField"

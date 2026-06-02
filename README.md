@@ -13,9 +13,11 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3C public package:
+This repository contains the Layer 3D-A public package:
 
 ```text
+Mathlib.Algebra.Group.Image
+Mathlib.Algebra.Group.Kernel
 Mathlib.Algebra.Group.Subgroup.Order
 Mathlib.Algebra.Group.Subgroup
 Mathlib.Logic.EqReasoning
@@ -38,7 +40,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.6"
+version = "0.1.7"
 schema = "npa.package.v0.1"
 ```
 
@@ -101,9 +103,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Group.Subgroup.Order` Layer 3C import closure. It
-does not vendor `npa-mathlib` source, replay, meta, theorem index, registry
-state, or package source tree.
+vendored `Mathlib.Algebra.Group.Kernel` and `Mathlib.Algebra.Group.Image`
+Layer 3D-A import closure. It does not vendor `npa-mathlib` source, replay,
+meta, theorem index, registry state, or package source tree.
 
 To verify it:
 
@@ -143,9 +145,12 @@ data, and release audit evidence.
 Custom axioms are not allowed. The package permits the built-in `Eq.rec` axiom
 surface because `Mathlib.Logic.EqReasoning` and
 `Mathlib.Algebra.Group.Basic` / `Mathlib.Algebra.Group.Subgroup` expose
-equality reasoning certificates that use it explicitly. The Layer 3C
-`Mathlib.Algebra.Group.Subgroup.Order` module adds no direct or transitive
-axioms.
+equality reasoning certificates that use it explicitly. Layer 3D-A keeps the
+homomorphism law surface in `Mathlib.Algebra.Group.Basic` and adds
+`Mathlib.Algebra.Group.Kernel` plus `Mathlib.Algebra.Group.Image`. The package
+direct axiom surface remains policy-approved, and the new modules only carry
+the expected `Eq.rec` equality-reasoning dependency where their proofs require
+transport.
 
 ## License
 

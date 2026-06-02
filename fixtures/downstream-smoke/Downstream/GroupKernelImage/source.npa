@@ -1,0 +1,13 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Group.Kernel
+import Mathlib.Algebra.Group.Image
+
+theorem kernel_mul_closed_passthrough.{u,v} :
+  forall (G : Sort u), forall (oneG : G), forall (mulG : forall (a : G), forall (b : G), G), forall (invG : forall (a : G), G), forall (H : Sort v), forall (oneH : H), forall (mulH : forall (a : H), forall (b : H), H), forall (invH : forall (a : H), H), forall (f : forall (x : G), H), forall (groupH_args : @GroupLawArgs.{v} H oneH mulH invH), forall (hom_args : @GroupHomLawArgs.{u,v} G oneG mulG invG H oneH mulH invH f), forall (a : G), forall (b : G), forall (ha : @KernelPred.{u,v} G H oneH f a), forall (hb : @KernelPred.{u,v} G H oneH f b), @KernelPred.{u,v} G H oneH f (mulG a b) :=
+  fun G => fun oneG => fun mulG => fun invG => fun H => fun oneH => fun mulH => fun invH => fun f => fun groupH_args => fun hom_args => fun a => fun b => fun ha => fun hb => @kernel_mul_closed.{u,v} G oneG mulG invG H oneH mulH invH f groupH_args hom_args a b ha hb
+
+theorem image_intro_passthrough.{u,v} :
+  forall (G : Sort u), forall (H : Sort v), forall (f : forall (x : G), H), forall (a : G), @ImagePred.{u,v} G H f (f a) :=
+  fun G => fun H => fun f => fun a => @image_intro.{u,v} G H f a

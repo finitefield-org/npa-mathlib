@@ -108,6 +108,13 @@ The `v0.1.6` release adds this Layer 3C module:
 Mathlib.Algebra.Group.Subgroup.Order
 ```
 
+The `v0.1.7` release adds these Layer 3D-A modules:
+
+```text
+Mathlib.Algebra.Group.Kernel
+Mathlib.Algebra.Group.Image
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -159,14 +166,25 @@ The Layer 3C mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractGroupSubgroupOrder` | `Mathlib.Algebra.Group.Subgroup.Order` | `Mathlib/Algebra/Group/Subgroup/Order/` |
 
+The Layer 3D-A mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupKernel` | `Mathlib.Algebra.Group.Kernel` | `Mathlib/Algebra/Group/Kernel/` |
+| `Proofs.Ai.Algebra.AbstractGroupImage` | `Mathlib.Algebra.Group.Image` | `Mathlib/Algebra/Group/Image/` |
+
+No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
+The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
+`hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including kernel, image,
-quotient, normal quotient, isomorphism, and correspondence modules, are
-intentionally deferred until the `Mathlib.Algebra.Group.*` namespace has enough
-stable public surface to support them without overloading `Basic`, `Subgroup`,
-or `Subgroup.Order`.
+The remaining abstract group corpus modules, including quotient, normal
+quotient, isomorphism, and correspondence modules, are intentionally deferred
+until the `Mathlib.Algebra.Group.*` namespace has enough stable public surface
+to support them without overloading `Basic`, `Subgroup`, `Subgroup.Order`,
+`Kernel`, or `Image`.
 
 ## Category Rules
 

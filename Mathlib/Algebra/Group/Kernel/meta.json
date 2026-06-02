@@ -1,0 +1,21 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.Kernel",
+  "source": "Mathlib/Algebra/Group/Kernel/source.npa",
+  "certificate": "Mathlib/Algebra/Group/Kernel/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:962c2db5be02218d92e681a9d92035d12cd06f23515aafad793dd5612ae14736",
+  "certificate_file_sha256": "sha256:66724ebc31b2a845aa5e91dc9468f5470ee1b6ecb22b7b5632dfc912b3f96d0c",
+  "export_hash": "sha256:5c1a39b0e9f82dc1014e3e63549c71eab3db6383024a87408e4e95e06bc33fbb",
+  "axiom_report_hash": "sha256:39f92e3a74edf201d900d93abeebb9c404ea8c141bfc46761f7e889c9f8cf9f7",
+  "certificate_hash": "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56fb27f4f514dcd6dbef14d",
+  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "kernel_mul_closed", "kind": "theorem" },
+    { "name": "kernel_inv_closed", "kind": "theorem" },
+    { "name": "kernel_conj_closed", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}
