@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.16"
+version = "0.1.17"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib ring first isomorphism and CRT."
+description = "Public theorem-library package for NPA mathlib ordered algebra and square normalization."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -232,6 +232,57 @@ expected_certificate_hash = "sha256:8e8c0736e1158db3a0a298ac41bb513ee87200d94345
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism"]
 definitions = ["RingCrtPairMap", "RingCrtCombine", "RingCrtIntersectionPred", "RingChineseRemainder"]
 theorems = ["ring_crt_intersection_intro", "ring_crt_intersection_left", "ring_crt_intersection_right", "ring_crt_pair_hom_laws", "ring_crt_kernel_to_intersection", "ring_crt_intersection_to_kernel", "ring_crt_pair_surjective", "ring_chinese_remainder_theorem"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Algebra.OrderedField.Basic"
+source = "Mathlib/Algebra/OrderedField/Basic/source.npa"
+certificate = "Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
+meta = "Mathlib/Algebra/OrderedField/Basic/meta.json"
+replay = "Mathlib/Algebra/OrderedField/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:4d326541c8684f869b3470dd00a67400dafe6cb4f1022baafb24b945dbfb44b6"
+expected_certificate_file_hash = "sha256:0dd58a419cffe01c9a1e928c20b3127818502879eb5b9c8007256e9f92773923"
+expected_export_hash = "sha256:d413f9f1558949e004cde3f49fd5622cb00b0a0fa312d08a04b22f23f13262ac"
+expected_axiom_report_hash = "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8"
+expected_certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1c160ba3a53e"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
+definitions = ["le", "lt", "sqrt", "Nonneg", "Positive", "OrderedFieldLawArgs"]
+theorems = ["le_refl", "le_trans", "add_nonneg", "mul_nonneg", "square_nonneg", "sqrt_nonneg", "sqrt_square_of_nonneg", "sqrt_mul_self", "eq_of_square_eq_square_nonneg", "add_le_add", "mul_le_mul_nonneg", "zero_le_two", "le_antisymm", "lt_of_le_of_ne", "le_of_eq", "sqrt_sq", "sq_eq_zero_iff", "sum_nonneg_eq_zero", "square_completion_bound_from_ordered_args", "le_of_sq_le_sq_nonneg_from_ordered_args", "add_dist_nonneg_from_ordered_args", "sqrt_sum_square_bound_from_ordered_args", "le_mul_sqrt_of_sq_le_mul_nonneg_from_ordered_args", "add_two_mul_le_sq_add_sqrt_from_ordered_args"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.OrderedField.Square"
+source = "Mathlib/Algebra/OrderedField/Square/source.npa"
+certificate = "Mathlib/Algebra/OrderedField/Square/certificate.npcert"
+meta = "Mathlib/Algebra/OrderedField/Square/meta.json"
+replay = "Mathlib/Algebra/OrderedField/Square/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:7cb4aabb88d65edf953eb5f2572c7c6d0b0392d64cea29f5e64a4e15eda23db7"
+expected_certificate_file_hash = "sha256:fae673ab05ad289b783fae31a2f5992dcc81863491167c4189e0700386c76e1a"
+expected_export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
+expected_axiom_report_hash = "sha256:b1c966ff112a4d21e88c23443f7594255da9b1129a7d1cbea048b57e695c9f2e"
+expected_certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c4d6f3a8d388"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic"]
+definitions = []
+theorems = ["square_def", "mul_self_eq_square", "sq_add", "sq_sub", "sum_two_squares_comm", "cancel_double_zero_term", "sq_zero", "sq_one", "sq_neg", "two_mul", "sq_eq_sq_of_eq_or_neg_eq", "sq_add_eq_add_sq_add_two_mul", "sq_sub_eq_add_sq_sub_two_mul", "add_sq_eq_zero_iff", "mul_two_zero_term", "normalize_add_with_zero_cross_term"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.OrderedField.ScalarIdentities"
+source = "Mathlib/Algebra/OrderedField/ScalarIdentities/source.npa"
+certificate = "Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert"
+meta = "Mathlib/Algebra/OrderedField/ScalarIdentities/meta.json"
+replay = "Mathlib/Algebra/OrderedField/ScalarIdentities/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:fd2b54bd0738780f87b01b777bcfab8892e0f8c5c04a5c77dc793ad850979bcb"
+expected_certificate_file_hash = "sha256:5f74dde73d0d7ed701b58da85f529f43f4654e1782c8f69e6f6bf6763d6433a7"
+expected_export_hash = "sha256:a1d3023263d92db731c77b25c5d9cef404011eb133bea508b943d01cc829a20b"
+expected_axiom_report_hash = "sha256:e07182db3dc623da3ef815d3fda91d057b11f0dff8f81befe6c60472cbf02dcf"
+expected_certificate_hash = "sha256:11fc4faa5d98f79f6082b55a38d36321f827c87dc12d9aa02111cbf171854919"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square"]
+definitions = []
+theorems = ["mul_two_zero_term_from_ring_args", "cancel_double_zero_term_from_ring_args", "normalize_add_with_zero_cross_term_from_ring_args", "mul_two_neg_from_ring_args", "add_neg_cross_term_to_sub_sum_from_ring_args", "law_of_cosines_scalar_rhs_from_ring_args", "two_mul_from_ring_args", "add_sub_cross_cancel_from_ring_args", "add_pairwise_commute_from_ring_args", "add_cross_and_sub_cross_cancel_from_ring_args", "parallelogram_scalar_rhs_from_ring_args", "add_middle_to_front_from_ring_args", "polarization_scalar_rhs_from_ring_args"]
 axioms = ["Eq.rec"]
 
 [[modules]]

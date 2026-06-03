@@ -1,0 +1,18 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Ring.Basic
+import Mathlib.Algebra.OrderedField.Basic
+import Mathlib.Algebra.OrderedField.Square
+import Mathlib.Algebra.OrderedField.ScalarIdentities
+
+theorem sqrt_sq_passthrough.{u} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (le_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (lt_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (sqrt_fn : forall (a : Scalar), Scalar), forall (law : forall (a : Scalar), forall (ha : le_rel zero a), @Eq.{u} Scalar (@sq.{u} Scalar mul (sqrt_fn a)) a), forall (a : Scalar), forall (ha : le_rel zero a), @Eq.{u} Scalar (@sq.{u} Scalar mul (sqrt_fn a)) a :=
+  @sqrt_sq.{u}
+
+theorem sq_add_eq_add_sq_add_two_mul_passthrough.{u} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (le_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (lt_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (sqrt_fn : forall (a : Scalar), Scalar), forall (law : forall (a : Scalar), forall (b : Scalar), @Eq.{u} Scalar (@sq.{u} Scalar mul (add a b)) (add (add (@sq.{u} Scalar mul a) (mul (mul (@two.{u} Scalar one add) a) b)) (@sq.{u} Scalar mul b))), forall (a : Scalar), forall (b : Scalar), @Eq.{u} Scalar (@sq.{u} Scalar mul (add a b)) (add (add (@sq.{u} Scalar mul a) (mul (mul (@two.{u} Scalar one add) a) b)) (@sq.{u} Scalar mul b)) :=
+  @sq_add_eq_add_sq_add_two_mul.{u}
+
+theorem polarization_scalar_rhs_from_ring_args_passthrough.{u} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (ring_args : @RingLawArgs.{u} Scalar zero one add neg sub mul), forall (nx : Scalar), forall (ny : Scalar), forall (d : Scalar), @Eq.{u} Scalar (mul (@two.{u} Scalar one add) d) (sub (add (add nx (mul (@two.{u} Scalar one add) d)) ny) (add nx ny)) :=
+  @polarization_scalar_rhs_from_ring_args.{u}

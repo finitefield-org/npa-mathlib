@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib ring isomorphism and CRT artifacts."
+description = "Downstream import fixture for public npa-mathlib ordered algebra and square normalization artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -24,110 +24,54 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.16"
+version = "0.1.17"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
 
 [[imports]]
-module = "Mathlib.Algebra.Group.Basic"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
-export_hash = "sha256:36a59f49575ead1441d64314b9f301f159d391e5dc159c874fe2e7c89416db5f"
-certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61e88f330b7a245c185756"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.Image"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Image/certificate.npcert"
-export_hash = "sha256:0935f963b77bb9ed124d4b38435ad2a9a19f860e1f06de11c1ab8ca3f05cdd0e"
-certificate_hash = "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294245455d1b1b00bd2f588"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.Kernel.Quotient"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert"
-export_hash = "sha256:456e96fbacbb84ec968918cae2b0914f9b851c96f3bdf1fda65be372c247ea48"
-certificate_hash = "sha256:de182e1a592999e7b630930514be307ac7e38c012a6214196397bd96def89ed9"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.Kernel.Quotient.Mul"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Mul/certificate.npcert"
-export_hash = "sha256:149df869acd227ea5d7476160595d2338e9c00b1fb2f72d5e4ee6fca5e663c55"
-certificate_hash = "sha256:603136356e732b815a7040c25aa21a055ac9dfa448cfd1f2ae0f8675292d76d8"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.Kernel.Quotient.Group"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Group/certificate.npcert"
-export_hash = "sha256:4e67aa4b715757c1e8d8b4cef1637464a43fe2a4348c909b893e4f4c1330fa69"
-certificate_hash = "sha256:28b4b550a12b0e1cb4ae1624c6cf7007c8262b52254729110cd26fadda72acac"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.Kernel.Quotient.Hom"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/Hom/certificate.npcert"
-export_hash = "sha256:2a0178a6cd6a9fff1e449bffb7a62e25d4e4a944ceb514083db0bcf5b0229700"
-certificate_hash = "sha256:ed2a9ba856a0437961f5b62b26d755e26f5a526274d3b7f0cb2f6f5d960453f7"
-
-[[imports]]
-module = "Mathlib.Algebra.Group.FirstIsomorphism"
-package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/FirstIsomorphism/certificate.npcert"
-export_hash = "sha256:aaf83557307aef06abfc3bf75495930d8d4caa84c45f2d164036b68f67041563"
-certificate_hash = "sha256:9de6c8ed4c50809451d6ac6e617a2bac85cd117a972c9e2db7e48056ceb9da83"
-
-[[imports]]
 module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.1.16"
+version = "0.1.17"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
 export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
 certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
 
 [[imports]]
-module = "Mathlib.Algebra.Ring.FirstIsomorphism.Basic"
+module = "Mathlib.Algebra.OrderedField.Basic"
 package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/FirstIsomorphism/Basic/certificate.npcert"
-export_hash = "sha256:9f8f5ffb6f11a3326fb57c947a73c204c167a861b46cf69b7794971bce7019d2"
-certificate_hash = "sha256:75c47310b5159c7d43f02978c9babf5bceaa86d8a17322cc2b2d31956991b5e3"
+version = "0.1.17"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
+export_hash = "sha256:d413f9f1558949e004cde3f49fd5622cb00b0a0fa312d08a04b22f23f13262ac"
+certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1c160ba3a53e"
 
 [[imports]]
-module = "Mathlib.Algebra.Ring.FirstIsomorphism"
+module = "Mathlib.Algebra.OrderedField.Square"
 package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/FirstIsomorphism/certificate.npcert"
-export_hash = "sha256:9ef53bef360e0e274a73ca9ba975f66eed4296483446e0ff633520a02fab9447"
-certificate_hash = "sha256:094440c29ba32666c059099a3f94495e240872b703d1f4eb534b9b09a2e8aad4"
+version = "0.1.17"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert"
+export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
+certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c4d6f3a8d388"
 
 [[imports]]
-module = "Mathlib.Algebra.Ring.ChineseRemainder"
+module = "Mathlib.Algebra.OrderedField.ScalarIdentities"
 package = "npa-mathlib"
-version = "0.1.16"
-certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/ChineseRemainder/certificate.npcert"
-export_hash = "sha256:b60589726ed65d621b4cd00bb74d286ba2ac024a76b34607e4ede2f61e719a5a"
-certificate_hash = "sha256:8e8c0736e1158db3a0a298ac41bb513ee87200d943455dfbf51cff9b17090a31"
+version = "0.1.17"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert"
+export_hash = "sha256:a1d3023263d92db731c77b25c5d9cef404011eb133bea508b943d01cc829a20b"
+certificate_hash = "sha256:11fc4faa5d98f79f6082b55a38d36321f827c87dc12d9aa02111cbf171854919"
 
 [[modules]]
-module = "Downstream.RingIsoCrt"
-source = "Downstream/RingIsoCrt/source.npa"
-certificate = "Downstream/RingIsoCrt/certificate.npcert"
+module = "Downstream.OrderedAlgebra"
+source = "Downstream/OrderedAlgebra/source.npa"
+certificate = "Downstream/OrderedAlgebra/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism", "Mathlib.Algebra.Ring.ChineseRemainder"]
-expected_source_hash = "sha256:32b9e2ab5bb415a9e8942974ca5732f4119b9a00baa78db8b7b3948329599df6"
-expected_certificate_file_hash = "sha256:0a49d3b9b4207f15e16eee4ba3e36dc7e46f1865d62c48b25c49f051b9edd76f"
-expected_export_hash = "sha256:6c1505dfd2719e5790be800e12794f9a6d18c58b72875520eed63db9a8d7282a"
-expected_axiom_report_hash = "sha256:b3d0660b2cf1248a54992af7f5b4732ab56b318d9bd20e6574f91f8718b8c9f0"
-expected_certificate_hash = "sha256:6cc7f1256741e31af8bf3590d6ad03d7ba1bc23e4ae662930f97f610d7fc3657"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Algebra.OrderedField.ScalarIdentities"]
+expected_source_hash = "sha256:f63fdb6b9a5b57d3d98050ed4a5b5f8930480d9efcd2d3eefe91ae37e869d44b"
+expected_certificate_file_hash = "sha256:327ad20bae38573ede13d76342ab49855b9ef8f90eebbf49ce6b7c5e19a22602"
+expected_export_hash = "sha256:1086a652868e79ee6ddc29644bf0834b5adab6ce54a0f54f5b183d8816702c47"
+expected_axiom_report_hash = "sha256:e9300baeff990276ee43e2e40557b16d7753ca3edf37a90af7dbb378a877117f"
+expected_certificate_hash = "sha256:aa23a74f7d5aa8a92be938af5bf90dddae42b121cbb060a2ec2db5ccf0f89b8c"
 definitions = []
-theorems = ["ring_first_isomorphism_to_image_passthrough", "ring_chinese_remainder_theorem_passthrough"]
+theorems = ["sqrt_sq_passthrough", "sq_add_eq_add_sq_add_two_mul_passthrough", "polarization_scalar_rhs_from_ring_args_passthrough"]
 axioms = ["Eq.rec"]

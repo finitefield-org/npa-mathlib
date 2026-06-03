@@ -183,6 +183,15 @@ Mathlib.Algebra.Ring.FirstIsomorphism
 Mathlib.Algebra.Ring.ChineseRemainder
 ```
 
+The `v0.1.17` release adds these ordered algebra and square-normalization
+modules:
+
+```text
+Mathlib.Algebra.OrderedField.Basic
+Mathlib.Algebra.OrderedField.Square
+Mathlib.Algebra.OrderedField.ScalarIdentities
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -309,6 +318,14 @@ The ring first-isomorphism and CRT mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractRingFirstIso` | `Mathlib.Algebra.Ring.FirstIsomorphism` | `Mathlib/Algebra/Ring/FirstIsomorphism/` |
 | `Proofs.Ai.Algebra.AbstractRingChineseRemainder` | `Mathlib.Algebra.Ring.ChineseRemainder` | `Mathlib/Algebra/Ring/ChineseRemainder/` |
 
+The ordered algebra and square-normalization mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractOrderedField` | `Mathlib.Algebra.OrderedField.Basic` | `Mathlib/Algebra/OrderedField/Basic/` |
+| `Proofs.Ai.Algebra.AbstractSquareNormalize` | `Mathlib.Algebra.OrderedField.Square` | `Mathlib/Algebra/OrderedField/Square/` |
+| `Proofs.Ai.Algebra.AbstractScalarDerive` | `Mathlib.Algebra.OrderedField.ScalarIdentities` | `Mathlib/Algebra/OrderedField/ScalarIdentities/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -360,6 +377,14 @@ ring homomorphism law surface, image predicate, and kernel quotient
 construction, so the public `RingHomLawArgs`, `RingImagePred`, and
 `RingKerQuot*` names remain in
 `Mathlib.Algebra.Ring.FirstIsomorphism.Basic`.
+
+The v0.1.17 ordered algebra route uses `Mathlib.Algebra.OrderedField.Basic`
+for the abstract ordered-field law-package surface. The already released
+`Mathlib.Algebra.OrderedField` module remains the concrete one-element
+ordered-field route. `Mathlib.Algebra.OrderedField.Square` contains the
+abstract square-normalization facts, while
+`Mathlib.Algebra.OrderedField.ScalarIdentities` contains derived scalar RHS
+identities used by later inner-product and geometry routes.
 
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.

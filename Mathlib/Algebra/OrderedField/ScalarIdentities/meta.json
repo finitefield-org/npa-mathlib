@@ -1,0 +1,31 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.OrderedField.ScalarIdentities",
+  "source": "Mathlib/Algebra/OrderedField/ScalarIdentities/source.npa",
+  "certificate": "Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:fd2b54bd0738780f87b01b777bcfab8892e0f8c5c04a5c77dc793ad850979bcb",
+  "certificate_file_sha256": "sha256:5f74dde73d0d7ed701b58da85f529f43f4654e1782c8f69e6f6bf6763d6433a7",
+  "export_hash": "sha256:a1d3023263d92db731c77b25c5d9cef404011eb133bea508b943d01cc829a20b",
+  "axiom_report_hash": "sha256:e07182db3dc623da3ef815d3fda91d057b11f0dff8f81befe6c60472cbf02dcf",
+  "certificate_hash": "sha256:11fc4faa5d98f79f6082b55a38d36321f827c87dc12d9aa02111cbf171854919",
+  "imports": ["Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Logic.EqReasoning", "Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "mul_two_zero_term_from_ring_args", "kind": "theorem" },
+    { "name": "cancel_double_zero_term_from_ring_args", "kind": "theorem" },
+    { "name": "normalize_add_with_zero_cross_term_from_ring_args", "kind": "theorem" },
+    { "name": "mul_two_neg_from_ring_args", "kind": "theorem" },
+    { "name": "add_neg_cross_term_to_sub_sum_from_ring_args", "kind": "theorem" },
+    { "name": "law_of_cosines_scalar_rhs_from_ring_args", "kind": "theorem" },
+    { "name": "two_mul_from_ring_args", "kind": "theorem" },
+    { "name": "add_sub_cross_cancel_from_ring_args", "kind": "theorem" },
+    { "name": "add_pairwise_commute_from_ring_args", "kind": "theorem" },
+    { "name": "add_cross_and_sub_cross_cancel_from_ring_args", "kind": "theorem" },
+    { "name": "parallelogram_scalar_rhs_from_ring_args", "kind": "theorem" },
+    { "name": "add_middle_to_front_from_ring_args", "kind": "theorem" },
+    { "name": "polarization_scalar_rhs_from_ring_args", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}
