@@ -154,6 +154,15 @@ The `v0.1.12` release adds this Layer 3D-F module:
 Mathlib.Algebra.Group.ThirdIsomorphism
 ```
 
+The `v0.1.13` release adds these Layer 3D-G modules:
+
+```text
+Mathlib.Algebra.Group.Correspondence.Basic
+Mathlib.Algebra.Group.Correspondence.Order
+Mathlib.Algebra.Group.Correspondence
+Mathlib.Algebra.Group.Correspondence.Ordered
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -251,6 +260,15 @@ The Layer 3D-F mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractGroupThirdIso` | `Mathlib.Algebra.Group.ThirdIsomorphism` | `Mathlib/Algebra/Group/ThirdIsomorphism/` |
 
+The Layer 3D-G mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupCorrespondence` | `Mathlib.Algebra.Group.Correspondence.Basic` | `Mathlib/Algebra/Group/Correspondence/Basic/` |
+| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrder` | `Mathlib.Algebra.Group.Correspondence.Order` | `Mathlib/Algebra/Group/Correspondence/Order/` |
+| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceFinal` | `Mathlib.Algebra.Group.Correspondence` | `Mathlib/Algebra/Group/Correspondence/` |
+| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrderFinal` | `Mathlib.Algebra.Group.Correspondence.Ordered` | `Mathlib/Algebra/Group/Correspondence/Ordered/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -279,15 +297,13 @@ Layer 3D-F intentionally keeps the third-isomorphism route in one
 a single theorem-evidence module, and its helper definitions are tightly
 coupled to the final evidence surface.
 
+Layer 3D-G uses `Correspondence.Basic` for the normal-quotient image/preimage
+construction surface, `Correspondence.Order` for monotonicity/equivalence facts,
+`Correspondence` for the theorem-evidence surface, and `Correspondence.Ordered`
+for the final ordered correspondence evidence.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
-
-The remaining abstract group correspondence modules are intentionally deferred
-until the
-`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
-them without overloading `Basic`, `Subgroup`, `Subgroup.Order`, `Kernel`,
-`Image`, `Kernel.Quotient`, `FirstIsomorphism`, `Quotient`, or
-`SecondIsomorphism`.
 
 ## Category Rules
 

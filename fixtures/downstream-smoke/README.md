@@ -9,32 +9,41 @@ Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
 - downstream import bundle modules:
-  `Mathlib.Algebra.Group.ThirdIsomorphism`,
-  `Mathlib.Algebra.Group.Kernel.Quotient`,
   `Mathlib.Algebra.Group.Subgroup`,
+  `Mathlib.Algebra.Group.Subgroup.Order`,
   `Mathlib.Algebra.Group.Quotient`,
   `Mathlib.Algebra.Group.Quotient.Mul`,
-  `Mathlib.Algebra.Group.Quotient.Group`
+  `Mathlib.Algebra.Group.Quotient.Group`,
+  `Mathlib.Algebra.Group.Correspondence.Basic`,
+  `Mathlib.Algebra.Group.Correspondence.Order`,
+  `Mathlib.Algebra.Group.Correspondence`,
+  `Mathlib.Algebra.Group.Correspondence.Ordered`
 - source-free proof artifact:
-  `../../Mathlib/Algebra/Group/ThirdIsomorphism/certificate.npcert`,
-  `../../Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert`,
   `../../Mathlib/Algebra/Group/Subgroup/certificate.npcert`,
+  `../../Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert`,
   `../../Mathlib/Algebra/Group/Quotient/certificate.npcert`,
   `../../Mathlib/Algebra/Group/Quotient/Mul/certificate.npcert`,
-  `../../Mathlib/Algebra/Group/Quotient/Group/certificate.npcert`
+  `../../Mathlib/Algebra/Group/Quotient/Group/certificate.npcert`,
+  `../../Mathlib/Algebra/Group/Correspondence/Basic/certificate.npcert`,
+  `../../Mathlib/Algebra/Group/Correspondence/Order/certificate.npcert`,
+  `../../Mathlib/Algebra/Group/Correspondence/certificate.npcert`,
+  `../../Mathlib/Algebra/Group/Correspondence/Ordered/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.Algebra.Group.ThirdIsomorphism`:
+`Mathlib.Algebra.Group.Correspondence.Ordered`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Subgroup/Order/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Quotient/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Quotient/Mul/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Group/Quotient/Group/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Algebra/Group/ThirdIsomorphism/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Correspondence/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Correspondence/Order/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Correspondence/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Group/Correspondence/Ordered/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -47,6 +56,8 @@ from the vendored dependency tree; source-free verification reads only the
 hash-pinned certificate bytes and the downstream package certificate.
 
 The local theorem
-`Downstream.GroupThirdIsomorphism::third_isomorphism_theorem_evidence_passthrough`
-imports the Layer 3D-F third isomorphism closure and applies the exported
-theorem `third_isomorphism_theorem_evidence`.
+`Downstream.GroupCorrespondence::correspondence_theorem_evidence_passthrough`
+imports the Layer 3D-G correspondence root module and applies the exported
+theorem `correspondence_theorem_evidence`. The local theorem
+`Downstream.GroupCorrespondence::correspondence_order_evidence_passthrough`
+also imports the ordered closure and applies `correspondence_order_evidence`.

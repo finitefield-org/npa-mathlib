@@ -13,9 +13,13 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3D-F public package:
+This repository contains the Layer 3D-G public package:
 
 ```text
+Mathlib.Algebra.Group.Correspondence.Ordered
+Mathlib.Algebra.Group.Correspondence
+Mathlib.Algebra.Group.Correspondence.Order
+Mathlib.Algebra.Group.Correspondence.Basic
 Mathlib.Algebra.Group.ThirdIsomorphism
 Mathlib.Algebra.Group.SecondIsomorphism
 Mathlib.Algebra.Group.SecondIsomorphism.Image
@@ -54,7 +58,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.12"
+version = "0.1.13"
 schema = "npa.package.v0.1"
 ```
 
@@ -117,9 +121,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Group.ThirdIsomorphism` Layer 3D-F import
-closure. It does not vendor `npa-mathlib` source, replay, meta, theorem index,
-registry state, or package source tree.
+vendored `Mathlib.Algebra.Group.Correspondence.Ordered` Layer 3D-G import
+closure and applies `correspondence_order_evidence`. It does not vendor
+`npa-mathlib` source, replay, meta, theorem index, registry state, or package
+source tree.
 
 To verify it:
 
@@ -167,7 +172,9 @@ quotient closure. Layer 3D-F adds the third isomorphism theorem-evidence route
 on top of the normal quotient and kernel quotient surfaces. The package direct
 axiom surface remains policy-approved, and the new modules only carry the
 expected `Eq.rec` equality-reasoning dependency where their proofs require
-transport.
+transport. Layer 3D-G adds the correspondence theorem and order-evidence route
+for normal-subgroup quotients on top of the public quotient, subgroup, and
+subgroup-order surfaces.
 
 ## License
 

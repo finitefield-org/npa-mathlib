@@ -1,0 +1,32 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.Correspondence",
+  "source": "Mathlib/Algebra/Group/Correspondence/source.npa",
+  "certificate": "Mathlib/Algebra/Group/Correspondence/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:51807d0bef3a4481a9906644eb221be3b4c7de3fe4cb25d6f0204f46fc857864",
+  "certificate_file_sha256": "sha256:0e4cd4a9b306a3faa97f56ba2cb034fedb0c12bd03151b78159122c0e887a2d2",
+  "export_hash": "sha256:53fd29e96f6e6f11234b9771a415d02b5958826424f22b99261710fe4d3051ea",
+  "axiom_report_hash": "sha256:f5d781dcd1af03f4c02e2c247ae1bcca0de8eb1b5bfae9b9b3803bc323f2b936",
+  "certificate_hash": "sha256:d670ec4a6223d1002a5ebad83f804b4835a67bda7f4f5055ea5cc99172a09776",
+  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.Correspondence.Basic"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "CorrespondenceImageSubgroupEvidence", "kind": "inductive" },
+    { "name": "CorrespondencePreimageSubgroupEvidence", "kind": "inductive" },
+    { "name": "CorrespondenceContainmentEvidence", "kind": "inductive" },
+    { "name": "CorrespondenceSubgroupSaturationEvidence", "kind": "inductive" },
+    { "name": "CorrespondenceQuotientRoundTripEvidence", "kind": "inductive" },
+    { "name": "CorrespondenceTheoremEvidence", "kind": "inductive" },
+    { "name": "correspondence_image_subgroup_law_args", "kind": "theorem" },
+    { "name": "correspondence_preimage_subgroup_law_args", "kind": "theorem" },
+    { "name": "correspondence_image_subgroup_evidence", "kind": "theorem" },
+    { "name": "correspondence_preimage_subgroup_evidence", "kind": "theorem" },
+    { "name": "correspondence_containment_evidence", "kind": "theorem" },
+    { "name": "correspondence_subgroup_saturation_evidence", "kind": "theorem" },
+    { "name": "correspondence_quotient_round_trip_evidence", "kind": "theorem" },
+    { "name": "correspondence_theorem_evidence", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}
