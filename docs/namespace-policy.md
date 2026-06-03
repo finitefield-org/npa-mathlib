@@ -252,6 +252,13 @@ The `v0.1.26` release adds this analysis inverse-function closure module:
 Mathlib.Analysis.Calculus.InverseFunction
 ```
 
+The `v0.1.27` release adds these analysis implicit-function closure modules:
+
+```text
+Mathlib.Analysis.Calculus.ImplicitFunction.Phi
+Mathlib.Analysis.Calculus.ImplicitFunction
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -446,6 +453,13 @@ The analysis inverse-function closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractInverseFunction` | `Mathlib.Analysis.Calculus.InverseFunction` | `Mathlib/Analysis/Calculus/InverseFunction/` |
 
+The analysis implicit-function closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractImplicitPhi` | `Mathlib.Analysis.Calculus.ImplicitFunction.Phi` | `Mathlib/Analysis/Calculus/ImplicitFunction/Phi/` |
+| `Proofs.Ai.Analysis.AbstractImplicitFunction` | `Mathlib.Analysis.Calculus.ImplicitFunction` | `Mathlib/Analysis/Calculus/ImplicitFunction/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -577,6 +591,14 @@ local inverse evidence, local inverse results, and the quantitative
 inverse-function theorem route. It extends the calculus namespace after
 derivative and fixed-point foundations are public, and gives the later
 implicit-function route a stable public inverse-function dependency.
+
+The v0.1.27 analysis implicit-function closure uses
+`Mathlib.Analysis.Calculus.ImplicitFunction.Phi` for the auxiliary implicit
+Phi coordinate/map and derivative block-triangular evidence, and
+`Mathlib.Analysis.Calculus.ImplicitFunction` for extraction, target
+membership, uniqueness, differentiability, and derivative-formula theorem
+evidence. The Phi helper is a nested submodule because it is coupled to the
+final implicit-function route but remains a separately imported prerequisite.
 
 ## Category Rules
 

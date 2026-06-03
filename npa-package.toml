@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib analysis inverse-function closure."
+description = "Public theorem-library package for NPA mathlib analysis implicit-function closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -403,6 +403,40 @@ imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgeb
 definitions = ["InverseResidual", "InverseNewtonMap", "LocalInverseEvidence", "LocalInverseResult", "QuantitativeInverseFunctionArgs"]
 theorems = ["inverse_residual_def", "inverse_newton_map_def", "local_inverse_evidence_intro", "local_inverse_evidence_elim", "local_inverse_base_mem_from_evidence", "local_inverse_image_mem_from_evidence", "local_inverse_maps_from_evidence", "local_inverse_left_from_evidence", "local_inverse_right_from_evidence", "local_inverse_unique_from_evidence", "local_inverse_fixed_point_from_evidence", "local_inverse_derivative_from_evidence", "local_inverse_linear_iso_from_evidence", "local_inverse_result_intro", "local_inverse_result_elim", "quantitative_inverse_function_from_args"]
 axioms = []
+
+[[modules]]
+module = "Mathlib.Analysis.Calculus.ImplicitFunction.Phi"
+source = "Mathlib/Analysis/Calculus/ImplicitFunction/Phi/source.npa"
+certificate = "Mathlib/Analysis/Calculus/ImplicitFunction/Phi/certificate.npcert"
+meta = "Mathlib/Analysis/Calculus/ImplicitFunction/Phi/meta.json"
+replay = "Mathlib/Analysis/Calculus/ImplicitFunction/Phi/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:746667e3cdabc718d17756ef8a961fb84c393cb3a2677374121687ff28e76e5f"
+expected_certificate_file_hash = "sha256:e7951516c245ba3359d036917e34966627b1540bc9db3583501cb37c84f2a5c6"
+expected_export_hash = "sha256:60eb204552d70bd36579339db92c140cfcd00fb680854f21416955cc49f16e9b"
+expected_axiom_report_hash = "sha256:9f292648aa00dddbe49e31f78bc11448b5ee88db69aba9ec37edaa67a112d59b"
+expected_certificate_hash = "sha256:97c25c688a9eca54d4e111a21569cee25b1ede25c14893f973bf52d4de030672"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative"]
+definitions = ["ImplicitPhiCoord", "ImplicitPhi", "ImplicitPhiDerivativeMap", "ImplicitPhiDerivativeArgs", "ImplicitPhiIsoArgs"]
+theorems = ["implicit_phi_coord_def", "implicit_phi_def", "implicit_phi_coord_base_value_from_zero", "implicit_phi_derivative_map_def", "implicit_phi_full_derivative_from_args", "implicit_phi_partial_x_from_args", "implicit_phi_partial_y_from_args", "implicit_phi_derivative_from_args", "implicit_phi_dy_iso_from_args", "implicit_phi_block_triangular_args_from_args", "implicit_phi_linear_iso_from_args", "implicit_phi_block_left_inverse_from_args", "implicit_phi_block_right_inverse_from_args"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Analysis.Calculus.ImplicitFunction"
+source = "Mathlib/Analysis/Calculus/ImplicitFunction/source.npa"
+certificate = "Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert"
+meta = "Mathlib/Analysis/Calculus/ImplicitFunction/meta.json"
+replay = "Mathlib/Analysis/Calculus/ImplicitFunction/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:4ad9b6a6a100e2b7964d11e3aec36c1518a3312cf8ce30cebbcf89140cf26ab0"
+expected_certificate_file_hash = "sha256:e9c8e022da767c64a68a7d325d7973c716017978c833886cc4e568fe3afd578a"
+expected_export_hash = "sha256:efc45f11663333dc28aa373c19bc943dd353aad33025b241eafe73dde91475fc"
+expected_axiom_report_hash = "sha256:0d1690c6eba73dbd259c7cfc6f42702c48cb349a31bca7078cd2a76bb5ac6fcf"
+expected_certificate_hash = "sha256:0b285ded8c84adf179a8d5e27831eadd240f81b1b0711e964f77438bc2b17784"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.Calculus.ImplicitFunction.Phi"]
+definitions = ["ImplicitTargetPoint", "ImplicitFunction", "ImplicitGraphPoint", "ImplicitTargetDerivativeMap", "ImplicitFunctionDerivativeChainMap", "ImplicitFunctionDerivativeFormulaMap", "ImplicitPhiLocalInverseLaws", "ImplicitFunctionExtractionArgs", "ImplicitFunctionDerivativeArgs", "ImplicitFunctionTheoremEvidence", "ImplicitFunctionDerivativeEvidence"]
+theorems = ["implicit_target_point_def", "implicit_function_def", "implicit_graph_point_def", "implicit_target_derivative_map_def", "implicit_function_derivative_chain_map_def", "implicit_function_derivative_formula_map_def", "implicit_extraction_local_inverse_from_args", "implicit_extraction_target_mem_from_args", "implicit_function_value_mem_from_args", "implicit_function_zero_from_args", "implicit_function_unique_from_args", "implicit_function_derivative_extraction_args_from_args", "implicit_function_target_derivative_from_args", "implicit_function_partial_x_from_derivative_args", "implicit_function_partial_y_from_derivative_args", "implicit_function_dy_iso_from_derivative_args", "implicit_function_phi_inverse_derivative_from_args", "implicit_function_snd_projection_derivative_from_args", "implicit_function_derivative_from_args", "implicit_function_differentiable_from_args", "implicit_function_derivative_formula_from_args", "implicit_function_theorem_args_from_evidence", "implicit_function_theorem_target_mem_from_evidence", "implicit_function_theorem_value_mem_from_evidence", "implicit_function_theorem_zero_from_evidence", "implicit_function_theorem_unique_from_evidence", "implicit_function_theorem", "implicit_function_derivative_evidence_args", "implicit_function_derivative_evidence_basic", "implicit_function_derivative_evidence_differentiable", "implicit_function_derivative_evidence_derivative", "implicit_function_derivative_evidence_formula", "implicit_function_derivative_theorem"]
+axioms = ["Eq.rec"]
 
 [[modules]]
 module = "Mathlib.LinearAlgebra.InnerProduct"

@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib analysis inverse-function closure artifacts."
+description = "Downstream import fixture for public npa-mathlib analysis implicit-function closure artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
@@ -32,7 +32,7 @@ certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d83
 [[imports]]
 module = "Mathlib.Topology.Metric.Basic"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Topology/Metric/Basic/certificate.npcert"
 export_hash = "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36"
 certificate_hash = "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf6eefeb46c37"
@@ -40,7 +40,7 @@ certificate_hash = "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf
 [[imports]]
 module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
 export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
 certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
@@ -48,7 +48,7 @@ certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Basic"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
 export_hash = "sha256:d413f9f1558949e004cde3f49fd5622cb00b0a0fa312d08a04b22f23f13262ac"
 certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1c160ba3a53e"
@@ -56,7 +56,7 @@ certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Square"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert"
 export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
 certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c4d6f3a8d388"
@@ -64,7 +64,7 @@ certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c
 [[imports]]
 module = "Mathlib.LinearAlgebra.VectorSpace"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert"
 export_hash = "sha256:2665099f8cfe0789db8e597c477440e6fa0c89262d32b284e5491eaf27e098aa"
 certificate_hash = "sha256:f53bf9435015310b0a3e423d2609b00dab0dfcf30bd676fa012cfb2842e6db2d"
@@ -72,7 +72,7 @@ certificate_hash = "sha256:f53bf9435015310b0a3e423d2609b00dab0dfcf30bd676fa012cf
 [[imports]]
 module = "Mathlib.Analysis.NormedSpace.Basic"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert"
 export_hash = "sha256:d1ce796f7af0aa26d4b1236c440276f4a7a8b30421af244bf8839aca49f9e56b"
 certificate_hash = "sha256:236207f99ee6b9e58509b92f8f4d64493aabc93dbfd4979096d674e37810c24d"
@@ -80,7 +80,7 @@ certificate_hash = "sha256:236207f99ee6b9e58509b92f8f4d64493aabc93dbfd4979096d67
 [[imports]]
 module = "Mathlib.Analysis.LinearMap"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/LinearMap/certificate.npcert"
 export_hash = "sha256:f4c6a05d5b50cb41ef031bfb44cf43fb0ef8ac873a629f96255a0549191cafd7"
 certificate_hash = "sha256:6d3947e1c38337eb05b37e27b32152c648920e4b61920413b9619ffe23c71034"
@@ -88,38 +88,38 @@ certificate_hash = "sha256:6d3947e1c38337eb05b37e27b32152c648920e4b61920413b9619
 [[imports]]
 module = "Mathlib.Analysis.Calculus.Derivative"
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/Derivative/certificate.npcert"
 export_hash = "sha256:9c665ab4b07f95261f66ef9d34f3f1df62955b5925ed52a1e7ab8ff1dff00ed9"
 certificate_hash = "sha256:36b6c9e1d5bc128cd500cd5cad18f146f32e61fc86f8868a9ef6d2c0e9688fe3"
 
 [[imports]]
-module = "Mathlib.Analysis.FixedPoint.Banach"
+module = "Mathlib.Analysis.Calculus.ImplicitFunction.Phi"
 package = "npa-mathlib"
-version = "0.1.26"
-certificate = "vendor/npa-mathlib/Mathlib/Analysis/FixedPoint/Banach/certificate.npcert"
-export_hash = "sha256:19fc9c8bc36358b02ff1bfad9f3695b4ab335e51474d67f7a55076d7ece074e2"
-certificate_hash = "sha256:0f03af71effebe775cb89cf02841eb7053ec72b7faf722639d08188a5ac0ba61"
+version = "0.1.27"
+certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/Phi/certificate.npcert"
+export_hash = "sha256:60eb204552d70bd36579339db92c140cfcd00fb680854f21416955cc49f16e9b"
+certificate_hash = "sha256:97c25c688a9eca54d4e111a21569cee25b1ede25c14893f973bf52d4de030672"
 
 [[imports]]
-module = "Mathlib.Analysis.Calculus.InverseFunction"
+module = "Mathlib.Analysis.Calculus.ImplicitFunction"
 package = "npa-mathlib"
-version = "0.1.26"
-certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/InverseFunction/certificate.npcert"
-export_hash = "sha256:abb15f4f06e9487c57969f4492e342be57401d9976a19c76ba95ebe89d4ee46f"
-certificate_hash = "sha256:b37f975a3a1c64f716754ab66d20383899321d81fd4deea8cc0720df4ff38a68"
+version = "0.1.27"
+certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert"
+export_hash = "sha256:efc45f11663333dc28aa373c19bc943dd353aad33025b241eafe73dde91475fc"
+certificate_hash = "sha256:0b285ded8c84adf179a8d5e27831eadd240f81b1b0711e964f77438bc2b17784"
 
 [[modules]]
-module = "Downstream.InverseFunction"
-source = "Downstream/InverseFunction/source.npa"
-certificate = "Downstream/InverseFunction/certificate.npcert"
+module = "Downstream.ImplicitFunction"
+source = "Downstream/ImplicitFunction/source.npa"
+certificate = "Downstream/ImplicitFunction/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Topology.Metric.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.FixedPoint.Banach", "Mathlib.Analysis.Calculus.InverseFunction"]
-expected_source_hash = "sha256:78f4186cb51f0b8cc25790261f9be0ec2b377fad3f80501bc0a2f1703d8f8203"
-expected_certificate_file_hash = "sha256:c37d79060b79102633b349f53c772d45ee5bd14fa2ec7f2a699b7c0483ce83b1"
-expected_export_hash = "sha256:461ccb4950002ee537291b5f974eb2436cfe23dcfe08f113423bab2ac1384302"
-expected_axiom_report_hash = "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b"
-expected_certificate_hash = "sha256:b2ea6036c4fc34771aa7732b92b1369e242352e97e66ab3f785edac74bc964ad"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Topology.Metric.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.Calculus.ImplicitFunction.Phi", "Mathlib.Analysis.Calculus.ImplicitFunction"]
+expected_source_hash = "sha256:2b020728db71975f1d7e1cdc9b363828650e3afb9dd2effe2ab23250a091bb4c"
+expected_certificate_file_hash = "sha256:5e6988e435940498171256f1e849bc337a320718f89ea7b5d8052fd30705f9aa"
+expected_export_hash = "sha256:bbb4e2a24220aa8911e867c16996ffd622d5a1d688f7548185c1d32d88c4af71"
+expected_axiom_report_hash = "sha256:264e20271c467decb51c6d88450323ab332a5299d533567d458be2be3b5f452c"
+expected_certificate_hash = "sha256:7e3c2d13b12d4c92322dbba58f85a3afe3fa407af44bbf793456609e3971c59e"
 definitions = []
-theorems = ["local_inverse_result_intro_passthrough", "quantitative_inverse_function_from_args_passthrough"]
+theorems = ["implicit_phi_derivative_from_args_passthrough", "implicit_function_theorem_passthrough", "implicit_function_derivative_theorem_passthrough"]
 axioms = ["Eq.rec"]

@@ -9,12 +9,12 @@ Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
 - downstream import bundle module:
-  `Mathlib.Analysis.Calculus.InverseFunction`
+  `Mathlib.Analysis.Calculus.ImplicitFunction`
 - source-free proof artifact:
-  `../../Mathlib/Analysis/Calculus/InverseFunction/certificate.npcert`
+  `../../Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.Analysis.Calculus.InverseFunction`:
+`Mathlib.Analysis.Calculus.ImplicitFunction`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
@@ -26,8 +26,8 @@ The fixture vendors the source-free certificate import closure for
 - `vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/LinearMap/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/Derivative/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Analysis/FixedPoint/Banach/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Analysis/Calculus/InverseFunction/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/Phi/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -39,6 +39,7 @@ are not proof evidence for this fixture. They are deliberately absent from the
 vendored dependency tree; source-free verification reads only the hash-pinned
 certificate bytes and the downstream package certificate.
 
-The local theorems in `Downstream.InverseFunction` import the inverse-function
-closure and apply the exported `local_inverse_result_intro` and
-`quantitative_inverse_function_from_args` surface.
+The local theorems in `Downstream.ImplicitFunction` import the implicit-function
+closure and apply the exported `implicit_phi_derivative_from_args`,
+`implicit_function_theorem`, and `implicit_function_derivative_theorem`
+surfaces.

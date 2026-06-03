@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the analysis inverse-function closure public
+This repository contains the analysis implicit-function closure public
 package:
 
 ```text
@@ -56,6 +56,8 @@ Mathlib.Analysis.LinearMap
 Mathlib.Analysis.Calculus.Derivative
 Mathlib.Analysis.FixedPoint.Banach
 Mathlib.Analysis.Calculus.InverseFunction
+Mathlib.Analysis.Calculus.ImplicitFunction.Phi
+Mathlib.Analysis.Calculus.ImplicitFunction
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 Mathlib.Geometry.Affine
@@ -82,7 +84,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.26"
+version = "0.1.27"
 schema = "npa.package.v0.1"
 ```
 
@@ -145,9 +147,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Analysis.Calculus.InverseFunction` inverse-function import
-closure and applies `local_inverse_result_intro` and
-`quantitative_inverse_function_from_args`. It vendors the full source-free
+vendored `Mathlib.Analysis.Calculus.ImplicitFunction` implicit-function import
+closure and applies `implicit_phi_derivative_from_args`,
+`implicit_function_theorem`, and
+`implicit_function_derivative_theorem`. It vendors the full source-free
 certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
@@ -236,7 +239,12 @@ adds the analysis fixed-point route. `Mathlib.Analysis.FixedPoint.Banach`
 carries no direct custom axioms and no transitive axioms according to its
 package axiom report. The v0.1.26 release adds the analysis inverse-function
 route. `Mathlib.Analysis.Calculus.InverseFunction` carries no direct custom
-axioms and no transitive axioms according to its package axiom report.
+axioms and no transitive axioms according to its package axiom report. The
+v0.1.27 release adds the analysis implicit-function route.
+`Mathlib.Analysis.Calculus.ImplicitFunction.Phi` and
+`Mathlib.Analysis.Calculus.ImplicitFunction` carry no direct custom axioms and
+have the expected transitive `Eq.rec` dependency through equality-reasoning and
+analysis foundation imports.
 
 ## License
 
