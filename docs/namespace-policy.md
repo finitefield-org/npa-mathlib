@@ -234,6 +234,12 @@ The `v0.1.23` release adds this analysis linear-map closure module:
 Mathlib.Analysis.LinearMap
 ```
 
+The `v0.1.24` release adds this analysis derivative closure module:
+
+```text
+Mathlib.Analysis.Calculus.Derivative
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -410,6 +416,12 @@ The analysis linear-map closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractLinearMap` | `Mathlib.Analysis.LinearMap` | `Mathlib/Analysis/LinearMap/` |
 
+The analysis derivative closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractDerivative` | `Mathlib.Analysis.Calculus.Derivative` | `Mathlib/Analysis/Calculus/Derivative/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -521,6 +533,12 @@ APIs over normed spaces. It is placed under `Analysis` rather than a pure
 `LinearAlgebra` namespace because the checked surface is normed and bounded
 and is the direct foundation for derivative, inverse-function, and
 implicit-function analysis routes.
+
+The v0.1.24 analysis derivative closure uses
+`Mathlib.Analysis.Calculus.Derivative` for Frechet derivative,
+differentiability, derivative uniqueness, product/pair rules, composition,
+and partial derivative APIs. It starts the calculus subdomain that
+inverse-function and implicit-function routes will extend.
 
 ## Category Rules
 
