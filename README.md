@@ -13,9 +13,17 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3D-C public package:
+This repository contains the Layer 3D-F public package:
 
 ```text
+Mathlib.Algebra.Group.ThirdIsomorphism
+Mathlib.Algebra.Group.SecondIsomorphism
+Mathlib.Algebra.Group.SecondIsomorphism.Image
+Mathlib.Algebra.Group.SecondIsomorphism.Kernel
+Mathlib.Algebra.Group.SecondIsomorphism.Map
+Mathlib.Algebra.Group.Quotient.Group
+Mathlib.Algebra.Group.Quotient.Mul
+Mathlib.Algebra.Group.Quotient
 Mathlib.Algebra.Group.FirstIsomorphism.Image
 Mathlib.Algebra.Group.FirstIsomorphism
 Mathlib.Algebra.Group.Kernel.Quotient.Hom
@@ -46,7 +54,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.9"
+version = "0.1.12"
 schema = "npa.package.v0.1"
 ```
 
@@ -109,9 +117,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Group.FirstIsomorphism.*` Layer 3D-C import closure.
-It does not vendor `npa-mathlib` source, replay, meta, theorem index, registry
-state, or package source tree.
+vendored `Mathlib.Algebra.Group.ThirdIsomorphism` Layer 3D-F import
+closure. It does not vendor `npa-mathlib` source, replay, meta, theorem index,
+registry state, or package source tree.
 
 To verify it:
 
@@ -155,9 +163,11 @@ equality reasoning certificates that use it explicitly. Layer 3D-C keeps the
 homomorphism law surface in `Mathlib.Algebra.Group.Basic` and adds the
 first isomorphism-to-image route under
 `Mathlib.Algebra.Group.FirstIsomorphism.*` on top of the Layer 3D-B kernel
-quotient closure. The package direct axiom surface remains policy-approved,
-and the new modules only carry the expected `Eq.rec` equality-reasoning
-dependency where their proofs require transport.
+quotient closure. Layer 3D-F adds the third isomorphism theorem-evidence route
+on top of the normal quotient and kernel quotient surfaces. The package direct
+axiom surface remains policy-approved, and the new modules only carry the
+expected `Eq.rec` equality-reasoning dependency where their proofs require
+transport.
 
 ## License
 

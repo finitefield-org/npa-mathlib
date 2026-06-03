@@ -1,0 +1,20 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.Quotient.Mul",
+  "source": "Mathlib/Algebra/Group/Quotient/Mul/source.npa",
+  "certificate": "Mathlib/Algebra/Group/Quotient/Mul/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:25458abf3e13bbfefa548d040844c627ade48dc910ffb8058bca2d8e3cc33eb2",
+  "certificate_file_sha256": "sha256:541772d27e36bc290e149eb6b1498e659dea43e7d53884b2d828f26e5c9c28b8",
+  "export_hash": "sha256:9570dfe4c8b6ca61fe53acd2bf41cf193be20a4d9118cbc295f1c1a10d602cc7",
+  "axiom_report_hash": "sha256:5bd7339ac208646efb0ed11ff2499737a45b42195bb28180b5685aed4560bbe3",
+  "certificate_hash": "sha256:5495b3aba0eb579efd418b5a86fad16765c2f21889c9531747fa0d152f774013",
+  "imports": ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "NormalQuotMulRep", "kind": "def" },
+    { "name": "normal_quot_mul_rep_compat", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.SecondIsomorphism.Map",
+  "source": "Mathlib/Algebra/Group/SecondIsomorphism/Map/source.npa",
+  "certificate": "Mathlib/Algebra/Group/SecondIsomorphism/Map/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:bf167686c871620f655081c61a536a7538eb2f9d327e30de91d06e33bfde3ae4",
+  "certificate_file_sha256": "sha256:2114f1a9368313eaefcb31079e9c02c44e4a1def10aa0a22c73027aa434dfc98",
+  "export_hash": "sha256:7ee14328dc55734480495e5b6bdc07124481d60ac50ea2cd2cfe0ae1af1ee6d7",
+  "axiom_report_hash": "sha256:be1a77ed10a39666141513d10276a53768c73a3c2f624e2abac75c22ae46554f",
+  "certificate_hash": "sha256:d9fca8faf318fd62e6ae8e45c9f1ebfa9a982364ea7d105d2be495382166be34",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup",
+    "Mathlib.Algebra.Group.Quotient",
+    "Mathlib.Algebra.Group.Quotient.Mul",
+    "Mathlib.Algebra.Group.Quotient.Group"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "SecondIsoPhi",
+      "kind": "def"
+    },
+    {
+      "name": "second_iso_phi_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "second_iso_phi_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "second_iso_phi_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "second_iso_phi_inv",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

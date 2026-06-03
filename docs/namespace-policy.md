@@ -131,6 +131,29 @@ Mathlib.Algebra.Group.FirstIsomorphism
 Mathlib.Algebra.Group.FirstIsomorphism.Image
 ```
 
+The `v0.1.10` release adds these Layer 3D-D modules:
+
+```text
+Mathlib.Algebra.Group.Quotient
+Mathlib.Algebra.Group.Quotient.Mul
+Mathlib.Algebra.Group.Quotient.Group
+```
+
+The `v0.1.11` release adds these Layer 3D-E modules:
+
+```text
+Mathlib.Algebra.Group.SecondIsomorphism
+Mathlib.Algebra.Group.SecondIsomorphism.Map
+Mathlib.Algebra.Group.SecondIsomorphism.Kernel
+Mathlib.Algebra.Group.SecondIsomorphism.Image
+```
+
+The `v0.1.12` release adds this Layer 3D-F module:
+
+```text
+Mathlib.Algebra.Group.ThirdIsomorphism
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -205,6 +228,29 @@ The Layer 3D-C mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupFirstIsoFull` | `Mathlib.Algebra.Group.FirstIsomorphism` | `Mathlib/Algebra/Group/FirstIsomorphism/` |
 | `Proofs.Ai.Algebra.AbstractGroupFirstIsoImage` | `Mathlib.Algebra.Group.FirstIsomorphism.Image` | `Mathlib/Algebra/Group/FirstIsomorphism/Image/` |
 
+The Layer 3D-D mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupNormalQuotient` | `Mathlib.Algebra.Group.Quotient` | `Mathlib/Algebra/Group/Quotient/` |
+| `Proofs.Ai.Algebra.AbstractGroupNormalQuotientMul` | `Mathlib.Algebra.Group.Quotient.Mul` | `Mathlib/Algebra/Group/Quotient/Mul/` |
+| `Proofs.Ai.Algebra.AbstractGroupNormalQuotientGroup` | `Mathlib.Algebra.Group.Quotient.Group` | `Mathlib/Algebra/Group/Quotient/Group/` |
+
+The Layer 3D-E mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupSecondIsoPhi` | `Mathlib.Algebra.Group.SecondIsomorphism.Map` | `Mathlib/Algebra/Group/SecondIsomorphism/Map/` |
+| `Proofs.Ai.Algebra.AbstractGroupSecondIsoKernel` | `Mathlib.Algebra.Group.SecondIsomorphism.Kernel` | `Mathlib/Algebra/Group/SecondIsomorphism/Kernel/` |
+| `Proofs.Ai.Algebra.AbstractGroupSecondIsoImage` | `Mathlib.Algebra.Group.SecondIsomorphism.Image` | `Mathlib/Algebra/Group/SecondIsomorphism/Image/` |
+| `Proofs.Ai.Algebra.AbstractGroupSecondIsoFinal` | `Mathlib.Algebra.Group.SecondIsomorphism` | `Mathlib/Algebra/Group/SecondIsomorphism/` |
+
+The Layer 3D-F mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractGroupThirdIso` | `Mathlib.Algebra.Group.ThirdIsomorphism` | `Mathlib/Algebra/Group/ThirdIsomorphism/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -218,15 +264,30 @@ Layer 3D-C intentionally uses `FirstIsomorphism` instead of `FirstIso` in
 public module names. `Proofs.Ai.Algebra.AbstractGroupFirstIso` remains
 unpublished because it exposes the provisional `FirstIsoRepMvp` surface.
 
+Layer 3D-D intentionally uses `Mathlib.Algebra.Group.Quotient.*` for quotient
+groups by normal subgroups. The already released
+`Mathlib.Algebra.Group.Kernel.Quotient.*` surface remains the specialized
+kernel-relation quotient route for homomorphisms.
+
+Layer 3D-E intentionally uses `SecondIsomorphism` instead of `SecondIso` in
+public module names. `Proofs.Ai.Algebra.AbstractGroupSecondIsoPhi` is published
+as `Mathlib.Algebra.Group.SecondIsomorphism.Map` so Greek-letter
+implementation terminology does not become a public module identifier.
+
+Layer 3D-F intentionally keeps the third-isomorphism route in one
+`Mathlib.Algebra.Group.ThirdIsomorphism` module. The checked-in corpus route is
+a single theorem-evidence module, and its helper definitions are tightly
+coupled to the final evidence surface.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
-The remaining abstract group corpus modules, including normal quotient,
-second/third isomorphism, and correspondence modules, are intentionally
-deferred until the `Mathlib.Algebra.Group.*` namespace has enough stable public
-surface to support them without overloading `Basic`, `Subgroup`,
-`Subgroup.Order`, `Kernel`, `Image`, `Kernel.Quotient`, or
-`FirstIsomorphism`.
+The remaining abstract group correspondence modules are intentionally deferred
+until the
+`Mathlib.Algebra.Group.*` namespace has enough stable public surface to support
+them without overloading `Basic`, `Subgroup`, `Subgroup.Order`, `Kernel`,
+`Image`, `Kernel.Quotient`, `FirstIsomorphism`, `Quotient`, or
+`SecondIsomorphism`.
 
 ## Category Rules
 
