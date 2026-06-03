@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the analysis fixed-point closure public
+This repository contains the analysis inverse-function closure public
 package:
 
 ```text
@@ -55,6 +55,7 @@ Mathlib.Analysis.NormedSpace.Basic
 Mathlib.Analysis.LinearMap
 Mathlib.Analysis.Calculus.Derivative
 Mathlib.Analysis.FixedPoint.Banach
+Mathlib.Analysis.Calculus.InverseFunction
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 Mathlib.Geometry.Affine
@@ -81,7 +82,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.25"
+version = "0.1.26"
 schema = "npa.package.v0.1"
 ```
 
@@ -144,9 +145,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Analysis.FixedPoint.Banach` fixed-point import closure and
-applies `fixed_point_unique_from_evidence` and
-`banach_fixed_point_from_args`. It vendors the full source-free
+vendored `Mathlib.Analysis.Calculus.InverseFunction` inverse-function import
+closure and applies `local_inverse_result_intro` and
+`quantitative_inverse_function_from_args`. It vendors the full source-free
 certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
@@ -233,7 +234,9 @@ release adds the analysis derivative route.
 transitive axioms according to its package axiom report. The v0.1.25 release
 adds the analysis fixed-point route. `Mathlib.Analysis.FixedPoint.Banach`
 carries no direct custom axioms and no transitive axioms according to its
-package axiom report.
+package axiom report. The v0.1.26 release adds the analysis inverse-function
+route. `Mathlib.Analysis.Calculus.InverseFunction` carries no direct custom
+axioms and no transitive axioms according to its package axiom report.
 
 ## License
 

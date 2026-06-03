@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.25"
+version = "0.1.26"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib analysis fixed-point closure."
+description = "Public theorem-library package for NPA mathlib analysis inverse-function closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -385,6 +385,23 @@ expected_certificate_hash = "sha256:0f03af71effebe775cb89cf02841eb7053ec72b7faf7
 imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic"]
 definitions = ["CauchySeq", "ConvergesTo", "CompleteMetricArgs", "SelfMapOn", "ContractiveOn", "FixedPoint", "FixedPointStability", "FixedPointEvidence", "FixedPointResult", "BanachFixedPointArgs"]
 theorems = ["cauchy_seq_intro", "cauchy_seq_apply", "converges_to_intro", "converges_to_apply", "complete_metric_limit_from_args", "self_map_on_apply", "contractive_on_apply", "fixed_point_def", "fixed_point_stability_apply", "fixed_point_evidence_intro", "fixed_point_evidence_elim", "fixed_point_mem_from_evidence", "fixed_point_eq_from_evidence", "fixed_point_unique_from_evidence", "fixed_point_stability_from_evidence", "fixed_point_result_intro", "fixed_point_result_elim", "banach_fixed_point_from_args"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Analysis.Calculus.InverseFunction"
+source = "Mathlib/Analysis/Calculus/InverseFunction/source.npa"
+certificate = "Mathlib/Analysis/Calculus/InverseFunction/certificate.npcert"
+meta = "Mathlib/Analysis/Calculus/InverseFunction/meta.json"
+replay = "Mathlib/Analysis/Calculus/InverseFunction/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:cda16cfa847a4ff6fa447bb6c1749c100fa03db1f9c19caef893ccc77daee013"
+expected_certificate_file_hash = "sha256:cc39011125fa514e18739a83f30d5a36376a972b873810f3b8ea81bd50d65976"
+expected_export_hash = "sha256:abb15f4f06e9487c57969f4492e342be57401d9976a19c76ba95ebe89d4ee46f"
+expected_axiom_report_hash = "sha256:4ce54129453ca5f2cc9726d9e809e739b6640402d7515115c64b8169ae6c93a6"
+expected_certificate_hash = "sha256:b37f975a3a1c64f716754ab66d20383899321d81fd4deea8cc0720df4ff38a68"
+imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.FixedPoint.Banach"]
+definitions = ["InverseResidual", "InverseNewtonMap", "LocalInverseEvidence", "LocalInverseResult", "QuantitativeInverseFunctionArgs"]
+theorems = ["inverse_residual_def", "inverse_newton_map_def", "local_inverse_evidence_intro", "local_inverse_evidence_elim", "local_inverse_base_mem_from_evidence", "local_inverse_image_mem_from_evidence", "local_inverse_maps_from_evidence", "local_inverse_left_from_evidence", "local_inverse_right_from_evidence", "local_inverse_unique_from_evidence", "local_inverse_fixed_point_from_evidence", "local_inverse_derivative_from_evidence", "local_inverse_linear_iso_from_evidence", "local_inverse_result_intro", "local_inverse_result_elim", "quantitative_inverse_function_from_args"]
 axioms = []
 
 [[modules]]

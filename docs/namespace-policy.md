@@ -246,6 +246,12 @@ The `v0.1.25` release adds this analysis fixed-point closure module:
 Mathlib.Analysis.FixedPoint.Banach
 ```
 
+The `v0.1.26` release adds this analysis inverse-function closure module:
+
+```text
+Mathlib.Analysis.Calculus.InverseFunction
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -434,6 +440,12 @@ The analysis fixed-point closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractFixedPoint` | `Mathlib.Analysis.FixedPoint.Banach` | `Mathlib/Analysis/FixedPoint/Banach/` |
 
+The analysis inverse-function closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractInverseFunction` | `Mathlib.Analysis.Calculus.InverseFunction` | `Mathlib/Analysis/Calculus/InverseFunction/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -558,6 +570,13 @@ complete metric evidence, contractive self-map evidence, fixed-point evidence,
 fixed-point results, and the Banach fixed-point theorem route. It is kept out
 of `Analysis.Calculus` because it is an analysis theorem family consumed by
 the inverse-function route rather than a derivative API.
+
+The v0.1.26 analysis inverse-function closure uses
+`Mathlib.Analysis.Calculus.InverseFunction` for inverse residuals, Newton maps,
+local inverse evidence, local inverse results, and the quantitative
+inverse-function theorem route. It extends the calculus namespace after
+derivative and fixed-point foundations are public, and gives the later
+implicit-function route a stable public inverse-function dependency.
 
 ## Category Rules
 
