@@ -163,6 +163,12 @@ Mathlib.Algebra.Group.Correspondence
 Mathlib.Algebra.Group.Correspondence.Ordered
 ```
 
+The `v0.1.14` release adds this Layer 3E module:
+
+```text
+Mathlib.Logic.Iff
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -269,6 +275,12 @@ The Layer 3D-G mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupCorrespondenceFinal` | `Mathlib.Algebra.Group.Correspondence` | `Mathlib/Algebra/Group/Correspondence/` |
 | `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrderFinal` | `Mathlib.Algebra.Group.Correspondence.Ordered` | `Mathlib/Algebra/Group/Correspondence/Ordered/` |
 
+The Layer 3E mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Logic.Iff` | `Mathlib.Logic.Iff` | `Mathlib/Logic/Iff/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -301,6 +313,10 @@ Layer 3D-G uses `Correspondence.Basic` for the normal-quotient image/preimage
 construction surface, `Correspondence.Order` for monotonicity/equivalence facts,
 `Correspondence` for the theorem-evidence surface, and `Correspondence.Ordered`
 for the final ordered correspondence evidence.
+
+Layer 3E keeps `Iff`, `And`, `Or`, `False`, and `Not` together in
+`Mathlib.Logic.Iff`. A future `Mathlib.Logic.Connectives` split is deferred
+until another checked corpus route needs the connectives without the `Iff` API.
 
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.

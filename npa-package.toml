@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.13"
+version = "0.1.14"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 3D-G."
+description = "Public theorem-library package for NPA mathlib Layer 3E."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -95,6 +95,23 @@ expected_certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7e
 imports = ["Std.Logic.Eq"]
 definitions = []
 theorems = ["eq_symm", "eq_trans", "eq_congr_arg", "eq_congr_fun", "eq_congr2", "eq_subst", "eq_transport_const", "eq_rewrite_left", "eq_rewrite_right", "eq_cast_trans", "eq_calc3"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Logic.Iff"
+source = "Mathlib/Logic/Iff/source.npa"
+certificate = "Mathlib/Logic/Iff/certificate.npcert"
+meta = "Mathlib/Logic/Iff/meta.json"
+replay = "Mathlib/Logic/Iff/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:4cfbee5247057d885bf4b6af1da7576a52672853f1c6250e9dd1a70fd168f0a6"
+expected_certificate_file_hash = "sha256:5db35953be54b9278c60ca721f5ee4a3a22e71c8087f1d3898e23b70f964bd8f"
+expected_export_hash = "sha256:e17dc3a48900d70ad426461379d429257631555845b50b6413c20d80ca0626a9"
+expected_axiom_report_hash = "sha256:e857a3aea953927d44e330377c011e7fe1f0892d779d46d8eb9d4cc62236ade7"
+expected_certificate_hash = "sha256:0d6359b2b0f58d8a99c86f2ea0fd579c3d99b62391712f9b47239039ae2cf919"
+imports = ["Std.Logic.Eq"]
+definitions = ["Iff", "And", "Or", "False", "Not"]
+theorems = ["iff_refl", "iff_symm", "iff_trans", "iff_mp", "iff_mpr", "and_intro", "and_left", "and_right", "iff_of_eq", "false_elim", "not_intro", "not_elim", "or_inl", "or_inr", "or_elim", "iff_congr_arg"]
 axioms = ["Eq.rec"]
 
 [[modules]]

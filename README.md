@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3D-G public package:
+This repository contains the Layer 3E public package:
 
 ```text
 Mathlib.Algebra.Group.Correspondence.Ordered
@@ -38,6 +38,7 @@ Mathlib.Algebra.Group.Image
 Mathlib.Algebra.Group.Kernel
 Mathlib.Algebra.Group.Subgroup.Order
 Mathlib.Algebra.Group.Subgroup
+Mathlib.Logic.Iff
 Mathlib.Logic.EqReasoning
 Mathlib.Algebra.Group.Basic
 Mathlib.Geometry.RightTriangle
@@ -58,7 +59,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.13"
+version = "0.1.14"
 schema = "npa.package.v0.1"
 ```
 
@@ -121,10 +122,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Group.Correspondence.Ordered` Layer 3D-G import
-closure and applies `correspondence_order_evidence`. It does not vendor
-`npa-mathlib` source, replay, meta, theorem index, registry state, or package
-source tree.
+vendored `Mathlib.Logic.Iff` Layer 3E import closure and applies `iff_mp`,
+`or_elim`, and `false_elim`. It does not vendor `npa-mathlib` source, replay,
+meta, theorem index, registry state, or package source tree.
 
 To verify it:
 
