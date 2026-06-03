@@ -175,6 +175,14 @@ The `v0.1.15` release adds this abstract ring foundation module:
 Mathlib.Algebra.Ring.Basic
 ```
 
+The `v0.1.16` release adds these ring first-isomorphism and CRT modules:
+
+```text
+Mathlib.Algebra.Ring.FirstIsomorphism.Basic
+Mathlib.Algebra.Ring.FirstIsomorphism
+Mathlib.Algebra.Ring.ChineseRemainder
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -293,6 +301,14 @@ The abstract ring foundation mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractRing` | `Mathlib.Algebra.Ring.Basic` | `Mathlib/Algebra/Ring/Basic/` |
 
+The ring first-isomorphism and CRT mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractRingFirstIsoBase` | `Mathlib.Algebra.Ring.FirstIsomorphism.Basic` | `Mathlib/Algebra/Ring/FirstIsomorphism/Basic/` |
+| `Proofs.Ai.Algebra.AbstractRingFirstIso` | `Mathlib.Algebra.Ring.FirstIsomorphism` | `Mathlib/Algebra/Ring/FirstIsomorphism/` |
+| `Proofs.Ai.Algebra.AbstractRingChineseRemainder` | `Mathlib.Algebra.Ring.ChineseRemainder` | `Mathlib/Algebra/Ring/ChineseRemainder/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -337,6 +353,13 @@ declaration names such as `add_assoc` and `ring_normalize_add_mul3`; downstream
 packages should import the abstract foundation or the concrete route according
 to the proof surface they need, not both in the same source module unless they
 have a deliberate disambiguation plan.
+
+The v0.1.16 ring first-isomorphism and CRT route does not introduce a separate
+`Mathlib.Algebra.Ring.Hom` module. The checked corpus base module bundles the
+ring homomorphism law surface, image predicate, and kernel quotient
+construction, so the public `RingHomLawArgs`, `RingImagePred`, and
+`RingKerQuot*` names remain in
+`Mathlib.Algebra.Ring.FirstIsomorphism.Basic`.
 
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.

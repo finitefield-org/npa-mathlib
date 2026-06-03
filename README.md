@@ -13,7 +13,8 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the abstract ring foundation public package:
+This repository contains the ring first isomorphism and Chinese remainder
+public package:
 
 ```text
 Mathlib.Algebra.Group.Correspondence.Ordered
@@ -42,6 +43,9 @@ Mathlib.Logic.Iff
 Mathlib.Logic.EqReasoning
 Mathlib.Algebra.Group.Basic
 Mathlib.Algebra.Ring.Basic
+Mathlib.Algebra.Ring.FirstIsomorphism.Basic
+Mathlib.Algebra.Ring.FirstIsomorphism
+Mathlib.Algebra.Ring.ChineseRemainder
 Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
@@ -60,7 +64,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.15"
+version = "0.1.16"
 schema = "npa.package.v0.1"
 ```
 
@@ -123,10 +127,11 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.Ring.Basic` abstract ring foundation import closure
-and applies `RingLawArgs`, `sub_add_cancel`, and `ring_normalize_add_mul3`. It
-does not vendor `npa-mathlib` source, replay, meta, theorem index, registry
-state, or package source tree.
+vendored `Mathlib.Algebra.Ring.ChineseRemainder` ring first-isomorphism and
+CRT import closure and applies `ring_first_isomorphism_to_image` and
+`ring_chinese_remainder_theorem`. It vendors the full source-free certificate
+import closure, but not `npa-mathlib` source, replay, meta, theorem index,
+registry state, or package source tree.
 
 To verify it:
 
@@ -176,7 +181,10 @@ axiom surface remains policy-approved, and the new modules only carry the
 expected `Eq.rec` equality-reasoning dependency where their proofs require
 transport. Layer 3D-G adds the correspondence theorem and order-evidence route
 for normal-subgroup quotients on top of the public quotient, subgroup, and
-subgroup-order surfaces.
+subgroup-order surfaces. The v0.1.16 release adds the ring first-isomorphism
+and CRT route, including `RingHomLawArgs`, `RingFirstIso`, and
+`RingChineseRemainder`, with the same policy-approved `Eq.rec`
+equality-reasoning dependency.
 
 ## License
 
