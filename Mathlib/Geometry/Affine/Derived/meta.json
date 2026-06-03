@@ -1,0 +1,26 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.Affine.Derived",
+  "source": "Mathlib/Geometry/Affine/Derived/source.npa",
+  "certificate": "Mathlib/Geometry/Affine/Derived/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:4774d46cd5cfeffddc8484a8931d9680a440a4673eb65669c38baa4b576b3bc1",
+  "certificate_file_sha256": "sha256:3f2862c65cba4b2ba6f4052a493ddd6bce9c6e1639894216652e9cb398d1085b",
+  "export_hash": "sha256:952ab394c2bd8f278bb4ce88212dc89972c67a9af64e466bbeb6f0b7b7777285",
+  "axiom_report_hash": "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c",
+  "certificate_hash": "sha256:51c24ff1368a6b76548c439fecc97b55d6e5265c08d3e9aa6922b8f6775d8e3f",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Geometry.Affine", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "vec_add_comm_from_vector_args", "kind": "theorem" },
+    { "name": "disp_reverse_from_affine_args", "kind": "theorem" },
+    { "name": "disp_comp_from_affine_args", "kind": "theorem" },
+    { "name": "dist_sq_points_def_from_args", "kind": "theorem" },
+    { "name": "hypotenuse_vector_eq_neg_left_add_right_from_args", "kind": "theorem" },
+    { "name": "hypotenuse_vector_eq_sub_legs_from_args", "kind": "theorem" },
+    { "name": "dist_sq_hypotenuse_norm_neg_left_add_right_from_args", "kind": "theorem" },
+    { "name": "dist_sq_hypotenuse_norm_sub_legs_from_args", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

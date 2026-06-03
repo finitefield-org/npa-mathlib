@@ -205,6 +205,17 @@ Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 ```
 
+The `v0.1.20` release adds these geometry Pythagorean closure modules:
+
+```text
+Mathlib.Geometry.Affine
+Mathlib.Geometry.Affine.Derived
+Mathlib.Geometry.RightTriangle.Abstract
+Mathlib.Geometry.RightTriangle.Derived
+Mathlib.Geometry.Metric.Abstract
+Mathlib.Geometry.Pythagorean
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -352,6 +363,17 @@ The inner-product closure mapping is fixed:
 | `Proofs.Ai.Vector.AbstractInnerProduct` | `Mathlib.LinearAlgebra.InnerProduct` | `Mathlib/LinearAlgebra/InnerProduct/` |
 | `Proofs.Ai.Vector.AbstractInnerProductDerive` | `Mathlib.LinearAlgebra.InnerProduct.Derived` | `Mathlib/LinearAlgebra/InnerProduct/Derived/` |
 
+The geometry Pythagorean closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Geometry.Affine` | `Mathlib.Geometry.Affine` | `Mathlib/Geometry/Affine/` |
+| `Proofs.Ai.Geometry.AffineDerive` | `Mathlib.Geometry.Affine.Derived` | `Mathlib/Geometry/Affine/Derived/` |
+| `Proofs.Ai.Geometry.AbstractRightTriangle` | `Mathlib.Geometry.RightTriangle.Abstract` | `Mathlib/Geometry/RightTriangle/Abstract/` |
+| `Proofs.Ai.Geometry.AbstractRightTriangleDerive` | `Mathlib.Geometry.RightTriangle.Derived` | `Mathlib/Geometry/RightTriangle/Derived/` |
+| `Proofs.Ai.Geometry.AbstractMetric` | `Mathlib.Geometry.Metric.Abstract` | `Mathlib/Geometry/Metric/Abstract/` |
+| `Proofs.Ai.Geometry.Pythagorean` | `Mathlib.Geometry.Pythagorean` | `Mathlib/Geometry/Pythagorean/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -432,8 +454,15 @@ Cauchy-Schwarz statements. Downstream packages should choose either the
 abstract linear-algebra route or the concrete vector route according to the
 proof surface they need.
 
-`Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
-corpus closure belongs to the abstract geometry / law-package track.
+The v0.1.20 geometry Pythagorean closure uses `Mathlib.Geometry.Affine` for
+the abstract point/displacement surface and `Mathlib.Geometry.Pythagorean` for
+the final theorem surface. The already released
+`Mathlib.Geometry.RightTriangle` and `Mathlib.Geometry.Metric` modules remain
+the concrete geometry route; the abstract law-package route therefore uses
+`Mathlib.Geometry.RightTriangle.Abstract`,
+`Mathlib.Geometry.RightTriangle.Derived`, and
+`Mathlib.Geometry.Metric.Abstract` instead of repurposing those concrete module
+names.
 
 ## Category Rules
 

@@ -1,0 +1,24 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.RightTriangle.Derived",
+  "source": "Mathlib/Geometry/RightTriangle/Derived/source.npa",
+  "certificate": "Mathlib/Geometry/RightTriangle/Derived/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:2eee45f1afde28aaf959db810acaddc87c21b94ccc50e9cee1e2c9108c9e6701",
+  "certificate_file_sha256": "sha256:2418d3e1f3fafe72fc93113222a9f748105257316cd920cc8631fc84406d5bf6",
+  "export_hash": "sha256:5057ab1e9f7efb30fe7b278a3e47d6714cd3940a840c85a072f5ee06bec59eed",
+  "axiom_report_hash": "sha256:c52744f66c569059e6a3785b92ab69c1954e8f5031de9c4f6e1002d5a029e06c",
+  "certificate_hash": "sha256:3593d2fc159412ac4429f1b817e13c70c7e76586aa5fda298a3bb43a26c050d6",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Geometry.RightTriangle.Abstract", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [
+    { "name": "neg_zero_from_ring_args", "kind": "theorem" },
+    { "name": "right_triangle_legs_perp_vec_from_rt", "kind": "theorem" },
+    { "name": "right_triangle_legs_dot_zero_from_rt", "kind": "theorem" },
+    { "name": "right_triangle_neg_left_dot_zero_from_rt", "kind": "theorem" },
+    { "name": "right_triangle_neg_left_perp_vec_from_rt", "kind": "theorem" },
+    { "name": "right_triangle_affine_additive_perp_bridge_from_rt", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

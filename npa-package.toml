@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.19"
+version = "0.1.20"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib inner-product closure."
+description = "Public theorem-library package for NPA mathlib geometry Pythagorean closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -334,6 +334,108 @@ expected_certificate_hash = "sha256:03cc30cefb649d78f185c97d31d41070dffd350ebddd
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct"]
 definitions = []
 theorems = ["norm_sq_add_from_inner_args", "norm_sq_sub_from_inner_args", "parallelogram_law_from_inner_args", "polarization_identity_from_inner_args", "dot_neg_left_from_inner_args", "norm_sq_neg_from_inner_args", "norm_sq_add_of_dot_zero_from_args", "norm_sq_add_of_perp_from_args", "norm_sq_add_neg_left_from_inner_args", "dot_zero_left_from_law_packages", "dot_zero_right_from_law_packages", "dot_eq_zero_of_norm_sq_zero_left_from_inner_args", "dot_eq_zero_of_norm_sq_zero_right_from_inner_args", "cauchy_schwarz_zero_left_from_law_packages", "cauchy_schwarz_zero_right_from_law_packages", "cauchy_schwarz_from_law_packages", "norm_sq_nonneg_from_inner_args", "dot_le_mul_sqrt_norm_sq_from_cauchy", "norm_sq_add_le_square_sum_norms_from_cauchy"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Geometry.Affine"
+source = "Mathlib/Geometry/Affine/source.npa"
+certificate = "Mathlib/Geometry/Affine/certificate.npcert"
+meta = "Mathlib/Geometry/Affine/meta.json"
+replay = "Mathlib/Geometry/Affine/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:f1697fd4c3d4a81503821b1540ed3807ee97e9aaaed2bd5225257981cbace973"
+expected_certificate_file_hash = "sha256:12ce563b23b473796fc4bdf0e17fcbb2ccd3c4565534e9f17bc911eee9660b6c"
+expected_export_hash = "sha256:e4e3f862585856027ffe88cb2ed9cf0705d3fc14aa7a05e05e56d17edf0b60c5"
+expected_axiom_report_hash = "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e"
+expected_certificate_hash = "sha256:e1f00b05158d700bfcdd2a947a500ab1f58bec799ee255e66eb316077a0f2085"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct"]
+definitions = ["Point", "disp", "distSqPoints", "translate", "midpoint", "collinear", "AffineLawArgs"]
+theorems = ["disp_self", "disp_reverse", "disp_comp", "hypotenuse_vector_eq_sub_legs", "dist_sq_points_def", "point_ext_of_zero_disp", "dist_sq_symm", "dist_sq_zero_iff_eq"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Geometry.Affine.Derived"
+source = "Mathlib/Geometry/Affine/Derived/source.npa"
+certificate = "Mathlib/Geometry/Affine/Derived/certificate.npcert"
+meta = "Mathlib/Geometry/Affine/Derived/meta.json"
+replay = "Mathlib/Geometry/Affine/Derived/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:4774d46cd5cfeffddc8484a8931d9680a440a4673eb65669c38baa4b576b3bc1"
+expected_certificate_file_hash = "sha256:3f2862c65cba4b2ba6f4052a493ddd6bce9c6e1639894216652e9cb398d1085b"
+expected_export_hash = "sha256:952ab394c2bd8f278bb4ce88212dc89972c67a9af64e466bbeb6f0b7b7777285"
+expected_axiom_report_hash = "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c"
+expected_certificate_hash = "sha256:51c24ff1368a6b76548c439fecc97b55d6e5265c08d3e9aa6922b8f6775d8e3f"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.Geometry.Affine"]
+definitions = []
+theorems = ["vec_add_comm_from_vector_args", "disp_reverse_from_affine_args", "disp_comp_from_affine_args", "dist_sq_points_def_from_args", "hypotenuse_vector_eq_neg_left_add_right_from_args", "hypotenuse_vector_eq_sub_legs_from_args", "dist_sq_hypotenuse_norm_neg_left_add_right_from_args", "dist_sq_hypotenuse_norm_sub_legs_from_args"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Geometry.RightTriangle.Abstract"
+source = "Mathlib/Geometry/RightTriangle/Abstract/source.npa"
+certificate = "Mathlib/Geometry/RightTriangle/Abstract/certificate.npcert"
+meta = "Mathlib/Geometry/RightTriangle/Abstract/meta.json"
+replay = "Mathlib/Geometry/RightTriangle/Abstract/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:dda93a618ea737a9bfa9fe359deedcae08497bad08d5df2962ccb66dd076cc44"
+expected_certificate_file_hash = "sha256:4ad51ace89ad52cc869e0793a7c9a29bee48c99fa05f259fa3df0218fc0cb8b7"
+expected_export_hash = "sha256:1ed84dc5fb2771b39e9780daafa2d67d237875716091e1ceb9762f105adbe501"
+expected_axiom_report_hash = "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07"
+expected_certificate_hash = "sha256:12c9b50e2bce346b793d58b483e71e74f68184ba77d54a7575f33360025b6841"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.Geometry.Affine"]
+definitions = ["Perp", "RightTriangle", "AngleRight", "Area2", "FootOnHypotenuse"]
+theorems = ["perp_iff_dot_eq_zero", "perp_symm", "right_triangle_legs_perp", "pythagorean_distance_sq_general", "law_of_cosines_general", "right_triangle_area_general", "median_to_hypotenuse_general"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Geometry.RightTriangle.Derived"
+source = "Mathlib/Geometry/RightTriangle/Derived/source.npa"
+certificate = "Mathlib/Geometry/RightTriangle/Derived/certificate.npcert"
+meta = "Mathlib/Geometry/RightTriangle/Derived/meta.json"
+replay = "Mathlib/Geometry/RightTriangle/Derived/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:2eee45f1afde28aaf959db810acaddc87c21b94ccc50e9cee1e2c9108c9e6701"
+expected_certificate_file_hash = "sha256:2418d3e1f3fafe72fc93113222a9f748105257316cd920cc8631fc84406d5bf6"
+expected_export_hash = "sha256:5057ab1e9f7efb30fe7b278a3e47d6714cd3940a840c85a072f5ee06bec59eed"
+expected_axiom_report_hash = "sha256:c52744f66c569059e6a3785b92ab69c1954e8f5031de9c4f6e1002d5a029e06c"
+expected_certificate_hash = "sha256:3593d2fc159412ac4429f1b817e13c70c7e76586aa5fda298a3bb43a26c050d6"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Abstract"]
+definitions = []
+theorems = ["neg_zero_from_ring_args", "right_triangle_legs_perp_vec_from_rt", "right_triangle_legs_dot_zero_from_rt", "right_triangle_neg_left_dot_zero_from_rt", "right_triangle_neg_left_perp_vec_from_rt", "right_triangle_affine_additive_perp_bridge_from_rt"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Geometry.Metric.Abstract"
+source = "Mathlib/Geometry/Metric/Abstract/source.npa"
+certificate = "Mathlib/Geometry/Metric/Abstract/certificate.npcert"
+meta = "Mathlib/Geometry/Metric/Abstract/meta.json"
+replay = "Mathlib/Geometry/Metric/Abstract/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:5e01c606e2e731e0ee8bcd85c4fbcbff6dd310e848f3550bf12c39e6b0ee4c33"
+expected_certificate_file_hash = "sha256:f787c65efc58e02729d3db0dbcc49ac56e7d81e31046fc6cd640aaee6b66d792"
+expected_export_hash = "sha256:915b8dc17e88b5108d8bd450a40fa88a7c213b58d20399ce26c3ac6ad3cd2b48"
+expected_axiom_report_hash = "sha256:b683ec26dd9da17affedaeb69c226b9b8b3a3dd7bc68442117e84b903240ec1b"
+expected_certificate_hash = "sha256:e81ba9ee769c5a61ee7cf8b22672de6112bd8918c0666e00fda71894562abed8"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Abstract"]
+definitions = ["dist", "MetricSpaceLawArgs", "Ball"]
+theorems = ["dist_def", "point_dist_sq_nonneg_from_inner_args", "square_dist_eq_dist_sq_from_law_packages", "dist_sq_eq_square_dist_from_law_packages", "dist_sq_eq_square_dist", "dist_sq_points_le_square_sum_dist_from_law_packages", "dist_nonneg_from_ordered_args", "triangle_inequality_from_law_packages", "dist_nonneg", "distance_symm", "distance_zero_iff_eq", "pythagorean_distance_general", "triangle_inequality"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Geometry.Pythagorean"
+source = "Mathlib/Geometry/Pythagorean/source.npa"
+certificate = "Mathlib/Geometry/Pythagorean/certificate.npcert"
+meta = "Mathlib/Geometry/Pythagorean/meta.json"
+replay = "Mathlib/Geometry/Pythagorean/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:3e8f3d40e94a3a3e68568ebcd3fa42e3f9d1e4777e6777dbdc870e3bc4c3d794"
+expected_certificate_file_hash = "sha256:cc20a83f3a2331a3d22a952ed713d577465cf121e437df9ae74ed89d727950f2"
+expected_export_hash = "sha256:f68ec468e44dfdb9e309d35f41fa341b3bbdb880c6a186620ce67fd4cc6e5af4"
+expected_axiom_report_hash = "sha256:067fa89c58bfb9d8a1a11be14a0d6e47a783909b69a3bda57dd93232c06af24b"
+expected_certificate_hash = "sha256:75c412b9048c7b459c6879047b55e5a10619fdc2ef282ef4a39aa37ba7921f39"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Abstract", "Mathlib.Geometry.RightTriangle.Derived", "Mathlib.Geometry.Metric.Abstract"]
+definitions = []
+theorems = ["pythagorean_dist_sq_symm_from_affine_args", "pythagorean_dist_sq_reverse_norm_neg_from_law_packages", "pythagorean_left_leg_norm_neg_from_law_packages", "dist_sq_law_of_cosines_rhs_from_law_packages", "law_of_cosines_sq_from_law_packages", "law_of_cosines_dist_sq_from_law_packages", "pythagorean_distance_sq_from_law_packages", "pythagorean_theorem_sq", "pythagorean_theorem_dist_sq", "pythagorean_converse_sq", "law_of_cosines_right_angle_specialization_from_law_packages", "law_of_cosines_right_angle_specialization", "pythagorean_theorem_api_alias", "pythagorean_theorem_dependencies"]
 axioms = ["Eq.rec"]
 
 [[modules]]

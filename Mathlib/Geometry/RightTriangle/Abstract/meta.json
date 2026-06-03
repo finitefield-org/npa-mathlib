@@ -1,0 +1,30 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.RightTriangle.Abstract",
+  "source": "Mathlib/Geometry/RightTriangle/Abstract/source.npa",
+  "certificate": "Mathlib/Geometry/RightTriangle/Abstract/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:dda93a618ea737a9bfa9fe359deedcae08497bad08d5df2962ccb66dd076cc44",
+  "certificate_file_sha256": "sha256:4ad51ace89ad52cc869e0793a7c9a29bee48c99fa05f259fa3df0218fc0cb8b7",
+  "export_hash": "sha256:1ed84dc5fb2771b39e9780daafa2d67d237875716091e1ceb9762f105adbe501",
+  "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
+  "certificate_hash": "sha256:12c9b50e2bce346b793d58b483e71e74f68184ba77d54a7575f33360025b6841",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Geometry.Affine", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [
+    { "name": "Perp", "kind": "def" },
+    { "name": "RightTriangle", "kind": "def" },
+    { "name": "AngleRight", "kind": "def" },
+    { "name": "Area2", "kind": "def" },
+    { "name": "FootOnHypotenuse", "kind": "def" },
+    { "name": "perp_iff_dot_eq_zero", "kind": "theorem" },
+    { "name": "perp_symm", "kind": "theorem" },
+    { "name": "right_triangle_legs_perp", "kind": "theorem" },
+    { "name": "pythagorean_distance_sq_general", "kind": "theorem" },
+    { "name": "law_of_cosines_general", "kind": "theorem" },
+    { "name": "right_triangle_area_general", "kind": "theorem" },
+    { "name": "median_to_hypotenuse_general", "kind": "theorem" }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

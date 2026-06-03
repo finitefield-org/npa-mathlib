@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the inner-product closure public
+This repository contains the geometry Pythagorean closure public
 package:
 
 ```text
@@ -52,6 +52,12 @@ Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
+Mathlib.Geometry.Affine
+Mathlib.Geometry.Affine.Derived
+Mathlib.Geometry.RightTriangle.Abstract
+Mathlib.Geometry.RightTriangle.Derived
+Mathlib.Geometry.Metric.Abstract
+Mathlib.Geometry.Pythagorean
 Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
@@ -70,7 +76,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.19"
+version = "0.1.20"
 schema = "npa.package.v0.1"
 ```
 
@@ -133,12 +139,11 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.LinearAlgebra.InnerProduct` and
-`Mathlib.LinearAlgebra.InnerProduct.Derived` inner-product import closure and
-applies `parallelogram_law`, `polarization_identity`, and
-`cauchy_schwarz_from_law_packages`. It vendors the full source-free
-certificate import closure, but not `npa-mathlib` source, replay, meta,
-theorem index, registry state, or package source tree.
+vendored `Mathlib.Geometry.Pythagorean` geometry import closure and applies
+`pythagorean_distance_general`, `pythagorean_theorem_dist_sq`, and
+`pythagorean_theorem_api_alias`. It vendors the full source-free certificate
+import closure, but not `npa-mathlib` source, replay, meta, theorem index,
+registry state, or package source tree.
 
 To verify it:
 
@@ -200,7 +205,14 @@ release adds the abstract vector-space foundation route, and
 release adds the abstract inner-product route. `Mathlib.LinearAlgebra.InnerProduct`
 carries no custom axioms, and `Mathlib.LinearAlgebra.InnerProduct.Derived`
 carries the expected `Eq.rec` dependency through equality-reasoning and scalar
-identity imports.
+identity imports. The v0.1.20 release adds the abstract geometry Pythagorean
+route. `Mathlib.Geometry.Affine` and
+`Mathlib.Geometry.RightTriangle.Abstract` carry no custom axioms, while
+`Mathlib.Geometry.Affine.Derived`,
+`Mathlib.Geometry.RightTriangle.Derived`,
+`Mathlib.Geometry.Metric.Abstract`, and `Mathlib.Geometry.Pythagorean` carry
+the expected `Eq.rec` dependency through equality-reasoning, scalar identity,
+and law-package imports.
 
 ## License
 
