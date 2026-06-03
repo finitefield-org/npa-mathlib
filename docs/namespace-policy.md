@@ -240,6 +240,12 @@ The `v0.1.24` release adds this analysis derivative closure module:
 Mathlib.Analysis.Calculus.Derivative
 ```
 
+The `v0.1.25` release adds this analysis fixed-point closure module:
+
+```text
+Mathlib.Analysis.FixedPoint.Banach
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -422,6 +428,12 @@ The analysis derivative closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractDerivative` | `Mathlib.Analysis.Calculus.Derivative` | `Mathlib/Analysis/Calculus/Derivative/` |
 
+The analysis fixed-point closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractFixedPoint` | `Mathlib.Analysis.FixedPoint.Banach` | `Mathlib/Analysis/FixedPoint/Banach/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -539,6 +551,13 @@ The v0.1.24 analysis derivative closure uses
 differentiability, derivative uniqueness, product/pair rules, composition,
 and partial derivative APIs. It starts the calculus subdomain that
 inverse-function and implicit-function routes will extend.
+
+The v0.1.25 analysis fixed-point closure uses
+`Mathlib.Analysis.FixedPoint.Banach` for Cauchy/convergence argument packages,
+complete metric evidence, contractive self-map evidence, fixed-point evidence,
+fixed-point results, and the Banach fixed-point theorem route. It is kept out
+of `Analysis.Calculus` because it is an analysis theorem family consumed by
+the inverse-function route rather than a derivative API.
 
 ## Category Rules
 

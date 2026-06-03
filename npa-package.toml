@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.24"
+version = "0.1.25"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib analysis derivative closure."
+description = "Public theorem-library package for NPA mathlib analysis fixed-point closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -368,6 +368,23 @@ expected_certificate_hash = "sha256:36b6c9e1d5bc128cd500cd5cad18f146f32e61fc86f8
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap"]
 definitions = ["FrechetRemainder", "FrechetDerivativeAt", "FrechetDifferentiableAt", "FrechetDifferentiableOn", "DerivativeUniqueArgs", "ConstMap", "ZeroMap", "PairMap", "PartialXMap", "PartialYMap", "PartialXDerivativeMap", "PartialYDerivativeMap", "DerivativeConstRuleArgs", "DerivativeIdRuleArgs", "DerivativeFstRuleArgs", "DerivativeSndRuleArgs", "DerivativePairRuleArgs", "DerivativeCompRuleArgs", "PartialDerivativeRuleArgs"]
 theorems = ["frechet_remainder_def", "frechet_derivative_at_intro", "frechet_derivative_linear_from_at", "frechet_derivative_bound_from_at", "frechet_derivative_remainder_from_at", "frechet_differentiable_at_intro", "frechet_differentiable_at_elim", "frechet_differentiable_on_apply", "derivative_unique_from_args", "const_map_def", "zero_map_def", "pair_map_def", "derivative_const_from_args", "derivative_id_from_args", "derivative_fst_from_args", "derivative_snd_from_args", "derivative_pair_from_args", "derivative_comp_from_args", "partial_x_map_def", "partial_y_map_def", "partial_x_derivative_map_def", "partial_y_derivative_map_def", "partial_x_derivative_from_args", "partial_y_derivative_from_args"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Analysis.FixedPoint.Banach"
+source = "Mathlib/Analysis/FixedPoint/Banach/source.npa"
+certificate = "Mathlib/Analysis/FixedPoint/Banach/certificate.npcert"
+meta = "Mathlib/Analysis/FixedPoint/Banach/meta.json"
+replay = "Mathlib/Analysis/FixedPoint/Banach/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:9574f5719a73de411aa998e79846e62d60dbc08ece113d86e3a8279e2ce53da9"
+expected_certificate_file_hash = "sha256:f03b2b830652ee7941e6ce09120b47959e2114fc3ed35dd9dc793ae8327d06ff"
+expected_export_hash = "sha256:19fc9c8bc36358b02ff1bfad9f3695b4ab335e51474d67f7a55076d7ece074e2"
+expected_axiom_report_hash = "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12"
+expected_certificate_hash = "sha256:0f03af71effebe775cb89cf02841eb7053ec72b7faf722639d08188a5ac0ba61"
+imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic"]
+definitions = ["CauchySeq", "ConvergesTo", "CompleteMetricArgs", "SelfMapOn", "ContractiveOn", "FixedPoint", "FixedPointStability", "FixedPointEvidence", "FixedPointResult", "BanachFixedPointArgs"]
+theorems = ["cauchy_seq_intro", "cauchy_seq_apply", "converges_to_intro", "converges_to_apply", "complete_metric_limit_from_args", "self_map_on_apply", "contractive_on_apply", "fixed_point_def", "fixed_point_stability_apply", "fixed_point_evidence_intro", "fixed_point_evidence_elim", "fixed_point_mem_from_evidence", "fixed_point_eq_from_evidence", "fixed_point_unique_from_evidence", "fixed_point_stability_from_evidence", "fixed_point_result_intro", "fixed_point_result_elim", "banach_fixed_point_from_args"]
 axioms = []
 
 [[modules]]
