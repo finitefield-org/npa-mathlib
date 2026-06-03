@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.14"
+version = "0.1.15"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib Layer 3E."
+description = "Public theorem-library package for NPA mathlib abstract ring foundation."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -164,6 +164,23 @@ imports = ["Std.Logic.Eq"]
 inductives = ["RingElem"]
 definitions = ["zero", "one", "add", "neg", "sub", "mul"]
 theorems = ["sub_eq_add_neg", "add_assoc", "add_comm", "add_zero", "zero_add", "neg_add_cancel", "add_neg_cancel", "sub_self", "mul_assoc", "mul_comm", "mul_one", "one_mul", "mul_zero", "zero_mul", "left_distrib", "right_distrib", "add_left_cancel", "mul_add", "add_mul", "ring_normalize_add_mul3"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.Ring.Basic"
+source = "Mathlib/Algebra/Ring/Basic/source.npa"
+certificate = "Mathlib/Algebra/Ring/Basic/certificate.npcert"
+meta = "Mathlib/Algebra/Ring/Basic/meta.json"
+replay = "Mathlib/Algebra/Ring/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:1a545c8cce7c0efe5f0c4754d63d5f846d055a329705397b3d5c95569c13dc71"
+expected_certificate_file_hash = "sha256:db64bef589981cb8c68d395a924761ffde4f68e3c8f06cee763caf36ca0e2009"
+expected_export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
+expected_axiom_report_hash = "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12"
+expected_certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
+imports = ["Std.Logic.Eq"]
+definitions = ["two", "sq", "RingLawArgs"]
+theorems = ["sub_eq_add_neg", "add_assoc", "add_comm", "add_zero", "zero_add", "neg_add_cancel", "add_neg_cancel", "sub_self", "mul_assoc", "mul_comm", "mul_one", "one_mul", "left_distrib", "right_distrib", "mul_zero", "zero_mul", "add_left_cancel", "ring_normalize_add_mul3", "add_right_cancel", "neg_neg", "sub_zero", "zero_sub", "sub_add_cancel", "add_sub_cancel", "sub_add_sub_cancel"]
 axioms = []
 
 [[modules]]

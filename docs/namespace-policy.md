@@ -169,6 +169,12 @@ The `v0.1.14` release adds this Layer 3E module:
 Mathlib.Logic.Iff
 ```
 
+The `v0.1.15` release adds this abstract ring foundation module:
+
+```text
+Mathlib.Algebra.Ring.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -281,6 +287,12 @@ The Layer 3E mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Logic.Iff` | `Mathlib.Logic.Iff` | `Mathlib/Logic/Iff/` |
 
+The abstract ring foundation mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractRing` | `Mathlib.Algebra.Ring.Basic` | `Mathlib/Algebra/Ring/Basic/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -317,6 +329,14 @@ for the final ordered correspondence evidence.
 Layer 3E keeps `Iff`, `And`, `Or`, `False`, and `Not` together in
 `Mathlib.Logic.Iff`. A future `Mathlib.Logic.Connectives` split is deferred
 until another checked corpus route needs the connectives without the `Iff` API.
+
+The abstract ring foundation uses `Mathlib.Algebra.Ring.Basic` for arbitrary
+`Scalar` law-package facts. The already released `Mathlib.Algebra.Ring` module
+remains the concrete one-element ring route. Both surfaces contain some
+declaration names such as `add_assoc` and `ring_normalize_add_mul3`; downstream
+packages should import the abstract foundation or the concrete route according
+to the proof surface they need, not both in the same source module unless they
+have a deliberate disambiguation plan.
 
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.

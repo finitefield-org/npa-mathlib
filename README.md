@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the Layer 3E public package:
+This repository contains the abstract ring foundation public package:
 
 ```text
 Mathlib.Algebra.Group.Correspondence.Ordered
@@ -41,6 +41,7 @@ Mathlib.Algebra.Group.Subgroup
 Mathlib.Logic.Iff
 Mathlib.Logic.EqReasoning
 Mathlib.Algebra.Group.Basic
+Mathlib.Algebra.Ring.Basic
 Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
@@ -59,7 +60,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.14"
+version = "0.1.15"
 schema = "npa.package.v0.1"
 ```
 
@@ -122,9 +123,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Logic.Iff` Layer 3E import closure and applies `iff_mp`,
-`or_elim`, and `false_elim`. It does not vendor `npa-mathlib` source, replay,
-meta, theorem index, registry state, or package source tree.
+vendored `Mathlib.Algebra.Ring.Basic` abstract ring foundation import closure
+and applies `RingLawArgs`, `sub_add_cancel`, and `ring_normalize_add_mul3`. It
+does not vendor `npa-mathlib` source, replay, meta, theorem index, registry
+state, or package source tree.
 
 To verify it:
 

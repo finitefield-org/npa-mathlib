@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib Logic.Iff artifacts."
+description = "Downstream import fixture for public npa-mathlib abstract ring artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -22,24 +22,24 @@ export_hash = "sha256:b78b442d5f593458cc12f079b59e3c70259c0bec4967511e1a01d262d2
 certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6bf10058054aa"
 
 [[imports]]
-module = "Mathlib.Logic.Iff"
+module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.1.14"
-certificate = "vendor/npa-mathlib/Mathlib/Logic/Iff/certificate.npcert"
-export_hash = "sha256:e17dc3a48900d70ad426461379d429257631555845b50b6413c20d80ca0626a9"
-certificate_hash = "sha256:0d6359b2b0f58d8a99c86f2ea0fd579c3d99b62391712f9b47239039ae2cf919"
+version = "0.1.15"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
+export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
+certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
 
 [[modules]]
-module = "Downstream.LogicIff"
-source = "Downstream/LogicIff/source.npa"
-certificate = "Downstream/LogicIff/certificate.npcert"
+module = "Downstream.RingBasic"
+source = "Downstream/RingBasic/source.npa"
+certificate = "Downstream/RingBasic/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.Iff"]
-expected_source_hash = "sha256:75303868b2d495f9203b5130c8e2bec95022aa27393ac262b5dbbb1eaf448784"
-expected_certificate_file_hash = "sha256:95359d0a8826c83896713dbdab8f294628c9fe0abaeb8e4035752a9e831ae3dd"
-expected_export_hash = "sha256:7e35ee61d3a10f9a5c1242ca4e70e8e06dfae7f9ac460e22ae9f940f3bbad166"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
+expected_source_hash = "sha256:c0655bacb671724cbcfd114a1f9bbf91c317cf553de0ac45b6f2a29c7c2140d4"
+expected_certificate_file_hash = "sha256:d5ccfad73c75e819ea0d2629f4d0a07133d22a4747a811d0239f44a112ad6172"
+expected_export_hash = "sha256:018f82d948ea4d07ecb0a3e01f4f3f1c3a963119408f1a7d00a034eb402c0567"
 expected_axiom_report_hash = "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb"
-expected_certificate_hash = "sha256:a72834f6336e24ee8ed133d5c7be28874435b957f3ea33199b2a2e1a44eabd7f"
+expected_certificate_hash = "sha256:583abc6c1ad619ef6055a473fb289a41fc447b1fc26f04ca5836b7eba9ea1cec"
 definitions = []
-theorems = ["iff_mp_passthrough", "or_elim_passthrough", "false_elim_passthrough"]
-axioms = ["Eq.rec"]
+theorems = ["ring_law_args_passthrough", "sub_add_cancel_passthrough", "ring_normalize_add_mul3_passthrough"]
+axioms = []
