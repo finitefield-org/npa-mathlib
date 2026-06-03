@@ -222,6 +222,12 @@ The `v0.1.21` release adds this analysis metric topology closure module:
 Mathlib.Topology.Metric.Basic
 ```
 
+The `v0.1.22` release adds this analysis normed-space closure module:
+
+```text
+Mathlib.Analysis.NormedSpace.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -386,6 +392,12 @@ The analysis metric topology closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractMetricTopology` | `Mathlib.Topology.Metric.Basic` | `Mathlib/Topology/Metric/Basic/` |
 
+The analysis normed-space closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractNormedSpace` | `Mathlib.Analysis.NormedSpace.Basic` | `Mathlib/Analysis/NormedSpace/Basic/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -482,6 +494,13 @@ neighborhoods, local membership, local predicates, local equality, and local
 uniqueness. The module is placed under `Topology` rather than `Analysis`
 because it provides local metric-topology vocabulary for later analysis
 closures rather than a final analysis theorem surface.
+
+The v0.1.22 analysis normed-space closure uses
+`Mathlib.Analysis.NormedSpace.Basic` for norm distance, normed-space law
+packages, product vector operations, product norms, product distances, and
+product norm estimates. It is placed under `Analysis` because it provides the
+norm/product-norm foundation used by later linear-map, derivative,
+fixed-point, inverse-function, and implicit-function routes.
 
 ## Category Rules
 

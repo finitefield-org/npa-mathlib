@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib analysis metric topology closure artifacts."
+description = "Downstream import fixture for public npa-mathlib analysis normed-space closure artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -24,30 +24,62 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.1.21"
+version = "0.1.22"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
 certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
 
 [[imports]]
-module = "Mathlib.Topology.Metric.Basic"
+module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.1.21"
-certificate = "vendor/npa-mathlib/Mathlib/Topology/Metric/Basic/certificate.npcert"
-export_hash = "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36"
-certificate_hash = "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf6eefeb46c37"
+version = "0.1.22"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
+export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
+certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
+
+[[imports]]
+module = "Mathlib.Algebra.OrderedField.Basic"
+package = "npa-mathlib"
+version = "0.1.22"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
+export_hash = "sha256:d413f9f1558949e004cde3f49fd5622cb00b0a0fa312d08a04b22f23f13262ac"
+certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1c160ba3a53e"
+
+[[imports]]
+module = "Mathlib.Algebra.OrderedField.Square"
+package = "npa-mathlib"
+version = "0.1.22"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert"
+export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
+certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c4d6f3a8d388"
+
+[[imports]]
+module = "Mathlib.LinearAlgebra.VectorSpace"
+package = "npa-mathlib"
+version = "0.1.22"
+certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert"
+export_hash = "sha256:2665099f8cfe0789db8e597c477440e6fa0c89262d32b284e5491eaf27e098aa"
+certificate_hash = "sha256:f53bf9435015310b0a3e423d2609b00dab0dfcf30bd676fa012cfb2842e6db2d"
+
+[[imports]]
+module = "Mathlib.Analysis.NormedSpace.Basic"
+package = "npa-mathlib"
+version = "0.1.22"
+certificate = "vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert"
+export_hash = "sha256:d1ce796f7af0aa26d4b1236c440276f4a7a8b30421af244bf8839aca49f9e56b"
+certificate_hash = "sha256:236207f99ee6b9e58509b92f8f4d64493aabc93dbfd4979096d674e37810c24d"
 
 [[modules]]
-module = "Downstream.MetricTopology"
-source = "Downstream/MetricTopology/source.npa"
-certificate = "Downstream/MetricTopology/certificate.npcert"
+module = "Downstream.NormedSpace"
+source = "Downstream/NormedSpace/source.npa"
+certificate = "Downstream/NormedSpace/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Topology.Metric.Basic"]
-expected_source_hash = "sha256:6a3a29aa475b511b9ff48cdda5ae1011902e11b9ecb1a4146077510b333e96cb"
-expected_certificate_file_hash = "sha256:ff2f1dd61c8bdfa7150a30032b00f5fdfa82e83bf60ec35fe4ecd2e628b20d26"
-expected_export_hash = "sha256:e33b72aa82c9500dfb8ae3f264dd90b08f81a2a3413eaf8263b36c412de2116d"
-expected_axiom_report_hash = "sha256:54502ead9b60479bd096ceef3ab93acb45f9474c3fc26b19c83e4bb43cff5c14"
-expected_certificate_hash = "sha256:bba655285cc6ee14748e390d24fcf61f4e72beae8b4af0b0e1f2df608699fb26"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic"]
+expected_source_hash = "sha256:0cb1a1cdca643d3bcd763bf4353cdd99f47765839663cca605eec31f5f92ba99"
+expected_certificate_file_hash = "sha256:75b0f17bbd1ab62c25047012fc35fe7c2e03c544ac5b23cc5ad18aa0c62fc5d3"
+expected_export_hash = "sha256:d99fd0e9a0d762bd69a9ad299f1f5505e9912df126b79d94a7337948ee81dbad"
+expected_axiom_report_hash = "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b"
+expected_certificate_hash = "sha256:e299a0c747a08b24cfec9ba16b82f041e16c5fde1721b564e36ce037d73870d2"
 definitions = []
-theorems = ["metric_ball_mono_passthrough", "local_eq_trans_passthrough", "local_unique_apply_passthrough"]
+theorems = ["norm_dist_triangle_passthrough", "product_norm_pair_le_add_passthrough"]
 axioms = ["Eq.rec"]

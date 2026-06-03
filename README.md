@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the analysis metric topology closure public
+This repository contains the analysis normed-space closure public
 package:
 
 ```text
@@ -51,6 +51,7 @@ Mathlib.Algebra.OrderedField.Basic
 Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
+Mathlib.Analysis.NormedSpace.Basic
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 Mathlib.Geometry.Affine
@@ -77,7 +78,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.21"
+version = "0.1.22"
 schema = "npa.package.v0.1"
 ```
 
@@ -140,9 +141,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Topology.Metric.Basic` metric-topology import closure and
-applies `metric_ball_mono`, `local_eq_trans`, and `local_unique_apply`. It
-vendors the full source-free certificate import closure, but not
+vendored `Mathlib.Analysis.NormedSpace.Basic` normed-space import closure and
+applies `norm_dist_triangle_from_args` and
+`product_norm_pair_le_add_from_args`. It vendors the full source-free
+certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
 
@@ -216,7 +218,10 @@ the expected `Eq.rec` dependency through equality-reasoning, scalar identity,
 and law-package imports. The v0.1.21 release adds the analysis metric
 topology route. `Mathlib.Topology.Metric.Basic` carries no direct custom
 axioms and has the expected transitive `Eq.rec` dependency through
-`Mathlib.Logic.EqReasoning`.
+`Mathlib.Logic.EqReasoning`. The v0.1.22 release adds the analysis
+normed-space route. `Mathlib.Analysis.NormedSpace.Basic` carries no direct
+custom axioms and has the expected transitive `Eq.rec` dependency through
+equality-reasoning and vector-space imports.
 
 ## License
 

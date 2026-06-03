@@ -8,16 +8,20 @@ This fixture models a downstream package that consumes the local
 Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
-- downstream import bundle module: `Mathlib.Topology.Metric.Basic`
+- downstream import bundle module: `Mathlib.Analysis.NormedSpace.Basic`
 - source-free proof artifact:
-  `../../Mathlib/Topology/Metric/Basic/certificate.npcert`
+  `../../Mathlib/Analysis/NormedSpace/Basic/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.Topology.Metric.Basic`:
+`Mathlib.Analysis.NormedSpace.Basic`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Topology/Metric/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -29,6 +33,6 @@ are not proof evidence for this fixture. They are deliberately absent from the
 vendored dependency tree; source-free verification reads only the hash-pinned
 certificate bytes and the downstream package certificate.
 
-The local theorems in `Downstream.MetricTopology` import the metric-topology
-closure and apply the exported `metric_ball_mono`, `local_eq_trans`, and
-`local_unique_apply` surface.
+The local theorems in `Downstream.NormedSpace` import the normed-space closure
+and apply the exported `norm_dist_triangle_from_args` and
+`product_norm_pair_le_add_from_args` surface.

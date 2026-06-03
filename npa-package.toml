@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.21"
+version = "0.1.22"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib analysis metric topology closure."
+description = "Public theorem-library package for NPA mathlib analysis normed-space closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -318,6 +318,23 @@ imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Ordere
 definitions = ["vsub", "linear_comb2", "linear_comb3", "VectorSpaceLawArgs"]
 theorems = ["vec_sub_def", "vec_add_assoc", "vec_add_comm", "vec_add_zero", "vec_zero_add", "vec_neg_add_cancel", "vec_add_neg_cancel", "sub_sub_sub_cancel", "vec_sub_self", "vec_sub_zero", "vec_add_left_cancel", "smul_add", "add_smul", "one_smul", "mul_smul", "zero_smul", "smul_zero", "neg_smul", "smul_neg", "vec_sub_eq_add_neg", "sub_add_sub_cancel_left", "linear_comb2_ext", "linear_comb3_ext"]
 axioms = []
+
+[[modules]]
+module = "Mathlib.Analysis.NormedSpace.Basic"
+source = "Mathlib/Analysis/NormedSpace/Basic/source.npa"
+certificate = "Mathlib/Analysis/NormedSpace/Basic/certificate.npcert"
+meta = "Mathlib/Analysis/NormedSpace/Basic/meta.json"
+replay = "Mathlib/Analysis/NormedSpace/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:e9ebe9423b89282c7b67dca89b928df621b6224b7ac18264f1c0c82d03d8604e"
+expected_certificate_file_hash = "sha256:c593e76d0bef4a190d20d7a0940befc66dde9e8348517b3293edc80dcfe07f76"
+expected_export_hash = "sha256:d1ce796f7af0aa26d4b1236c440276f4a7a8b30421af244bf8839aca49f9e56b"
+expected_axiom_report_hash = "sha256:4ffc0ac83684ca65d83296a7fb4b8104c1099ad79204df7e4efd1f430359d3c0"
+expected_certificate_hash = "sha256:236207f99ee6b9e58509b92f8f4d64493aabc93dbfd4979096d674e37810c24d"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace"]
+definitions = ["NormDist", "NormedSpaceLawArgs", "ProductZero", "ProductAdd", "ProductNeg", "ProductSmul", "ProductSub", "ProductNorm", "ProductDist", "ProductNormEstimateArgs"]
+theorems = ["norm_dist_def", "norm_nonneg_from_args", "norm_zero_from_args", "norm_triangle_from_args", "norm_neg_from_args", "norm_dist_self_from_args", "norm_dist_symm_from_args", "norm_dist_triangle_from_args", "product_zero_def", "product_add_def", "product_neg_def", "product_smul_def", "product_sub_def", "product_norm_def", "product_dist_def", "product_fst_pair_from_args", "product_snd_pair_from_args", "product_pair_eta_from_args", "product_add_fst_from_pair_law", "product_add_snd_from_pair_law", "product_smul_fst_from_pair_law", "product_smul_snd_from_pair_law", "product_norm_pair_eq_from_pair_laws", "product_norm_fst_le_from_args", "product_norm_snd_le_from_args", "product_norm_pair_le_add_from_args", "product_norm_add_le_from_args", "product_dist_pair_le_add_from_args"]
+axioms = ["Eq.rec"]
 
 [[modules]]
 module = "Mathlib.LinearAlgebra.InnerProduct"

@@ -1,0 +1,15 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Ring.Basic
+import Mathlib.Algebra.OrderedField.Basic
+import Mathlib.Algebra.OrderedField.Square
+import Mathlib.LinearAlgebra.VectorSpace
+import Mathlib.Analysis.NormedSpace.Basic
+
+theorem norm_dist_triangle_passthrough.{u,v} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (le_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (Vector : Sort v), forall (vzero : Vector), forall (vadd : forall (x : Vector), forall (y : Vector), Vector), forall (vneg : forall (x : Vector), Vector), forall (smul : forall (a : Scalar), forall (x : Vector), Vector), forall (norm : forall (x : Vector), Scalar), forall (norm_args : @NormedSpaceLawArgs.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm), forall (x : Vector), forall (y : Vector), forall (z : Vector), le_rel (@NormDist.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm x z) (add (@NormDist.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm x y) (@NormDist.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm y z)) :=
+  @norm_dist_triangle_from_args.{u,v}
+
+theorem product_norm_pair_le_add_passthrough.{p,u,v,w} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (le_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (X : Sort v), forall (xzero : X), forall (xadd : forall (a : X), forall (b : X), X), forall (xneg : forall (a : X), X), forall (xsmul : forall (a : Scalar), forall (x : X), X), forall (xnorm : forall (x : X), Scalar), forall (Y : Sort w), forall (yzero : Y), forall (yadd : forall (a : Y), forall (b : Y), Y), forall (yneg : forall (a : Y), Y), forall (ysmul : forall (a : Scalar), forall (y : Y), Y), forall (ynorm : forall (y : Y), Scalar), forall (Product : Sort p), forall (pair : forall (x : X), forall (y : Y), Product), forall (fst : forall (point : Product), X), forall (snd : forall (point : Product), Y), forall (product_args : @ProductNormEstimateArgs.{p,u,v,w} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Product pair fst snd), forall (x : X), forall (y : Y), forall (bx : Scalar), forall (bound_y : Scalar), forall (hx : le_rel (xnorm x) bx), forall (hy : le_rel (ynorm y) bound_y), le_rel (@ProductNorm.{p,u,v,w} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Product pair fst snd (pair x y)) (add bx bound_y) :=
+  @product_norm_pair_le_add_from_args.{p,u,v,w}
