@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.20"
+version = "0.1.21"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib geometry Pythagorean closure."
+description = "Public theorem-library package for NPA mathlib analysis metric topology closure."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -95,6 +95,23 @@ expected_certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7e
 imports = ["Std.Logic.Eq"]
 definitions = []
 theorems = ["eq_symm", "eq_trans", "eq_congr_arg", "eq_congr_fun", "eq_congr2", "eq_subst", "eq_transport_const", "eq_rewrite_left", "eq_rewrite_right", "eq_cast_trans", "eq_calc3"]
+axioms = ["Eq.rec"]
+
+[[modules]]
+module = "Mathlib.Topology.Metric.Basic"
+source = "Mathlib/Topology/Metric/Basic/source.npa"
+certificate = "Mathlib/Topology/Metric/Basic/certificate.npcert"
+meta = "Mathlib/Topology/Metric/Basic/meta.json"
+replay = "Mathlib/Topology/Metric/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:e3188913d905dfb7d529806a568df95c201bef8174143e06ee37c4f1c2147860"
+expected_certificate_file_hash = "sha256:aacd0c14b7957f03edeb381d9241404c9da1cc6393803d2cbcfacb032f684971"
+expected_export_hash = "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36"
+expected_axiom_report_hash = "sha256:6821508440c560fb4a20c6b8dde9b28116f41a1733e43c2dd5163cd66c37b969"
+expected_certificate_hash = "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf6eefeb46c37"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning"]
+definitions = ["MetricBall", "Neighborhood", "LocalMem", "LocalPred", "LocalEq", "LocalUnique"]
+theorems = ["metric_ball_intro", "metric_ball_elim", "neighborhood_intro", "neighborhood_center", "neighborhood_shrink", "local_mem_intro", "local_mem_elim", "local_pred_intro", "local_pred_apply", "local_pred_shrink", "metric_ball_mono", "local_eq_refl", "local_eq_symm", "local_eq_trans", "local_unique_apply"]
 axioms = ["Eq.rec"]
 
 [[modules]]

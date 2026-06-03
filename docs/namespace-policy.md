@@ -216,6 +216,12 @@ Mathlib.Geometry.Metric.Abstract
 Mathlib.Geometry.Pythagorean
 ```
 
+The `v0.1.21` release adds this analysis metric topology closure module:
+
+```text
+Mathlib.Topology.Metric.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -374,6 +380,12 @@ The geometry Pythagorean closure mapping is fixed:
 | `Proofs.Ai.Geometry.AbstractMetric` | `Mathlib.Geometry.Metric.Abstract` | `Mathlib/Geometry/Metric/Abstract/` |
 | `Proofs.Ai.Geometry.Pythagorean` | `Mathlib.Geometry.Pythagorean` | `Mathlib/Geometry/Pythagorean/` |
 
+The analysis metric topology closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractMetricTopology` | `Mathlib.Topology.Metric.Basic` | `Mathlib/Topology/Metric/Basic/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -463,6 +475,13 @@ the concrete geometry route; the abstract law-package route therefore uses
 `Mathlib.Geometry.RightTriangle.Derived`, and
 `Mathlib.Geometry.Metric.Abstract` instead of repurposing those concrete module
 names.
+
+The v0.1.21 analysis metric topology closure uses
+`Mathlib.Topology.Metric.Basic` for predicate-level metric balls,
+neighborhoods, local membership, local predicates, local equality, and local
+uniqueness. The module is placed under `Topology` rather than `Analysis`
+because it provides local metric-topology vocabulary for later analysis
+closures rather than a final analysis theorem surface.
 
 ## Category Rules
 

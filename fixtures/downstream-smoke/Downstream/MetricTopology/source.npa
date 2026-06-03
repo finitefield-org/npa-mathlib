@@ -1,0 +1,15 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Topology.Metric.Basic
+
+theorem metric_ball_mono_passthrough.{u,v} :
+  forall (X : Sort u), forall (R : Sort v), forall (dist : forall (a : X), forall (b : X), R), forall (lt : forall (a : R), forall (b : R), Prop), forall (center : X), forall (r1 : R), forall (r2 : R), forall (h_le : forall (x : X), forall (hx : @MetricBall.{u,v} X R dist lt center r1 x), @MetricBall.{u,v} X R dist lt center r2 x), @LocalPred.{u} X (@MetricBall.{u,v} X R dist lt center r1) (@MetricBall.{u,v} X R dist lt center r2) :=
+  @metric_ball_mono.{u,v}
+
+theorem local_eq_trans_passthrough.{u,v} :
+  forall (X : Sort u), forall (Y : Sort v), forall (domain : forall (x : X), Prop), forall (f : forall (x : X), Y), forall (g : forall (x : X), Y), forall (k : forall (x : X), Y), forall (hfg : @LocalEq.{u,v} X Y domain f g), forall (hgk : @LocalEq.{u,v} X Y domain g k), @LocalEq.{u,v} X Y domain f k :=
+  @local_eq_trans.{u,v}
+
+theorem local_unique_apply_passthrough.{u,v} :
+  forall (X : Sort u), forall (Y : Sort v), forall (domain : forall (x : X), Prop), forall (predicate : forall (x : X), forall (y : Y), Prop), forall (candidate : forall (x : X), Y), forall (uniq : @LocalUnique.{u,v} X Y domain predicate candidate), forall (other : forall (x : X), Y), forall (other_sol : forall (x : X), forall (hx : domain x), predicate x (other x)), forall (candidate_sol : forall (x : X), forall (hx : domain x), predicate x (candidate x)), @LocalEq.{u,v} X Y domain other candidate :=
+  @local_unique_apply.{u,v}

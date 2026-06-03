@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the geometry Pythagorean closure public
+This repository contains the analysis metric topology closure public
 package:
 
 ```text
@@ -41,6 +41,7 @@ Mathlib.Algebra.Group.Subgroup.Order
 Mathlib.Algebra.Group.Subgroup
 Mathlib.Logic.Iff
 Mathlib.Logic.EqReasoning
+Mathlib.Topology.Metric.Basic
 Mathlib.Algebra.Group.Basic
 Mathlib.Algebra.Ring.Basic
 Mathlib.Algebra.Ring.FirstIsomorphism.Basic
@@ -76,7 +77,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.20"
+version = "0.1.21"
 schema = "npa.package.v0.1"
 ```
 
@@ -139,11 +140,11 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Geometry.Pythagorean` geometry import closure and applies
-`pythagorean_distance_general`, `pythagorean_theorem_dist_sq`, and
-`pythagorean_theorem_api_alias`. It vendors the full source-free certificate
-import closure, but not `npa-mathlib` source, replay, meta, theorem index,
-registry state, or package source tree.
+vendored `Mathlib.Topology.Metric.Basic` metric-topology import closure and
+applies `metric_ball_mono`, `local_eq_trans`, and `local_unique_apply`. It
+vendors the full source-free certificate import closure, but not
+`npa-mathlib` source, replay, meta, theorem index, registry state, or package
+source tree.
 
 To verify it:
 
@@ -212,7 +213,10 @@ route. `Mathlib.Geometry.Affine` and
 `Mathlib.Geometry.RightTriangle.Derived`,
 `Mathlib.Geometry.Metric.Abstract`, and `Mathlib.Geometry.Pythagorean` carry
 the expected `Eq.rec` dependency through equality-reasoning, scalar identity,
-and law-package imports.
+and law-package imports. The v0.1.21 release adds the analysis metric
+topology route. `Mathlib.Topology.Metric.Basic` carries no direct custom
+axioms and has the expected transitive `Eq.rec` dependency through
+`Mathlib.Logic.EqReasoning`.
 
 ## License
 
