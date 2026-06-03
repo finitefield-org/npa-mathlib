@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib vector-space foundation artifacts."
+description = "Downstream import fixture for public npa-mathlib inner-product closure artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.1.18"
+version = "0.1.19"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
 export_hash = "sha256:d9ee6937c14ad1e94c85d5b4eb664022da239a794802a948601c207a0152f2ff"
 certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f5aa3aa4390f"
@@ -32,7 +32,7 @@ certificate_hash = "sha256:9c1d44e6906a80b92a7439a2da9a80938940744d0802c544db51f
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Basic"
 package = "npa-mathlib"
-version = "0.1.18"
+version = "0.1.19"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
 export_hash = "sha256:d413f9f1558949e004cde3f49fd5622cb00b0a0fa312d08a04b22f23f13262ac"
 certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1c160ba3a53e"
@@ -40,30 +40,62 @@ certificate_hash = "sha256:fc2f924e2f2d6df6286dee945cf07465733a2617871eae80e45e1
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Square"
 package = "npa-mathlib"
-version = "0.1.18"
+version = "0.1.19"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert"
 export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
 certificate_hash = "sha256:633a349876b76b967256ba42f75f83c2c2f48428af7f7712d1c0c4d6f3a8d388"
 
 [[imports]]
+module = "Mathlib.Logic.EqReasoning"
+package = "npa-mathlib"
+version = "0.1.19"
+certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
+export_hash = "sha256:67f90711ce596378579688b337552c3ae555aada85f97c5d40eab2381e2d1679"
+certificate_hash = "sha256:5f4d2c7abdf117a41633f904bc11345963ee8c36cd7ea1cfc0d8369657a22bad"
+
+[[imports]]
+module = "Mathlib.Algebra.OrderedField.ScalarIdentities"
+package = "npa-mathlib"
+version = "0.1.19"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert"
+export_hash = "sha256:a1d3023263d92db731c77b25c5d9cef404011eb133bea508b943d01cc829a20b"
+certificate_hash = "sha256:11fc4faa5d98f79f6082b55a38d36321f827c87dc12d9aa02111cbf171854919"
+
+[[imports]]
 module = "Mathlib.LinearAlgebra.VectorSpace"
 package = "npa-mathlib"
-version = "0.1.18"
+version = "0.1.19"
 certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert"
 export_hash = "sha256:2665099f8cfe0789db8e597c477440e6fa0c89262d32b284e5491eaf27e098aa"
 certificate_hash = "sha256:f53bf9435015310b0a3e423d2609b00dab0dfcf30bd676fa012cfb2842e6db2d"
 
+[[imports]]
+module = "Mathlib.LinearAlgebra.InnerProduct"
+package = "npa-mathlib"
+version = "0.1.19"
+certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/InnerProduct/certificate.npcert"
+export_hash = "sha256:af2c57ceb6b5ca583d5d5cc0db14a7c46b7752a0929e5a9d23c29baf2c1e7b75"
+certificate_hash = "sha256:b9ab7df58fed220a35a7e8b78ab111b5e167bf304568ab643b29c48945e6d06e"
+
+[[imports]]
+module = "Mathlib.LinearAlgebra.InnerProduct.Derived"
+package = "npa-mathlib"
+version = "0.1.19"
+certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/InnerProduct/Derived/certificate.npcert"
+export_hash = "sha256:18878a4407d7b0fd95b8cbdbe09569a395d557d08e37d8d6d4528da463da29e8"
+certificate_hash = "sha256:03cc30cefb649d78f185c97d31d41070dffd350ebddd91433e6378e2d1b72dc6"
+
 [[modules]]
-module = "Downstream.VectorSpace"
-source = "Downstream/VectorSpace/source.npa"
-certificate = "Downstream/VectorSpace/certificate.npcert"
+module = "Downstream.InnerProduct"
+source = "Downstream/InnerProduct/source.npa"
+certificate = "Downstream/InnerProduct/certificate.npcert"
 producer_profile = "human-surface-explicit-term"
-imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace"]
-expected_source_hash = "sha256:04f515f9aff150561004033bc368aa8c76824fa6f7131e36dcc24e1dca40d779"
-expected_certificate_file_hash = "sha256:046441767918707ab980cfa8d586f52ddbe652f1d10fef8a099ccf5b060d2213"
-expected_export_hash = "sha256:b260c6b71cbe35853856a457f122672d5b7c829b52df5fe60cc07cc0599f14c8"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived"]
+expected_source_hash = "sha256:619ef8aa5d44b6bddf2fb4fb3ce42b70375926c5f32fce12824cdebf305cfb4e"
+expected_certificate_file_hash = "sha256:3ed3968557f8b39c32c393e45ecf7f44c9b25377840588539755b7d7e44954fe"
+expected_export_hash = "sha256:8d225672eaf4cad1f3fd50e15ee28a97a60dbbe56e698e1a728609384c518630"
 expected_axiom_report_hash = "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb"
-expected_certificate_hash = "sha256:6a2ced0f9140fe2747b04fc2432cf405e08fbb7911dbbd0f3fcd57147feb6ca5"
+expected_certificate_hash = "sha256:1ddd31e352504916c05fc087be9d16e521113be4912a33b3748ca09bf85a1eb7"
 definitions = []
-theorems = ["vector_space_law_args_passthrough", "linear_comb2_ext_passthrough", "linear_comb3_ext_passthrough"]
-axioms = []
+theorems = ["parallelogram_law_passthrough", "polarization_identity_passthrough", "cauchy_schwarz_from_law_packages_passthrough"]
+axioms = ["Eq.rec"]

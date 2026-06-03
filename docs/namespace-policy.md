@@ -198,6 +198,13 @@ The `v0.1.18` release adds this vector-space foundation module:
 Mathlib.LinearAlgebra.VectorSpace
 ```
 
+The `v0.1.19` release adds these inner-product closure modules:
+
+```text
+Mathlib.LinearAlgebra.InnerProduct
+Mathlib.LinearAlgebra.InnerProduct.Derived
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -338,6 +345,13 @@ The vector-space foundation mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Vector.AbstractSpace` | `Mathlib.LinearAlgebra.VectorSpace` | `Mathlib/LinearAlgebra/VectorSpace/` |
 
+The inner-product closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Vector.AbstractInnerProduct` | `Mathlib.LinearAlgebra.InnerProduct` | `Mathlib/LinearAlgebra/InnerProduct/` |
+| `Proofs.Ai.Vector.AbstractInnerProductDerive` | `Mathlib.LinearAlgebra.InnerProduct.Derived` | `Mathlib/LinearAlgebra/InnerProduct/Derived/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -406,6 +420,17 @@ surfaces contain names such as `vsub`, `vec_add_assoc`, and `vec_sub_def`;
 downstream packages should import the abstract linear-algebra route or the
 concrete vector route according to the proof surface they need, not both in the
 same source module unless they have a deliberate disambiguation plan.
+
+The v0.1.19 inner-product closure uses
+`Mathlib.LinearAlgebra.InnerProduct` for the abstract inner-product law-package
+surface and `Mathlib.LinearAlgebra.InnerProduct.Derived` for theorem
+derivations from full ring, ordered-field, vector-space, and inner-product law
+packages. The already released `Mathlib.Vector.Dot` module remains the
+concrete one-element dot-product route, while the new modules expose abstract
+`dot`, `normSq`, `distSq`, perpendicularity, parallelogram, polarization, and
+Cauchy-Schwarz statements. Downstream packages should choose either the
+abstract linear-algebra route or the concrete vector route according to the
+proof surface they need.
 
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.

@@ -8,18 +8,22 @@ This fixture models a downstream package that consumes the local
 Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
-- downstream import bundle module: `Mathlib.LinearAlgebra.VectorSpace`
+- downstream import bundle module: `Mathlib.LinearAlgebra.InnerProduct.Derived`
 - source-free proof artifact:
-  `../../Mathlib/LinearAlgebra/VectorSpace/certificate.npcert`
+  `../../Mathlib/LinearAlgebra/InnerProduct/Derived/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
-`Mathlib.LinearAlgebra.VectorSpace`:
+`Mathlib.LinearAlgebra.InnerProduct.Derived`:
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/LinearAlgebra/InnerProduct/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/LinearAlgebra/InnerProduct/Derived/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
 versions, export hashes, and certificate hashes from the publish plan's
@@ -31,6 +35,6 @@ are not proof evidence for this fixture. They are deliberately absent from the
 vendored dependency tree; source-free verification reads only the hash-pinned
 certificate bytes and the downstream package certificate.
 
-The local theorems in `Downstream.VectorSpace` import the vector-space
-foundation closure and apply the exported `VectorSpaceLawArgs`,
-`linear_comb2_ext`, and `linear_comb3_ext` surface.
+The local theorems in `Downstream.InnerProduct` import the inner-product
+closure and apply the exported `parallelogram_law`,
+`polarization_identity`, and `cauchy_schwarz_from_law_packages` surface.
