@@ -228,6 +228,12 @@ The `v0.1.22` release adds this analysis normed-space closure module:
 Mathlib.Analysis.NormedSpace.Basic
 ```
 
+The `v0.1.23` release adds this analysis linear-map closure module:
+
+```text
+Mathlib.Analysis.LinearMap
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -398,6 +404,12 @@ The analysis normed-space closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Analysis.AbstractNormedSpace` | `Mathlib.Analysis.NormedSpace.Basic` | `Mathlib/Analysis/NormedSpace/Basic/` |
 
+The analysis linear-map closure mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Analysis.AbstractLinearMap` | `Mathlib.Analysis.LinearMap` | `Mathlib/Analysis/LinearMap/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -502,6 +514,14 @@ product norm estimates. It is placed under `Analysis` because it provides the
 norm/product-norm foundation used by later linear-map, derivative,
 fixed-point, inverse-function, and implicit-function routes.
 
+The v0.1.23 analysis linear-map closure uses
+`Mathlib.Analysis.LinearMap` for bounded-linear-map law packages, operator norm
+bounds, linear isomorphisms, composition, inverses, and block-triangular map
+APIs over normed spaces. It is placed under `Analysis` rather than a pure
+`LinearAlgebra` namespace because the checked surface is normed and bounded
+and is the direct foundation for derivative, inverse-function, and
+implicit-function analysis routes.
+
 ## Category Rules
 
 Use short, domain-oriented module names. Prefer adding one coherent module over
@@ -521,8 +541,10 @@ Use `Mathlib.Algebra.*` for algebraic structures and algebraic theorem groups.
 Prefer names such as `Mathlib.Algebra.Ring`, `Mathlib.Algebra.Square`, and
 `Mathlib.Algebra.Group.Basic` for small foundational layers.
 
-Use `Mathlib.LinearAlgebra.*` for abstract vector-space, linear-map,
-inner-product, matrix, and determinant law-package surfaces. Keep
+Use `Mathlib.LinearAlgebra.*` for abstract vector-space, algebraic linear-map,
+inner-product, matrix, and determinant law-package surfaces. Use
+`Mathlib.Analysis.*` for bounded or normed linear-map APIs that depend on the
+analysis normed-space foundation. Keep
 `Mathlib.Vector.*` for the already released concrete vector examples unless a
 future breaking policy says otherwise.
 

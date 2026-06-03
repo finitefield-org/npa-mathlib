@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the analysis normed-space closure public
+This repository contains the analysis linear-map closure public
 package:
 
 ```text
@@ -52,6 +52,7 @@ Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
 Mathlib.Analysis.NormedSpace.Basic
+Mathlib.Analysis.LinearMap
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 Mathlib.Geometry.Affine
@@ -78,7 +79,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.22"
+version = "0.1.23"
 schema = "npa.package.v0.1"
 ```
 
@@ -141,9 +142,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Analysis.NormedSpace.Basic` normed-space import closure and
-applies `norm_dist_triangle_from_args` and
-`product_norm_pair_le_add_from_args`. It vendors the full source-free
+vendored `Mathlib.Analysis.LinearMap` linear-map import closure and applies
+`linear_comp_law_args`, `linear_inv_left_inverse_from_iso`, and
+`block_triangular_b_iso_from_args`. It vendors the full source-free
 certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
@@ -221,7 +222,10 @@ axioms and has the expected transitive `Eq.rec` dependency through
 `Mathlib.Logic.EqReasoning`. The v0.1.22 release adds the analysis
 normed-space route. `Mathlib.Analysis.NormedSpace.Basic` carries no direct
 custom axioms and has the expected transitive `Eq.rec` dependency through
-equality-reasoning and vector-space imports.
+equality-reasoning and vector-space imports. The v0.1.23 release adds the
+analysis linear-map route. `Mathlib.Analysis.LinearMap` carries no direct
+custom axioms and has the expected transitive `Eq.rec` dependency through
+equality-reasoning, vector-space, and normed-space imports.
 
 ## License
 
