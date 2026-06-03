@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the ordered algebra and square normalization public
+This repository contains the vector-space foundation public
 package:
 
 ```text
@@ -49,6 +49,7 @@ Mathlib.Algebra.Ring.ChineseRemainder
 Mathlib.Algebra.OrderedField.Basic
 Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
+Mathlib.LinearAlgebra.VectorSpace
 Mathlib.Geometry.RightTriangle
 Mathlib.Geometry.Metric
 Mathlib.Vector.Basic
@@ -67,7 +68,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.17"
+version = "0.1.18"
 schema = "npa.package.v0.1"
 ```
 
@@ -130,10 +131,9 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 ## Downstream Smoke Fixture
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
-vendored `Mathlib.Algebra.OrderedField.ScalarIdentities` ordered-algebra and
-square-normalization import closure and applies `sqrt_sq`,
-`sq_add_eq_add_sq_add_two_mul`, and
-`polarization_scalar_rhs_from_ring_args`. It vendors the full source-free
+vendored `Mathlib.LinearAlgebra.VectorSpace` vector-space foundation import
+closure and applies `VectorSpaceLawArgs`, `linear_comb2_ext`, and
+`linear_comb3_ext`. It vendors the full source-free
 certificate import closure, but not `npa-mathlib` source, replay, meta,
 theorem index, registry state, or package source tree.
 
@@ -191,7 +191,9 @@ and CRT route, including `RingHomLawArgs`, `RingFirstIso`, and
 equality-reasoning dependency. The v0.1.17 release adds the abstract ordered
 field, square-normalization, and scalar-identity route. The first two modules
 carry no custom axioms; `Mathlib.Algebra.OrderedField.ScalarIdentities` carries
-the expected `Eq.rec` dependency through equality transport.
+the expected `Eq.rec` dependency through equality transport. The v0.1.18
+release adds the abstract vector-space foundation route, and
+`Mathlib.LinearAlgebra.VectorSpace` carries no custom axioms.
 
 ## License
 

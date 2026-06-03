@@ -192,6 +192,12 @@ Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 ```
 
+The `v0.1.18` release adds this vector-space foundation module:
+
+```text
+Mathlib.LinearAlgebra.VectorSpace
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -326,6 +332,12 @@ The ordered algebra and square-normalization mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractSquareNormalize` | `Mathlib.Algebra.OrderedField.Square` | `Mathlib/Algebra/OrderedField/Square/` |
 | `Proofs.Ai.Algebra.AbstractScalarDerive` | `Mathlib.Algebra.OrderedField.ScalarIdentities` | `Mathlib/Algebra/OrderedField/ScalarIdentities/` |
 
+The vector-space foundation mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Vector.AbstractSpace` | `Mathlib.LinearAlgebra.VectorSpace` | `Mathlib/LinearAlgebra/VectorSpace/` |
+
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
@@ -386,6 +398,15 @@ abstract square-normalization facts, while
 `Mathlib.Algebra.OrderedField.ScalarIdentities` contains derived scalar RHS
 identities used by later inner-product and geometry routes.
 
+The v0.1.18 vector-space foundation route uses
+`Mathlib.LinearAlgebra.VectorSpace` for the abstract vector-space law-package
+surface. The already released `Mathlib.Vector.Basic` and `Mathlib.Vector.Dot`
+modules remain the concrete one-element vector and dot-product route. Both
+surfaces contain names such as `vsub`, `vec_add_assoc`, and `vec_sub_def`;
+downstream packages should import the abstract linear-algebra route or the
+concrete vector route according to the proof surface they need, not both in the
+same source module unless they have a deliberate disambiguation plan.
+
 `Proofs.Ai.Geometry.Pythagorean` is intentionally deferred because its current
 corpus closure belongs to the abstract geometry / law-package track.
 
@@ -408,9 +429,13 @@ Use `Mathlib.Algebra.*` for algebraic structures and algebraic theorem groups.
 Prefer names such as `Mathlib.Algebra.Ring`, `Mathlib.Algebra.Square`, and
 `Mathlib.Algebra.Group.Basic` for small foundational layers.
 
-Use `Mathlib.Vector.*`, `Mathlib.Geometry.*`, `Mathlib.Analysis.*`, and similar
-domain prefixes when the subject has grown beyond a single algebra or data
-module.
+Use `Mathlib.LinearAlgebra.*` for abstract vector-space, linear-map,
+inner-product, matrix, and determinant law-package surfaces. Keep
+`Mathlib.Vector.*` for the already released concrete vector examples unless a
+future breaking policy says otherwise.
+
+Use `Mathlib.Geometry.*`, `Mathlib.Analysis.*`, and similar domain prefixes
+when the subject has grown beyond a single algebra or data module.
 
 Avoid package names, implementation strategies, proof generation methods,
 authors, release numbers, or trust levels in module names. For example, do not

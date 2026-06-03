@@ -1,0 +1,17 @@
+import Std.Logic.Eq
+import Mathlib.Algebra.Ring.Basic
+import Mathlib.Algebra.OrderedField.Basic
+import Mathlib.Algebra.OrderedField.Square
+import Mathlib.LinearAlgebra.VectorSpace
+
+theorem vector_space_law_args_passthrough.{u,v} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (Vector : Sort v), forall (vzero : Vector), forall (vadd : forall (x : Vector), forall (y : Vector), Vector), forall (vneg : forall (x : Vector), Vector), forall (smul : forall (a : Scalar), forall (x : Vector), Vector), forall (vector_args : @VectorSpaceLawArgs.{u,v} Scalar zero one add neg sub mul Vector vzero vadd vneg smul), @VectorSpaceLawArgs.{u,v} Scalar zero one add neg sub mul Vector vzero vadd vneg smul :=
+  fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun vector_args => vector_args
+
+theorem linear_comb2_ext_passthrough.{u,v} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (Vector : Sort v), forall (vzero : Vector), forall (vadd : forall (x : Vector), forall (y : Vector), Vector), forall (vneg : forall (x : Vector), Vector), forall (smul : forall (a : Scalar), forall (x : Vector), Vector), forall (a : Scalar), forall (x : Vector), forall (b : Scalar), forall (y : Vector), @Eq.{v} Vector (@linear_comb2.{u,v} Scalar Vector vadd smul a x b y) (vadd (smul a x) (smul b y)) :=
+  @linear_comb2_ext.{u,v}
+
+theorem linear_comb3_ext_passthrough.{u,v} :
+  forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (Vector : Sort v), forall (vzero : Vector), forall (vadd : forall (x : Vector), forall (y : Vector), Vector), forall (vneg : forall (x : Vector), Vector), forall (smul : forall (a : Scalar), forall (x : Vector), Vector), forall (a : Scalar), forall (x : Vector), forall (b : Scalar), forall (y : Vector), forall (c : Scalar), forall (z : Vector), @Eq.{v} Vector (@linear_comb3.{u,v} Scalar Vector vadd smul a x b y c z) (vadd (vadd (smul a x) (smul b y)) (smul c z)) :=
+  @linear_comb3_ext.{u,v}
