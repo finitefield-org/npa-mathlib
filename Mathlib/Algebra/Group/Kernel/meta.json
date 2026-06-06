@@ -10,12 +10,27 @@
   "export_hash": "sha256:5c1a39b0e9f82dc1014e3e63549c71eab3db6383024a87408e4e95e06bc33fbb",
   "axiom_report_hash": "sha256:39f92e3a74edf201d900d93abeebb9c404ea8c141bfc46761f7e889c9f8cf9f7",
   "certificate_hash": "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56fb27f4f514dcd6dbef14d",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "kernel_mul_closed", "kind": "theorem" },
-    { "name": "kernel_inv_closed", "kind": "theorem" },
-    { "name": "kernel_conj_closed", "kind": "theorem" }
+    {
+      "name": "kernel_mul_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_inv_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_conj_closed",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

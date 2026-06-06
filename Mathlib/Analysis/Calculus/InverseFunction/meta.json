@@ -5,35 +5,106 @@
   "certificate": "Mathlib/Analysis/Calculus/InverseFunction/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:cda16cfa847a4ff6fa447bb6c1749c100fa03db1f9c19caef893ccc77daee013",
-  "certificate_file_sha256": "sha256:cc39011125fa514e18739a83f30d5a36376a972b873810f3b8ea81bd50d65976",
-  "export_hash": "sha256:abb15f4f06e9487c57969f4492e342be57401d9976a19c76ba95ebe89d4ee46f",
+  "source_sha256": "sha256:f6e9aa4abf729442201e500dbb27b9c9ad30b1d2bceb7f79b6c4fde780959391",
+  "certificate_file_sha256": "sha256:52a0c4b28e8eff1695072257e681f9d07b24e9b91ff98551e6f6f42ed0ee06f4",
+  "export_hash": "sha256:dfeb171a04e4af0fa3bedd1e12b835d855a19f2082ffa1eb650f81641c2f7f9f",
   "axiom_report_hash": "sha256:4ce54129453ca5f2cc9726d9e809e739b6640402d7515115c64b8169ae6c93a6",
-  "certificate_hash": "sha256:b37f975a3a1c64f716754ab66d20383899321d81fd4deea8cc0720df4ff38a68",
-  "imports": ["Std.Logic.Eq", "Mathlib.Topology.Metric.Basic", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.FixedPoint.Banach"],
+  "certificate_hash": "sha256:99fac295a7fe5aca94a7900148a9807abc1532f61968533cd4db452f1e9f0f3e",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Topology.Metric.Basic",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Mathlib.Analysis.NormedSpace.Basic",
+    "Mathlib.Analysis.LinearMap",
+    "Mathlib.Analysis.Calculus.Derivative",
+    "Mathlib.Analysis.FixedPoint.Banach"
+  ],
   "axioms": [],
   "declarations": [
-    { "name": "InverseResidual", "kind": "def" },
-    { "name": "InverseNewtonMap", "kind": "def" },
-    { "name": "LocalInverseEvidence", "kind": "def" },
-    { "name": "LocalInverseResult", "kind": "def" },
-    { "name": "QuantitativeInverseFunctionArgs", "kind": "def" },
-    { "name": "inverse_residual_def", "kind": "theorem" },
-    { "name": "inverse_newton_map_def", "kind": "theorem" },
-    { "name": "local_inverse_evidence_intro", "kind": "theorem" },
-    { "name": "local_inverse_evidence_elim", "kind": "theorem" },
-    { "name": "local_inverse_base_mem_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_image_mem_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_maps_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_left_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_right_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_unique_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_fixed_point_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_derivative_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_linear_iso_from_evidence", "kind": "theorem" },
-    { "name": "local_inverse_result_intro", "kind": "theorem" },
-    { "name": "local_inverse_result_elim", "kind": "theorem" },
-    { "name": "quantitative_inverse_function_from_args", "kind": "theorem" }
+    {
+      "name": "InverseResidual",
+      "kind": "def"
+    },
+    {
+      "name": "InverseNewtonMap",
+      "kind": "def"
+    },
+    {
+      "name": "LocalInverseEvidence",
+      "kind": "def"
+    },
+    {
+      "name": "LocalInverseResult",
+      "kind": "def"
+    },
+    {
+      "name": "QuantitativeInverseFunctionArgs",
+      "kind": "def"
+    },
+    {
+      "name": "inverse_residual_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "inverse_newton_map_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_evidence_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_evidence_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_base_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_image_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_maps",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_unique",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_fixed_point",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_derivative",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_linear_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_result_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_inverse_result_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "quantitative_inverse_function",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

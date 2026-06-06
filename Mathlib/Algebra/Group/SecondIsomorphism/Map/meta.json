@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/SecondIsomorphism/Map/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:bf167686c871620f655081c61a536a7538eb2f9d327e30de91d06e33bfde3ae4",
-  "certificate_file_sha256": "sha256:2114f1a9368313eaefcb31079e9c02c44e4a1def10aa0a22c73027aa434dfc98",
-  "export_hash": "sha256:7ee14328dc55734480495e5b6bdc07124481d60ac50ea2cd2cfe0ae1af1ee6d7",
+  "source_sha256": "sha256:e86965073092a3b548fa7c66a98a4e1e35f5daa04073e6a549d4e06f8bf8f86b",
+  "certificate_file_sha256": "sha256:11618c9712c43681ac97da34a6e7d1d5785c54c3ca116e24b26434737fd21f02",
+  "export_hash": "sha256:182b4991e8083dc99c2ada00d5f3d1f3a8dbd6d6bba105c337f0eb0b674e93bb",
   "axiom_report_hash": "sha256:be1a77ed10a39666141513d10276a53768c73a3c2f624e2abac75c22ae46554f",
-  "certificate_hash": "sha256:d9fca8faf318fd62e6ae8e45c9f1ebfa9a982364ea7d105d2be495382166be34",
+  "certificate_hash": "sha256:9b3bd89e550124ec02fd8f59376fb032fc9cbc8ab2ae7bd623404064a1468e0e",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Algebra.Group.Basic",
@@ -23,23 +23,23 @@
   ],
   "declarations": [
     {
-      "name": "SecondIsoPhi",
+      "name": "SecondIsoMap",
       "kind": "def"
     },
     {
-      "name": "second_iso_phi_mk",
+      "name": "second_iso_map_mk",
       "kind": "theorem"
     },
     {
-      "name": "second_iso_phi_mul",
+      "name": "second_iso_map_mul",
       "kind": "theorem"
     },
     {
-      "name": "second_iso_phi_one",
+      "name": "second_iso_map_one",
       "kind": "theorem"
     },
     {
-      "name": "second_iso_phi_inv",
+      "name": "second_iso_augmented_map_inv",
       "kind": "theorem"
     }
   ],

@@ -5,26 +5,75 @@
   "certificate": "Mathlib/Algebra/Ring/FirstIsomorphism/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:ae5ff402aafb79a21c3cce567f420d0a185e581ab9bb6a42d2302a9009c74250",
-  "certificate_file_sha256": "sha256:cd5ed74355fac4f19568206e0b3709edad835c2f8396b7e5e54a8932c0efe094",
-  "export_hash": "sha256:9ef53bef360e0e274a73ca9ba975f66eed4296483446e0ff633520a02fab9447",
+  "source_sha256": "sha256:693518124fa82e98483ebbda46ca90c8a7691ccb18684eda53aaf85e61b36f26",
+  "certificate_file_sha256": "sha256:e41799b4e48a5428e939b0753049c69ae4674df6e1a869c487cb8aba7fe0d7d3",
+  "export_hash": "sha256:08ff971ed9d11d35efe3f6a0b898988fe3261708e6e6d5da430499e83f6396f9",
   "axiom_report_hash": "sha256:f39c6826ea5fd04328e88ce53f46ee3da7422779015b92583cdcef2697007f68",
-  "certificate_hash": "sha256:094440c29ba32666c059099a3f94495e240872b703d1f4eb534b9b09a2e8aad4",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic"],
-  "axioms": ["Eq.rec"],
+  "certificate_hash": "sha256:633e93d4821c7ad39eeb5166e6f374d7150d6f0a493beefac9a8c85085091c90",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Image",
+    "Mathlib.Algebra.Group.Kernel.Quotient",
+    "Mathlib.Algebra.Group.Kernel.Quotient.Mul",
+    "Mathlib.Algebra.Group.Kernel.Quotient.Group",
+    "Mathlib.Algebra.Group.FirstIsomorphism",
+    "Mathlib.Algebra.Ring.FirstIsomorphism.Basic"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "RingKerQuotMul", "kind": "def" },
-    { "name": "RingKerQuotOne", "kind": "def" },
-    { "name": "RingFirstIso", "kind": "def" },
-    { "name": "ring_ker_quot_mul_mk", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_zero", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_one", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_add", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_mul", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_injective", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_hits_image", "kind": "theorem" },
-    { "name": "ring_first_iso_phi_surj_image", "kind": "theorem" },
-    { "name": "ring_first_isomorphism_to_image", "kind": "theorem" }
+    {
+      "name": "RingKernelQuotientMul",
+      "kind": "def"
+    },
+    {
+      "name": "RingKernelQuotientOne",
+      "kind": "def"
+    },
+    {
+      "name": "RingFirstIso",
+      "kind": "def"
+    },
+    {
+      "name": "ring_kernel_quotient_mul_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_injective",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_hits_image",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_iso_map_surj_image",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_first_isomorphism_to_image",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

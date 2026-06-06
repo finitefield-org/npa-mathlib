@@ -5,24 +5,62 @@
   "certificate": "Mathlib/Algebra/Group/Kernel/Quotient/Group/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:5e826492a530cfac9e2aac54e236f214af89a925e6bdd3c210c6fbfb92ea86dd",
-  "certificate_file_sha256": "sha256:ef6acfa38ee4521a747ec9785d939c98cea0c64e26354f523eba4441a589742c",
-  "export_hash": "sha256:4e67aa4b715757c1e8d8b4cef1637464a43fe2a4348c909b893e4f4c1330fa69",
+  "source_sha256": "sha256:91e8a7e6a411b61bc9d96a321b24bc2d65d3ef602bc63d9e5199917a9c62ad83",
+  "certificate_file_sha256": "sha256:9786bb9851100f50b646bd44fb88dc4422973868aedb582e0f2893b5fbfd04ee",
+  "export_hash": "sha256:3f189310201f27b8b48e0b86c5df8b7449e6460db52136be1ce3fc5c0ee223fa",
   "axiom_report_hash": "sha256:35475c48af8ff4a446c4f9b72745aea69e6442d8ee83fe8587a0a88eeec2e307",
-  "certificate_hash": "sha256:28b4b550a12b0e1cb4ae1624c6cf7007c8262b52254729110cd26fadda72acac",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul"],
-  "axioms": ["Eq.rec"],
+  "certificate_hash": "sha256:7243608be98ed3f572549199c674fbcd2a44ad5c2b3d25cf2ccdd36c62c93714",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Kernel.Quotient",
+    "Mathlib.Algebra.Group.Kernel.Quotient.Mul"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "KerQuotMul", "kind": "def" },
-    { "name": "KerQuotOne", "kind": "def" },
-    { "name": "KerQuotInv", "kind": "def" },
-    { "name": "ker_quot_mul_mk", "kind": "theorem" },
-    { "name": "ker_quot_inv_mk", "kind": "theorem" },
-    { "name": "ker_quot_mul_assoc", "kind": "theorem" },
-    { "name": "ker_quot_one_mul", "kind": "theorem" },
-    { "name": "ker_quot_mul_one", "kind": "theorem" },
-    { "name": "ker_quot_inv_mul", "kind": "theorem" },
-    { "name": "ker_quot_mul_inv", "kind": "theorem" }
+    {
+      "name": "KernelQuotientMul",
+      "kind": "def"
+    },
+    {
+      "name": "KernelQuotientOne",
+      "kind": "def"
+    },
+    {
+      "name": "KernelQuotientInv",
+      "kind": "def"
+    },
+    {
+      "name": "kernel_quotient_mul_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_inv_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_mul_assoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_one_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_mul_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_inv_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_mul_inv",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

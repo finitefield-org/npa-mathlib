@@ -70,9 +70,9 @@
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => forall (point : X), forall (value : Y), forall (bound : Scalar), forall (remainder_small : forall (r : Y), Prop), @FrechetDerivativeAt.{u,v,w} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm (@ConstMap.{u,v,w} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm value) point (@ZeroMap.{u,v,w} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm) bound remainder_small"
     },
     {
-      "declaration": "DerivativeIdRuleArgs",
+      "declaration": "DerivativeIdentityRuleArgs",
       "source_kind": "explicit_def_value",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun norm => forall (point : Vector), forall (bound : Scalar), forall (remainder_small : forall (r : Vector), Prop), @FrechetDerivativeAt.{u,v,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm Vector vzero vadd vneg smul norm (@LinearId.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm) point (@LinearId.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm) bound remainder_small"
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun norm => forall (point : Vector), forall (bound : Scalar), forall (remainder_small : forall (r : Vector), Prop), @FrechetDerivativeAt.{u,v,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm Vector vzero vadd vneg smul norm (@LinearIdentity.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm) point (@LinearIdentity.{u,v} Scalar zero one add neg sub mul le_rel Vector vzero vadd vneg smul norm) bound remainder_small"
     },
     {
       "declaration": "DerivativeFstRuleArgs",
@@ -140,7 +140,7 @@
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun f => fun domain => fun diff_on => fun x => fun hx => diff_on x hx"
     },
     {
-      "declaration": "derivative_unique_from_args",
+      "declaration": "derivative_unique",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun f => fun point => fun unique_args => fun df_left => fun bound_left => fun remainder_left => fun df_right => fun bound_right => fun remainder_right => fun left_at => fun right_at => fun h => unique_args df_left bound_left remainder_left df_right bound_right remainder_right left_at right_at h"
     },
@@ -160,32 +160,32 @@
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun Product => fun pzero => fun padd => fun pneg => fun psmul => fun pnorm => fun pair => fun fst => fun snd => fun f => fun g => fun point => @Eq.refl.{p} Product (@PairMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd f g point)"
     },
     {
-      "declaration": "derivative_const_from_args",
+      "declaration": "derivative_const",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun args => fun point => fun value => fun bound => fun remainder_small => args point value bound remainder_small"
     },
     {
-      "declaration": "derivative_id_from_args",
+      "declaration": "derivative_identity",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun norm => fun args => fun point => fun bound => fun remainder_small => args point bound remainder_small"
     },
     {
-      "declaration": "derivative_fst_from_args",
+      "declaration": "derivative_fst",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Product => fun pair => fun fst => fun snd => fun args => fun point => fun bound => fun remainder_small => args point bound remainder_small"
     },
     {
-      "declaration": "derivative_snd_from_args",
+      "declaration": "derivative_snd",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Product => fun pair => fun fst => fun snd => fun args => fun point => fun bound => fun remainder_small => args point bound remainder_small"
     },
     {
-      "declaration": "derivative_pair_from_args",
+      "declaration": "derivative_pair",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun Product => fun pzero => fun padd => fun pneg => fun psmul => fun pnorm => fun pair => fun fst => fun snd => fun f => fun g => fun args => fun point => fun df => fun dg => fun f_bound => fun f_remainder => fun g_bound => fun g_remainder => fun pair_bound => fun pair_remainder => fun f_at => fun g_at => args point df dg f_bound f_remainder g_bound g_remainder pair_bound pair_remainder f_at g_at"
     },
     {
-      "declaration": "derivative_comp_from_args",
+      "declaration": "derivative_comp",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun f => fun g => fun args => fun point => fun df => fun dg => fun f_bound => fun f_remainder => fun g_bound => fun g_remainder => fun comp_bound => fun comp_remainder => fun f_at => fun g_at => args point df dg f_bound f_remainder g_bound g_remainder comp_bound comp_remainder f_at g_at"
     },
@@ -210,12 +210,12 @@
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun Product => fun pzero => fun padd => fun pneg => fun psmul => fun pnorm => fun pair => fun fst => fun snd => fun F => fun dF => fun h => @Eq.refl.{z} Z (@PartialYDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF h)"
     },
     {
-      "declaration": "partial_x_derivative_from_args",
+      "declaration": "partial_x_derivative",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun Product => fun pzero => fun padd => fun pneg => fun psmul => fun pnorm => fun pair => fun fst => fun snd => fun F => fun args => fun base_x => fun base_y => fun dF => fun F_bound => fun F_remainder => fun partial_x_bound => fun partial_x_remainder => fun partial_y_bound => fun partial_y_remainder => fun F_at => args base_x base_y dF F_bound F_remainder partial_x_bound partial_x_remainder partial_y_bound partial_y_remainder F_at (@FrechetDerivativeAt.{u,v,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Z zzero zadd zneg zsmul znorm (@PartialXMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_y) base_x (@PartialXDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_x_bound partial_x_remainder) (fun (partial_x_at : @FrechetDerivativeAt.{u,v,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Z zzero zadd zneg zsmul znorm (@PartialXMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_y) base_x (@PartialXDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_x_bound partial_x_remainder) => fun (partial_y_at : @FrechetDerivativeAt.{u,w,z} Scalar zero one add neg sub mul le_rel Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm (@PartialYMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_x) base_y (@PartialYDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_y_bound partial_y_remainder) => partial_x_at)"
     },
     {
-      "declaration": "partial_y_derivative_from_args",
+      "declaration": "partial_y_derivative",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun X => fun xzero => fun xadd => fun xneg => fun xsmul => fun xnorm => fun Y => fun yzero => fun yadd => fun yneg => fun ysmul => fun ynorm => fun Z => fun zzero => fun zadd => fun zneg => fun zsmul => fun znorm => fun Product => fun pzero => fun padd => fun pneg => fun psmul => fun pnorm => fun pair => fun fst => fun snd => fun F => fun args => fun base_x => fun base_y => fun dF => fun F_bound => fun F_remainder => fun partial_x_bound => fun partial_x_remainder => fun partial_y_bound => fun partial_y_remainder => fun F_at => args base_x base_y dF F_bound F_remainder partial_x_bound partial_x_remainder partial_y_bound partial_y_remainder F_at (@FrechetDerivativeAt.{u,w,z} Scalar zero one add neg sub mul le_rel Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm (@PartialYMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_x) base_y (@PartialYDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_y_bound partial_y_remainder) (fun (partial_x_at : @FrechetDerivativeAt.{u,v,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Z zzero zadd zneg zsmul znorm (@PartialXMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_y) base_x (@PartialXDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_x_bound partial_x_remainder) => fun (partial_y_at : @FrechetDerivativeAt.{u,w,z} Scalar zero one add neg sub mul le_rel Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm (@PartialYMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F base_x) base_y (@PartialYDerivativeMap.{p,u,v,w,z} Scalar zero one add neg sub mul le_rel X xzero xadd xneg xsmul xnorm Y yzero yadd yneg ysmul ynorm Z zzero zadd zneg zsmul znorm Product pzero padd pneg psmul pnorm pair fst snd F dF) partial_y_bound partial_y_remainder) => partial_y_at)"
     }

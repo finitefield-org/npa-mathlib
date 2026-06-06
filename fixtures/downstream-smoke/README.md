@@ -26,7 +26,7 @@ The fixture vendors the source-free certificate import closure for
 - `vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/LinearMap/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/Derivative/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/Phi/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert`
 
 The imports in `npa-package.toml` are pinned to package names, package
@@ -40,6 +40,6 @@ vendored dependency tree; source-free verification reads only the hash-pinned
 certificate bytes and the downstream package certificate.
 
 The local theorems in `Downstream.ImplicitFunction` import the implicit-function
-closure and apply the exported `implicit_phi_derivative_from_args`,
+closure and apply the exported `implicit_augmented_map_derivative`,
 `implicit_function_theorem`, and `implicit_function_derivative_theorem`
 surfaces.

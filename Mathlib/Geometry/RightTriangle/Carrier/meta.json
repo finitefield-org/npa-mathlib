@@ -1,0 +1,74 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.RightTriangle.Carrier",
+  "source": "Mathlib/Geometry/RightTriangle/Carrier/source.npa",
+  "certificate": "Mathlib/Geometry/RightTriangle/Carrier/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:0d8272df43b0d035c2cf179f7e74b79582da4a0a7da67f03a41b9cd7bf326618",
+  "certificate_file_sha256": "sha256:177a64d58585bcb21cc4c4c51c25d75a2a07d5729f4172bf7e3f47e13a77ef95",
+  "export_hash": "sha256:2ac43f5b52195a49cf676f7e6e42f8b2dce8f7b0a731f9162e1c21d0d8b3fd9b",
+  "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
+  "certificate_hash": "sha256:e68140468c5e5c83976cb6c4c8c9136303c5ac0247cace5dca9fed58267635e6",
+  "imports": [
+    "Mathlib.Algebra.OrderedField.Basic",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.OrderedField.Square",
+    "Mathlib.Geometry.Affine",
+    "Mathlib.LinearAlgebra.InnerProduct",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Std.Logic.Eq"
+  ],
+  "axioms": [],
+  "declarations": [
+    {
+      "name": "Perp",
+      "kind": "def"
+    },
+    {
+      "name": "RightTriangle",
+      "kind": "def"
+    },
+    {
+      "name": "AngleRight",
+      "kind": "def"
+    },
+    {
+      "name": "Area2",
+      "kind": "def"
+    },
+    {
+      "name": "FootOnHypotenuse",
+      "kind": "def"
+    },
+    {
+      "name": "perp_iff_dot_eq_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "perp_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "right_triangle_legs_perp",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_distance_sq_general",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines_general",
+      "kind": "theorem"
+    },
+    {
+      "name": "right_triangle_area_general",
+      "kind": "theorem"
+    },
+    {
+      "name": "median_to_hypotenuse_general",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

@@ -9,7 +9,7 @@ theorem nat_succ_zero_self_eq :
   @Eq.{1} Nat (Nat.succ Nat.zero) (Nat.succ Nat.zero) :=
   @Eq.refl.{1} Nat (Nat.succ Nat.zero)
 
-theorem nat_id :
+theorem nat_identity :
   forall (n : Nat), Nat :=
   fun n => n
 

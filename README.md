@@ -39,7 +39,7 @@ Mathlib.Algebra.Group.Image
 Mathlib.Algebra.Group.Kernel
 Mathlib.Algebra.Group.Subgroup.Order
 Mathlib.Algebra.Group.Subgroup
-Mathlib.Logic.Iff
+Mathlib.Logic.PropConnectives
 Mathlib.Logic.EqReasoning
 Mathlib.Topology.Metric.Basic
 Mathlib.Algebra.Group.Basic
@@ -56,23 +56,23 @@ Mathlib.Analysis.LinearMap
 Mathlib.Analysis.Calculus.Derivative
 Mathlib.Analysis.FixedPoint.Banach
 Mathlib.Analysis.Calculus.InverseFunction
-Mathlib.Analysis.Calculus.ImplicitFunction.Phi
+Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap
 Mathlib.Analysis.Calculus.ImplicitFunction
 Mathlib.LinearAlgebra.InnerProduct
 Mathlib.LinearAlgebra.InnerProduct.Derived
 Mathlib.Geometry.Affine
 Mathlib.Geometry.Affine.Derived
-Mathlib.Geometry.RightTriangle.Abstract
+Mathlib.Geometry.RightTriangle.Carrier
 Mathlib.Geometry.RightTriangle.Derived
-Mathlib.Geometry.Metric.Abstract
+Mathlib.Geometry.Metric.Carrier
 Mathlib.Geometry.Pythagorean
-Mathlib.Geometry.RightTriangle
-Mathlib.Geometry.Metric
-Mathlib.Vector.Basic
-Mathlib.Vector.Dot
-Mathlib.Algebra.Ring
+Mathlib.Geometry.RightTriangle.UnitModel
+Mathlib.Geometry.Metric.UnitModel
+Mathlib.LinearAlgebra.Vector.UnitModel
+Mathlib.LinearAlgebra.InnerProduct.UnitModel
+Mathlib.Algebra.Ring.UnitModel
 Mathlib.Algebra.Square
-Mathlib.Algebra.OrderedField
+Mathlib.Algebra.OrderedField.UnitModel
 Mathlib.Logic.Basic
 Mathlib.Logic.Prop
 Mathlib.Logic.Eq
@@ -148,7 +148,7 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
 vendored `Mathlib.Analysis.Calculus.ImplicitFunction` implicit-function import
-closure and applies `implicit_phi_derivative_from_args`,
+closure and applies `implicit_augmented_map_derivative`,
 `implicit_function_theorem`, and
 `implicit_function_derivative_theorem`. It vendors the full source-free
 certificate import closure, but not
@@ -217,10 +217,10 @@ carries no custom axioms, and `Mathlib.LinearAlgebra.InnerProduct.Derived`
 carries the expected `Eq.rec` dependency through equality-reasoning and scalar
 identity imports. The v0.1.20 release adds the abstract geometry Pythagorean
 route. `Mathlib.Geometry.Affine` and
-`Mathlib.Geometry.RightTriangle.Abstract` carry no custom axioms, while
+`Mathlib.Geometry.RightTriangle.Carrier` carry no custom axioms, while
 `Mathlib.Geometry.Affine.Derived`,
 `Mathlib.Geometry.RightTriangle.Derived`,
-`Mathlib.Geometry.Metric.Abstract`, and `Mathlib.Geometry.Pythagorean` carry
+`Mathlib.Geometry.Metric.Carrier`, and `Mathlib.Geometry.Pythagorean` carry
 the expected `Eq.rec` dependency through equality-reasoning, scalar identity,
 and law-package imports. The v0.1.21 release adds the analysis metric
 topology route. `Mathlib.Topology.Metric.Basic` carries no direct custom
@@ -241,7 +241,7 @@ package axiom report. The v0.1.26 release adds the analysis inverse-function
 route. `Mathlib.Analysis.Calculus.InverseFunction` carries no direct custom
 axioms and no transitive axioms according to its package axiom report. The
 v0.1.27 release adds the analysis implicit-function route.
-`Mathlib.Analysis.Calculus.ImplicitFunction.Phi` and
+`Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` and
 `Mathlib.Analysis.Calculus.ImplicitFunction` carry no direct custom axioms and
 have the expected transitive `Eq.rec` dependency through equality-reasoning and
 analysis foundation imports.

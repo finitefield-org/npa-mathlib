@@ -10,30 +10,98 @@
   "export_hash": "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36",
   "axiom_report_hash": "sha256:6821508440c560fb4a20c6b8dde9b28116f41a1733e43c2dd5163cd66c37b969",
   "certificate_hash": "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf6eefeb46c37",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "MetricBall", "kind": "def" },
-    { "name": "Neighborhood", "kind": "def" },
-    { "name": "LocalMem", "kind": "def" },
-    { "name": "LocalPred", "kind": "def" },
-    { "name": "LocalEq", "kind": "def" },
-    { "name": "LocalUnique", "kind": "def" },
-    { "name": "metric_ball_intro", "kind": "theorem" },
-    { "name": "metric_ball_elim", "kind": "theorem" },
-    { "name": "neighborhood_intro", "kind": "theorem" },
-    { "name": "neighborhood_center", "kind": "theorem" },
-    { "name": "neighborhood_shrink", "kind": "theorem" },
-    { "name": "local_mem_intro", "kind": "theorem" },
-    { "name": "local_mem_elim", "kind": "theorem" },
-    { "name": "local_pred_intro", "kind": "theorem" },
-    { "name": "local_pred_apply", "kind": "theorem" },
-    { "name": "local_pred_shrink", "kind": "theorem" },
-    { "name": "metric_ball_mono", "kind": "theorem" },
-    { "name": "local_eq_refl", "kind": "theorem" },
-    { "name": "local_eq_symm", "kind": "theorem" },
-    { "name": "local_eq_trans", "kind": "theorem" },
-    { "name": "local_unique_apply", "kind": "theorem" }
+    {
+      "name": "MetricBall",
+      "kind": "def"
+    },
+    {
+      "name": "Neighborhood",
+      "kind": "def"
+    },
+    {
+      "name": "LocalMem",
+      "kind": "def"
+    },
+    {
+      "name": "LocalPred",
+      "kind": "def"
+    },
+    {
+      "name": "LocalEq",
+      "kind": "def"
+    },
+    {
+      "name": "LocalUnique",
+      "kind": "def"
+    },
+    {
+      "name": "metric_ball_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "metric_ball_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "neighborhood_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "neighborhood_center",
+      "kind": "theorem"
+    },
+    {
+      "name": "neighborhood_shrink",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_mem_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_mem_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_pred_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_pred_apply",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_pred_shrink",
+      "kind": "theorem"
+    },
+    {
+      "name": "metric_ball_mono",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_eq_refl",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_eq_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_eq_trans",
+      "kind": "theorem"
+    },
+    {
+      "name": "local_unique_apply",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

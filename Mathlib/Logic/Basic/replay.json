@@ -5,7 +5,7 @@
   "profile": "explicit_term_source_certificate_handoff",
   "steps": [
     {
-      "declaration": "id",
+      "declaration": "identity",
       "source_kind": "explicit_term",
       "term": "fun A => fun x => x"
     },
@@ -40,7 +40,7 @@
       "term": "fun A => fun B => fun f => fun x => f x x"
     },
     {
-      "declaration": "prop_id",
+      "declaration": "prop_identity",
       "source_kind": "explicit_term",
       "term": "fun P => fun p => p"
     },

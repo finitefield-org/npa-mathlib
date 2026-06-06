@@ -5,18 +5,36 @@
   "certificate": "Mathlib/Algebra/Group/Quotient/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:b204617789dd3659b0042c98d3e4c5d892fcf95d7ed9bb1adfb4a5f263f22b0f",
+  "source_sha256": "sha256:d05276fa74eb6d236c25c109f09c31bfa5ba7239893af26921b6134bdc7e0061",
   "certificate_file_sha256": "sha256:95564c1e3a7172a768384daa7392e06895df59581cba4e532ddd9f1c722f4f31",
   "export_hash": "sha256:14d52188e958a89a9f87ad32a12c2738a73c0e185d68bcd390875bf4dea7f4de",
   "axiom_report_hash": "sha256:9fdeea3b7c832309cc77d8a52df14c8bdf8c3cc2ade0673e86e2d27b1d6f089e",
   "certificate_hash": "sha256:6fc7c518e7eaa04e792bb1d4dd3af7b4f5c4987136a118ce98a75d601c4feb19",
-  "imports": ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "NormalSetoid", "kind": "def" },
-    { "name": "NormalQuot", "kind": "def" },
-    { "name": "NormalQuotMk", "kind": "def" },
-    { "name": "normal_quot_sound", "kind": "theorem" }
+    {
+      "name": "NormalSetoid",
+      "kind": "def"
+    },
+    {
+      "name": "NormalQuot",
+      "kind": "def"
+    },
+    {
+      "name": "NormalQuotMk",
+      "kind": "def"
+    },
+    {
+      "name": "normal_quot_sound",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

@@ -1,5 +1,5 @@
 import Std.Logic.Eq
-import Mathlib.Algebra.Ring
+import Mathlib.Algebra.Ring.UnitModel
 
 def two :
   RingElem :=

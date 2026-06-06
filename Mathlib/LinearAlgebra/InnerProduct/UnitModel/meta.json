@@ -1,0 +1,104 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.LinearAlgebra.InnerProduct.UnitModel",
+  "source": "Mathlib/LinearAlgebra/InnerProduct/UnitModel/source.npa",
+  "certificate": "Mathlib/LinearAlgebra/InnerProduct/UnitModel/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:86fbd4aefc72af566c18c89b6d7b9ccad3b485eb1cccc0fbf9be54e1b422eb11",
+  "certificate_file_sha256": "sha256:99a291d554e178a8f37a4d7c121b9bfbcc542f48651c5c5632dc60df34f19c20",
+  "export_hash": "sha256:f90604310bc2c3472d1527968754a8f12cece9916f377446be7a688cfe34c129",
+  "axiom_report_hash": "sha256:fed11e73accfbfb0dfc28b4f510e151fa33d8af82d58fdb23b92567e04e59e40",
+  "certificate_hash": "sha256:a9b9b5c2e2751887bd5705d750e329cf890b1424145f4b2d9636a99b34114600",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Ring.UnitModel",
+    "Mathlib.Algebra.Square",
+    "Mathlib.Algebra.OrderedField.UnitModel",
+    "Mathlib.LinearAlgebra.Vector.UnitModel"
+  ],
+  "axioms": [],
+  "declarations": [
+    {
+      "name": "dot",
+      "kind": "def"
+    },
+    {
+      "name": "norm_sq",
+      "kind": "def"
+    },
+    {
+      "name": "dist_sq",
+      "kind": "def"
+    },
+    {
+      "name": "dot_comm",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_add_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_add_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_neg_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_neg_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_sub_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_sub_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_self_eq_norm_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_sub",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_add_of_dot_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_sub_of_dot_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "parallelogram_law",
+      "kind": "theorem"
+    },
+    {
+      "name": "polarization_identity",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_nonneg",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

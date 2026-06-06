@@ -1,0 +1,85 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.RightTriangle.UnitModel",
+  "source": "Mathlib/Geometry/RightTriangle/UnitModel/source.npa",
+  "certificate": "Mathlib/Geometry/RightTriangle/UnitModel/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:cafed82344fb2f1d3f7c50fe3512c7a4f302fa827afc414e80743fe23ff4fe85",
+  "certificate_file_sha256": "sha256:dc6191991b5be2bea30fb3f2dbaee49e28ec0bca8cef8f1b81035d2643cc3c15",
+  "export_hash": "sha256:84bfdc7b992f860b92e9ee5e0b380329792003cede431667d7a8e4f0ad2a0c9e",
+  "axiom_report_hash": "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e",
+  "certificate_hash": "sha256:800a0bded617e12ed3559aa6029ed805fdb418d36113faf19452a282f4689df5",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Ring.UnitModel",
+    "Mathlib.Algebra.Square",
+    "Mathlib.Algebra.OrderedField.UnitModel",
+    "Mathlib.LinearAlgebra.Vector.UnitModel",
+    "Mathlib.LinearAlgebra.InnerProduct.UnitModel"
+  ],
+  "axioms": [],
+  "declarations": [
+    {
+      "name": "Perp",
+      "kind": "def"
+    },
+    {
+      "name": "RightTriangle",
+      "kind": "def"
+    },
+    {
+      "name": "perp_iff_dot_eq_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "perp_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "right_triangle_legs_perp",
+      "kind": "theorem"
+    },
+    {
+      "name": "hypotenuse_vector_eq_sub_legs",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_leg_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_leg_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_hypotenuse",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_distance_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines",
+      "kind": "theorem"
+    },
+    {
+      "name": "right_triangle_area",
+      "kind": "theorem"
+    },
+    {
+      "name": "median_to_hypotenuse",
+      "kind": "theorem"
+    },
+    {
+      "name": "altitude_on_hypotenuse",
+      "kind": "theorem"
+    },
+    {
+      "name": "thales_theorem",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

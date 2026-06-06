@@ -10,13 +10,37 @@
   "export_hash": "sha256:343f663b129a1ecdfddc751614f5471b9256fb48567bd600e8ea7300b737fda8",
   "axiom_report_hash": "sha256:930e872459fa0a237548e58d011ab133dca95a0d4dce5979f68cb3fe009ce914",
   "certificate_hash": "sha256:aaeddce85ffe318f8ce637974e0011ad562148c5342fd28fee7140e80b19f20e",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Subgroup.Order", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.Correspondence.Basic"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup",
+    "Mathlib.Algebra.Group.Subgroup.Order",
+    "Mathlib.Algebra.Group.Quotient",
+    "Mathlib.Algebra.Group.Quotient.Mul",
+    "Mathlib.Algebra.Group.Quotient.Group",
+    "Mathlib.Algebra.Group.Correspondence.Basic"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "correspondence_image_mono", "kind": "theorem" },
-    { "name": "correspondence_preimage_mono", "kind": "theorem" },
-    { "name": "correspondence_image_respects_equiv", "kind": "theorem" },
-    { "name": "correspondence_preimage_respects_equiv", "kind": "theorem" }
+    {
+      "name": "correspondence_image_mono",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_mono",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_respects_equiv",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_respects_equiv",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

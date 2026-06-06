@@ -1,0 +1,128 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Ring.UnitModel",
+  "source": "Mathlib/Algebra/Ring/UnitModel/source.npa",
+  "certificate": "Mathlib/Algebra/Ring/UnitModel/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:b085e8696b98d9cebd8c68b1ba2d96dc067dfba358ad4b23bb9d60685e2d5760",
+  "certificate_file_sha256": "sha256:c4e2c75ad1a319592ff0b91299bf653d1cfc4e748f9414e640efe857cbef64af",
+  "export_hash": "sha256:a3ba454f9f0271d36496f68897c8e33f7d7600b8de39f001ee122ba9893d65ce",
+  "axiom_report_hash": "sha256:2eb8901dcadbaffb969aabfd5e10172a4e17abc50558a0954952232d438fa2ed",
+  "certificate_hash": "sha256:c730ee9539462c53c7111d382eec837f13095dd1c564845a2e2f98d1f6bc52b2",
+  "imports": [
+    "Std.Logic.Eq"
+  ],
+  "axioms": [],
+  "declarations": [
+    {
+      "name": "RingElem",
+      "kind": "inductive"
+    },
+    {
+      "name": "zero",
+      "kind": "def"
+    },
+    {
+      "name": "one",
+      "kind": "def"
+    },
+    {
+      "name": "add",
+      "kind": "def"
+    },
+    {
+      "name": "neg",
+      "kind": "def"
+    },
+    {
+      "name": "sub",
+      "kind": "def"
+    },
+    {
+      "name": "mul",
+      "kind": "def"
+    },
+    {
+      "name": "sub_eq_add_neg",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_assoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_comm",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "zero_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "neg_add_cancel",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_neg_cancel",
+      "kind": "theorem"
+    },
+    {
+      "name": "sub_self",
+      "kind": "theorem"
+    },
+    {
+      "name": "mul_assoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "mul_comm",
+      "kind": "theorem"
+    },
+    {
+      "name": "mul_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "one_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "mul_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "zero_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "left_distrib",
+      "kind": "theorem"
+    },
+    {
+      "name": "right_distrib",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_left_cancel",
+      "kind": "theorem"
+    },
+    {
+      "name": "mul_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "add_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_reorder_three_mul_terms",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

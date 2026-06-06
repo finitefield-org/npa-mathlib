@@ -1,0 +1,62 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.Metric.UnitModel",
+  "source": "Mathlib/Geometry/Metric/UnitModel/source.npa",
+  "certificate": "Mathlib/Geometry/Metric/UnitModel/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:6e82039dc69e2b9b3550ac73fa34a0ce08af35f46d37be194314f2ea6607f950",
+  "certificate_file_sha256": "sha256:26c6dd5e3ada7ca87c03cb4e0e565d0666b272ca166baa3363cefab22df02eec",
+  "export_hash": "sha256:3dac93cc2dfe1d045ce01a44b52e86a69071d9915e511394a2fb63001ac2470d",
+  "axiom_report_hash": "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36",
+  "certificate_hash": "sha256:4ef107992e3dc63ad474a1b14c1418e1e8d20b9948ef6281eb214d89921800bf",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Ring.UnitModel",
+    "Mathlib.Algebra.Square",
+    "Mathlib.Algebra.OrderedField.UnitModel",
+    "Mathlib.LinearAlgebra.Vector.UnitModel",
+    "Mathlib.LinearAlgebra.InnerProduct.UnitModel",
+    "Mathlib.Geometry.RightTriangle.UnitModel"
+  ],
+  "axioms": [],
+  "declarations": [
+    {
+      "name": "dist",
+      "kind": "def"
+    },
+    {
+      "name": "dist_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_eq_square_dist",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "distance_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "distance_zero_iff_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_distance",
+      "kind": "theorem"
+    },
+    {
+      "name": "cauchy_schwarz",
+      "kind": "theorem"
+    },
+    {
+      "name": "triangle_inequality",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

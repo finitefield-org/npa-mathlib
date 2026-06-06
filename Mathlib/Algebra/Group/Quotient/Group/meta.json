@@ -5,24 +5,62 @@
   "certificate": "Mathlib/Algebra/Group/Quotient/Group/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:83730893b4e3d0abc25e1d1803fb9f2ebbca0c5e4c6bda4f069536f51ec12118",
+  "source_sha256": "sha256:d068cfa46ad488e03208a34fb4dc8acc878b27ff529cc05735e213931e3848bb",
   "certificate_file_sha256": "sha256:cf0072a2d9bd870cea4f1ccad9eab7ece8a7d6f6b582a109fc506c31f8bc06a0",
   "export_hash": "sha256:fb6bb1472ee946b6db2174ccf4cf845b0a7dda6c8c42ccc9396950a5a8a92654",
   "axiom_report_hash": "sha256:35475c48af8ff4a446c4f9b72745aea69e6442d8ee83fe8587a0a88eeec2e307",
   "certificate_hash": "sha256:41a716e2220952290f35148b55d9505f1c8f7b90491233c10ee704bb5b678ef1",
-  "imports": ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup",
+    "Mathlib.Algebra.Group.Quotient",
+    "Mathlib.Algebra.Group.Quotient.Mul"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "NormalQuotMul", "kind": "def" },
-    { "name": "NormalQuotOne", "kind": "def" },
-    { "name": "NormalQuotInv", "kind": "def" },
-    { "name": "normal_quot_mul_mk", "kind": "theorem" },
-    { "name": "normal_quot_inv_mk", "kind": "theorem" },
-    { "name": "normal_quot_mul_assoc", "kind": "theorem" },
-    { "name": "normal_quot_one_mul", "kind": "theorem" },
-    { "name": "normal_quot_mul_one", "kind": "theorem" },
-    { "name": "normal_quot_inv_mul", "kind": "theorem" },
-    { "name": "normal_quot_mul_inv", "kind": "theorem" }
+    {
+      "name": "NormalQuotMul",
+      "kind": "def"
+    },
+    {
+      "name": "NormalQuotOne",
+      "kind": "def"
+    },
+    {
+      "name": "NormalQuotInv",
+      "kind": "def"
+    },
+    {
+      "name": "normal_quot_mul_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_inv_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_mul_assoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_one_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_mul_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_inv_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "normal_quot_mul_inv",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

@@ -5,28 +5,87 @@
   "certificate": "Mathlib/Geometry/Pythagorean/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:3e8f3d40e94a3a3e68568ebcd3fa42e3f9d1e4777e6777dbdc870e3bc4c3d794",
-  "certificate_file_sha256": "sha256:cc20a83f3a2331a3d22a952ed713d577465cf121e437df9ae74ed89d727950f2",
-  "export_hash": "sha256:f68ec468e44dfdb9e309d35f41fa341b3bbdb880c6a186620ce67fd4cc6e5af4",
-  "axiom_report_hash": "sha256:067fa89c58bfb9d8a1a11be14a0d6e47a783909b69a3bda57dd93232c06af24b",
-  "certificate_hash": "sha256:75c412b9048c7b459c6879047b55e5a10619fdc2ef282ef4a39aa37ba7921f39",
-  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Logic.EqReasoning", "Mathlib.Geometry.Metric.Abstract", "Mathlib.Geometry.RightTriangle.Abstract", "Mathlib.Geometry.RightTriangle.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
-  "axioms": ["Eq.rec"],
+  "source_sha256": "sha256:0f738e6be20e20772b0b4ae27b2776b693e9905edadc8a392103ad382b14e24f",
+  "certificate_file_sha256": "sha256:34d2a95c95f05341676d5e5c833ca0b5f4137e54e3c6a16151cb24fe88a5cafb",
+  "export_hash": "sha256:07080b11d8e96760fc11a4538b4706910795468dba2148dc4c9e2eb840a5c0d7",
+  "axiom_report_hash": "sha256:17ecb11b616e9ee8e49162b79b996da7567201892f1a83e255b69403a0822596",
+  "certificate_hash": "sha256:7fcd15ed57728134e04a5a4e0ee88ccbcb910d22f6ba53cbea9b8471c81b9551",
+  "imports": [
+    "Mathlib.Algebra.OrderedField.Basic",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.OrderedField.ScalarIdentities",
+    "Mathlib.Algebra.OrderedField.Square",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Geometry.Metric.Carrier",
+    "Mathlib.Geometry.RightTriangle.Carrier",
+    "Mathlib.Geometry.RightTriangle.Derived",
+    "Mathlib.Geometry.Affine",
+    "Mathlib.Geometry.Affine.Derived",
+    "Mathlib.LinearAlgebra.InnerProduct",
+    "Mathlib.LinearAlgebra.InnerProduct.Derived",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Std.Logic.Eq"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "pythagorean_dist_sq_symm_from_affine_args", "kind": "theorem" },
-    { "name": "pythagorean_dist_sq_reverse_norm_neg_from_law_packages", "kind": "theorem" },
-    { "name": "pythagorean_left_leg_norm_neg_from_law_packages", "kind": "theorem" },
-    { "name": "dist_sq_law_of_cosines_rhs_from_law_packages", "kind": "theorem" },
-    { "name": "law_of_cosines_sq_from_law_packages", "kind": "theorem" },
-    { "name": "law_of_cosines_dist_sq_from_law_packages", "kind": "theorem" },
-    { "name": "pythagorean_distance_sq_from_law_packages", "kind": "theorem" },
-    { "name": "pythagorean_theorem_sq", "kind": "theorem" },
-    { "name": "pythagorean_theorem_dist_sq", "kind": "theorem" },
-    { "name": "pythagorean_converse_sq", "kind": "theorem" },
-    { "name": "law_of_cosines_right_angle_specialization_from_law_packages", "kind": "theorem" },
-    { "name": "law_of_cosines_right_angle_specialization", "kind": "theorem" },
-    { "name": "pythagorean_theorem_api_alias", "kind": "theorem" },
-    { "name": "pythagorean_theorem_dependencies", "kind": "theorem" }
+    {
+      "name": "pythagorean_dist_sq_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_dist_sq_reverse_norm_neg",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_left_leg_norm_neg",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_law_of_cosines_rhs",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines_dist_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_distance_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_theorem_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_theorem_dist_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_converse_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines_right_angle_specialization_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "law_of_cosines_right_angle_specialization",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_theorem",
+      "kind": "theorem"
+    },
+    {
+      "name": "metric_space_law_args_identity",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

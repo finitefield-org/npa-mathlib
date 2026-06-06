@@ -10,11 +10,31 @@
   "export_hash": "sha256:c265cf2dd797fee3682500227e12667debe58d472406723f89ceb8c47f01801b",
   "axiom_report_hash": "sha256:48fad99b017e564eae3a94ad24d12f5a3572af147ee049749faf426445d75ddf",
   "certificate_hash": "sha256:38cf43f485f7480e9674983644dd3d5572f64c911be1c569c116215dea9223ad",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Subgroup.Order", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.Correspondence.Basic", "Mathlib.Algebra.Group.Correspondence.Order", "Mathlib.Algebra.Group.Correspondence"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup",
+    "Mathlib.Algebra.Group.Subgroup.Order",
+    "Mathlib.Algebra.Group.Quotient",
+    "Mathlib.Algebra.Group.Quotient.Mul",
+    "Mathlib.Algebra.Group.Quotient.Group",
+    "Mathlib.Algebra.Group.Correspondence.Basic",
+    "Mathlib.Algebra.Group.Correspondence.Order",
+    "Mathlib.Algebra.Group.Correspondence"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "CorrespondenceOrderEvidence", "kind": "def" },
-    { "name": "correspondence_order_evidence", "kind": "theorem" }
+    {
+      "name": "CorrespondenceOrderEvidence",
+      "kind": "def"
+    },
+    {
+      "name": "correspondence_order_evidence",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

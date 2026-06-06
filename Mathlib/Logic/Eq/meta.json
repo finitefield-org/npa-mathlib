@@ -14,9 +14,7 @@
     "Std.Logic.Eq",
     "Std.Nat.Basic"
   ],
-  "axioms": [
-
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "eq_refl_self",

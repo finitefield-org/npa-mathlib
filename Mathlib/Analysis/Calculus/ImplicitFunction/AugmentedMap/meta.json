@@ -1,0 +1,99 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap",
+  "source": "Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/source.npa",
+  "certificate": "Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:1e75528c86acb935bd24e94d686bf714548f9637c8c28589bdffb89d3286fbe0",
+  "certificate_file_sha256": "sha256:e469f8fbd2fd58dce91b697bccfc8a4fab5628ffc63c2e7170b36c0ad14e052e",
+  "export_hash": "sha256:de13e20d9a4c556b9caa439e5ed3550dd3e2d3d58e63c452482532c91c4ddeb5",
+  "axiom_report_hash": "sha256:9f292648aa00dddbe49e31f78bc11448b5ee88db69aba9ec37edaa67a112d59b",
+  "certificate_hash": "sha256:6e6951bc75b039349e6187116879a7ad001e45c44db0f69e412f85dda65ee910",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Mathlib.Analysis.NormedSpace.Basic",
+    "Mathlib.Analysis.LinearMap",
+    "Mathlib.Analysis.Calculus.Derivative"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "ImplicitAugmentedMapCoord",
+      "kind": "def"
+    },
+    {
+      "name": "ImplicitAugmentedMap",
+      "kind": "def"
+    },
+    {
+      "name": "ImplicitAugmentedMapDerivativeMap",
+      "kind": "def"
+    },
+    {
+      "name": "ImplicitAugmentedMapDerivativeArgs",
+      "kind": "def"
+    },
+    {
+      "name": "ImplicitAugmentedMapIsoArgs",
+      "kind": "def"
+    },
+    {
+      "name": "implicit_augmented_map_coord_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_coord_base_value",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_derivative_map_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_full_derivative",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_partial_x_derivative",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_partial_y_derivative",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_derivative",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_dy_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_block_triangular_args",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_linear_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_block_left_inverse",
+      "kind": "theorem"
+    },
+    {
+      "name": "implicit_augmented_map_block_right_inverse",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

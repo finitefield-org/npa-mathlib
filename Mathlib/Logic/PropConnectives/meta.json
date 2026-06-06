@@ -1,0 +1,106 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Logic.PropConnectives",
+  "source": "Mathlib/Logic/PropConnectives/source.npa",
+  "certificate": "Mathlib/Logic/PropConnectives/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:4c0e4b81c959bfa11fcb7f0feeb45898125b69e7f125a160b383ff9fba18dc30",
+  "certificate_file_sha256": "sha256:9c6616369c978b8795da5f3f6f03ed0d588273d3532338bc5cadfd43a6e6b117",
+  "export_hash": "sha256:7616471fc3e7c6d31082f291d734563bf1c4efe661e7dbb1e383217345fe79c9",
+  "axiom_report_hash": "sha256:a9620870534347752c499df136b026f5c259381439a48bcad6a51f1d68178559",
+  "certificate_hash": "sha256:172e63b722338c4e65ad002379e1515c564c854c02b3181c02141c20e7ae2201",
+  "imports": [
+    "Std.Logic.Eq"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "PropIff",
+      "kind": "def"
+    },
+    {
+      "name": "PropAnd",
+      "kind": "def"
+    },
+    {
+      "name": "PropOr",
+      "kind": "def"
+    },
+    {
+      "name": "PropFalse",
+      "kind": "def"
+    },
+    {
+      "name": "PropNot",
+      "kind": "def"
+    },
+    {
+      "name": "prop_iff_refl",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_trans",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_mp",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_mpr",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_and_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_and_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_and_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_of_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_false_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_not_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_not_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_or_inl",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_or_inr",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_or_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "prop_iff_congr_arg",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

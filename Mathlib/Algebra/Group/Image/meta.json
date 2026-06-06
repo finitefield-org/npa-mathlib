@@ -10,15 +10,39 @@
   "export_hash": "sha256:0935f963b77bb9ed124d4b38435ad2a9a19f860e1f06de11c1ab8ca3f05cdd0e",
   "axiom_report_hash": "sha256:0869976f857fbf07454df1db004a649ae3ee9ede0e1429dbf40af6dfaac5bfeb",
   "certificate_hash": "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294245455d1b1b00bd2f588",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "ImagePred", "kind": "def" },
-    { "name": "image_intro", "kind": "theorem" },
-    { "name": "image_elim", "kind": "theorem" },
-    { "name": "image_one", "kind": "theorem" },
-    { "name": "image_mul_closed", "kind": "theorem" },
-    { "name": "image_inv_closed", "kind": "theorem" }
+    {
+      "name": "ImagePred",
+      "kind": "def"
+    },
+    {
+      "name": "image_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "image_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "image_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "image_mul_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "image_inv_closed",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

@@ -5,29 +5,81 @@
   "certificate": "Mathlib/Geometry/Affine/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:f1697fd4c3d4a81503821b1540ed3807ee97e9aaaed2bd5225257981cbace973",
-  "certificate_file_sha256": "sha256:12ce563b23b473796fc4bdf0e17fcbb2ccd3c4565534e9f17bc911eee9660b6c",
-  "export_hash": "sha256:e4e3f862585856027ffe88cb2ed9cf0705d3fc14aa7a05e05e56d17edf0b60c5",
+  "source_sha256": "sha256:a87474c5961d38f64ede2005e16cdc3c129e358e1ad067459403e8cf8872a9a8",
+  "certificate_file_sha256": "sha256:1bc9c3afe5bec7e834622777d1024e67d047879015c344750b91c4e0579bfccc",
+  "export_hash": "sha256:475b7dbb030e651c36ce3f6e0462a9c73a416ffb114b66cd963745eabd606a63",
   "axiom_report_hash": "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e",
-  "certificate_hash": "sha256:e1f00b05158d700bfcdd2a947a500ab1f58bec799ee255e66eb316077a0f2085",
-  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
+  "certificate_hash": "sha256:c21d87a3a5d2f9500a88172fe98ecdc86e93b31eb45478591c36128adfcdddf4",
+  "imports": [
+    "Mathlib.Algebra.OrderedField.Basic",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.OrderedField.Square",
+    "Mathlib.LinearAlgebra.InnerProduct",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Std.Logic.Eq"
+  ],
   "axioms": [],
   "declarations": [
-    { "name": "Point", "kind": "def" },
-    { "name": "disp", "kind": "def" },
-    { "name": "distSqPoints", "kind": "def" },
-    { "name": "translate", "kind": "def" },
-    { "name": "midpoint", "kind": "def" },
-    { "name": "collinear", "kind": "def" },
-    { "name": "AffineLawArgs", "kind": "def" },
-    { "name": "disp_self", "kind": "theorem" },
-    { "name": "disp_reverse", "kind": "theorem" },
-    { "name": "disp_comp", "kind": "theorem" },
-    { "name": "hypotenuse_vector_eq_sub_legs", "kind": "theorem" },
-    { "name": "dist_sq_points_def", "kind": "theorem" },
-    { "name": "point_ext_of_zero_disp", "kind": "theorem" },
-    { "name": "dist_sq_symm", "kind": "theorem" },
-    { "name": "dist_sq_zero_iff_eq", "kind": "theorem" }
+    {
+      "name": "Point",
+      "kind": "def"
+    },
+    {
+      "name": "disp",
+      "kind": "def"
+    },
+    {
+      "name": "dist_sq_points",
+      "kind": "def"
+    },
+    {
+      "name": "translate",
+      "kind": "def"
+    },
+    {
+      "name": "midpoint",
+      "kind": "def"
+    },
+    {
+      "name": "collinear",
+      "kind": "def"
+    },
+    {
+      "name": "AffineLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "disp_self",
+      "kind": "theorem"
+    },
+    {
+      "name": "disp_reverse",
+      "kind": "theorem"
+    },
+    {
+      "name": "disp_comp",
+      "kind": "theorem"
+    },
+    {
+      "name": "hypotenuse_vector_eq_sub_legs",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_points_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "point_ext_of_zero_disp",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_zero_iff_eq",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

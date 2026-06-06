@@ -5,52 +5,172 @@
   "certificate": "Mathlib/Analysis/NormedSpace/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:e9ebe9423b89282c7b67dca89b928df621b6224b7ac18264f1c0c82d03d8604e",
-  "certificate_file_sha256": "sha256:c593e76d0bef4a190d20d7a0940befc66dde9e8348517b3293edc80dcfe07f76",
-  "export_hash": "sha256:d1ce796f7af0aa26d4b1236c440276f4a7a8b30421af244bf8839aca49f9e56b",
+  "source_sha256": "sha256:2152518532c89e59bfa0b85419a424dd43e550668104c092e73fcdb9f33ffbe3",
+  "certificate_file_sha256": "sha256:c8229aa89819918ac5f7409b37446868bbfe1fe0b5cd4f7e6e4684ac6d8969b9",
+  "export_hash": "sha256:ccf1146511d85eb42fdafb49d708269e57ca1fa18ee1c59ff6ea084c6acd3077",
   "axiom_report_hash": "sha256:4ffc0ac83684ca65d83296a7fb4b8104c1099ad79204df7e4efd1f430359d3c0",
-  "certificate_hash": "sha256:236207f99ee6b9e58509b92f8f4d64493aabc93dbfd4979096d674e37810c24d",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace"],
-  "axioms": ["Eq.rec"],
+  "certificate_hash": "sha256:db85cfc69a45f15c0896c6727a17ec2e5e8f367af3651228380e3c652737b71e",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.LinearAlgebra.VectorSpace"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "NormDist", "kind": "def" },
-    { "name": "NormedSpaceLawArgs", "kind": "def" },
-    { "name": "ProductZero", "kind": "def" },
-    { "name": "ProductAdd", "kind": "def" },
-    { "name": "ProductNeg", "kind": "def" },
-    { "name": "ProductSmul", "kind": "def" },
-    { "name": "ProductSub", "kind": "def" },
-    { "name": "ProductNorm", "kind": "def" },
-    { "name": "ProductDist", "kind": "def" },
-    { "name": "ProductNormEstimateArgs", "kind": "def" },
-    { "name": "norm_dist_def", "kind": "theorem" },
-    { "name": "norm_nonneg_from_args", "kind": "theorem" },
-    { "name": "norm_zero_from_args", "kind": "theorem" },
-    { "name": "norm_triangle_from_args", "kind": "theorem" },
-    { "name": "norm_neg_from_args", "kind": "theorem" },
-    { "name": "norm_dist_self_from_args", "kind": "theorem" },
-    { "name": "norm_dist_symm_from_args", "kind": "theorem" },
-    { "name": "norm_dist_triangle_from_args", "kind": "theorem" },
-    { "name": "product_zero_def", "kind": "theorem" },
-    { "name": "product_add_def", "kind": "theorem" },
-    { "name": "product_neg_def", "kind": "theorem" },
-    { "name": "product_smul_def", "kind": "theorem" },
-    { "name": "product_sub_def", "kind": "theorem" },
-    { "name": "product_norm_def", "kind": "theorem" },
-    { "name": "product_dist_def", "kind": "theorem" },
-    { "name": "product_fst_pair_from_args", "kind": "theorem" },
-    { "name": "product_snd_pair_from_args", "kind": "theorem" },
-    { "name": "product_pair_eta_from_args", "kind": "theorem" },
-    { "name": "product_add_fst_from_pair_law", "kind": "theorem" },
-    { "name": "product_add_snd_from_pair_law", "kind": "theorem" },
-    { "name": "product_smul_fst_from_pair_law", "kind": "theorem" },
-    { "name": "product_smul_snd_from_pair_law", "kind": "theorem" },
-    { "name": "product_norm_pair_eq_from_pair_laws", "kind": "theorem" },
-    { "name": "product_norm_fst_le_from_args", "kind": "theorem" },
-    { "name": "product_norm_snd_le_from_args", "kind": "theorem" },
-    { "name": "product_norm_pair_le_add_from_args", "kind": "theorem" },
-    { "name": "product_norm_add_le_from_args", "kind": "theorem" },
-    { "name": "product_dist_pair_le_add_from_args", "kind": "theorem" }
+    {
+      "name": "NormDist",
+      "kind": "def"
+    },
+    {
+      "name": "NormedSpaceLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "ProductZero",
+      "kind": "def"
+    },
+    {
+      "name": "ProductAdd",
+      "kind": "def"
+    },
+    {
+      "name": "ProductNeg",
+      "kind": "def"
+    },
+    {
+      "name": "ProductSmul",
+      "kind": "def"
+    },
+    {
+      "name": "ProductSub",
+      "kind": "def"
+    },
+    {
+      "name": "ProductNorm",
+      "kind": "def"
+    },
+    {
+      "name": "ProductDist",
+      "kind": "def"
+    },
+    {
+      "name": "ProductNormEstimateArgs",
+      "kind": "def"
+    },
+    {
+      "name": "norm_dist_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_triangle",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_neg",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_dist_self",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_dist_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_dist_triangle",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_zero_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_add_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_neg_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_smul_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_sub_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_dist_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_fst_pair",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_snd_pair",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_pair_eta",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_add_fst",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_add_snd",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_smul_fst",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_smul_snd",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_pair_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_fst_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_snd_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_pair_le_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_norm_add_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "product_dist_pair_le_add",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

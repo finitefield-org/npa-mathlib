@@ -10,12 +10,8 @@
   "export_hash": "sha256:2be3062e9adb565d319e67b416e96dd6c5f5ec6bb4fa9fd1902c256bf06c8613",
   "axiom_report_hash": "sha256:70b2d0f35f9ebfff46bdf399b80487f0c76ffd6460ab930f733af1f889d2fc65",
   "certificate_hash": "sha256:91e5f7856e09d29a80903fe50932f3a340bc446965b2ae3d414cdbbef5b39cf5",
-  "imports": [
-
-  ],
-  "axioms": [
-
-  ],
+  "imports": [],
+  "axioms": [],
   "declarations": [
     {
       "name": "imp_chain4",

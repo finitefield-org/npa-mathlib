@@ -10,35 +10,123 @@
   "export_hash": "sha256:6a457720e4aef4102591fab03c2d50b9748b06bff9e7fe635dc8e30ae63b1c9a",
   "axiom_report_hash": "sha256:a1c7dff2e43196d9ed0f707b49ddcb949d8c3f3c7b3a85369478372380820393",
   "certificate_hash": "sha256:17d611fd3212bf953d900f1acbac0ae2403eecdd436e6116c6257238b43e1ec5",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group"],
-  "axioms": ["Eq.rec"],
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.Subgroup",
+    "Mathlib.Algebra.Group.Quotient",
+    "Mathlib.Algebra.Group.Quotient.Mul",
+    "Mathlib.Algebra.Group.Quotient.Group"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "CorrespondenceImagePred", "kind": "def" },
-    { "name": "CorrespondencePreimagePred", "kind": "def" },
-    { "name": "CorrespondenceSaturationPred", "kind": "def" },
-    { "name": "CorrespondenceImageSubgroupMk", "kind": "def" },
-    { "name": "CorrespondencePreimageSubgroupMk", "kind": "def" },
-    { "name": "CorrespondenceImageSubgroupLawArgs", "kind": "def" },
-    { "name": "CorrespondencePreimageSubgroupLawArgs", "kind": "def" },
-    { "name": "CorrespondenceTheoremMk", "kind": "def" },
-    { "name": "correspondence_group_mul_inv_left_reassoc", "kind": "theorem" },
-    { "name": "correspondence_subgroup_saturates", "kind": "theorem" },
-    { "name": "correspondence_image_intro", "kind": "theorem" },
-    { "name": "correspondence_saturation_intro", "kind": "theorem" },
-    { "name": "correspondence_saturation_elim", "kind": "theorem" },
-    { "name": "correspondence_image_elim", "kind": "theorem" },
-    { "name": "correspondence_image_one", "kind": "theorem" },
-    { "name": "correspondence_image_mul_closed", "kind": "theorem" },
-    { "name": "correspondence_image_inv_closed", "kind": "theorem" },
-    { "name": "correspondence_preimage_one", "kind": "theorem" },
-    { "name": "correspondence_preimage_mul_closed", "kind": "theorem" },
-    { "name": "correspondence_preimage_inv_closed", "kind": "theorem" },
-    { "name": "correspondence_preimage_contains_normal", "kind": "theorem" },
-    { "name": "correspondence_subgroup_to_preimage_image", "kind": "theorem" },
-    { "name": "correspondence_subgroup_to_saturation", "kind": "theorem" },
-    { "name": "correspondence_saturation_to_subgroup", "kind": "theorem" },
-    { "name": "correspondence_quotient_to_image_preimage", "kind": "theorem" },
-    { "name": "correspondence_image_preimage_to_quotient", "kind": "theorem" }
+    {
+      "name": "CorrespondenceImagePred",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondencePreimagePred",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondenceSaturationPred",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondenceImageSubgroupMk",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondencePreimageSubgroupMk",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondenceImageSubgroupLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondencePreimageSubgroupLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "CorrespondenceTheoremMk",
+      "kind": "def"
+    },
+    {
+      "name": "correspondence_group_mul_inv_left_reassoc",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_subgroup_saturates",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_saturation_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_saturation_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_elim",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_mul_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_inv_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_mul_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_inv_closed",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_preimage_contains_normal",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_subgroup_to_preimage_image",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_subgroup_to_saturation",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_saturation_to_subgroup",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_quotient_to_image_preimage",
+      "kind": "theorem"
+    },
+    {
+      "name": "correspondence_image_preimage_to_quotient",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

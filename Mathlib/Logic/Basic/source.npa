@@ -1,4 +1,4 @@
-theorem id :
+theorem identity :
   forall (A : Type), forall (x : A), A :=
   fun A => fun x => x
 
@@ -26,7 +26,7 @@ theorem duplicate :
   forall (A : Type), forall (B : Type), forall (f : forall (x : A), forall (y : A), B), forall (x : A), B :=
   fun A => fun B => fun f => fun x => f x x
 
-theorem prop_id :
+theorem prop_identity :
   forall (P : Prop), forall (p : P), P :=
   fun P => fun p => p
 

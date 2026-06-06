@@ -4,8 +4,9 @@ This document fixes the public module namespace policy for `npa-mathlib`.
 
 Module names are proof-relevant package identifiers. They affect certificate
 identity, export hashes, package locks, axiom reports, theorem indexes, publish
-plans, release bundles, and downstream import fixtures. Treat a released module
-name as stable public API.
+plans, release bundles, and downstream import fixtures. Starting with version
+1.0.0, treat a released module name as stable public API within the same major
+version.
 
 ## Top-Level Boundary
 
@@ -24,11 +25,16 @@ not define new local `Mathlib.*` modules unless they are becoming part of
 
 ## Stability Rules
 
-Released module names are stable.
+Starting with version 1.0.0, released module names are stable within the same
+major version.
 
-Do not rename, move, or repurpose a released module to mean something else. If a
-better organization becomes necessary, add a new module and keep the old module
-available until a separately documented breaking release policy exists.
+Before version 1.0.0, breaking module-name, declaration-name, and organization
+changes are allowed when they improve the public API.
+
+Within a stable major version, do not rename, move, or repurpose a released
+module to mean something else. If a better organization becomes necessary, add a
+new module and keep the old module available until a separately documented
+breaking release policy exists.
 
 Adding a module requires the generated package artifacts to be refreshed:
 
@@ -70,23 +76,23 @@ Mathlib.Core.Reduction
 The `v0.1.1` release adds these Layer 1 modules:
 
 ```text
-Mathlib.Algebra.Ring
+Mathlib.Algebra.Ring.UnitModel
 Mathlib.Algebra.Square
-Mathlib.Algebra.OrderedField
+Mathlib.Algebra.OrderedField.UnitModel
 ```
 
 The `v0.1.2` release adds these Layer 2A modules:
 
 ```text
-Mathlib.Vector.Basic
-Mathlib.Vector.Dot
+Mathlib.LinearAlgebra.Vector.UnitModel
+Mathlib.LinearAlgebra.InnerProduct.UnitModel
 ```
 
 The `v0.1.3` release adds these Layer 2B modules:
 
 ```text
-Mathlib.Geometry.RightTriangle
-Mathlib.Geometry.Metric
+Mathlib.Geometry.RightTriangle.UnitModel
+Mathlib.Geometry.Metric.UnitModel
 ```
 
 The `v0.1.4` release adds these Layer 3A modules:
@@ -166,7 +172,7 @@ Mathlib.Algebra.Group.Correspondence.Ordered
 The `v0.1.14` release adds this Layer 3E module:
 
 ```text
-Mathlib.Logic.Iff
+Mathlib.Logic.PropConnectives
 ```
 
 The `v0.1.15` release adds this abstract ring foundation module:
@@ -210,9 +216,9 @@ The `v0.1.20` release adds these geometry Pythagorean closure modules:
 ```text
 Mathlib.Geometry.Affine
 Mathlib.Geometry.Affine.Derived
-Mathlib.Geometry.RightTriangle.Abstract
+Mathlib.Geometry.RightTriangle.Carrier
 Mathlib.Geometry.RightTriangle.Derived
-Mathlib.Geometry.Metric.Abstract
+Mathlib.Geometry.Metric.Carrier
 Mathlib.Geometry.Pythagorean
 ```
 
@@ -255,7 +261,7 @@ Mathlib.Analysis.Calculus.InverseFunction
 The `v0.1.27` release adds these analysis implicit-function closure modules:
 
 ```text
-Mathlib.Analysis.Calculus.ImplicitFunction.Phi
+Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap
 Mathlib.Analysis.Calculus.ImplicitFunction
 ```
 
@@ -273,23 +279,23 @@ The Layer 1 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Algebra.Ring` | `Mathlib.Algebra.Ring` | `Mathlib/Algebra/Ring/` |
+| `Proofs.Ai.Algebra.Ring` | `Mathlib.Algebra.Ring.UnitModel` | `Mathlib/Algebra/Ring/UnitModel/` |
 | `Proofs.Ai.Algebra.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
-| `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField` | `Mathlib/Algebra/OrderedField/` |
+| `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField.UnitModel` | `Mathlib/Algebra/OrderedField/UnitModel/` |
 
 The Layer 2A mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Vector.Basic` | `Mathlib.Vector.Basic` | `Mathlib/Vector/Basic/` |
-| `Proofs.Ai.Vector.Dot` | `Mathlib.Vector.Dot` | `Mathlib/Vector/Dot/` |
+| `Proofs.Ai.Vector.Basic` | `Mathlib.LinearAlgebra.Vector.UnitModel` | `Mathlib/LinearAlgebra/Vector/UnitModel/` |
+| `Proofs.Ai.Vector.Dot` | `Mathlib.LinearAlgebra.InnerProduct.UnitModel` | `Mathlib/LinearAlgebra/InnerProduct/UnitModel/` |
 
 The Layer 2B mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Geometry.RightTriangle` | `Mathlib.Geometry.RightTriangle` | `Mathlib/Geometry/RightTriangle/` |
-| `Proofs.Ai.Geometry.Metric` | `Mathlib.Geometry.Metric` | `Mathlib/Geometry/Metric/` |
+| `Proofs.Ai.Geometry.RightTriangle` | `Mathlib.Geometry.RightTriangle.UnitModel` | `Mathlib/Geometry/RightTriangle/UnitModel/` |
+| `Proofs.Ai.Geometry.Metric` | `Mathlib.Geometry.Metric.UnitModel` | `Mathlib/Geometry/Metric/UnitModel/` |
 
 The Layer 3A mapping is fixed:
 
@@ -345,7 +351,7 @@ The Layer 3D-E mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupSecondIsoPhi` | `Mathlib.Algebra.Group.SecondIsomorphism.Map` | `Mathlib/Algebra/Group/SecondIsomorphism/Map/` |
+| `Proofs.Ai.Algebra.AbstractGroupSecondIsoMap` | `Mathlib.Algebra.Group.SecondIsomorphism.Map` | `Mathlib/Algebra/Group/SecondIsomorphism/Map/` |
 | `Proofs.Ai.Algebra.AbstractGroupSecondIsoKernel` | `Mathlib.Algebra.Group.SecondIsomorphism.Kernel` | `Mathlib/Algebra/Group/SecondIsomorphism/Kernel/` |
 | `Proofs.Ai.Algebra.AbstractGroupSecondIsoImage` | `Mathlib.Algebra.Group.SecondIsomorphism.Image` | `Mathlib/Algebra/Group/SecondIsomorphism/Image/` |
 | `Proofs.Ai.Algebra.AbstractGroupSecondIsoFinal` | `Mathlib.Algebra.Group.SecondIsomorphism` | `Mathlib/Algebra/Group/SecondIsomorphism/` |
@@ -369,7 +375,7 @@ The Layer 3E mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Logic.Iff` | `Mathlib.Logic.Iff` | `Mathlib/Logic/Iff/` |
+| `Proofs.Ai.Logic.Iff` | `Mathlib.Logic.PropConnectives` | `Mathlib/Logic/PropConnectives/` |
 
 The abstract ring foundation mapping is fixed:
 
@@ -412,9 +418,9 @@ The geometry Pythagorean closure mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.Geometry.Affine` | `Mathlib.Geometry.Affine` | `Mathlib/Geometry/Affine/` |
 | `Proofs.Ai.Geometry.AffineDerive` | `Mathlib.Geometry.Affine.Derived` | `Mathlib/Geometry/Affine/Derived/` |
-| `Proofs.Ai.Geometry.AbstractRightTriangle` | `Mathlib.Geometry.RightTriangle.Abstract` | `Mathlib/Geometry/RightTriangle/Abstract/` |
+| `Proofs.Ai.Geometry.AbstractRightTriangle` | `Mathlib.Geometry.RightTriangle.Carrier` | `Mathlib/Geometry/RightTriangle/Carrier/` |
 | `Proofs.Ai.Geometry.AbstractRightTriangleDerive` | `Mathlib.Geometry.RightTriangle.Derived` | `Mathlib/Geometry/RightTriangle/Derived/` |
-| `Proofs.Ai.Geometry.AbstractMetric` | `Mathlib.Geometry.Metric.Abstract` | `Mathlib/Geometry/Metric/Abstract/` |
+| `Proofs.Ai.Geometry.AbstractMetric` | `Mathlib.Geometry.Metric.Carrier` | `Mathlib/Geometry/Metric/Carrier/` |
 | `Proofs.Ai.Geometry.Pythagorean` | `Mathlib.Geometry.Pythagorean` | `Mathlib/Geometry/Pythagorean/` |
 
 The analysis metric topology closure mapping is fixed:
@@ -457,7 +463,7 @@ The analysis implicit-function closure mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Analysis.AbstractImplicitPhi` | `Mathlib.Analysis.Calculus.ImplicitFunction.Phi` | `Mathlib/Analysis/Calculus/ImplicitFunction/Phi/` |
+| `Proofs.Ai.Analysis.AbstractImplicitAugmentedMap` | `Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` | `Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/` |
 | `Proofs.Ai.Analysis.AbstractImplicitFunction` | `Mathlib.Analysis.Calculus.ImplicitFunction` | `Mathlib/Analysis/Calculus/ImplicitFunction/` |
 
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
@@ -479,7 +485,7 @@ groups by normal subgroups. The already released
 kernel-relation quotient route for homomorphisms.
 
 Layer 3D-E intentionally uses `SecondIsomorphism` instead of `SecondIso` in
-public module names. `Proofs.Ai.Algebra.AbstractGroupSecondIsoPhi` is published
+public module names. `Proofs.Ai.Algebra.AbstractGroupSecondIsoMap` is published
 as `Mathlib.Algebra.Group.SecondIsomorphism.Map` so Greek-letter
 implementation terminology does not become a public module identifier.
 
@@ -493,14 +499,15 @@ construction surface, `Correspondence.Order` for monotonicity/equivalence facts,
 `Correspondence` for the theorem-evidence surface, and `Correspondence.Ordered`
 for the final ordered correspondence evidence.
 
-Layer 3E keeps `Iff`, `And`, `Or`, `False`, and `Not` together in
-`Mathlib.Logic.Iff`. A future `Mathlib.Logic.Connectives` split is deferred
-until another checked corpus route needs the connectives without the `Iff` API.
+Layer 3E keeps `PropIff`, `PropAnd`, `PropOr`, `PropFalse`, and `PropNot`
+together in `Mathlib.Logic.PropConnectives`. A future
+`Mathlib.Logic.Connectives` split is deferred until another checked corpus route
+needs the connectives without the bundled iff API.
 
 The abstract ring foundation uses `Mathlib.Algebra.Ring.Basic` for arbitrary
-`Scalar` law-package facts. The already released `Mathlib.Algebra.Ring` module
-remains the concrete one-element ring route. Both surfaces contain some
-declaration names such as `add_assoc` and `ring_normalize_add_mul3`; downstream
+`Scalar` law-package facts. `Mathlib.Algebra.Ring.UnitModel` is the concrete
+one-element ring route. Both surfaces contain some
+declaration names such as `add_assoc` and `ring_reorder_three_mul_terms`; downstream
 packages should import the abstract foundation or the concrete route according
 to the proof surface they need, not both in the same source module unless they
 have a deliberate disambiguation plan.
@@ -509,12 +516,12 @@ The v0.1.16 ring first-isomorphism and CRT route does not introduce a separate
 `Mathlib.Algebra.Ring.Hom` module. The checked corpus base module bundles the
 ring homomorphism law surface, image predicate, and kernel quotient
 construction, so the public `RingHomLawArgs`, `RingImagePred`, and
-`RingKerQuot*` names remain in
+`RingKernelQuotient*` names remain in
 `Mathlib.Algebra.Ring.FirstIsomorphism.Basic`.
 
 The v0.1.17 ordered algebra route uses `Mathlib.Algebra.OrderedField.Basic`
-for the abstract ordered-field law-package surface. The already released
-`Mathlib.Algebra.OrderedField` module remains the concrete one-element
+for the abstract ordered-field law-package surface.
+`Mathlib.Algebra.OrderedField.UnitModel` is the concrete one-element
 ordered-field route. `Mathlib.Algebra.OrderedField.Square` contains the
 abstract square-normalization facts, while
 `Mathlib.Algebra.OrderedField.ScalarIdentities` contains derived scalar RHS
@@ -522,8 +529,9 @@ identities used by later inner-product and geometry routes.
 
 The v0.1.18 vector-space foundation route uses
 `Mathlib.LinearAlgebra.VectorSpace` for the abstract vector-space law-package
-surface. The already released `Mathlib.Vector.Basic` and `Mathlib.Vector.Dot`
-modules remain the concrete one-element vector and dot-product route. Both
+surface. `Mathlib.LinearAlgebra.Vector.UnitModel` and
+`Mathlib.LinearAlgebra.InnerProduct.UnitModel` are the concrete one-element
+vector and dot-product route. Both
 surfaces contain names such as `vsub`, `vec_add_assoc`, and `vec_sub_def`;
 downstream packages should import the abstract linear-algebra route or the
 concrete vector route according to the proof surface they need, not both in the
@@ -533,22 +541,21 @@ The v0.1.19 inner-product closure uses
 `Mathlib.LinearAlgebra.InnerProduct` for the abstract inner-product law-package
 surface and `Mathlib.LinearAlgebra.InnerProduct.Derived` for theorem
 derivations from full ring, ordered-field, vector-space, and inner-product law
-packages. The already released `Mathlib.Vector.Dot` module remains the
-concrete one-element dot-product route, while the new modules expose abstract
-`dot`, `normSq`, `distSq`, perpendicularity, parallelogram, polarization, and
+packages. `Mathlib.LinearAlgebra.InnerProduct.UnitModel` is the concrete
+one-element dot-product route, while the abstract modules expose
+`dot`, `norm_sq`, `dist_sq`, perpendicularity, parallelogram, polarization, and
 Cauchy-Schwarz statements. Downstream packages should choose either the
 abstract linear-algebra route or the concrete vector route according to the
 proof surface they need.
 
 The v0.1.20 geometry Pythagorean closure uses `Mathlib.Geometry.Affine` for
 the abstract point/displacement surface and `Mathlib.Geometry.Pythagorean` for
-the final theorem surface. The already released
-`Mathlib.Geometry.RightTriangle` and `Mathlib.Geometry.Metric` modules remain
-the concrete geometry route; the abstract law-package route therefore uses
-`Mathlib.Geometry.RightTriangle.Abstract`,
+the final theorem surface. `Mathlib.Geometry.RightTriangle.UnitModel` and
+`Mathlib.Geometry.Metric.UnitModel` are the concrete geometry route; the
+carrier-parametric law-package route uses
+`Mathlib.Geometry.RightTriangle.Carrier`,
 `Mathlib.Geometry.RightTriangle.Derived`, and
-`Mathlib.Geometry.Metric.Abstract` instead of repurposing those concrete module
-names.
+`Mathlib.Geometry.Metric.Carrier`.
 
 The v0.1.21 analysis metric topology closure uses
 `Mathlib.Topology.Metric.Basic` for predicate-level metric balls,
@@ -593,12 +600,13 @@ derivative and fixed-point foundations are public, and gives the later
 implicit-function route a stable public inverse-function dependency.
 
 The v0.1.27 analysis implicit-function closure uses
-`Mathlib.Analysis.Calculus.ImplicitFunction.Phi` for the auxiliary implicit
-Phi coordinate/map and derivative block-triangular evidence, and
+`Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` for the auxiliary implicit
+augmented coordinate/map and derivative block-triangular evidence, and
 `Mathlib.Analysis.Calculus.ImplicitFunction` for extraction, target
 membership, uniqueness, differentiability, and derivative-formula theorem
-evidence. The Phi helper is a nested submodule because it is coupled to the
-final implicit-function route but remains a separately imported prerequisite.
+evidence. The augmented-map helper is a nested submodule because it is coupled
+to the final implicit-function route but remains a separately imported
+prerequisite.
 
 ## Category Rules
 
@@ -616,15 +624,15 @@ certificate-facing semantics, such as reduction examples. Do not place general
 mathematics there.
 
 Use `Mathlib.Algebra.*` for algebraic structures and algebraic theorem groups.
-Prefer names such as `Mathlib.Algebra.Ring`, `Mathlib.Algebra.Square`, and
+Prefer names such as `Mathlib.Algebra.Ring.UnitModel`, `Mathlib.Algebra.Square`, and
 `Mathlib.Algebra.Group.Basic` for small foundational layers.
 
 Use `Mathlib.LinearAlgebra.*` for abstract vector-space, algebraic linear-map,
 inner-product, matrix, and determinant law-package surfaces. Use
 `Mathlib.Analysis.*` for bounded or normed linear-map APIs that depend on the
-analysis normed-space foundation. Keep
-`Mathlib.Vector.*` for the already released concrete vector examples unless a
-future breaking policy says otherwise.
+analysis normed-space foundation. Use `Mathlib.LinearAlgebra.Vector.UnitModel`
+and `Mathlib.LinearAlgebra.InnerProduct.UnitModel` for the concrete
+one-element vector examples.
 
 Use `Mathlib.Geometry.*`, `Mathlib.Analysis.*`, and similar domain prefixes
 when the subject has grown beyond a single algebra or data module.
@@ -649,7 +657,7 @@ Mathlib.Probability.Basic
 Use short mathematical nouns for core objects:
 
 ```text
-Mathlib.Algebra.Ring
+Mathlib.Algebra.Ring.UnitModel
 Mathlib.Algebra.Field
 Mathlib.Algebra.Polynomial
 Mathlib.Category.Functor
@@ -696,7 +704,7 @@ Use instead:
 ```text
 Mathlib.Data.Nat.Basic
 Mathlib.Algebra.Basic
-Mathlib.Algebra.Ring
+Mathlib.Algebra.Ring.UnitModel
 Mathlib.Logic.Basic
 ```
 
@@ -729,7 +737,7 @@ only.
 | `13` | Commutative algebra | `Mathlib.Algebra.Commutative`, `Mathlib.Algebra.Ideal`, `Mathlib.Algebra.Localization`, `Mathlib.Algebra.Noetherian`. |
 | `14` | Algebraic geometry | `Mathlib.AlgebraicGeometry.Scheme`, `Mathlib.AlgebraicGeometry.Variety`, `Mathlib.AlgebraicGeometry.Sheaf`, `Mathlib.AlgebraicGeometry.Projective`. |
 | `15` | Linear algebra and matrix theory | `Mathlib.LinearAlgebra.Basic`, `Mathlib.LinearAlgebra.Matrix`, `Mathlib.LinearAlgebra.VectorSpace`, `Mathlib.LinearAlgebra.Tensor`, `Mathlib.LinearAlgebra.Determinant`. |
-| `16` | Associative rings and algebras | `Mathlib.Algebra.Ring`, `Mathlib.Algebra.AssociativeAlgebra`, `Mathlib.Algebra.Module`, `Mathlib.Algebra.Representation`. |
+| `16` | Associative rings and algebras | `Mathlib.Algebra.Ring.UnitModel`, `Mathlib.Algebra.AssociativeAlgebra`, `Mathlib.Algebra.Module`, `Mathlib.Algebra.Representation`. |
 | `17` | Nonassociative rings and algebras | `Mathlib.Algebra.Lie`, `Mathlib.Algebra.Jordan`, `Mathlib.Algebra.NonAssociative`. |
 | `18` | Category theory and homological algebra | `Mathlib.Category.Basic`, `Mathlib.Category.Functor`, `Mathlib.Category.NaturalTransformation`, `Mathlib.Category.Homological`. |
 | `19` | K-theory | `Mathlib.KTheory.Basic`, `Mathlib.KTheory.Algebraic`, `Mathlib.KTheory.Topological`. |

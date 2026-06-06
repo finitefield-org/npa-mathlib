@@ -1,0 +1,95 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Geometry.Metric.Carrier",
+  "source": "Mathlib/Geometry/Metric/Carrier/source.npa",
+  "certificate": "Mathlib/Geometry/Metric/Carrier/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:f67bde80d443ecbddc5efe80a29c311efdd195da762a6a69ba591fa1e3ea5b26",
+  "certificate_file_sha256": "sha256:6a66ed58c76d5ae15c64fdf375cbc01fb4d43dba925a9c812578d208d84c0c57",
+  "export_hash": "sha256:bfec981e8fd8c86dd13ae1a7821ac4c964f2a92fca91ec500feb7dbe4a9b7c1f",
+  "axiom_report_hash": "sha256:b683ec26dd9da17affedaeb69c226b9b8b3a3dd7bc68442117e84b903240ec1b",
+  "certificate_hash": "sha256:4c5b6d8498330feb0af9aae5830e2bbd2219fa4b31c4f5edb53ec90f6ddf19dd",
+  "imports": [
+    "Mathlib.Algebra.OrderedField.Basic",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.OrderedField.Square",
+    "Mathlib.Geometry.RightTriangle.Carrier",
+    "Mathlib.Geometry.Affine",
+    "Mathlib.Geometry.Affine.Derived",
+    "Mathlib.LinearAlgebra.InnerProduct",
+    "Mathlib.LinearAlgebra.InnerProduct.Derived",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Std.Logic.Eq"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
+  "declarations": [
+    {
+      "name": "dist",
+      "kind": "def"
+    },
+    {
+      "name": "MetricSpaceLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "Ball",
+      "kind": "def"
+    },
+    {
+      "name": "dist_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "point_dist_sq_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "square_dist_eq_dist_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_eq_square_dist_derived",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_eq_square_dist",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_points_le_square_sum_dist",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_nonneg_derived",
+      "kind": "theorem"
+    },
+    {
+      "name": "triangle_inequality_derived",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "distance_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "distance_zero_iff_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "pythagorean_distance_general",
+      "kind": "theorem"
+    },
+    {
+      "name": "triangle_inequality",
+      "kind": "theorem"
+    }
+  ],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

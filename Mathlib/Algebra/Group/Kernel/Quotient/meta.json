@@ -5,21 +5,47 @@
   "certificate": "Mathlib/Algebra/Group/Kernel/Quotient/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:d2f77c8524c46be7531a84cfa888c18517f3c9b031859f604d56efeca13926c3",
-  "certificate_file_sha256": "sha256:25802dfd49cadecb2e84d10c0eb6077dc14cd8220eda4b924db8d51dccbba560",
-  "export_hash": "sha256:456e96fbacbb84ec968918cae2b0914f9b851c96f3bdf1fda65be372c247ea48",
+  "source_sha256": "sha256:e874db1459512110be2bc8d078c40ba03a0bcf968e7aa054b744466a3402edb9",
+  "certificate_file_sha256": "sha256:4772e82216bde7153098d69bf331f24c5c5dff9c1d1d18b7ae57b88f777b4cae",
+  "export_hash": "sha256:a4810aa0bab0bbde13471819e4d85ca08fbbd60c1c30cf3bdf426bf49d0eea02",
   "axiom_report_hash": "sha256:30155dfd0399b8bb9222cee6aff0c26065a6766282a10f97ef2d27d45d89aa6a",
-  "certificate_hash": "sha256:de182e1a592999e7b630930514be307ac7e38c012a6214196397bd96def89ed9",
-  "imports": ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic"],
-  "axioms": ["Eq.rec"],
+  "certificate_hash": "sha256:584cfe85a8c1de9c4a48407d6b2de51f336e6f7004df127d8908f86fa10da7be",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Algebra.Group.Basic"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "KerSetoid", "kind": "def" },
-    { "name": "KerQuot", "kind": "def" },
-    { "name": "KerQuotMk", "kind": "def" },
-    { "name": "KerQuotToH", "kind": "def" },
-    { "name": "ker_quot_sound", "kind": "theorem" },
-    { "name": "ker_quot_to_h_mk", "kind": "theorem" },
-    { "name": "ker_quot_to_h_mul_mk", "kind": "theorem" }
+    {
+      "name": "KerSetoid",
+      "kind": "def"
+    },
+    {
+      "name": "KernelQuotient",
+      "kind": "def"
+    },
+    {
+      "name": "KernelQuotientMk",
+      "kind": "def"
+    },
+    {
+      "name": "KernelQuotientToH",
+      "kind": "def"
+    },
+    {
+      "name": "kernel_quotient_sound",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_to_h_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "kernel_quotient_to_h_mul_mk",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

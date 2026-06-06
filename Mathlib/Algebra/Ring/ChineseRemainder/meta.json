@@ -5,26 +5,76 @@
   "certificate": "Mathlib/Algebra/Ring/ChineseRemainder/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:6e79e7e0514c81f547da7de06f1c9a63656995d23a2e29a1131e6b60cbc63279",
-  "certificate_file_sha256": "sha256:c4c5cfffa946a0dbfaa9e615d881417da14751b4138c80582d4b694338b6c84c",
-  "export_hash": "sha256:b60589726ed65d621b4cd00bb74d286ba2ac024a76b34607e4ede2f61e719a5a",
+  "source_sha256": "sha256:30160b0838a01ce755095043cf7e954af1c7626a75aecffbbbd746b0409a4842",
+  "certificate_file_sha256": "sha256:1137bcfa6bc362126b00dcb9b62ab8429c052463d629074aeaafe5631c3aaf8d",
+  "export_hash": "sha256:6e561bc4973e7104bad9bfef90e524dc62aa11a7c6ff034ee96f985b96ffb0e0",
   "axiom_report_hash": "sha256:ef7d0eaa598be1de31fe3519ebceaa3a49511caf9ca312a771ba4e7272eaffdb",
-  "certificate_hash": "sha256:8e8c0736e1158db3a0a298ac41bb513ee87200d943455dfbf51cff9b17090a31",
-  "imports": ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism"],
-  "axioms": ["Eq.rec"],
+  "certificate_hash": "sha256:0380a408892e1baa1fa547c913fec1c689677831e8ad2dca894bc476f7871981",
+  "imports": [
+    "Std.Logic.Eq",
+    "Mathlib.Logic.EqReasoning",
+    "Mathlib.Algebra.Group.Basic",
+    "Mathlib.Algebra.Group.FirstIsomorphism",
+    "Mathlib.Algebra.Group.Image",
+    "Mathlib.Algebra.Group.Kernel.Quotient",
+    "Mathlib.Algebra.Group.Kernel.Quotient.Mul",
+    "Mathlib.Algebra.Group.Kernel.Quotient.Group",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.Ring.FirstIsomorphism.Basic",
+    "Mathlib.Algebra.Ring.FirstIsomorphism"
+  ],
+  "axioms": [
+    "Eq.rec"
+  ],
   "declarations": [
-    { "name": "RingCrtPairMap", "kind": "def" },
-    { "name": "RingCrtCombine", "kind": "def" },
-    { "name": "RingCrtIntersectionPred", "kind": "def" },
-    { "name": "RingChineseRemainder", "kind": "def" },
-    { "name": "ring_crt_intersection_intro", "kind": "theorem" },
-    { "name": "ring_crt_intersection_left", "kind": "theorem" },
-    { "name": "ring_crt_intersection_right", "kind": "theorem" },
-    { "name": "ring_crt_pair_hom_laws", "kind": "theorem" },
-    { "name": "ring_crt_kernel_to_intersection", "kind": "theorem" },
-    { "name": "ring_crt_intersection_to_kernel", "kind": "theorem" },
-    { "name": "ring_crt_pair_surjective", "kind": "theorem" },
-    { "name": "ring_chinese_remainder_theorem", "kind": "theorem" }
+    {
+      "name": "RingCrtPairMap",
+      "kind": "def"
+    },
+    {
+      "name": "RingCrtCombine",
+      "kind": "def"
+    },
+    {
+      "name": "RingCrtIntersectionPred",
+      "kind": "def"
+    },
+    {
+      "name": "RingChineseRemainder",
+      "kind": "def"
+    },
+    {
+      "name": "ring_crt_intersection_intro",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_intersection_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_intersection_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_pair_hom_laws",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_kernel_to_intersection",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_intersection_to_kernel",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_crt_pair_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "ring_chinese_remainder_theorem",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

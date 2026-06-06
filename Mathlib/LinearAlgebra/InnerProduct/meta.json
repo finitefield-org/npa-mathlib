@@ -5,44 +5,140 @@
   "certificate": "Mathlib/LinearAlgebra/InnerProduct/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:7161182e477f37fb3414ed13b4a59bb823bf153a9feddecf499090e327dfed93",
-  "certificate_file_sha256": "sha256:639f7e84e6bcc70b3ce3ea2f2a0818b4186b66910e1f80ebfc26908f242b8a0c",
-  "export_hash": "sha256:af2c57ceb6b5ca583d5d5cc0db14a7c46b7752a0929e5a9d23c29baf2c1e7b75",
+  "source_sha256": "sha256:f51f15453cb708f9b7782605166b3cc1ee667668a1b95f0037cedbfdefaaa934",
+  "certificate_file_sha256": "sha256:4c5fcdc3d9531bb499ad2e2793af76375b7bdb8e5c92e8a13eb729a5fdd8fd98",
+  "export_hash": "sha256:fd0cf1fe98a78a5c3f2d589938dd75483f5e210a56d2ab9c3a2ef27ff111fb4b",
   "axiom_report_hash": "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8",
-  "certificate_hash": "sha256:b9ab7df58fed220a35a7e8b78ab111b5e167bf304568ab643b29c48945e6d06e",
-  "imports": ["Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Std.Logic.Eq"],
+  "certificate_hash": "sha256:25ea19cf74225424ddc7c497791bbf5d0c9ff793cde731b864f9c862714cf60e",
+  "imports": [
+    "Mathlib.Algebra.OrderedField.Basic",
+    "Mathlib.Algebra.Ring.Basic",
+    "Mathlib.Algebra.OrderedField.Square",
+    "Mathlib.LinearAlgebra.VectorSpace",
+    "Std.Logic.Eq"
+  ],
   "axioms": [],
   "declarations": [
-    { "name": "dot", "kind": "def" },
-    { "name": "normSq", "kind": "def" },
-    { "name": "distSq", "kind": "def" },
-    { "name": "PerpVec", "kind": "def" },
-    { "name": "InnerProductLawArgs", "kind": "def" },
-    { "name": "dot_comm", "kind": "theorem" },
-    { "name": "dot_add_left", "kind": "theorem" },
-    { "name": "dot_add_right", "kind": "theorem" },
-    { "name": "dot_neg_left", "kind": "theorem" },
-    { "name": "dot_neg_right", "kind": "theorem" },
-    { "name": "dot_sub_left", "kind": "theorem" },
-    { "name": "dot_sub_right", "kind": "theorem" },
-    { "name": "norm_sq_def", "kind": "theorem" },
-    { "name": "dist_sq_def", "kind": "theorem" },
-    { "name": "dot_self_eq_norm_sq", "kind": "theorem" },
-    { "name": "norm_sq_add", "kind": "theorem" },
-    { "name": "norm_sq_sub", "kind": "theorem" },
-    { "name": "norm_sq_add_of_dot_zero", "kind": "theorem" },
-    { "name": "norm_sq_sub_of_dot_zero", "kind": "theorem" },
-    { "name": "norm_sq_nonneg", "kind": "theorem" },
-    { "name": "parallelogram_law", "kind": "theorem" },
-    { "name": "polarization_identity", "kind": "theorem" },
-    { "name": "cauchy_schwarz", "kind": "theorem" },
-    { "name": "perp_vec_iff_dot_eq_zero", "kind": "theorem" },
-    { "name": "perp_vec_symm", "kind": "theorem" },
-    { "name": "norm_sq_zero_iff", "kind": "theorem" },
-    { "name": "dist_sq_nonneg", "kind": "theorem" },
-    { "name": "norm_sq_add_of_perp", "kind": "theorem" },
-    { "name": "norm_sq_sub_of_perp", "kind": "theorem" },
-    { "name": "quadratic_norm_nonneg", "kind": "theorem" }
+    {
+      "name": "dot",
+      "kind": "def"
+    },
+    {
+      "name": "norm_sq",
+      "kind": "def"
+    },
+    {
+      "name": "dist_sq",
+      "kind": "def"
+    },
+    {
+      "name": "PerpVec",
+      "kind": "def"
+    },
+    {
+      "name": "InnerProductLawArgs",
+      "kind": "def"
+    },
+    {
+      "name": "dot_comm",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_add_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_add_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_neg_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_neg_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_sub_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_sub_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "dot_self_eq_norm_sq",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_sub",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_add_of_dot_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_sub_of_dot_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "parallelogram_law",
+      "kind": "theorem"
+    },
+    {
+      "name": "polarization_identity",
+      "kind": "theorem"
+    },
+    {
+      "name": "cauchy_schwarz",
+      "kind": "theorem"
+    },
+    {
+      "name": "perp_vec_iff_dot_eq_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "perp_vec_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_zero_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "dist_sq_nonneg",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_add_of_perp",
+      "kind": "theorem"
+    },
+    {
+      "name": "norm_sq_sub_of_perp",
+      "kind": "theorem"
+    },
+    {
+      "name": "quadratic_norm_nonneg",
+      "kind": "theorem"
+    }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

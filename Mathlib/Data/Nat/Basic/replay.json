@@ -15,7 +15,7 @@
       "term": "@Eq.refl.{1} Nat (Nat.succ Nat.zero)"
     },
     {
-      "declaration": "nat_id",
+      "declaration": "nat_identity",
       "source_kind": "explicit_term",
       "term": "fun n => n"
     },
