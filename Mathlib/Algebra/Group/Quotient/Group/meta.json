@@ -22,15 +22,15 @@
   ],
   "declarations": [
     {
-      "name": "NormalQuotMul",
+      "name": "NormalQuotientMul",
       "kind": "def"
     },
     {
-      "name": "NormalQuotOne",
+      "name": "NormalQuotientOne",
       "kind": "def"
     },
     {
-      "name": "NormalQuotInv",
+      "name": "NormalQuotientInv",
       "kind": "def"
     },
     {

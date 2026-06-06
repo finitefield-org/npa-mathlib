@@ -1,6 +1,6 @@
 import Std.Logic.Eq
 import Mathlib.Algebra.Ring.UnitModel
-import Mathlib.Algebra.Square
+import Mathlib.Algebra.Ring.UnitModel.Square
 import Mathlib.Algebra.OrderedField.UnitModel
 import Mathlib.LinearAlgebra.Vector.UnitModel
 

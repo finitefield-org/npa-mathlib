@@ -19,7 +19,7 @@
   ],
   "declarations": [
     {
-      "name": "KerSetoid",
+      "name": "KernelSetoid",
       "kind": "def"
     },
     {

@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/RightTriangle/Carrier/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:0d8272df43b0d035c2cf179f7e74b79582da4a0a7da67f03a41b9cd7bf326618",
-  "certificate_file_sha256": "sha256:177a64d58585bcb21cc4c4c51c25d75a2a07d5729f4172bf7e3f47e13a77ef95",
-  "export_hash": "sha256:2ac43f5b52195a49cf676f7e6e42f8b2dce8f7b0a731f9162e1c21d0d8b3fd9b",
+  "source_sha256": "sha256:60c39f89bec4253137f052fcff08149613286dc16dfb8e5cbe3e22e15eb71ae8",
+  "certificate_file_sha256": "sha256:1253d2afa5475587cd27599a42fc3248969cf03a3dcfd4fcca212b92b711ffd2",
+  "export_hash": "sha256:1e793046cc134cdffb7c33a315e6169c9e5993367cef2a2b75fd6c98f520ebb6",
   "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
-  "certificate_hash": "sha256:e68140468c5e5c83976cb6c4c8c9136303c5ac0247cace5dca9fed58267635e6",
+  "certificate_hash": "sha256:aa550dd64c124f2ffec926efa2e23056bc7441c1b650c0114d01cd60331bfac9",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -54,19 +54,19 @@
       "kind": "theorem"
     },
     {
-      "name": "pythagorean_distance_sq_general",
+      "name": "pythagorean_distance_sq_law",
       "kind": "theorem"
     },
     {
-      "name": "law_of_cosines_general",
+      "name": "law_of_cosines_sq_law",
       "kind": "theorem"
     },
     {
-      "name": "right_triangle_area_general",
+      "name": "right_triangle_area_sq_law",
       "kind": "theorem"
     },
     {
-      "name": "median_to_hypotenuse_general",
+      "name": "median_to_hypotenuse_sq_law",
       "kind": "theorem"
     }
   ],

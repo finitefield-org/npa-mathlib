@@ -6,17 +6,17 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:7a431c4d7ce25e9ba4418a2e735e693b627216372ffef20403677fe3eab4446b",
-  "certificate_file_sha256": "sha256:8955a55fd73d42d395915e09187f9f58f43af38744a13e8dadd7cd0d01c1f054",
+  "certificate_file_sha256": "sha256:d371c5aa965f579e59d03f92a513f4fd879c73db39fbc4613ff873242fa201ef",
   "export_hash": "sha256:98d25fad362a2c75e6ff097176610ef061ef195263d60b3b397d5beb7c233d7b",
   "axiom_report_hash": "sha256:aacbe01532a99d075e6a5943c920c51381fff510fd7e56959ab34351a9b96090",
-  "certificate_hash": "sha256:18be11f6c8ccbaf498a1a3df39a51e29a3dc736c4f1f5e6bf20d86b112733f53",
+  "certificate_hash": "sha256:6d62ed583b06092406895c8e68302e781e0d39f2817498df50637ac1bf37cdb1",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
-    "Mathlib.Topology.Metric.Basic",
+    "Mathlib.Topology.Metric.Local",
     "Mathlib.LinearAlgebra.VectorSpace",
     "Mathlib.Analysis.NormedSpace.Basic",
-    "Mathlib.Analysis.LinearMap"
+    "Mathlib.Analysis.NormedSpace.LinearMap"
   ],
   "axioms": [],
   "declarations": [

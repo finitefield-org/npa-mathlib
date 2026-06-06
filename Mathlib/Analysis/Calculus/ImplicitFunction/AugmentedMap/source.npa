@@ -2,7 +2,7 @@ import Std.Logic.Eq
 import Mathlib.Logic.EqReasoning
 import Mathlib.LinearAlgebra.VectorSpace
 import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.LinearMap
+import Mathlib.Analysis.NormedSpace.LinearMap
 import Mathlib.Analysis.Calculus.Derivative
 
 def ImplicitAugmentedMapCoord.{p,q,u,v,w,z} :

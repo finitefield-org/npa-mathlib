@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Ring/ChineseRemainder/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:30160b0838a01ce755095043cf7e954af1c7626a75aecffbbbd746b0409a4842",
-  "certificate_file_sha256": "sha256:1137bcfa6bc362126b00dcb9b62ab8429c052463d629074aeaafe5631c3aaf8d",
-  "export_hash": "sha256:6e561bc4973e7104bad9bfef90e524dc62aa11a7c6ff034ee96f985b96ffb0e0",
+  "source_sha256": "sha256:aeac754f8db5c7e8ba5c552972648d0e8ef5f574d4f13fa1e967a90460d03420",
+  "certificate_file_sha256": "sha256:3508a42632e025fd75cbbab7a0e74f456ea4de53e942a03af85f39c7112538d1",
+  "export_hash": "sha256:15759e427f10df949b9c221ec1f0e2fd7314058b47241dac7e6d69cbbd1193e1",
   "axiom_report_hash": "sha256:ef7d0eaa598be1de31fe3519ebceaa3a49511caf9ca312a771ba4e7272eaffdb",
-  "certificate_hash": "sha256:0380a408892e1baa1fa547c913fec1c689677831e8ad2dca894bc476f7871981",
+  "certificate_hash": "sha256:8ddaa4eb24e995042f029f268dce88d171daf673c93d507812441b01f4d4f86f",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -28,15 +28,15 @@
   ],
   "declarations": [
     {
-      "name": "RingCrtPairMap",
+      "name": "RingChineseRemainderPairMap",
       "kind": "def"
     },
     {
-      "name": "RingCrtCombine",
+      "name": "RingChineseRemainderCombine",
       "kind": "def"
     },
     {
-      "name": "RingCrtIntersectionPred",
+      "name": "RingChineseRemainderIntersection",
       "kind": "def"
     },
     {
@@ -44,31 +44,31 @@
       "kind": "def"
     },
     {
-      "name": "ring_crt_intersection_intro",
+      "name": "ring_chinese_remainder_intersection_intro",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_intersection_left",
+      "name": "ring_chinese_remainder_intersection_left",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_intersection_right",
+      "name": "ring_chinese_remainder_intersection_right",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_pair_hom_laws",
+      "name": "ring_chinese_remainder_pair_hom_laws",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_kernel_to_intersection",
+      "name": "ring_chinese_remainder_kernel_to_intersection",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_intersection_to_kernel",
+      "name": "ring_chinese_remainder_intersection_to_kernel",
       "kind": "theorem"
     },
     {
-      "name": "ring_crt_pair_surjective",
+      "name": "ring_chinese_remainder_pair_surjective",
       "kind": "theorem"
     },
     {

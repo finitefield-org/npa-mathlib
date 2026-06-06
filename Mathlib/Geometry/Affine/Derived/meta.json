@@ -6,10 +6,10 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:0240a1e9eaadd55643d0da2a7b73889be740156c10875964e4cff0ba7ab25b1e",
-  "certificate_file_sha256": "sha256:ee25e28574d4ef398c692bc583a8f70d5176205d0444def618c10e9cc5d29216",
+  "certificate_file_sha256": "sha256:00125ba22273f5ca6f2f95aa74920ed2fba93ec4dee5f353f477b4a81a42d601",
   "export_hash": "sha256:255e34254d8e3bf69b853786fe9a1f07d2821d79b11d08f0d0dc6751cc2589e8",
   "axiom_report_hash": "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c",
-  "certificate_hash": "sha256:c2b85bed0bd146fbe93a89e55bc0c2fd74e2a9e0ea11407f2b596a33cafb1ae6",
+  "certificate_hash": "sha256:c9151ee92ec5bd7da0dc7d81ba013c13cdf30fd8d2f4935a83886334b1d046a1",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -24,35 +24,35 @@
   ],
   "declarations": [
     {
-      "name": "derived_vec_add_comm",
+      "name": "affine_vec_add_comm",
       "kind": "theorem"
     },
     {
-      "name": "derived_disp_reverse",
+      "name": "affine_disp_reverse",
       "kind": "theorem"
     },
     {
-      "name": "derived_disp_comp",
+      "name": "affine_disp_comp",
       "kind": "theorem"
     },
     {
-      "name": "derived_dist_sq_points_def",
+      "name": "affine_dist_sq_points_def",
       "kind": "theorem"
     },
     {
-      "name": "derived_hypotenuse_vector_eq_neg_left_add_right",
+      "name": "affine_hypotenuse_vector_eq_neg_left_add_right",
       "kind": "theorem"
     },
     {
-      "name": "derived_hypotenuse_vector_eq_sub_legs",
+      "name": "affine_hypotenuse_vector_eq_sub_legs",
       "kind": "theorem"
     },
     {
-      "name": "derived_dist_sq_hypotenuse_norm_neg_left_add_right",
+      "name": "affine_dist_sq_hypotenuse_norm_neg_left_add_right",
       "kind": "theorem"
     },
     {
-      "name": "derived_dist_sq_hypotenuse_norm_sub_legs",
+      "name": "affine_dist_sq_hypotenuse_norm_sub_legs",
       "kind": "theorem"
     }
   ],

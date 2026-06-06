@@ -1,6 +1,6 @@
 {
   "schema": "npa-ai-proof-replay-v0.1",
-  "module": "Mathlib.Topology.Metric.Basic",
+  "module": "Mathlib.Topology.Metric.Local",
   "trusted": false,
   "profile": "explicit_term_source_certificate_handoff",
   "steps": [
@@ -112,6 +112,6 @@
   ],
   "acceptance": {
     "required": ["decode_module_cert", "verify_module_cert"],
-    "accepted_artifact": "Mathlib/Topology/Metric/Basic/certificate.npcert"
+    "accepted_artifact": "Mathlib/Topology/Metric/Local/certificate.npcert"
   }
 }

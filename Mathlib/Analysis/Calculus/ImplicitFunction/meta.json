@@ -6,16 +6,16 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:ba8783b9cf1b638b5fd33947f09ed18fd62382dded3c89a35c50a980e2f1125d",
-  "certificate_file_sha256": "sha256:cac1a7b37f143384b92f19c7c006ff857a56b499898b5258b1fba50f560a9f69",
+  "certificate_file_sha256": "sha256:18b93e2cb2b253b08c3afb66e83f995119a5ded3f0dad4a3f4c9018627744608",
   "export_hash": "sha256:e8b86eac3631c28938e66a4c478696ecc8144802f566dbb1eab3f5506e9dd40d",
   "axiom_report_hash": "sha256:0d1690c6eba73dbd259c7cfc6f42702c48cb349a31bca7078cd2a76bb5ac6fcf",
-  "certificate_hash": "sha256:86fed5cb81b7deac9ba78102c4fff5a1f0eacddce1e71fd277176b8fabde950d",
+  "certificate_hash": "sha256:2a2a7ab30eb19e8076019550e3667613935f2b16ae894dc1633ee4784d9b9a51",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
     "Mathlib.LinearAlgebra.VectorSpace",
     "Mathlib.Analysis.NormedSpace.Basic",
-    "Mathlib.Analysis.LinearMap",
+    "Mathlib.Analysis.NormedSpace.LinearMap",
     "Mathlib.Analysis.Calculus.Derivative",
     "Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap"
   ],
@@ -60,11 +60,11 @@
       "kind": "def"
     },
     {
-      "name": "ImplicitFunctionTheoremEvidence",
+      "name": "ImplicitFunctionWitness",
       "kind": "def"
     },
     {
-      "name": "ImplicitFunctionDerivativeEvidence",
+      "name": "ImplicitFunctionDerivativeWitness",
       "kind": "def"
     },
     {
@@ -176,23 +176,23 @@
       "kind": "theorem"
     },
     {
-      "name": "implicit_function_derivative_evidence_args",
+      "name": "implicit_function_derivative_witness_args",
       "kind": "theorem"
     },
     {
-      "name": "implicit_function_derivative_evidence_basic",
+      "name": "implicit_function_derivative_witness_basic",
       "kind": "theorem"
     },
     {
-      "name": "implicit_function_derivative_evidence_differentiable",
+      "name": "implicit_function_derivative_witness_differentiable",
       "kind": "theorem"
     },
     {
-      "name": "implicit_function_derivative_evidence_derivative",
+      "name": "implicit_function_derivative_witness_derivative",
       "kind": "theorem"
     },
     {
-      "name": "implicit_function_derivative_evidence_formula",
+      "name": "implicit_function_derivative_witness_formula",
       "kind": "theorem"
     },
     {

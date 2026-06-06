@@ -50,7 +50,7 @@
       "term": "fun P => fun Q => fun h => fun p => @Eq.refl.{0} Q (h p)"
     },
     {
-      "declaration": "eq_local_passthrough",
+      "declaration": "eq_self_of_eq_self",
       "source_kind": "explicit_term",
       "term": "fun A => fun x => fun h => h"
     },

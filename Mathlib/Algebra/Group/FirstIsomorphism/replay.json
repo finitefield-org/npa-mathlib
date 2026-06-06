@@ -12,12 +12,12 @@
     {
       "declaration": "first_iso_map_injective",
       "source_kind": "explicit_term",
-      "term": "fun G => fun H => fun f => @Quotient.indProp.{u} G (@KerSetoid.{u,v} G H f) (fun (q1 : @KernelQuotient.{u,v} G H f) => forall (q2 : @KernelQuotient.{u,v} G H f), forall (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f q1) (@KernelQuotientToH.{u,v} G H f q2)), @Eq.{succ u} (@KernelQuotient.{u,v} G H f) q1 q2) (fun (a : G) => @Quotient.indProp.{u} G (@KerSetoid.{u,v} G H f) (fun (q2 : @KernelQuotient.{u,v} G H f) => forall (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f a)) (@KernelQuotientToH.{u,v} G H f q2)), @Eq.{succ u} (@KernelQuotient.{u,v} G H f) (@KernelQuotientMk.{u,v} G H f a) q2) (fun (b : G) => fun (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f a)) (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f b))) => @kernel_quotient_sound.{u,v} G H f a b h))"
+      "term": "fun G => fun H => fun f => @Quotient.indProp.{u} G (@KernelSetoid.{u,v} G H f) (fun (q1 : @KernelQuotient.{u,v} G H f) => forall (q2 : @KernelQuotient.{u,v} G H f), forall (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f q1) (@KernelQuotientToH.{u,v} G H f q2)), @Eq.{succ u} (@KernelQuotient.{u,v} G H f) q1 q2) (fun (a : G) => @Quotient.indProp.{u} G (@KernelSetoid.{u,v} G H f) (fun (q2 : @KernelQuotient.{u,v} G H f) => forall (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f a)) (@KernelQuotientToH.{u,v} G H f q2)), @Eq.{succ u} (@KernelQuotient.{u,v} G H f) (@KernelQuotientMk.{u,v} G H f a) q2) (fun (b : G) => fun (h : @Eq.{succ v} H (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f a)) (@KernelQuotientToH.{u,v} G H f (@KernelQuotientMk.{u,v} G H f b))) => @kernel_quotient_sound.{u,v} G H f a b h))"
     },
     {
       "declaration": "first_iso_map_hits_image",
       "source_kind": "explicit_term",
-      "term": "fun G => fun H => fun f => @Quotient.indProp.{u} G (@KerSetoid.{u,v} G H f) (fun (q : @KernelQuotient.{u,v} G H f) => @ImagePred.{succ u,succ v} G H f (@KernelQuotientToH.{u,v} G H f q)) (fun (a : G) => @image_intro.{succ u,succ v} G H f a)"
+      "term": "fun G => fun H => fun f => @Quotient.indProp.{u} G (@KernelSetoid.{u,v} G H f) (fun (q : @KernelQuotient.{u,v} G H f) => @ImagePred.{succ u,succ v} G H f (@KernelQuotientToH.{u,v} G H f q)) (fun (a : G) => @image_intro.{succ u,succ v} G H f a)"
     },
     {
       "declaration": "first_iso_map_surj_image",

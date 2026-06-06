@@ -1,6 +1,6 @@
 {
   "schema": "npa-ai-proof-replay-v0.1",
-  "module": "Mathlib.Algebra.Square",
+  "module": "Mathlib.Algebra.Ring.UnitModel.Square",
   "trusted": false,
   "profile": "explicit_term_source_certificate_handoff",
   "steps": [

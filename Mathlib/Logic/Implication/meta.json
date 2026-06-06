@@ -1,8 +1,8 @@
 {
   "schema": "npa-ai-proof-meta-v0.1",
-  "module": "Mathlib.Logic.Prop",
-  "source": "Mathlib/Logic/Prop/source.npa",
-  "certificate": "Mathlib/Logic/Prop/certificate.npcert",
+  "module": "Mathlib.Logic.Implication",
+  "source": "Mathlib/Logic/Implication/source.npa",
+  "certificate": "Mathlib/Logic/Implication/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:466c82f2aa00708bbf9d91d7e59a5f0a629f5f61af979711c325a0f4ce29dec6",

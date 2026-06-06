@@ -67,7 +67,7 @@ The `v0.1.0` release fixed these Layer 0 modules:
 
 ```text
 Mathlib.Logic.Basic
-Mathlib.Logic.Prop
+Mathlib.Logic.Implication
 Mathlib.Logic.Eq
 Mathlib.Data.Nat.Basic
 Mathlib.Core.Reduction
@@ -77,7 +77,7 @@ The `v0.1.1` release adds these Layer 1 modules:
 
 ```text
 Mathlib.Algebra.Ring.UnitModel
-Mathlib.Algebra.Square
+Mathlib.Algebra.Ring.UnitModel.Square
 Mathlib.Algebra.OrderedField.UnitModel
 ```
 
@@ -166,7 +166,7 @@ The `v0.1.13` release adds these Layer 3D-G modules:
 Mathlib.Algebra.Group.Correspondence.Basic
 Mathlib.Algebra.Group.Correspondence.Order
 Mathlib.Algebra.Group.Correspondence
-Mathlib.Algebra.Group.Correspondence.Ordered
+Mathlib.Algebra.Group.Correspondence.OrderFacts
 ```
 
 The `v0.1.14` release adds this Layer 3E module:
@@ -225,7 +225,7 @@ Mathlib.Geometry.Pythagorean
 The `v0.1.21` release adds this analysis metric topology closure module:
 
 ```text
-Mathlib.Topology.Metric.Basic
+Mathlib.Topology.Metric.Local
 ```
 
 The `v0.1.22` release adds this analysis normed-space closure module:
@@ -237,7 +237,7 @@ Mathlib.Analysis.NormedSpace.Basic
 The `v0.1.23` release adds this analysis linear-map closure module:
 
 ```text
-Mathlib.Analysis.LinearMap
+Mathlib.Analysis.NormedSpace.LinearMap
 ```
 
 The `v0.1.24` release adds this analysis derivative closure module:
@@ -270,7 +270,7 @@ The Layer 0 mapping is fixed:
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
 | `Proofs.Ai.Basic` | `Mathlib.Logic.Basic` | `Mathlib/Logic/Basic/` |
-| `Proofs.Ai.Prop` | `Mathlib.Logic.Prop` | `Mathlib/Logic/Prop/` |
+| `Proofs.Ai.Prop` | `Mathlib.Logic.Implication` | `Mathlib/Logic/Implication/` |
 | `Proofs.Ai.Eq` | `Mathlib.Logic.Eq` | `Mathlib/Logic/Eq/` |
 | `Proofs.Ai.Nat` | `Mathlib.Data.Nat.Basic` | `Mathlib/Data/Nat/Basic/` |
 | `Proofs.Ai.Reduction` | `Mathlib.Core.Reduction` | `Mathlib/Core/Reduction/` |
@@ -280,7 +280,7 @@ The Layer 1 mapping is fixed:
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.Ring` | `Mathlib.Algebra.Ring.UnitModel` | `Mathlib/Algebra/Ring/UnitModel/` |
-| `Proofs.Ai.Algebra.Square` | `Mathlib.Algebra.Square` | `Mathlib/Algebra/Square/` |
+| `Proofs.Ai.Algebra.Square` | `Mathlib.Algebra.Ring.UnitModel.Square` | `Mathlib/Algebra/Ring/UnitModel/Square/` |
 | `Proofs.Ai.OrderedField` | `Mathlib.Algebra.OrderedField.UnitModel` | `Mathlib/Algebra/OrderedField/UnitModel/` |
 
 The Layer 2A mapping is fixed:
@@ -369,7 +369,7 @@ The Layer 3D-G mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupCorrespondence` | `Mathlib.Algebra.Group.Correspondence.Basic` | `Mathlib/Algebra/Group/Correspondence/Basic/` |
 | `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrder` | `Mathlib.Algebra.Group.Correspondence.Order` | `Mathlib/Algebra/Group/Correspondence/Order/` |
 | `Proofs.Ai.Algebra.AbstractGroupCorrespondenceFinal` | `Mathlib.Algebra.Group.Correspondence` | `Mathlib/Algebra/Group/Correspondence/` |
-| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrderFinal` | `Mathlib.Algebra.Group.Correspondence.Ordered` | `Mathlib/Algebra/Group/Correspondence/Ordered/` |
+| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrderFinal` | `Mathlib.Algebra.Group.Correspondence.OrderFacts` | `Mathlib/Algebra/Group/Correspondence/OrderFacts/` |
 
 The Layer 3E mapping is fixed:
 
@@ -427,7 +427,7 @@ The analysis metric topology closure mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Analysis.AbstractMetricTopology` | `Mathlib.Topology.Metric.Basic` | `Mathlib/Topology/Metric/Basic/` |
+| `Proofs.Ai.Analysis.AbstractMetricTopology` | `Mathlib.Topology.Metric.Local` | `Mathlib/Topology/Metric/Local/` |
 
 The analysis normed-space closure mapping is fixed:
 
@@ -439,7 +439,7 @@ The analysis linear-map closure mapping is fixed:
 
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
-| `Proofs.Ai.Analysis.AbstractLinearMap` | `Mathlib.Analysis.LinearMap` | `Mathlib/Analysis/LinearMap/` |
+| `Proofs.Ai.Analysis.AbstractLinearMap` | `Mathlib.Analysis.NormedSpace.LinearMap` | `Mathlib/Analysis/NormedSpace/LinearMap/` |
 
 The analysis derivative closure mapping is fixed:
 
@@ -496,8 +496,8 @@ coupled to the final evidence surface.
 
 Layer 3D-G uses `Correspondence.Basic` for the normal-quotient image/preimage
 construction surface, `Correspondence.Order` for monotonicity/equivalence facts,
-`Correspondence` for the theorem-evidence surface, and `Correspondence.Ordered`
-for the final ordered correspondence evidence.
+`Correspondence` for the theorem-evidence surface, and
+`Correspondence.OrderFacts` for the final order-specific correspondence facts.
 
 Layer 3E keeps `PropIff`, `PropAnd`, `PropOr`, `PropFalse`, and `PropNot`
 together in `Mathlib.Logic.PropConnectives`. A future
@@ -507,10 +507,10 @@ needs the connectives without the bundled iff API.
 The abstract ring foundation uses `Mathlib.Algebra.Ring.Basic` for arbitrary
 `Scalar` law-package facts. `Mathlib.Algebra.Ring.UnitModel` is the concrete
 one-element ring route. Both surfaces contain some
-declaration names such as `add_assoc` and `ring_reorder_three_mul_terms`; downstream
-packages should import the abstract foundation or the concrete route according
-to the proof surface they need, not both in the same source module unless they
-have a deliberate disambiguation plan.
+declaration names such as `add_assoc` and `ring_reorder_three_mul_terms`;
+downstream packages should import the abstract foundation or the concrete route
+according to the proof surface they need, not both in the same source module
+unless they have a deliberate disambiguation plan.
 
 The v0.1.16 ring first-isomorphism and CRT route does not introduce a separate
 `Mathlib.Algebra.Ring.Hom` module. The checked corpus base module bundles the
@@ -558,7 +558,7 @@ carrier-parametric law-package route uses
 `Mathlib.Geometry.Metric.Carrier`.
 
 The v0.1.21 analysis metric topology closure uses
-`Mathlib.Topology.Metric.Basic` for predicate-level metric balls,
+`Mathlib.Topology.Metric.Local` for predicate-level metric balls,
 neighborhoods, local membership, local predicates, local equality, and local
 uniqueness. The module is placed under `Topology` rather than `Analysis`
 because it provides local metric-topology vocabulary for later analysis
@@ -572,12 +572,12 @@ norm/product-norm foundation used by later linear-map, derivative,
 fixed-point, inverse-function, and implicit-function routes.
 
 The v0.1.23 analysis linear-map closure uses
-`Mathlib.Analysis.LinearMap` for bounded-linear-map law packages, operator norm
-bounds, linear isomorphisms, composition, inverses, and block-triangular map
-APIs over normed spaces. It is placed under `Analysis` rather than a pure
-`LinearAlgebra` namespace because the checked surface is normed and bounded
-and is the direct foundation for derivative, inverse-function, and
-implicit-function analysis routes.
+`Mathlib.Analysis.NormedSpace.LinearMap` for bounded-linear-map law packages,
+operator norm bounds, linear isomorphisms, composition, inverses, and
+block-triangular map APIs over normed spaces. It is placed under `Analysis`
+rather than a pure `LinearAlgebra` namespace because the checked surface is
+normed and bounded and is the direct foundation for derivative,
+inverse-function, and implicit-function analysis routes.
 
 The v0.1.24 analysis derivative closure uses
 `Mathlib.Analysis.Calculus.Derivative` for Frechet derivative,
@@ -600,13 +600,50 @@ derivative and fixed-point foundations are public, and gives the later
 implicit-function route a stable public inverse-function dependency.
 
 The v0.1.27 analysis implicit-function closure uses
-`Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` for the auxiliary implicit
-augmented coordinate/map and derivative block-triangular evidence, and
-`Mathlib.Analysis.Calculus.ImplicitFunction` for extraction, target
-membership, uniqueness, differentiability, and derivative-formula theorem
-evidence. The augmented-map helper is a nested submodule because it is coupled
-to the final implicit-function route but remains a separately imported
-prerequisite.
+`Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` for the auxiliary
+implicit augmented coordinate/map and derivative block-triangular evidence, and
+`Mathlib.Analysis.Calculus.ImplicitFunction` for extraction, target membership,
+uniqueness, differentiability, and derivative-formula theorem evidence. The
+augmented-map helper is a nested submodule because it is coupled to the final
+implicit-function route but remains a separately imported prerequisite.
+
+## Naming Principles
+
+Public names should describe the mathematical surface that downstream authors
+import, not the route that produced the certificate.
+
+Prefer the smallest name that disambiguates the exported API:
+
+- Use `Basic` for the first abstract foundation in a domain, especially when it
+  exports law-package or carrier-parametric facts that later modules depend on.
+- Use `UnitModel` for concrete one-element or singleton model routes. Do not
+  let concrete examples occupy the unsuffixed domain name when an abstract API
+  also exists.
+- Use `Carrier` for APIs parameterized by an explicit carrier and law
+  arguments. Use `Derived` for theorem layers whose main role is deriving facts
+  from already-public law packages.
+- Use content qualifiers such as `Local`, `OrderFacts`, `PropConnectives`, or
+  `Square` when the module is a specific vocabulary or theorem cluster rather
+  than the domain foundation.
+- Prefer expanded conventional mathematical names such as `FirstIsomorphism` to
+  abbreviated implementation names such as `FirstIso`.
+
+Avoid names that are likely to collide with future kernel or frontend standard
+names. For public logic declarations, prefer names such as `identity`,
+`prop_identity`, `PropIff`, `PropAnd`, and `PropNot` over bare `id`, `Iff`,
+`And`, or `Not` when the name is not the kernel primitive itself.
+
+Theorem names should describe the statement. Public theorems should not expose
+proof provenance or package plumbing through suffixes such as `_from_args`,
+`_from_law_packages`, `_api_alias`, or `_dependencies`. If those names are
+useful during proof construction, keep them as internal helpers and export
+content-oriented aliases such as `pythagorean_theorem_sq`, `law_of_cosines_sq`,
+or `law_of_cosines_sq_core`.
+
+When two candidate names are both accurate, prefer the one that helps import
+selection. A downstream author should be able to tell from the name whether they
+are importing a concrete model, an abstract law-package API, a
+carrier-parametric API, local topology vocabulary, or final theorem evidence.
 
 ## Category Rules
 
@@ -624,8 +661,9 @@ certificate-facing semantics, such as reduction examples. Do not place general
 mathematics there.
 
 Use `Mathlib.Algebra.*` for algebraic structures and algebraic theorem groups.
-Prefer names such as `Mathlib.Algebra.Ring.UnitModel`, `Mathlib.Algebra.Square`, and
-`Mathlib.Algebra.Group.Basic` for small foundational layers.
+Prefer names such as `Mathlib.Algebra.Ring.UnitModel`,
+`Mathlib.Algebra.Ring.UnitModel.Square`, and `Mathlib.Algebra.Group.Basic` for
+small foundational layers.
 
 Use `Mathlib.LinearAlgebra.*` for abstract vector-space, algebraic linear-map,
 inner-product, matrix, and determinant law-package surfaces. Use
@@ -797,6 +835,13 @@ Before adding a public module, check:
 - The module starts with `Mathlib.`.
 - The module path matches the dotted name.
 - The name describes mathematical content, not provenance or tooling.
+- The name distinguishes concrete models, abstract law-package APIs,
+  carrier-parametric APIs, derived theorem layers, and local vocabulary when
+  those surfaces coexist.
+- Public logic names are disambiguated from likely future kernel or frontend
+  standard names.
+- Public theorem names describe the statement and do not expose proof
+  provenance or package plumbing suffixes.
 - The module is closed over declared package imports.
 - No public artifact contains stale `Proofs.Ai.*` or seed names.
 - The module can be consumed source-free by downstream packages.

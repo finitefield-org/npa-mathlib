@@ -25,35 +25,35 @@
   ],
   "declarations": [
     {
-      "name": "FirstIsoQuotientAssocEvidence",
+      "name": "FirstIsoQuotientAssocFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoQuotientOneMulEvidence",
+      "name": "FirstIsoQuotientOneMulFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoQuotientMulOneEvidence",
+      "name": "FirstIsoQuotientMulOneFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoQuotientInvMulEvidence",
+      "name": "FirstIsoQuotientInvMulFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoQuotientMulInvEvidence",
+      "name": "FirstIsoQuotientMulInvFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoQuotientGroupEvidence",
+      "name": "FirstIsoQuotientGroupFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoImageGroupEvidence",
+      "name": "FirstIsoImageGroupClosureFacts",
       "kind": "inductive"
     },
     {
-      "name": "FirstIsoTheoremEvidence",
+      "name": "FirstIsoTheoremFacts",
       "kind": "inductive"
     },
     {
@@ -65,31 +65,31 @@
       "kind": "def"
     },
     {
-      "name": "first_iso_quotient_assoc_evidence",
+      "name": "first_iso_quotient_assoc_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_quotient_one_mul_evidence",
+      "name": "first_iso_quotient_one_mul_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_quotient_mul_one_evidence",
+      "name": "first_iso_quotient_mul_one_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_quotient_inv_mul_evidence",
+      "name": "first_iso_quotient_inv_mul_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_quotient_mul_inv_evidence",
+      "name": "first_iso_quotient_mul_inv_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_quotient_group_evidence",
+      "name": "first_iso_quotient_group_facts",
       "kind": "theorem"
     },
     {
-      "name": "first_iso_image_group_evidence",
+      "name": "first_iso_image_group_closure_facts",
       "kind": "theorem"
     },
     {
@@ -97,7 +97,7 @@
       "kind": "theorem"
     },
     {
-      "name": "first_isomorphism_theorem_evidence",
+      "name": "first_isomorphism_theorem_facts",
       "kind": "theorem"
     },
     {

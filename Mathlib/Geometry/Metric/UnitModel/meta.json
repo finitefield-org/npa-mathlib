@@ -13,7 +13,7 @@
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Algebra.Ring.UnitModel",
-    "Mathlib.Algebra.Square",
+    "Mathlib.Algebra.Ring.UnitModel.Square",
     "Mathlib.Algebra.OrderedField.UnitModel",
     "Mathlib.LinearAlgebra.Vector.UnitModel",
     "Mathlib.LinearAlgebra.InnerProduct.UnitModel",

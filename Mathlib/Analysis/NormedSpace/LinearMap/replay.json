@@ -1,6 +1,6 @@
 {
   "schema": "npa-ai-proof-replay-v0.1",
-  "module": "Mathlib.Analysis.LinearMap",
+  "module": "Mathlib.Analysis.NormedSpace.LinearMap",
   "trusted": false,
   "profile": "explicit_term_source_certificate_handoff",
   "steps": [
@@ -207,6 +207,6 @@
   ],
   "acceptance": {
     "required": ["decode_module_cert", "verify_module_cert"],
-    "accepted_artifact": "Mathlib/Analysis/LinearMap/certificate.npcert"
+    "accepted_artifact": "Mathlib/Analysis/NormedSpace/LinearMap/certificate.npcert"
   }
 }

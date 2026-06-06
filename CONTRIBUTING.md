@@ -43,7 +43,7 @@ For this initial release, keep the public module set limited to:
 
 ```text
 Mathlib.Logic.Basic
-Mathlib.Logic.Prop
+Mathlib.Logic.Implication
 Mathlib.Logic.Eq
 Mathlib.Data.Nat.Basic
 Mathlib.Core.Reduction

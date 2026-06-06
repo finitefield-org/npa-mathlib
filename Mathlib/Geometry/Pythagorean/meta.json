@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/Pythagorean/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:0f738e6be20e20772b0b4ae27b2776b693e9905edadc8a392103ad382b14e24f",
-  "certificate_file_sha256": "sha256:34d2a95c95f05341676d5e5c833ca0b5f4137e54e3c6a16151cb24fe88a5cafb",
+  "source_sha256": "sha256:eddf0e0cca0b9a215dd5d5610f401c412a921645e3bd9a033b12a65be8b0332d",
+  "certificate_file_sha256": "sha256:ffd5464a7a513edfa95dff2825769e49d9cab21945b47339fc77a4c46b399323",
   "export_hash": "sha256:07080b11d8e96760fc11a4538b4706910795468dba2148dc4c9e2eb840a5c0d7",
   "axiom_report_hash": "sha256:17ecb11b616e9ee8e49162b79b996da7567201892f1a83e255b69403a0822596",
-  "certificate_hash": "sha256:7fcd15ed57728134e04a5a4e0ee88ccbcb910d22f6ba53cbea9b8471c81b9551",
+  "certificate_hash": "sha256:ae29a4fa58582dc966aae0090b8d10ce7046a3cb18d34911323ed9736adae654",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -43,7 +43,7 @@
       "kind": "theorem"
     },
     {
-      "name": "dist_sq_law_of_cosines_rhs",
+      "name": "law_of_cosines_sq_core",
       "kind": "theorem"
     },
     {
@@ -83,7 +83,7 @@
       "kind": "theorem"
     },
     {
-      "name": "metric_space_law_args_identity",
+      "name": "metric_space_laws_self",
       "kind": "theorem"
     }
   ],

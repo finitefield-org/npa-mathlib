@@ -37,7 +37,7 @@ theorem eq_refl_prop_apply :
   forall (P : Prop), forall (Q : Prop), forall (h : forall (p : P), Q), forall (p : P), @Eq.{0} Q (h p) (h p) :=
   fun P => fun Q => fun h => fun p => @Eq.refl.{0} Q (h p)
 
-theorem eq_local_passthrough.{u} :
+theorem eq_self_of_eq_self.{u} :
   forall (A : Sort u), forall (x : A), forall (h : @Eq.{u} A x x), @Eq.{u} A x x :=
   fun A => fun x => fun h => h
 

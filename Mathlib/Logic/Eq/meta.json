@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Logic/Eq/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:840d68cb64b2b75fe048cf8f47b5908b05d72c488a6c4168777980d88052a954",
-  "certificate_file_sha256": "sha256:763bce3ceb66a1ad3d8c42c2f3de702361c26a34dc48cb48bb32e39aae200075",
-  "export_hash": "sha256:1c07efd64036803a90acda145142dfaca01324bf4ac0851f9084c2b398f322f8",
+  "source_sha256": "sha256:c09eccdc82718b7b929b8b190dc487e615d3be639f99407996d5e30cfd60579a",
+  "certificate_file_sha256": "sha256:cbdfeea3e294647581dbd63d744940af6582f30da6dd4902bdd716ce9b0dad6e",
+  "export_hash": "sha256:c117452574d636683e7973622f65debe3723ab3ba2f14151dbdefcaa80b3c710",
   "axiom_report_hash": "sha256:bc3aec4eabbf2c61f399239a21f359b264c36873e750ed25c9059fee86484bea",
-  "certificate_hash": "sha256:72a9b7d00d295691fcf1b0a256200104d50a8ad1efbee355cd0f6fd1a9e697e8",
+  "certificate_hash": "sha256:174e26d153546f5ff5fe6088a73ee063bd2dfe2706e3b3b92726f1732d20dfda",
   "imports": [
     "Std.Logic.Eq",
     "Std.Nat.Basic"
@@ -53,7 +53,7 @@
       "kind": "theorem"
     },
     {
-      "name": "eq_local_passthrough",
+      "name": "eq_self_of_eq_self",
       "kind": "theorem"
     },
     {

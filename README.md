@@ -17,7 +17,7 @@ This repository contains the analysis implicit-function closure public
 package:
 
 ```text
-Mathlib.Algebra.Group.Correspondence.Ordered
+Mathlib.Algebra.Group.Correspondence.OrderFacts
 Mathlib.Algebra.Group.Correspondence
 Mathlib.Algebra.Group.Correspondence.Order
 Mathlib.Algebra.Group.Correspondence.Basic
@@ -41,7 +41,7 @@ Mathlib.Algebra.Group.Subgroup.Order
 Mathlib.Algebra.Group.Subgroup
 Mathlib.Logic.PropConnectives
 Mathlib.Logic.EqReasoning
-Mathlib.Topology.Metric.Basic
+Mathlib.Topology.Metric.Local
 Mathlib.Algebra.Group.Basic
 Mathlib.Algebra.Ring.Basic
 Mathlib.Algebra.Ring.FirstIsomorphism.Basic
@@ -52,7 +52,7 @@ Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
 Mathlib.Analysis.NormedSpace.Basic
-Mathlib.Analysis.LinearMap
+Mathlib.Analysis.NormedSpace.LinearMap
 Mathlib.Analysis.Calculus.Derivative
 Mathlib.Analysis.FixedPoint.Banach
 Mathlib.Analysis.Calculus.InverseFunction
@@ -71,10 +71,10 @@ Mathlib.Geometry.Metric.UnitModel
 Mathlib.LinearAlgebra.Vector.UnitModel
 Mathlib.LinearAlgebra.InnerProduct.UnitModel
 Mathlib.Algebra.Ring.UnitModel
-Mathlib.Algebra.Square
+Mathlib.Algebra.Ring.UnitModel.Square
 Mathlib.Algebra.OrderedField.UnitModel
 Mathlib.Logic.Basic
-Mathlib.Logic.Prop
+Mathlib.Logic.Implication
 Mathlib.Logic.Eq
 Mathlib.Data.Nat.Basic
 Mathlib.Core.Reduction
@@ -223,13 +223,13 @@ route. `Mathlib.Geometry.Affine` and
 `Mathlib.Geometry.Metric.Carrier`, and `Mathlib.Geometry.Pythagorean` carry
 the expected `Eq.rec` dependency through equality-reasoning, scalar identity,
 and law-package imports. The v0.1.21 release adds the analysis metric
-topology route. `Mathlib.Topology.Metric.Basic` carries no direct custom
+topology route. `Mathlib.Topology.Metric.Local` carries no direct custom
 axioms and has the expected transitive `Eq.rec` dependency through
 `Mathlib.Logic.EqReasoning`. The v0.1.22 release adds the analysis
 normed-space route. `Mathlib.Analysis.NormedSpace.Basic` carries no direct
 custom axioms and has the expected transitive `Eq.rec` dependency through
 equality-reasoning and vector-space imports. The v0.1.23 release adds the
-analysis linear-map route. `Mathlib.Analysis.LinearMap` carries no direct
+analysis linear-map route. `Mathlib.Analysis.NormedSpace.LinearMap` carries no direct
 custom axioms and has the expected transitive `Eq.rec` dependency through
 equality-reasoning, vector-space, and normed-space imports. The v0.1.24
 release adds the analysis derivative route.

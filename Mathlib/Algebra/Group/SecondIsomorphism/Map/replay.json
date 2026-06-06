@@ -7,27 +7,27 @@
     {
       "declaration": "SecondIsoMap",
       "source_kind": "explicit_def_value",
-      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h => fun hh => @NormalQuotMk.{u} G one mul inv N group_args normal_args h"
+      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h => fun hh => @NormalQuotientMk.{u} G one mul inv N group_args normal_args h"
     },
     {
       "declaration": "second_iso_map_mk",
       "source_kind": "explicit_term",
-      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h => fun hh => @Eq.refl.{succ u} (@NormalQuot.{u} G one mul inv N group_args normal_args) (@NormalQuotMk.{u} G one mul inv N group_args normal_args h)"
+      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h => fun hh => @Eq.refl.{succ u} (@NormalQuotient.{u} G one mul inv N group_args normal_args) (@NormalQuotientMk.{u} G one mul inv N group_args normal_args h)"
     },
     {
       "declaration": "second_iso_map_mul",
       "source_kind": "explicit_term",
-      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => fun a => fun b => fun ha => fun hb => @Eq.refl.{succ u} (@NormalQuot.{u} G one mul inv N group_args normal_args) (@NormalQuotMk.{u} G one mul inv N group_args normal_args (mul a b))"
+      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => fun a => fun b => fun ha => fun hb => @Eq.refl.{succ u} (@NormalQuotient.{u} G one mul inv N group_args normal_args) (@NormalQuotientMk.{u} G one mul inv N group_args normal_args (mul a b))"
     },
     {
       "declaration": "second_iso_map_one",
       "source_kind": "explicit_term",
-      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => @Eq.refl.{succ u} (@NormalQuot.{u} G one mul inv N group_args normal_args) (@NormalQuotMk.{u} G one mul inv N group_args normal_args one)"
+      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => @Eq.refl.{succ u} (@NormalQuotient.{u} G one mul inv N group_args normal_args) (@NormalQuotientMk.{u} G one mul inv N group_args normal_args one)"
     },
     {
       "declaration": "second_iso_augmented_map_inv",
       "source_kind": "explicit_term",
-      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => fun h => fun hh => @Eq.refl.{succ u} (@NormalQuot.{u} G one mul inv N group_args normal_args) (@NormalQuotMk.{u} G one mul inv N group_args normal_args (inv h))"
+      "term": "fun G => fun one => fun mul => fun inv => fun N => fun group_args => fun normal_args => fun Hpred => fun h_args => fun h => fun hh => @Eq.refl.{succ u} (@NormalQuotient.{u} G one mul inv N group_args normal_args) (@NormalQuotientMk.{u} G one mul inv N group_args normal_args (inv h))"
     }
   ],
   "acceptance": {

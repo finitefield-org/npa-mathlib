@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/OrderedField/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:c4af3c3db7767665049f1dc77fa838d94d152f0e740a42d127c429cdbdad99e3",
-  "certificate_file_sha256": "sha256:ce03b0a982b1548b411cdcc351bf5f6a8917a9423f8f69e2f61307e39e049626",
-  "export_hash": "sha256:a4ea4025d8822dc2ac430489caeb2558378f7a339454f468e56a80fdaed317c9",
+  "source_sha256": "sha256:f804844a5bb666b575d9c5de90b03683fbe1bb8b328fd698080773807388dbde",
+  "certificate_file_sha256": "sha256:3fbafaabe0e2d064aab2002ca0bd47a761dab8905584473184c57bbaf07d14f5",
+  "export_hash": "sha256:39345b6890e80ff61948b888938c61885e9ca873876e150e7ba6f13fb9cc1ed3",
   "axiom_report_hash": "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8",
-  "certificate_hash": "sha256:9cb5de7a0439cf75418f22bf152546d9a69323592e7d5ec3e1d25b77569fdccf",
+  "certificate_hash": "sha256:8d5b95d5c9b8bb0cf3c679ca4604efbcd480d570b117d07cc139ffa84a927f6f",
   "imports": [
     "Mathlib.Algebra.Ring.Basic",
     "Std.Logic.Eq"
@@ -121,7 +121,7 @@
       "kind": "theorem"
     },
     {
-      "name": "add_dist_nonneg_derived",
+      "name": "add_nonneg_law",
       "kind": "theorem"
     },
     {

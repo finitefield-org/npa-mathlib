@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/ThirdIsomorphism/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:a5566ed28039245454e4ebdc1a1476071b57a162c956c876c5c948b4bfe6ca9f",
-  "certificate_file_sha256": "sha256:0d11531767f1aab42cf268ff0f99c9883543cc76c2ceba320db51f03828dcc6a",
-  "export_hash": "sha256:0eb325403daf50caf307859e2d520a00bcdbcb58061d94250b07d0ffc062db6a",
+  "source_sha256": "sha256:665cfbcf31c0c99fdcfcd2a9fc7b3b9c07eb83f3b419d07d38bbb243621dfb0b",
+  "certificate_file_sha256": "sha256:f6b248a0d9b21b0d9b02fde62dec6b8be42d8299519c842867346702a6ba046d",
+  "export_hash": "sha256:cc258c7d9968c75645b8d101ab6355dac23fb467c64b7ad593e2102cb323042e",
   "axiom_report_hash": "sha256:0108ad64717a722b59da86273c6f6182ab9467621b71e499023718c8ea574f6a",
-  "certificate_hash": "sha256:2e6ebfa3e548844c639ad512888d0ac105b232fc8cf91959eeeec539160dc21a",
+  "certificate_hash": "sha256:82b1e29fd8049322dddc3551a283221f9ef28bba4f2e82bb05e7f807fd1af51e",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -25,31 +25,31 @@
   ],
   "declarations": [
     {
-      "name": "ThirdIsoGN",
+      "name": "ThirdIsoQuotientByN",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoGNOne",
+      "name": "ThirdIsoQuotientByNOne",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoGNMul",
+      "name": "ThirdIsoQuotientByNMul",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoGNInv",
+      "name": "ThirdIsoQuotientByNInv",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoHNPred",
+      "name": "ThirdIsoSubquotientPred",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoHNSubgroupLawArgs",
+      "name": "ThirdIsoSubquotientSubgroupLawArgs",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoHNNormalSubgroupLawArgs",
+      "name": "ThirdIsoSubquotientNormalSubgroupLawArgs",
       "kind": "def"
     },
     {
@@ -57,7 +57,7 @@
       "kind": "def"
     },
     {
-      "name": "ThirdIsoMapKernelQuot",
+      "name": "ThirdIsoMapKernelQuotient",
       "kind": "def"
     },
     {
@@ -65,11 +65,11 @@
       "kind": "def"
     },
     {
-      "name": "ThirdIsoKernelEvidence",
+      "name": "ThirdIsoKernelFacts",
       "kind": "def"
     },
     {
-      "name": "ThirdIsoTheoremEvidence",
+      "name": "ThirdIsoTheoremFacts",
       "kind": "def"
     },
     {
@@ -77,27 +77,27 @@
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_intro",
+      "name": "third_iso_subquotient_intro",
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_elim",
+      "name": "third_iso_subquotient_elim",
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_one",
+      "name": "third_iso_subquotient_one",
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_mul_closed",
+      "name": "third_iso_subquotient_mul_closed",
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_inv_closed",
+      "name": "third_iso_subquotient_inv_closed",
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_conj_closed",
+      "name": "third_iso_subquotient_conj_closed",
       "kind": "theorem"
     },
     {
@@ -121,7 +121,7 @@
       "kind": "theorem"
     },
     {
-      "name": "third_iso_hn_to_kernel_sound",
+      "name": "third_iso_subquotient_to_kernel_sound",
       "kind": "theorem"
     },
     {
@@ -129,11 +129,11 @@
       "kind": "theorem"
     },
     {
-      "name": "third_iso_kernel_evidence",
+      "name": "third_iso_kernel_facts",
       "kind": "theorem"
     },
     {
-      "name": "third_isomorphism_theorem_evidence",
+      "name": "third_isomorphism_theorem",
       "kind": "theorem"
     }
   ],

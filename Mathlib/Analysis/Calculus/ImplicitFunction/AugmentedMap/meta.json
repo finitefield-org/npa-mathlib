@@ -6,16 +6,16 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:1e75528c86acb935bd24e94d686bf714548f9637c8c28589bdffb89d3286fbe0",
-  "certificate_file_sha256": "sha256:e469f8fbd2fd58dce91b697bccfc8a4fab5628ffc63c2e7170b36c0ad14e052e",
+  "certificate_file_sha256": "sha256:387002f6d9af79e5243169a279a1da29f05d50bfb9d5310f130e850cd7a82e5b",
   "export_hash": "sha256:de13e20d9a4c556b9caa439e5ed3550dd3e2d3d58e63c452482532c91c4ddeb5",
   "axiom_report_hash": "sha256:9f292648aa00dddbe49e31f78bc11448b5ee88db69aba9ec37edaa67a112d59b",
-  "certificate_hash": "sha256:6e6951bc75b039349e6187116879a7ad001e45c44db0f69e412f85dda65ee910",
+  "certificate_hash": "sha256:84084723cbfec8b737f12e70bef634083778b60051b765e818bbab84d87b3209",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
     "Mathlib.LinearAlgebra.VectorSpace",
     "Mathlib.Analysis.NormedSpace.Basic",
-    "Mathlib.Analysis.LinearMap",
+    "Mathlib.Analysis.NormedSpace.LinearMap",
     "Mathlib.Analysis.Calculus.Derivative"
   ],
   "axioms": [

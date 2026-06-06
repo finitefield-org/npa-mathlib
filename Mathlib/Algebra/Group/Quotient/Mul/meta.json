@@ -21,7 +21,7 @@
   ],
   "declarations": [
     {
-      "name": "NormalQuotMulRep",
+      "name": "NormalQuotientMulRep",
       "kind": "def"
     },
     {

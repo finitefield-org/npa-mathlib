@@ -18,13 +18,13 @@ The fixture vendors the source-free certificate import closure for
 
 - `vendor/npa-std/Std/Logic/Eq/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Topology/Metric/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Topology/Metric/Local/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert`
-- `vendor/npa-mathlib/Mathlib/Analysis/LinearMap/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/LinearMap/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/Derivative/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert`

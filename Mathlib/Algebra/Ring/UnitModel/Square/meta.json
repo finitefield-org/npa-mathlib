@@ -1,8 +1,8 @@
 {
   "schema": "npa-ai-proof-meta-v0.1",
-  "module": "Mathlib.Algebra.Square",
-  "source": "Mathlib/Algebra/Square/source.npa",
-  "certificate": "Mathlib/Algebra/Square/certificate.npcert",
+  "module": "Mathlib.Algebra.Ring.UnitModel.Square",
+  "source": "Mathlib/Algebra/Ring/UnitModel/Square/source.npa",
+  "certificate": "Mathlib/Algebra/Ring/UnitModel/Square/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:ba89320b338c28b37004b0f9c93bf8b02078f44f148e5a41eeff9c9d929ac900",

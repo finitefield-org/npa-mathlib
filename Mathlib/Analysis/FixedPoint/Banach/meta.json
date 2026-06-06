@@ -6,13 +6,13 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:fc29bc6a8accc0bcbbcb4ecd6e183b12a2fae7149e63d2f69a5cf71c47d4a653",
-  "certificate_file_sha256": "sha256:5be7329b9fbccf8a1753ade276448f5d51e2bc7602400cd23edf84efffe95db7",
+  "certificate_file_sha256": "sha256:8bd853d3adb280247090a37df015db7d451d6458cf7c6d7ad0174ba03f14368d",
   "export_hash": "sha256:2e339fdea914b18389703d3c3b21ec495ae1d0fe04f248411f8038c4d65013d8",
   "axiom_report_hash": "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12",
-  "certificate_hash": "sha256:79f06f1307a8882414ae1228ff8b006b45a404e5e4ba193056ad9021024e5606",
+  "certificate_hash": "sha256:03ea1e6a3eeb31de1b6447c8c02169b9984f56e69015f0b1dbbe9d3c94c32a8e",
   "imports": [
     "Std.Logic.Eq",
-    "Mathlib.Topology.Metric.Basic",
+    "Mathlib.Topology.Metric.Local",
     "Mathlib.LinearAlgebra.VectorSpace",
     "Mathlib.Analysis.NormedSpace.Basic"
   ],
@@ -47,7 +47,7 @@
       "kind": "def"
     },
     {
-      "name": "FixedPointEvidence",
+      "name": "FixedPointWitness",
       "kind": "def"
     },
     {
@@ -95,11 +95,11 @@
       "kind": "theorem"
     },
     {
-      "name": "fixed_point_evidence_intro",
+      "name": "fixed_point_witness_intro",
       "kind": "theorem"
     },
     {
-      "name": "fixed_point_evidence_elim",
+      "name": "fixed_point_witness_elim",
       "kind": "theorem"
     },
     {

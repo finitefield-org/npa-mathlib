@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/Correspondence/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:51807d0bef3a4481a9906644eb221be3b4c7de3fe4cb25d6f0204f46fc857864",
-  "certificate_file_sha256": "sha256:0e4cd4a9b306a3faa97f56ba2cb034fedb0c12bd03151b78159122c0e887a2d2",
-  "export_hash": "sha256:53fd29e96f6e6f11234b9771a415d02b5958826424f22b99261710fe4d3051ea",
+  "source_sha256": "sha256:a7532c3e62d274be701d127bf3e82783689586255292682ec2e02be20b4ad1cb",
+  "certificate_file_sha256": "sha256:d2d409f6f90149359e71f8624a0a82f0fd4a5b1593baeb9912e031a29b3d2771",
+  "export_hash": "sha256:1554c982a5404ad78161566f98e2bd399acba9f5e3cb446be5f913daafbcdffc",
   "axiom_report_hash": "sha256:f5d781dcd1af03f4c02e2c247ae1bcca0de8eb1b5bfae9b9b3803bc323f2b936",
-  "certificate_hash": "sha256:d670ec4a6223d1002a5ebad83f804b4835a67bda7f4f5055ea5cc99172a09776",
+  "certificate_hash": "sha256:bb42e1508df164b902e415a5a5c216b3bac8b4ffd347bff5b6514acefd0760ca",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -25,27 +25,27 @@
   ],
   "declarations": [
     {
-      "name": "CorrespondenceImageSubgroupEvidence",
+      "name": "CorrespondenceImageSubgroupFacts",
       "kind": "inductive"
     },
     {
-      "name": "CorrespondencePreimageSubgroupEvidence",
+      "name": "CorrespondencePreimageSubgroupFacts",
       "kind": "inductive"
     },
     {
-      "name": "CorrespondenceContainmentEvidence",
+      "name": "CorrespondenceContainmentFacts",
       "kind": "inductive"
     },
     {
-      "name": "CorrespondenceSubgroupSaturationEvidence",
+      "name": "CorrespondenceSubgroupSaturationFacts",
       "kind": "inductive"
     },
     {
-      "name": "CorrespondenceQuotientRoundTripEvidence",
+      "name": "CorrespondenceQuotientRoundTripFacts",
       "kind": "inductive"
     },
     {
-      "name": "CorrespondenceTheoremEvidence",
+      "name": "CorrespondenceTheoremFacts",
       "kind": "inductive"
     },
     {
@@ -57,27 +57,27 @@
       "kind": "theorem"
     },
     {
-      "name": "correspondence_image_subgroup_evidence",
+      "name": "correspondence_image_subgroup_facts",
       "kind": "theorem"
     },
     {
-      "name": "correspondence_preimage_subgroup_evidence",
+      "name": "correspondence_preimage_subgroup_facts",
       "kind": "theorem"
     },
     {
-      "name": "correspondence_containment_evidence",
+      "name": "correspondence_containment_facts",
       "kind": "theorem"
     },
     {
-      "name": "correspondence_subgroup_saturation_evidence",
+      "name": "correspondence_subgroup_saturation_facts",
       "kind": "theorem"
     },
     {
-      "name": "correspondence_quotient_round_trip_evidence",
+      "name": "correspondence_quotient_round_trip_facts",
       "kind": "theorem"
     },
     {
-      "name": "correspondence_theorem_evidence",
+      "name": "subgroup_correspondence_theorem",
       "kind": "theorem"
     }
   ],

@@ -1,9 +1,9 @@
 import Std.Logic.Eq
 import Mathlib.Logic.EqReasoning
-import Mathlib.Topology.Metric.Basic
+import Mathlib.Topology.Metric.Local
 import Mathlib.LinearAlgebra.VectorSpace
 import Mathlib.Analysis.NormedSpace.Basic
-import Mathlib.Analysis.LinearMap
+import Mathlib.Analysis.NormedSpace.LinearMap
 
 def FrechetRemainder.{u,v,w} :
   forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (le_rel : forall (a : Scalar), forall (b : Scalar), Prop), forall (X : Sort v), forall (xzero : X), forall (xadd : forall (x : X), forall (y : X), X), forall (xneg : forall (x : X), X), forall (xsmul : forall (a : Scalar), forall (x : X), X), forall (xnorm : forall (x : X), Scalar), forall (Y : Sort w), forall (yzero : Y), forall (yadd : forall (x : Y), forall (y : Y), Y), forall (yneg : forall (y : Y), Y), forall (ysmul : forall (a : Scalar), forall (y : Y), Y), forall (ynorm : forall (y : Y), Scalar), forall (f : forall (x : X), Y), forall (point : X), forall (df : forall (h : X), Y), forall (h : X), Y :=

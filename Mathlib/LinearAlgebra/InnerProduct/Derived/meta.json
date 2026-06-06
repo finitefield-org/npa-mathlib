@@ -6,10 +6,10 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:bdaa9cf0493d26d240fb33b9b768a63145ce5320ab1f23e4d10f7d6170773f80",
-  "certificate_file_sha256": "sha256:163c3410810aae4c3356d2c79e2d226e962ab2833b01487e5d69bd3019f02029",
+  "certificate_file_sha256": "sha256:c7dd20048c5207686623b04a6fa90fdb585f95d6c60a6b03c5854b53cda9d149",
   "export_hash": "sha256:c1bb87820ab06258cdb4ed492d68682c47a84b29adceca8681a775af22942439",
   "axiom_report_hash": "sha256:a932e43d59afb7af1fd32a8680d65c057b745979ae169927e86d27984c9e3144",
-  "certificate_hash": "sha256:9d00395fea0ad164b645773e1255a2a23880bf895a96194f56378d3713193b69",
+  "certificate_hash": "sha256:d92e1d0cc2807b0cd9933d5e020761e7587018eb1c96ab273cce0aecddfa78af",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -24,79 +24,79 @@
   ],
   "declarations": [
     {
-      "name": "derived_norm_sq_add",
+      "name": "inner_product_norm_sq_add",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_sub",
+      "name": "inner_product_norm_sq_sub",
       "kind": "theorem"
     },
     {
-      "name": "derived_parallelogram_law",
+      "name": "inner_product_parallelogram_law",
       "kind": "theorem"
     },
     {
-      "name": "derived_polarization_identity",
+      "name": "inner_product_polarization_identity",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_neg_left",
+      "name": "inner_product_dot_neg_left",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_neg",
+      "name": "inner_product_norm_sq_neg",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_add_of_dot_zero",
+      "name": "inner_product_norm_sq_add_of_dot_zero",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_add_of_perp",
+      "name": "inner_product_norm_sq_add_of_perp",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_add_neg_left",
+      "name": "inner_product_norm_sq_add_neg_left",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_zero_left",
+      "name": "inner_product_dot_zero_left",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_zero_right",
+      "name": "inner_product_dot_zero_right",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_eq_zero_of_norm_sq_zero_left",
+      "name": "inner_product_dot_eq_zero_of_norm_sq_zero_left",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_eq_zero_of_norm_sq_zero_right",
+      "name": "inner_product_dot_eq_zero_of_norm_sq_zero_right",
       "kind": "theorem"
     },
     {
-      "name": "derived_cauchy_schwarz_zero_left",
+      "name": "inner_product_cauchy_schwarz_zero_left",
       "kind": "theorem"
     },
     {
-      "name": "derived_cauchy_schwarz_zero_right",
+      "name": "inner_product_cauchy_schwarz_zero_right",
       "kind": "theorem"
     },
     {
-      "name": "derived_cauchy_schwarz",
+      "name": "inner_product_cauchy_schwarz",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_nonneg",
+      "name": "inner_product_norm_sq_nonneg",
       "kind": "theorem"
     },
     {
-      "name": "derived_dot_le_mul_sqrt_norm_sq",
+      "name": "inner_product_dot_le_mul_sqrt_norm_sq",
       "kind": "theorem"
     },
     {
-      "name": "derived_norm_sq_add_le_square_sum_norms",
+      "name": "inner_product_norm_sq_add_le_square_sum_norms",
       "kind": "theorem"
     }
   ],

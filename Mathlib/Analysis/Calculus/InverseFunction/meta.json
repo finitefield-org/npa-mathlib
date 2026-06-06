@@ -6,16 +6,16 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:f6e9aa4abf729442201e500dbb27b9c9ad30b1d2bceb7f79b6c4fde780959391",
-  "certificate_file_sha256": "sha256:52a0c4b28e8eff1695072257e681f9d07b24e9b91ff98551e6f6f42ed0ee06f4",
+  "certificate_file_sha256": "sha256:40a7975981fc304a8cb03aef659f979b80e35a3fe9889952f1f821d8d8161e4f",
   "export_hash": "sha256:dfeb171a04e4af0fa3bedd1e12b835d855a19f2082ffa1eb650f81641c2f7f9f",
   "axiom_report_hash": "sha256:4ce54129453ca5f2cc9726d9e809e739b6640402d7515115c64b8169ae6c93a6",
-  "certificate_hash": "sha256:99fac295a7fe5aca94a7900148a9807abc1532f61968533cd4db452f1e9f0f3e",
+  "certificate_hash": "sha256:45438ff36b4e87a8345ada9ce708817c56d32baa872569e8de71640e26375774",
   "imports": [
     "Std.Logic.Eq",
-    "Mathlib.Topology.Metric.Basic",
+    "Mathlib.Topology.Metric.Local",
     "Mathlib.LinearAlgebra.VectorSpace",
     "Mathlib.Analysis.NormedSpace.Basic",
-    "Mathlib.Analysis.LinearMap",
+    "Mathlib.Analysis.NormedSpace.LinearMap",
     "Mathlib.Analysis.Calculus.Derivative",
     "Mathlib.Analysis.FixedPoint.Banach"
   ],
@@ -30,7 +30,7 @@
       "kind": "def"
     },
     {
-      "name": "LocalInverseEvidence",
+      "name": "LocalInverseWitness",
       "kind": "def"
     },
     {
@@ -50,11 +50,11 @@
       "kind": "theorem"
     },
     {
-      "name": "local_inverse_evidence_intro",
+      "name": "local_inverse_witness_intro",
       "kind": "theorem"
     },
     {
-      "name": "local_inverse_evidence_elim",
+      "name": "local_inverse_witness_elim",
       "kind": "theorem"
     },
     {
