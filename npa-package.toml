@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.28"
+version = "0.1.29"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib abstract field foundation."
+description = "Public theorem-library package for NPA mathlib linear algebra matrix foundation."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -1085,4 +1085,21 @@ expected_certificate_hash = "sha256:be49329fb3c992cf1d5e592c83f79c125c8be9697eb2
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
 definitions = ["FieldFalse", "FieldNot", "Nonzero", "div", "FieldLawArgs"]
 theorems = ["field_ring_laws", "field_zero_ne_one", "field_inv_mul_cancel", "field_mul_inv_cancel", "field_div_eq_mul_inv", "field_inv_one", "field_div_one", "field_div_self_nonzero", "field_zero_div", "field_mul_left_cancel_nonzero", "field_mul_right_cancel_nonzero", "field_nonzero_mul_closed", "field_mul_eq_zero_cases"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.LinearAlgebra.Matrix.Basic"
+source = "Mathlib/LinearAlgebra/Matrix/Basic/source.npa"
+certificate = "Mathlib/LinearAlgebra/Matrix/Basic/certificate.npcert"
+meta = "Mathlib/LinearAlgebra/Matrix/Basic/meta.json"
+replay = "Mathlib/LinearAlgebra/Matrix/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:40ae0beab7cda8f974f6e1722ac9dbd5b512bcc3d66552d662c84510964fa040"
+expected_certificate_file_hash = "sha256:05e0035794fac5bcbaf7de1b16c384524f4d0c5d2422cbf990bbbd5efa8a6a3e"
+expected_export_hash = "sha256:7aebf76d1c55b942aa7f7dcbea99239745a1c9dcf30bc4c27944e9e31d00dc9e"
+expected_axiom_report_hash = "sha256:55932adb6d068a32ac76b43afee2b808d61b89bb36b85b1805fe77d82a1028b3"
+expected_certificate_hash = "sha256:f6e25b4a787b0c468da309b0b02e2a7764e706ad5b6c93be3b5b3f2cb5cf304b"
+imports = ["Std.Logic.Eq"]
+definitions = ["Matrix", "MatrixEq", "MatrixAdd", "MatrixTranspose", "MatrixProductEvidence", "SquareMatrixMulLawArgs"]
+theorems = ["matrix_intro", "matrix_eq_intro", "matrix_eq_apply", "matrix_add_entry", "matrix_transpose_entry", "matrix_product_evidence_intro", "matrix_product_eq", "square_matrix_mul_law_args_intro", "square_matrix_mul_assoc", "square_matrix_left_unit", "square_matrix_right_unit"]
 axioms = []

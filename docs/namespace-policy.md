@@ -271,6 +271,12 @@ The `v0.1.28` release adds this abstract field foundation module:
 Mathlib.Algebra.Field.Basic
 ```
 
+The `v0.1.29` release adds this linear algebra matrix foundation module:
+
+```text
+Mathlib.LinearAlgebra.Matrix.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -424,6 +430,12 @@ The inner-product closure mapping is fixed:
 | `Proofs.Ai.Vector.AbstractInnerProduct` | `Mathlib.LinearAlgebra.InnerProduct` | `Mathlib/LinearAlgebra/InnerProduct/` |
 | `Proofs.Ai.Vector.AbstractInnerProductDerive` | `Mathlib.LinearAlgebra.InnerProduct.Derived` | `Mathlib/LinearAlgebra/InnerProduct/Derived/` |
 
+The linear algebra matrix foundation mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.LinearAlgebra.Matrix.Basic` | `Mathlib.LinearAlgebra.Matrix.Basic` | `Mathlib/LinearAlgebra/Matrix/Basic/` |
+
 The geometry Pythagorean closure mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -566,6 +578,14 @@ one-element dot-product route, while the abstract modules expose
 Cauchy-Schwarz statements. Downstream packages should choose either the
 abstract linear-algebra route or the concrete vector route according to the
 proof surface they need.
+
+The v0.1.29 matrix foundation route uses
+`Mathlib.LinearAlgebra.Matrix.Basic` for the first public indexed-matrix
+foundation. Later matrix theorem layers should live under the same prefix, for
+example `Mathlib.LinearAlgebra.Matrix.Determinant`,
+`Mathlib.LinearAlgebra.Matrix.Rank`, or
+`Mathlib.LinearAlgebra.Matrix.Representation`, instead of overloading the
+foundation module.
 
 The v0.1.20 geometry Pythagorean closure uses `Mathlib.Geometry.Affine` for
 the abstract point/displacement surface and `Mathlib.Geometry.Pythagorean` for

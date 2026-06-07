@@ -13,7 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the abstract field foundation public package:
+This repository contains the linear algebra matrix foundation public package:
 
 ```text
 Mathlib.Algebra.Group.Correspondence.OrderFacts
@@ -51,6 +51,7 @@ Mathlib.Algebra.OrderedField.Basic
 Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
+Mathlib.LinearAlgebra.Matrix.Basic
 Mathlib.Analysis.NormedSpace.Basic
 Mathlib.Analysis.NormedSpace.LinearMap
 Mathlib.Analysis.Calculus.Derivative
@@ -84,7 +85,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.28"
+version = "0.1.29"
 schema = "npa.package.v0.1"
 ```
 
@@ -148,10 +149,10 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
 vendored `Mathlib.Analysis.Calculus.ImplicitFunction` implicit-function import
-closure and applies `implicit_augmented_map_derivative`,
-`implicit_function_theorem`, and
-`implicit_function_derivative_theorem`. It vendors the full source-free
-certificate import closure, but not
+closure and the `Mathlib.LinearAlgebra.Matrix.Basic` matrix foundation. It
+applies `matrix_intro`, `implicit_augmented_map_derivative`,
+`implicit_function_theorem`, and `implicit_function_derivative_theorem`. It
+vendors the full source-free certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
 
