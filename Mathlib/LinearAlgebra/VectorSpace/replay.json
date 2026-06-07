@@ -30,104 +30,9 @@
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun x => fun y => @Eq.refl.{v} Vector (@vsub.{v} Vector vadd vneg x y)"
     },
     {
-      "declaration": "vec_add_assoc",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => fun y => fun z => law x y z"
-    },
-    {
-      "declaration": "vec_add_comm",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => fun y => law x y"
-    },
-    {
-      "declaration": "vec_add_zero",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "vec_zero_add",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "vec_neg_add_cancel",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "vec_add_neg_cancel",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "sub_sub_sub_cancel",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => fun y => fun z => law x y z"
-    },
-    {
-      "declaration": "vec_sub_self",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "vec_sub_zero",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "vec_add_left_cancel",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => fun y => fun z => fun h => law x y z h"
-    },
-    {
-      "declaration": "smul_add",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => fun b => fun x => law a b x"
-    },
-    {
-      "declaration": "add_smul",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => fun x => fun y => law a x y"
-    },
-    {
-      "declaration": "one_smul",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "mul_smul",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => fun b => fun x => law a b x"
-    },
-    {
-      "declaration": "zero_smul",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => law x"
-    },
-    {
-      "declaration": "smul_zero",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => law a"
-    },
-    {
-      "declaration": "neg_smul",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => fun x => law a x"
-    },
-    {
-      "declaration": "smul_neg",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun a => fun x => law a x"
-    },
-    {
       "declaration": "vec_sub_eq_add_neg",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun x => fun y => @Eq.refl.{v} Vector (@vsub.{v} Vector vadd vneg x y)"
-    },
-    {
-      "declaration": "sub_add_sub_cancel_left",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun law => fun x => fun y => fun z => law x y z"
     },
     {
       "declaration": "linear_comb2_ext",
@@ -141,7 +46,10 @@
     }
   ],
   "acceptance": {
-    "required": ["decode_module_cert", "verify_module_cert"],
+    "required": [
+      "decode_module_cert",
+      "verify_module_cert"
+    ],
     "accepted_artifact": "Proofs/Ai/Vector/AbstractSpace/certificate.npcert"
   }
 }

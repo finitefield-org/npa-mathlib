@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:ba8783b9cf1b638b5fd33947f09ed18fd62382dded3c89a35c50a980e2f1125d",
-  "certificate_file_sha256": "sha256:18b93e2cb2b253b08c3afb66e83f995119a5ded3f0dad4a3f4c9018627744608",
-  "export_hash": "sha256:e8b86eac3631c28938e66a4c478696ecc8144802f566dbb1eab3f5506e9dd40d",
+  "source_sha256": "sha256:88c219e1249d0e5a725bf7a3e5563bfcd610a9ba75c8884163668d1affd1f2a5",
+  "certificate_file_sha256": "sha256:7b3695c3e1da866a0d5f2bff03287a37096ac06b8a1ab6c830e458de5a43524a",
+  "export_hash": "sha256:546dc5a52c41a45ef28d5f27e827b2ede8579dbe6ef974cf0b9fb66030d21eba",
   "axiom_report_hash": "sha256:0d1690c6eba73dbd259c7cfc6f42702c48cb349a31bca7078cd2a76bb5ac6fcf",
-  "certificate_hash": "sha256:2a2a7ab30eb19e8076019550e3667613935f2b16ae894dc1633ee4784d9b9a51",
+  "certificate_hash": "sha256:2ac59f6026425f38368d8ab23d51e43a9668afd77ce1872b8cf54bf42848ce22",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -19,9 +19,7 @@
     "Mathlib.Analysis.Calculus.Derivative",
     "Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "ImplicitTargetPoint",

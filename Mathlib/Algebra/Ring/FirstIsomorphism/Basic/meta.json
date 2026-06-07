@@ -6,10 +6,10 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:3d9a8ca5a3657958821953b83b41ffeddc1b56c132efeb5aaaeb6231fb4fabeb",
-  "certificate_file_sha256": "sha256:19c1903cad5e047fcd770eb4efc7d41b7c4fdd917abf9d0da5c1112539c7bfd1",
-  "export_hash": "sha256:294c1b95fd5f4cd4ebee11b200a39fabf91e48c217de325bcbae6e0f54e4d037",
+  "certificate_file_sha256": "sha256:95d2a0c93d8be91aa6946e4faac9eee067693386b2467ffc034a903a6560c98b",
+  "export_hash": "sha256:0555b22ada8df19eaa6d64f4a13f32d9b29aafa79959ec582aa60f987833d5e4",
   "axiom_report_hash": "sha256:cb6d6f45a78dfb3b8ae3aaf5bf13880ac499739b7e45d8c6593356efc29367e3",
-  "certificate_hash": "sha256:645b788db27d0016c7e89c52c8421f9eb67e3e0aae27fe086a7d27e24e086f66",
+  "certificate_hash": "sha256:3dd21e73cc3e52d6f370f876d98bcbb60a84fa87d1e28a98394dea85a5b528ab",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -20,9 +20,7 @@
     "Mathlib.Algebra.Group.Kernel.Quotient.Mul",
     "Mathlib.Algebra.Group.Kernel.Quotient.Group"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "RingHomLawArgs",

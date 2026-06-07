@@ -6,10 +6,10 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:aeac754f8db5c7e8ba5c552972648d0e8ef5f574d4f13fa1e967a90460d03420",
-  "certificate_file_sha256": "sha256:3508a42632e025fd75cbbab7a0e74f456ea4de53e942a03af85f39c7112538d1",
-  "export_hash": "sha256:15759e427f10df949b9c221ec1f0e2fd7314058b47241dac7e6d69cbbd1193e1",
+  "certificate_file_sha256": "sha256:448d9e16f4754bb96eeac3b5599baa14c77937c441f21a64f88df09598fa36e8",
+  "export_hash": "sha256:09b0e1e6a18e7cb70ae3128b58c2cfe5376a723cb78c4a6d124e2db74705ef26",
   "axiom_report_hash": "sha256:ef7d0eaa598be1de31fe3519ebceaa3a49511caf9ca312a771ba4e7272eaffdb",
-  "certificate_hash": "sha256:8ddaa4eb24e995042f029f268dce88d171daf673c93d507812441b01f4d4f86f",
+  "certificate_hash": "sha256:96735e8541d64f67f686b2db464677209cf6e4fd03b681f312887d849dac722d",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -23,9 +23,7 @@
     "Mathlib.Algebra.Ring.FirstIsomorphism.Basic",
     "Mathlib.Algebra.Ring.FirstIsomorphism"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "RingChineseRemainderPairMap",

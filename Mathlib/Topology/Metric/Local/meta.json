@@ -6,17 +6,15 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:e3188913d905dfb7d529806a568df95c201bef8174143e06ee37c4f1c2147860",
-  "certificate_file_sha256": "sha256:aacd0c14b7957f03edeb381d9241404c9da1cc6393803d2cbcfacb032f684971",
+  "certificate_file_sha256": "sha256:6a9f62c86cde57c09dad7b3593b10d3dd77e05274ea2fa63c228aae15dc37682",
   "export_hash": "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36",
   "axiom_report_hash": "sha256:6821508440c560fb4a20c6b8dde9b28116f41a1733e43c2dd5163cd66c37b969",
-  "certificate_hash": "sha256:72632a2941959b9e7ce7378ccf8627eff342630aa86fda4f43bdf6eefeb46c37",
+  "certificate_hash": "sha256:239456d3d8d69e87a8502f99a22fb3dfd7d1f303752026ce0709cda5579fdb7a",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "MetricBall",

@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:1e75528c86acb935bd24e94d686bf714548f9637c8c28589bdffb89d3286fbe0",
-  "certificate_file_sha256": "sha256:387002f6d9af79e5243169a279a1da29f05d50bfb9d5310f130e850cd7a82e5b",
-  "export_hash": "sha256:de13e20d9a4c556b9caa439e5ed3550dd3e2d3d58e63c452482532c91c4ddeb5",
+  "source_sha256": "sha256:d84b44864a1913b6715cc167baac737fe0948b9f2e231256663516130fc47ff6",
+  "certificate_file_sha256": "sha256:2294e58f0659eac5fdf765ad0ea12af41ce626e3de383dc788a73201e1bef71c",
+  "export_hash": "sha256:c23d9f7de17b05a8787d29355eb82d416de77e00c685ee377f769d397d8af9b3",
   "axiom_report_hash": "sha256:9f292648aa00dddbe49e31f78bc11448b5ee88db69aba9ec37edaa67a112d59b",
-  "certificate_hash": "sha256:84084723cbfec8b737f12e70bef634083778b60051b765e818bbab84d87b3209",
+  "certificate_hash": "sha256:df89a44d6153e2006b104b319692c4d3c252029f01c5230ea9a46afdec188d11",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -18,9 +18,7 @@
     "Mathlib.Analysis.NormedSpace.LinearMap",
     "Mathlib.Analysis.Calculus.Derivative"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "ImplicitAugmentedMapCoord",

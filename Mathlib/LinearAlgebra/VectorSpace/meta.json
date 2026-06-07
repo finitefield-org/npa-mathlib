@@ -5,18 +5,20 @@
   "certificate": "Mathlib/LinearAlgebra/VectorSpace/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:f137a3b0263a3f06f8ec8f05aa2d9a31509ff479f848640b0917cf1be2bbd5fc",
-  "certificate_file_sha256": "sha256:83f1f6790dfda274439470e54d8a8a0463047e9fa4f198e591b57023e040c2a0",
-  "export_hash": "sha256:2665099f8cfe0789db8e597c477440e6fa0c89262d32b284e5491eaf27e098aa",
-  "axiom_report_hash": "sha256:2eb8901dcadbaffb969aabfd5e10172a4e17abc50558a0954952232d438fa2ed",
-  "certificate_hash": "sha256:02299ea819d12ac93e6432295397d5543ceb6747c6f404adbbbd8fe2acc65694",
+  "source_sha256": "sha256:17429b12b99e8cd2c034155c60da2c51a5253bee925afb365edcf9ec2c18ff5d",
+  "certificate_file_sha256": "sha256:62de5ab69e5174d57fb395ae9a0ac7f1f401be1f8c8c30553228efc65d6e3e5e",
+  "export_hash": "sha256:34ff78798631f0da81a876a76e4b13c947f28bb059407792c2bc5441bcb68b05",
+  "axiom_report_hash": "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839",
+  "certificate_hash": "sha256:abaaa95f8a0c50cdb4eaa6f723143694fd5101370e0e87ead76633e4fe86d053",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
     "Mathlib.Algebra.OrderedField.Square",
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "vsub",
@@ -39,83 +41,7 @@
       "kind": "theorem"
     },
     {
-      "name": "vec_add_assoc",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_add_comm",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_add_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_zero_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_neg_add_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_add_neg_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_sub_sub_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_sub_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_sub_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "vec_add_left_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "smul_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_smul",
-      "kind": "theorem"
-    },
-    {
-      "name": "one_smul",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_smul",
-      "kind": "theorem"
-    },
-    {
-      "name": "zero_smul",
-      "kind": "theorem"
-    },
-    {
-      "name": "smul_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "neg_smul",
-      "kind": "theorem"
-    },
-    {
-      "name": "smul_neg",
-      "kind": "theorem"
-    },
-    {
       "name": "vec_sub_eq_add_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_add_sub_cancel_left",
       "kind": "theorem"
     },
     {

@@ -6,18 +6,16 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:2152518532c89e59bfa0b85419a424dd43e550668104c092e73fcdb9f33ffbe3",
-  "certificate_file_sha256": "sha256:71f56e8b57d2ed6b0c798f4be166c221d72db89ec2d289788d0a6eaed2872b8c",
+  "certificate_file_sha256": "sha256:7538a523a73c6e52aee5fc838b53d271fd69882cacc7ffccd36c91cd345b4853",
   "export_hash": "sha256:ccf1146511d85eb42fdafb49d708269e57ca1fa18ee1c59ff6ea084c6acd3077",
   "axiom_report_hash": "sha256:4ffc0ac83684ca65d83296a7fb4b8104c1099ad79204df7e4efd1f430359d3c0",
-  "certificate_hash": "sha256:a3d2e84783eb67f5d94fd234c159e1f5238d25033ffbbc9159b77003e60a9536",
+  "certificate_hash": "sha256:0b66ff38dffb9d04a4765bc20865fc94f7f034ce0aa3a956315bb75a2ff1989e",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
     "Mathlib.LinearAlgebra.VectorSpace"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "NormDist",

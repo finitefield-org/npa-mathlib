@@ -15,9 +15,7 @@
     "Mathlib.Logic.EqReasoning",
     "Mathlib.Algebra.Group.Basic"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "ImagePred",

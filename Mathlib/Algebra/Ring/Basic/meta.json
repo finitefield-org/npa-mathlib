@@ -5,15 +5,17 @@
   "certificate": "Mathlib/Algebra/Ring/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:0a541908e213fa90c09f454c251fda9fc40be9f826fc7fe4ef77522faee3b172",
-  "certificate_file_sha256": "sha256:ee1a3e471629d2f285a97d913a5a06d4e60e2ee745e4f4db02248154ab68c71b",
-  "export_hash": "sha256:b6826e524acbfa21ddfefa9e842c5b6d57a4a7caad7ad837810b35ee0d633ff2",
-  "axiom_report_hash": "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12",
-  "certificate_hash": "sha256:91e7c0565277a0844c09257b984bb6deae15bfdb438af08feacbc4c1ab9d3417",
+  "source_sha256": "sha256:8d127b0e3d073bcf32a9b805532e5ed8d151c1a27d1de23946ef2484ba4bc4cb",
+  "certificate_file_sha256": "sha256:a56c8f37e94b44542f13bde942708182346df0669170564e7e1485d038da55cf",
+  "export_hash": "sha256:0907bfd1cd3566b5c97034003469cd69cad2e16e045511fb0e471af4bfed6cc0",
+  "axiom_report_hash": "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb",
+  "certificate_hash": "sha256:17b2de7737cef73dcc427fb2883445e37430f6dbdd2dacf04cd4495ac9f32d91",
   "imports": [
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "two",
@@ -26,106 +28,6 @@
     {
       "name": "RingLawArgs",
       "kind": "def"
-    },
-    {
-      "name": "sub_eq_add_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_assoc",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_comm",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "zero_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "neg_add_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_neg_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_assoc",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_comm",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_one",
-      "kind": "theorem"
-    },
-    {
-      "name": "one_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "left_distrib",
-      "kind": "theorem"
-    },
-    {
-      "name": "right_distrib",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "zero_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_left_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "ring_reorder_three_mul_terms",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_right_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "neg_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "zero_sub",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_add_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_sub_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "sub_add_sub_cancel",
-      "kind": "theorem"
     }
   ],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"

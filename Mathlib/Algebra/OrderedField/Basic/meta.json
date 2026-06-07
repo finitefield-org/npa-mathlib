@@ -5,16 +5,18 @@
   "certificate": "Mathlib/Algebra/OrderedField/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:f804844a5bb666b575d9c5de90b03683fbe1bb8b328fd698080773807388dbde",
-  "certificate_file_sha256": "sha256:3fbafaabe0e2d064aab2002ca0bd47a761dab8905584473184c57bbaf07d14f5",
-  "export_hash": "sha256:39345b6890e80ff61948b888938c61885e9ca873876e150e7ba6f13fb9cc1ed3",
-  "axiom_report_hash": "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8",
-  "certificate_hash": "sha256:8d5b95d5c9b8bb0cf3c679ca4604efbcd480d570b117d07cc139ffa84a927f6f",
+  "source_sha256": "sha256:2b12a1c7754427a64bf92e5b3a562c183d8064a38340c8cfc6c8a1a2f80ee7e8",
+  "certificate_file_sha256": "sha256:1b63055ab2ac09cddd70edeb3e94746585a1fbf09a56b4a5b3b81fb11efe0328",
+  "export_hash": "sha256:3dea58c267dc683c03cefb0a2d148d31baad310ced8c049340b88fd21e965d19",
+  "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
+  "certificate_hash": "sha256:d7fd3c252d1e13ab664b0ade033d4f9dff26af045be661b600ab9d188805c61b",
   "imports": [
     "Mathlib.Algebra.Ring.Basic",
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "le",
@@ -39,78 +41,6 @@
     {
       "name": "OrderedFieldLawArgs",
       "kind": "def"
-    },
-    {
-      "name": "le_refl",
-      "kind": "theorem"
-    },
-    {
-      "name": "le_trans",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "square_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_square_of_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_mul_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_of_square_eq_square_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_le_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_le_mul_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "zero_le_two",
-      "kind": "theorem"
-    },
-    {
-      "name": "le_antisymm",
-      "kind": "theorem"
-    },
-    {
-      "name": "lt_of_le_of_ne",
-      "kind": "theorem"
-    },
-    {
-      "name": "le_of_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_eq_zero_iff",
-      "kind": "theorem"
-    },
-    {
-      "name": "sum_nonneg_eq_zero",
-      "kind": "theorem"
     },
     {
       "name": "square_completion_bound",

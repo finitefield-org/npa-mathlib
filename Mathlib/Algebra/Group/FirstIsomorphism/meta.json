@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/FirstIsomorphism/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:df26a5582972fb78232ba5fd45a9328cbffb8ca7a9e4f8c15d8ad05a5f670f4d",
-  "certificate_file_sha256": "sha256:6c9814c05daa92431c5ca7950a093c7b174f9edbd2e1699609684f7a7141d364",
-  "export_hash": "sha256:87d48407987e8038e36b98ab629f2f8c473c7e9f576e66199fda79064dfa807c",
+  "source_sha256": "sha256:a98de28f8b9b42202cd695a69aaca35183533a8cb791fcae294f1518dcd3d5c1",
+  "certificate_file_sha256": "sha256:84dcac38d608ca198b00c802941c31412da24860ab1d31874010cbb31596b5e6",
+  "export_hash": "sha256:87e946dd663dab6cf350ea2fbebd0762e152e23e8f319e7ab19691268f43a4fc",
   "axiom_report_hash": "sha256:9a0ded81408eba6f81619705659e98a0abcbe93475d802786eea2cf85209e352",
-  "certificate_hash": "sha256:dc309331e1ef6d5c27461a3051d9de90ec3e0469f1f733188bfb1d85fcc9ed24",
+  "certificate_hash": "sha256:5a7f3d09374804bf8a07a00dcc2295bea862b592cf675e27e5fc47d6f472adb5",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -20,9 +20,7 @@
     "Mathlib.Algebra.Group.Kernel.Quotient.Group",
     "Mathlib.Algebra.Group.Kernel.Quotient.Hom"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "first_iso_map_mul",

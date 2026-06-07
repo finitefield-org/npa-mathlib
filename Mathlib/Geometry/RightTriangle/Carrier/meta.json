@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/RightTriangle/Carrier/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:60c39f89bec4253137f052fcff08149613286dc16dfb8e5cbe3e22e15eb71ae8",
-  "certificate_file_sha256": "sha256:1253d2afa5475587cd27599a42fc3248969cf03a3dcfd4fcca212b92b711ffd2",
-  "export_hash": "sha256:1e793046cc134cdffb7c33a315e6169c9e5993367cef2a2b75fd6c98f520ebb6",
-  "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
-  "certificate_hash": "sha256:aa550dd64c124f2ffec926efa2e23056bc7441c1b650c0114d01cd60331bfac9",
+  "source_sha256": "sha256:b0766e51c45a5306f789d7a572dcef54fd1929433458bdeab1c12d19c7079de1",
+  "certificate_file_sha256": "sha256:396db9a581c946cebd5f515e97b33d77d5b1f1ec4bfc6a7db574e6c57358d52d",
+  "export_hash": "sha256:60e55fcc9ded451dd32c9ad2db05a4ffa046804c9cd6fec9abeda0aaf00dec41",
+  "axiom_report_hash": "sha256:5179d6cbb5510b049ee53c122a9481529db7972f0da0ff0a594070d1d8106526",
+  "certificate_hash": "sha256:bfd558e4039fc1a87ed6e30f98a025116286ee2f7e522bc8fad6a7681859a41f",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -19,7 +19,9 @@
     "Mathlib.LinearAlgebra.VectorSpace",
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "Perp",
@@ -46,27 +48,7 @@
       "kind": "theorem"
     },
     {
-      "name": "perp_symm",
-      "kind": "theorem"
-    },
-    {
       "name": "right_triangle_legs_perp",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_distance_sq_law",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_sq_law",
-      "kind": "theorem"
-    },
-    {
-      "name": "right_triangle_area_sq_law",
-      "kind": "theorem"
-    },
-    {
-      "name": "median_to_hypotenuse_sq_law",
       "kind": "theorem"
     }
   ],

@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Ring/FirstIsomorphism/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:693518124fa82e98483ebbda46ca90c8a7691ccb18684eda53aaf85e61b36f26",
-  "certificate_file_sha256": "sha256:e41799b4e48a5428e939b0753049c69ae4674df6e1a869c487cb8aba7fe0d7d3",
-  "export_hash": "sha256:08ff971ed9d11d35efe3f6a0b898988fe3261708e6e6d5da430499e83f6396f9",
+  "source_sha256": "sha256:b4cf44e3511401f3a8c19c5b5a8909aa177ccca27f4d44b5ba72f5fe1423d609",
+  "certificate_file_sha256": "sha256:ede53e5a81cae61bbdf7bac4a87277e537b5ce759f47c767a076b436565f0102",
+  "export_hash": "sha256:c2df1f0a3a1f7980a641d0110464899c74bd602346cbab120fc6a5e740b399db",
   "axiom_report_hash": "sha256:f39c6826ea5fd04328e88ce53f46ee3da7422779015b92583cdcef2697007f68",
-  "certificate_hash": "sha256:633e93d4821c7ad39eeb5166e6f374d7150d6f0a493beefac9a8c85085091c90",
+  "certificate_hash": "sha256:e37b0e0981e7487664c9a43b2f51dc34ac23bdb73d57c1d2c8b2a8cdcfeaff8e",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -22,9 +22,7 @@
     "Mathlib.Algebra.Group.FirstIsomorphism",
     "Mathlib.Algebra.Ring.FirstIsomorphism.Basic"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "RingKernelQuotientMul",

@@ -5,17 +5,19 @@
   "certificate": "Mathlib/Algebra/OrderedField/Square/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:7cb4aabb88d65edf953eb5f2572c7c6d0b0392d64cea29f5e64a4e15eda23db7",
-  "certificate_file_sha256": "sha256:df92f5d6211bc82d1057bba3bc70de9f5978bae63efdfb9c4a1cecd606987379",
-  "export_hash": "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab",
-  "axiom_report_hash": "sha256:b1c966ff112a4d21e88c23443f7594255da9b1129a7d1cbea048b57e695c9f2e",
-  "certificate_hash": "sha256:3fa3b9936a027ff4cb16c8ccb33cf8821f4dafe5617299829b711df79aafb4d9",
+  "source_sha256": "sha256:9303ab210fb953642fab3e90ff4289223ba39cb08925dfde37a6138f2e241704",
+  "certificate_file_sha256": "sha256:e2578a872221232776f8161e8b227f2af8d008635b3240620ac4953761ac2ae1",
+  "export_hash": "sha256:072726c4a00a9dffdfa569d09653b1f23040b8d67b7c095185e5be8feb411dc3",
+  "axiom_report_hash": "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b",
+  "certificate_hash": "sha256:6a4f7130bc29e35094a2ea0371c40ec6676cf639ef4c271d6304643218f8802d",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "square_def",
@@ -23,62 +25,6 @@
     },
     {
       "name": "mul_self_eq_square",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_sub",
-      "kind": "theorem"
-    },
-    {
-      "name": "sum_two_squares_comm",
-      "kind": "theorem"
-    },
-    {
-      "name": "cancel_double_zero_term",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_one",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "two_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_eq_sq_of_eq_or_neg_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_add_eq_add_sq_add_two_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "sq_sub_eq_add_sq_sub_two_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_sq_eq_zero_iff",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_two_zero_term",
-      "kind": "theorem"
-    },
-    {
-      "name": "normalize_add_with_zero_cross_term",
       "kind": "theorem"
     }
   ],

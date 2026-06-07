@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/Metric/Carrier/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:27bb7a36633ed45b52e08c3f40c72284c5436e11283c18869c80abdd9a3738d9",
-  "certificate_file_sha256": "sha256:7204dc993345c0f62ba1a8c60a4f314b4a7edad3b5655fbfa0d840b55b8ce8ce",
-  "export_hash": "sha256:b88eed14d59855a3c6021cc060377d4227cebee31bd9c11eb9d7d5844ee7e3f0",
-  "axiom_report_hash": "sha256:b683ec26dd9da17affedaeb69c226b9b8b3a3dd7bc68442117e84b903240ec1b",
-  "certificate_hash": "sha256:55683032aade1b18629662ad3fe9eb53399c5d3effd3e1831bfdbb0541ffa02c",
+  "source_sha256": "sha256:4327c21882d9af05f5c949535f80f3443ef8b37dd6087fd766ae119e60fd3d01",
+  "certificate_file_sha256": "sha256:5d0c995465535c91694ba008f65104e083b6a2e37b9f10435dbe62095e418561",
+  "export_hash": "sha256:d80d3434b99710bbe196eeac798accca05b0af1be6395e540f23648c38878f02",
+  "axiom_report_hash": "sha256:0ae085612d6240236b3e42ba55aa2b65ba17ab7bb0efa7bb5201598ea282e839",
+  "certificate_hash": "sha256:1795a0308edcf73ecbfa068f5ce6e29b0e9fead85826249d2c8e4d9cbb03feac",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -68,26 +68,6 @@
     },
     {
       "name": "triangle_inequality_of_dist_sq_bound",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "distance_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "distance_zero_iff_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_distance_law",
-      "kind": "theorem"
-    },
-    {
-      "name": "triangle_inequality",
       "kind": "theorem"
     }
   ],

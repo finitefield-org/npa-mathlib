@@ -6,19 +6,17 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:0cf01dfb1052183a7f56ed55da5b28850358370caf581ee4665ae09dc50d0959",
-  "certificate_file_sha256": "sha256:f1fe22033dc8bd33a0e45bd85c47fc0253fddc7bdc8540d003aaf1c3f371a48c",
-  "export_hash": "sha256:e1a425b00517bc012999fd06dd5a2d813117801ee99485a8b19fe0e9a02baa28",
+  "certificate_file_sha256": "sha256:cb6804c9d839390efe0aa88a3351489256a8a1ee29878805456bb257389b48a5",
+  "export_hash": "sha256:533c60ee4cd8fb38e0915240ae1463e59946f13da963ce0d7792828213c97898",
   "axiom_report_hash": "sha256:5bd7339ac208646efb0ed11ff2499737a45b42195bb28180b5685aed4560bbe3",
-  "certificate_hash": "sha256:ec55da0fdf8309235cae8dec3ab438a8ca31bd5bf216b620c83b8237a20ba6af",
+  "certificate_hash": "sha256:f9850fecdafc215387aed0f68923af755dce0a50aaf275a34fd3f2e446e74511",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
     "Mathlib.Algebra.Group.Basic",
     "Mathlib.Algebra.Group.Kernel.Quotient"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "KernelQuotientMulRep",

@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/Correspondence/OrderFacts/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:257f3f1daa6425e4b59d2e990a653fd7e6455a0b0aa66c2398872baac0db4b77",
-  "certificate_file_sha256": "sha256:eebfa2dd9d6c3b2b85ae03f9aa2a6e040edf41dab4d89db816ee28c6299ececb",
-  "export_hash": "sha256:c265cf2dd797fee3682500227e12667debe58d472406723f89ceb8c47f01801b",
+  "source_sha256": "sha256:c5de4504442ae4802cca6df41e75d8bd29fe87d0fff2c0dc1cef3d6d62ae69fa",
+  "certificate_file_sha256": "sha256:9059e1f27f2934cd8a34b9aa47dccdcef6a4eab3c07675b699200ebc9383d396",
+  "export_hash": "sha256:7bd4ca9179f3d183f76c40a77a1e8bdbeef3ae1deca918609ba30f063442e13a",
   "axiom_report_hash": "sha256:48fad99b017e564eae3a94ad24d12f5a3572af147ee049749faf426445d75ddf",
-  "certificate_hash": "sha256:8eab67524d02199cd28f3eba23f53d0e1d500510232d88f4e70fd4b17ded9bea",
+  "certificate_hash": "sha256:980501e64472021b7b8228d06411c044d243b2e3781ff2b28e4ceee0f5633db0",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -23,9 +23,7 @@
     "Mathlib.Algebra.Group.Correspondence.Order",
     "Mathlib.Algebra.Group.Correspondence"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "CorrespondenceOrderFacts",

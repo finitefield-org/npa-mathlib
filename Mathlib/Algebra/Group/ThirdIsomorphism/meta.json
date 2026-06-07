@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/ThirdIsomorphism/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:665cfbcf31c0c99fdcfcd2a9fc7b3b9c07eb83f3b419d07d38bbb243621dfb0b",
-  "certificate_file_sha256": "sha256:f6b248a0d9b21b0d9b02fde62dec6b8be42d8299519c842867346702a6ba046d",
-  "export_hash": "sha256:cc258c7d9968c75645b8d101ab6355dac23fb467c64b7ad593e2102cb323042e",
+  "source_sha256": "sha256:1f93732b31e2517f5c95a8e357c6afc262a8ab15c3d25574a4e889c728230287",
+  "certificate_file_sha256": "sha256:ff7bcdcc6c164562790fd1834d25b36ade42bcd1626d33a7d08df7770ebcdaa4",
+  "export_hash": "sha256:729f912d45d7e9b0457ee9f08e0a4a52df57faa0e4ff9023d8cb378a94477219",
   "axiom_report_hash": "sha256:0108ad64717a722b59da86273c6f6182ab9467621b71e499023718c8ea574f6a",
-  "certificate_hash": "sha256:82b1e29fd8049322dddc3551a283221f9ef28bba4f2e82bb05e7f807fd1af51e",
+  "certificate_hash": "sha256:ad006debb1586229743cd23ef61d6863d33a72821ead9997cf20ece23c5cce89",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -20,9 +20,7 @@
     "Mathlib.Algebra.Group.Quotient.Mul",
     "Mathlib.Algebra.Group.Quotient.Group"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "ThirdIsoQuotientByN",

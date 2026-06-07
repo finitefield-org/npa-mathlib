@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/Affine/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:a87474c5961d38f64ede2005e16cdc3c129e358e1ad067459403e8cf8872a9a8",
-  "certificate_file_sha256": "sha256:4103ac7bad5ff7caa538509b5b51bf38257968ecae4c191dbe25d81ad693a295",
-  "export_hash": "sha256:475b7dbb030e651c36ce3f6e0462a9c73a416ffb114b66cd963745eabd606a63",
-  "axiom_report_hash": "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e",
-  "certificate_hash": "sha256:ea6696568f922dbccbf894dbde9b394e831fb8de3682adc522829b45e289a929",
+  "source_sha256": "sha256:2b23344d28a90c857b6433c2a1a69778cad4498d72f706b31e9e9f792dbae3c4",
+  "certificate_file_sha256": "sha256:58b980d15833e4ea1af4b5c1ec6de01f854d34c915ad59b517eb7c55887fa58f",
+  "export_hash": "sha256:d47119be9c8b4d19ace8addd1e18bfbe5784c7f6fe45119bc609cc7a1c5265b8",
+  "axiom_report_hash": "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839",
+  "certificate_hash": "sha256:ead1b9a7eccab6c62e771979fc27f187dd3a6696f3148e3c472573e842b377c7",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -18,7 +18,9 @@
     "Mathlib.LinearAlgebra.VectorSpace",
     "Std.Logic.Eq"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "Point",
@@ -49,35 +51,7 @@
       "kind": "def"
     },
     {
-      "name": "disp_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "disp_reverse",
-      "kind": "theorem"
-    },
-    {
-      "name": "disp_comp",
-      "kind": "theorem"
-    },
-    {
-      "name": "hypotenuse_vector_eq_sub_legs",
-      "kind": "theorem"
-    },
-    {
       "name": "dist_sq_points_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "point_ext_of_zero_disp",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_zero_iff_eq",
       "kind": "theorem"
     }
   ],

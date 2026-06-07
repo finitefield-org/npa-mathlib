@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/Kernel/Quotient/Hom/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:19ab74bb0d54f72f6fd7edefad32b0a323a31d6f8983f8228b0eb7b925a0a82e",
-  "certificate_file_sha256": "sha256:a80ace0e638a4eb5c798e7fa67436350eb2b97790f030925d2e97414b6e61d37",
-  "export_hash": "sha256:b6faa411bf4a29d0b18371a23805b3e9f7459cf08f223efc7314692c5fae5d45",
+  "source_sha256": "sha256:6bf968e7b70dd74720f4960202c8aba94b011b20ee564ea3b5a7729630fcc128",
+  "certificate_file_sha256": "sha256:b2c79a887306667260378dd0844ca73dd9e28c592eded9b209266ee4128b212a",
+  "export_hash": "sha256:5c36fff3d192614278c2ae1a9249fb32c08d2df8a3564ab106f3a47848051964",
   "axiom_report_hash": "sha256:b8556fe24d881da2124391b4b0d69d4d22f988483234a12d4f565c15909305e6",
-  "certificate_hash": "sha256:2020a536c26c51cefea90814961a10e06537a0b37a5a6b0f130721bb769fa685",
+  "certificate_hash": "sha256:5e758029449be99ca69267c4a2a32b01304201e997aac09942bca7dde5abde86",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -18,9 +18,7 @@
     "Mathlib.Algebra.Group.Kernel.Quotient.Mul",
     "Mathlib.Algebra.Group.Kernel.Quotient.Group"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "kernel_quotient_to_h_mul",

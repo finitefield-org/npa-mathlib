@@ -58,35 +58,13 @@
       "declaration": "triangle_inequality_of_dist_sq_bound",
       "source_kind": "explicit_term",
       "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun ring_args => fun ordered_args => fun vector_args => fun inner_args => fun affine_args => fun A => fun B => fun C => @sqrt_sum_square_bound.{u} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn ordered_args (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A C) (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op B C) (@dist_nonneg_of_sqrt_nonneg.{p,u,v} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn Vector vzero vadd vneg smul inner PointCarrier disp_op ordered_args A C) (@dist_nonneg_of_sqrt_nonneg.{p,u,v} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn Vector vzero vadd vneg smul inner PointCarrier disp_op ordered_args A B) (@dist_nonneg_of_sqrt_nonneg.{p,u,v} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn Vector vzero vadd vneg smul inner PointCarrier disp_op ordered_args B C) (@Eq.rec.{u,0} Scalar (@sq.{u} Scalar mul (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A C)) (fun (q : Scalar) => fun (hq : @Eq.{u} Scalar (@sq.{u} Scalar mul (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A C)) q) => forall (hbound : le_rel q (@sq.{u} Scalar mul (add (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op B C)))), le_rel (@sq.{u} Scalar mul (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A C)) (@sq.{u} Scalar mul (add (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op B C)))) (fun (hbound : le_rel (@sq.{u} Scalar mul (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A C)) (@sq.{u} Scalar mul (add (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op B C)))) => hbound) (@dist_sq_points.{p,u,v} Scalar Vector inner PointCarrier disp_op A C) (@square_dist_eq_dist_sq.{p,u,v} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn Vector vzero vadd vneg smul inner PointCarrier disp_op ordered_args inner_args A C) (@dist_sq_points_le_square_sum_dist.{p,u,v} Scalar zero one add neg sub mul le_rel lt_rel sqrt_fn Vector vzero vadd vneg smul inner PointCarrier disp_op ring_args ordered_args vector_args inner_args affine_args A B C))"
-    },
-    {
-      "declaration": "dist_nonneg",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun law => fun A => fun B => law A B"
-    },
-    {
-      "declaration": "distance_symm",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun law => fun A => fun B => law A B"
-    },
-    {
-      "declaration": "distance_zero_iff_eq",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun law => fun A => fun B => fun (R : Prop) => fun (mk : forall (forward : forall (h : @Eq.{u} Scalar (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) zero), @Eq.{p} PointCarrier A B), forall (backward : forall (h : @Eq.{p} PointCarrier A B), @Eq.{u} Scalar (@dist.{p,u,v} Scalar sqrt_fn Vector inner PointCarrier disp_op A B) zero), R) => law A B R mk"
-    },
-    {
-      "declaration": "pythagorean_distance_law",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun metric_pythagorean_target => fun A => fun B => fun C => fun h => metric_pythagorean_target A B C h"
-    },
-    {
-      "declaration": "triangle_inequality",
-      "source_kind": "explicit_term",
-      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun le_rel => fun lt_rel => fun sqrt_fn => fun Vector => fun vzero => fun vadd => fun vneg => fun smul => fun inner => fun PointCarrier => fun disp_op => fun law => fun A => fun B => fun C => law A B C"
     }
   ],
   "acceptance": {
-    "required": ["decode_module_cert", "verify_module_cert"],
+    "required": [
+      "decode_module_cert",
+      "verify_module_cert"
+    ],
     "accepted_artifact": "Mathlib/Geometry/Metric/Carrier/certificate.npcert"
   }
 }

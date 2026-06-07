@@ -14,9 +14,7 @@
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "GroupLawArgs",

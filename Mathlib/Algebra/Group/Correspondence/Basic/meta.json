@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Algebra/Group/Correspondence/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:ea30247596f6e3adb57998235c773a6bc4c73058a34e9b65e9313f795ce34501",
-  "certificate_file_sha256": "sha256:dace40eccfee78cce71f880507e76ddb8a5a11d4872b070e7abbea999bb0544c",
-  "export_hash": "sha256:6a457720e4aef4102591fab03c2d50b9748b06bff9e7fe635dc8e30ae63b1c9a",
+  "source_sha256": "sha256:8be55c1a09c13f3c07220d11ea57f8c3f3603e5e1f69c5a8d4a092f6f21f7d91",
+  "certificate_file_sha256": "sha256:2fd547f096a2922438fd16070d6ab1ae0837a46a4e841a7ad0cebb4b8d0dc1d6",
+  "export_hash": "sha256:c70ccbf64113438178f17d9e8aef8608c932cb6d5655a39908365c95c6490782",
   "axiom_report_hash": "sha256:a1c7dff2e43196d9ed0f707b49ddcb949d8c3f3c7b3a85369478372380820393",
-  "certificate_hash": "sha256:17d611fd3212bf953d900f1acbac0ae2403eecdd436e6116c6257238b43e1ec5",
+  "certificate_hash": "sha256:24bee46a973397428e38c02a134ab334c4d95090c5ab02cdfe12bba3cd6d9dc0",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
@@ -19,9 +19,7 @@
     "Mathlib.Algebra.Group.Quotient.Mul",
     "Mathlib.Algebra.Group.Quotient.Group"
   ],
-  "axioms": [
-    "Eq.rec"
-  ],
+  "axioms": [],
   "declarations": [
     {
       "name": "CorrespondenceImagePred",

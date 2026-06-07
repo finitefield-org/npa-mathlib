@@ -112,7 +112,7 @@ expected_certificate_hash = "sha256:239456d3d8d69e87a8502f99a22fb3dfd7d1f3037520
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning"]
 definitions = ["MetricBall", "Neighborhood", "LocalMem", "LocalPred", "LocalEq", "LocalUnique"]
 theorems = ["metric_ball_intro", "metric_ball_elim", "neighborhood_intro", "neighborhood_center", "neighborhood_shrink", "local_mem_intro", "local_mem_elim", "local_pred_intro", "local_pred_apply", "local_pred_shrink", "metric_ball_mono", "local_eq_refl", "local_eq_symm", "local_eq_trans", "local_unique_apply"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Logic.PropConnectives"
@@ -190,14 +190,14 @@ certificate = "Mathlib/Algebra/Ring/Basic/certificate.npcert"
 meta = "Mathlib/Algebra/Ring/Basic/meta.json"
 replay = "Mathlib/Algebra/Ring/Basic/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:0a541908e213fa90c09f454c251fda9fc40be9f826fc7fe4ef77522faee3b172"
-expected_certificate_file_hash = "sha256:ee1a3e471629d2f285a97d913a5a06d4e60e2ee745e4f4db02248154ab68c71b"
-expected_export_hash = "sha256:b6826e524acbfa21ddfefa9e842c5b6d57a4a7caad7ad837810b35ee0d633ff2"
-expected_axiom_report_hash = "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12"
-expected_certificate_hash = "sha256:91e7c0565277a0844c09257b984bb6deae15bfdb438af08feacbc4c1ab9d3417"
+expected_source_hash = "sha256:8d127b0e3d073bcf32a9b805532e5ed8d151c1a27d1de23946ef2484ba4bc4cb"
+expected_certificate_file_hash = "sha256:a56c8f37e94b44542f13bde942708182346df0669170564e7e1485d038da55cf"
+expected_export_hash = "sha256:0907bfd1cd3566b5c97034003469cd69cad2e16e045511fb0e471af4bfed6cc0"
+expected_axiom_report_hash = "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb"
+expected_certificate_hash = "sha256:17b2de7737cef73dcc427fb2883445e37430f6dbdd2dacf04cd4495ac9f32d91"
 imports = ["Std.Logic.Eq"]
 definitions = ["two", "sq", "RingLawArgs"]
-theorems = ["sub_eq_add_neg", "add_assoc", "add_comm", "add_zero", "zero_add", "neg_add_cancel", "add_neg_cancel", "sub_self", "mul_assoc", "mul_comm", "mul_one", "one_mul", "left_distrib", "right_distrib", "mul_zero", "zero_mul", "add_left_cancel", "ring_reorder_three_mul_terms", "add_right_cancel", "neg_neg", "sub_zero", "zero_sub", "sub_add_cancel", "add_sub_cancel", "sub_add_sub_cancel"]
+theorems = []
 axioms = []
 
 [[modules]]
@@ -208,14 +208,14 @@ meta = "Mathlib/Algebra/Ring/FirstIsomorphism/Basic/meta.json"
 replay = "Mathlib/Algebra/Ring/FirstIsomorphism/Basic/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:3d9a8ca5a3657958821953b83b41ffeddc1b56c132efeb5aaaeb6231fb4fabeb"
-expected_certificate_file_hash = "sha256:46a7788a4244d7f66b416f41a2ad3e5e7c65b50334f7940f83003d9be16d2a8d"
+expected_certificate_file_hash = "sha256:95d2a0c93d8be91aa6946e4faac9eee067693386b2467ffc034a903a6560c98b"
 expected_export_hash = "sha256:0555b22ada8df19eaa6d64f4a13f32d9b29aafa79959ec582aa60f987833d5e4"
 expected_axiom_report_hash = "sha256:cb6d6f45a78dfb3b8ae3aaf5bf13880ac499739b7e45d8c6593356efc29367e3"
-expected_certificate_hash = "sha256:400d2bb966850a55ec2b1a340f2bbde23e97b576761b1aea771b8c1412807291"
+expected_certificate_hash = "sha256:3dd21e73cc3e52d6f370f876d98bcbb60a84fa87d1e28a98394dea85a5b528ab"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group"]
 definitions = ["RingHomLawArgs", "RingImagePred", "RingKernelQuotient", "RingKernelQuotientMk", "RingKernelQuotientToS", "RingKernelQuotientAdd", "RingKernelQuotientZero", "RingKernelQuotientNeg", "RingKernelQuotientMulRep"]
 theorems = ["ring_hom_zero", "ring_hom_one", "ring_hom_add", "ring_hom_neg", "ring_hom_mul", "ring_as_additive_group_laws", "ring_hom_as_additive_group_hom", "ring_kernel_quotient_mul_rep_compat", "ring_image_intro", "ring_image_zero", "ring_image_one", "ring_image_add_closed", "ring_image_neg_closed", "ring_image_mul_closed"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Ring.FirstIsomorphism"
@@ -225,14 +225,14 @@ meta = "Mathlib/Algebra/Ring/FirstIsomorphism/meta.json"
 replay = "Mathlib/Algebra/Ring/FirstIsomorphism/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:b4cf44e3511401f3a8c19c5b5a8909aa177ccca27f4d44b5ba72f5fe1423d609"
-expected_certificate_file_hash = "sha256:1610e473b54e155ada16c20c9dc496debcd4b5ba7deed959a6fb743a257138c2"
+expected_certificate_file_hash = "sha256:ede53e5a81cae61bbdf7bac4a87277e537b5ce759f47c767a076b436565f0102"
 expected_export_hash = "sha256:c2df1f0a3a1f7980a641d0110464899c74bd602346cbab120fc6a5e740b399db"
 expected_axiom_report_hash = "sha256:f39c6826ea5fd04328e88ce53f46ee3da7422779015b92583cdcef2697007f68"
-expected_certificate_hash = "sha256:37b3f3f4cb244440f323e3f348d43ae2b3fca82fd3636a23376af659449ef8ca"
+expected_certificate_hash = "sha256:e37b0e0981e7487664c9a43b2f51dc34ac23bdb73d57c1d2c8b2a8cdcfeaff8e"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic"]
 definitions = ["RingKernelQuotientMul", "RingKernelQuotientOne", "RingFirstIso"]
 theorems = ["ring_kernel_quotient_mul_mk", "ring_first_iso_map_zero", "ring_first_iso_map_one", "ring_first_iso_map_add", "ring_first_iso_map_mul", "ring_first_iso_map_injective", "ring_first_iso_map_hits_image", "ring_first_iso_map_surj_image", "ring_first_isomorphism_to_image"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Ring.ChineseRemainder"
@@ -242,14 +242,14 @@ meta = "Mathlib/Algebra/Ring/ChineseRemainder/meta.json"
 replay = "Mathlib/Algebra/Ring/ChineseRemainder/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:aeac754f8db5c7e8ba5c552972648d0e8ef5f574d4f13fa1e967a90460d03420"
-expected_certificate_file_hash = "sha256:c4719c14d7c333c74946731a90ae42414bfc07ec2dca4014b0b206e67b6654f9"
+expected_certificate_file_hash = "sha256:448d9e16f4754bb96eeac3b5599baa14c77937c441f21a64f88df09598fa36e8"
 expected_export_hash = "sha256:09b0e1e6a18e7cb70ae3128b58c2cfe5376a723cb78c4a6d124e2db74705ef26"
 expected_axiom_report_hash = "sha256:ef7d0eaa598be1de31fe3519ebceaa3a49511caf9ca312a771ba4e7272eaffdb"
-expected_certificate_hash = "sha256:c24c8c308bfff1f3f82c3a3389e991e19f07ad5be45bd71b762cc2dd019b23e1"
+expected_certificate_hash = "sha256:96735e8541d64f67f686b2db464677209cf6e4fd03b681f312887d849dac722d"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.FirstIsomorphism", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism.Basic", "Mathlib.Algebra.Ring.FirstIsomorphism"]
 definitions = ["RingChineseRemainderPairMap", "RingChineseRemainderCombine", "RingChineseRemainderIntersection", "RingChineseRemainder"]
 theorems = ["ring_chinese_remainder_intersection_intro", "ring_chinese_remainder_intersection_left", "ring_chinese_remainder_intersection_right", "ring_chinese_remainder_pair_hom_laws", "ring_chinese_remainder_kernel_to_intersection", "ring_chinese_remainder_intersection_to_kernel", "ring_chinese_remainder_pair_surjective", "ring_chinese_remainder_theorem"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.OrderedField.Basic"
@@ -258,14 +258,14 @@ certificate = "Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
 meta = "Mathlib/Algebra/OrderedField/Basic/meta.json"
 replay = "Mathlib/Algebra/OrderedField/Basic/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:f804844a5bb666b575d9c5de90b03683fbe1bb8b328fd698080773807388dbde"
-expected_certificate_file_hash = "sha256:3fbafaabe0e2d064aab2002ca0bd47a761dab8905584473184c57bbaf07d14f5"
-expected_export_hash = "sha256:39345b6890e80ff61948b888938c61885e9ca873876e150e7ba6f13fb9cc1ed3"
-expected_axiom_report_hash = "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8"
-expected_certificate_hash = "sha256:8d5b95d5c9b8bb0cf3c679ca4604efbcd480d570b117d07cc139ffa84a927f6f"
+expected_source_hash = "sha256:2b12a1c7754427a64bf92e5b3a562c183d8064a38340c8cfc6c8a1a2f80ee7e8"
+expected_certificate_file_hash = "sha256:1b63055ab2ac09cddd70edeb3e94746585a1fbf09a56b4a5b3b81fb11efe0328"
+expected_export_hash = "sha256:3dea58c267dc683c03cefb0a2d148d31baad310ced8c049340b88fd21e965d19"
+expected_axiom_report_hash = "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07"
+expected_certificate_hash = "sha256:d7fd3c252d1e13ab664b0ade033d4f9dff26af045be661b600ab9d188805c61b"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
 definitions = ["le", "lt", "sqrt", "Nonneg", "Positive", "OrderedFieldLawArgs"]
-theorems = ["le_refl", "le_trans", "add_nonneg", "mul_nonneg", "square_nonneg", "sqrt_nonneg", "sqrt_square_of_nonneg", "sqrt_mul_self", "eq_of_square_eq_square_nonneg", "add_le_add", "mul_le_mul_nonneg", "zero_le_two", "le_antisymm", "lt_of_le_of_ne", "le_of_eq", "sqrt_sq", "sq_eq_zero_iff", "sum_nonneg_eq_zero", "square_completion_bound", "le_of_sq_le_sq_nonneg", "add_nonneg_law", "sqrt_sum_square_bound", "le_mul_sqrt_of_sq_le_mul_nonneg", "add_two_mul_le_sq_add_sqrt"]
+theorems = ["square_completion_bound", "le_of_sq_le_sq_nonneg", "add_nonneg_law", "sqrt_sum_square_bound", "le_mul_sqrt_of_sq_le_mul_nonneg", "add_two_mul_le_sq_add_sqrt"]
 axioms = []
 
 [[modules]]
@@ -275,14 +275,14 @@ certificate = "Mathlib/Algebra/OrderedField/Square/certificate.npcert"
 meta = "Mathlib/Algebra/OrderedField/Square/meta.json"
 replay = "Mathlib/Algebra/OrderedField/Square/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:7cb4aabb88d65edf953eb5f2572c7c6d0b0392d64cea29f5e64a4e15eda23db7"
-expected_certificate_file_hash = "sha256:df92f5d6211bc82d1057bba3bc70de9f5978bae63efdfb9c4a1cecd606987379"
-expected_export_hash = "sha256:1ee23829bf6e36a395ccf56ea029a1120abbb9625d57d0e3b0016b6aab4e82ab"
-expected_axiom_report_hash = "sha256:b1c966ff112a4d21e88c23443f7594255da9b1129a7d1cbea048b57e695c9f2e"
-expected_certificate_hash = "sha256:3fa3b9936a027ff4cb16c8ccb33cf8821f4dafe5617299829b711df79aafb4d9"
+expected_source_hash = "sha256:9303ab210fb953642fab3e90ff4289223ba39cb08925dfde37a6138f2e241704"
+expected_certificate_file_hash = "sha256:e2578a872221232776f8161e8b227f2af8d008635b3240620ac4953761ac2ae1"
+expected_export_hash = "sha256:072726c4a00a9dffdfa569d09653b1f23040b8d67b7c095185e5be8feb411dc3"
+expected_axiom_report_hash = "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b"
+expected_certificate_hash = "sha256:6a4f7130bc29e35094a2ea0371c40ec6676cf639ef4c271d6304643218f8802d"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic"]
 definitions = []
-theorems = ["square_def", "mul_self_eq_square", "sq_add", "sq_sub", "sum_two_squares_comm", "cancel_double_zero_term", "sq_zero", "sq_one", "sq_neg", "two_mul", "sq_eq_sq_of_eq_or_neg_eq", "sq_add_eq_add_sq_add_two_mul", "sq_sub_eq_add_sq_sub_two_mul", "add_sq_eq_zero_iff", "mul_two_zero_term", "normalize_add_with_zero_cross_term"]
+theorems = ["square_def", "mul_self_eq_square"]
 axioms = []
 
 [[modules]]
@@ -293,10 +293,10 @@ meta = "Mathlib/Algebra/OrderedField/ScalarIdentities/meta.json"
 replay = "Mathlib/Algebra/OrderedField/ScalarIdentities/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:71038779a86c11014d078d15691cb30c51472dfb30618148d0651ad50d187c11"
-expected_certificate_file_hash = "sha256:2c35f6b843cc2d7a41133a67fc1e6f47f23857abf8e989381ff4d7c606fff1d8"
+expected_certificate_file_hash = "sha256:4b669207bf7f93eab3b8b11873f47f454efeccb4bc74961a71fd0e6f4377c69f"
 expected_export_hash = "sha256:eb421eb1eb97d3f71173f0778fe803584b8677a27acbd3eba3a9ff94d6683835"
 expected_axiom_report_hash = "sha256:bb204700bd905645de400797f926e91fffa6b384f0e8ce1c66162d4aa10a9d0c"
-expected_certificate_hash = "sha256:303e0d14a51d61829acea93f4a29c1735ae0fccf7a010d5078257386c886ffb4"
+expected_certificate_hash = "sha256:5952365fba41c1ac80cd6934bb625c29ef83c9c5da5d9937e0ef86d1187adf91"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Square"]
 definitions = []
 theorems = ["scalar_mul_two_zero_term", "scalar_cancel_double_zero_term", "scalar_normalize_add_with_zero_cross_term", "mul_two_neg", "add_neg_cross_term_to_sub_sum", "law_of_cosines_scalar_rhs", "scalar_two_mul", "add_sub_cross_cancel", "add_pairwise_commute", "add_cross_and_sub_cross_cancel", "parallelogram_scalar_rhs", "add_middle_to_front", "polarization_scalar_rhs"]
@@ -309,14 +309,14 @@ certificate = "Mathlib/LinearAlgebra/VectorSpace/certificate.npcert"
 meta = "Mathlib/LinearAlgebra/VectorSpace/meta.json"
 replay = "Mathlib/LinearAlgebra/VectorSpace/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:f137a3b0263a3f06f8ec8f05aa2d9a31509ff479f848640b0917cf1be2bbd5fc"
-expected_certificate_file_hash = "sha256:83f1f6790dfda274439470e54d8a8a0463047e9fa4f198e591b57023e040c2a0"
-expected_export_hash = "sha256:2665099f8cfe0789db8e597c477440e6fa0c89262d32b284e5491eaf27e098aa"
-expected_axiom_report_hash = "sha256:2eb8901dcadbaffb969aabfd5e10172a4e17abc50558a0954952232d438fa2ed"
-expected_certificate_hash = "sha256:02299ea819d12ac93e6432295397d5543ceb6747c6f404adbbbd8fe2acc65694"
+expected_source_hash = "sha256:17429b12b99e8cd2c034155c60da2c51a5253bee925afb365edcf9ec2c18ff5d"
+expected_certificate_file_hash = "sha256:62de5ab69e5174d57fb395ae9a0ac7f1f401be1f8c8c30553228efc65d6e3e5e"
+expected_export_hash = "sha256:34ff78798631f0da81a876a76e4b13c947f28bb059407792c2bc5441bcb68b05"
+expected_axiom_report_hash = "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839"
+expected_certificate_hash = "sha256:abaaa95f8a0c50cdb4eaa6f723143694fd5101370e0e87ead76633e4fe86d053"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square"]
 definitions = ["vsub", "linear_comb2", "linear_comb3", "VectorSpaceLawArgs"]
-theorems = ["vec_sub_def", "vec_add_assoc", "vec_add_comm", "vec_add_zero", "vec_zero_add", "vec_neg_add_cancel", "vec_add_neg_cancel", "sub_sub_sub_cancel", "vec_sub_self", "vec_sub_zero", "vec_add_left_cancel", "smul_add", "add_smul", "one_smul", "mul_smul", "zero_smul", "smul_zero", "neg_smul", "smul_neg", "vec_sub_eq_add_neg", "sub_add_sub_cancel_left", "linear_comb2_ext", "linear_comb3_ext"]
+theorems = ["vec_sub_def", "vec_sub_eq_add_neg", "linear_comb2_ext", "linear_comb3_ext"]
 axioms = []
 
 [[modules]]
@@ -327,14 +327,14 @@ meta = "Mathlib/Analysis/NormedSpace/Basic/meta.json"
 replay = "Mathlib/Analysis/NormedSpace/Basic/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:2152518532c89e59bfa0b85419a424dd43e550668104c092e73fcdb9f33ffbe3"
-expected_certificate_file_hash = "sha256:71f56e8b57d2ed6b0c798f4be166c221d72db89ec2d289788d0a6eaed2872b8c"
+expected_certificate_file_hash = "sha256:7538a523a73c6e52aee5fc838b53d271fd69882cacc7ffccd36c91cd345b4853"
 expected_export_hash = "sha256:ccf1146511d85eb42fdafb49d708269e57ca1fa18ee1c59ff6ea084c6acd3077"
 expected_axiom_report_hash = "sha256:4ffc0ac83684ca65d83296a7fb4b8104c1099ad79204df7e4efd1f430359d3c0"
-expected_certificate_hash = "sha256:a3d2e84783eb67f5d94fd234c159e1f5238d25033ffbbc9159b77003e60a9536"
+expected_certificate_hash = "sha256:0b66ff38dffb9d04a4765bc20865fc94f7f034ce0aa3a956315bb75a2ff1989e"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace"]
 definitions = ["NormDist", "NormedSpaceLawArgs", "ProductZero", "ProductAdd", "ProductNeg", "ProductSmul", "ProductSub", "ProductNorm", "ProductDist", "ProductNormEstimateArgs"]
 theorems = ["norm_dist_def", "norm_nonneg", "norm_zero", "norm_triangle", "norm_neg", "norm_dist_self", "norm_dist_symm", "norm_dist_triangle", "product_zero_def", "product_add_def", "product_neg_def", "product_smul_def", "product_sub_def", "product_norm_def", "product_dist_def", "product_fst_pair", "product_snd_pair", "product_pair_eta", "product_add_fst", "product_add_snd", "product_smul_fst", "product_smul_snd", "product_norm_pair_eq", "product_norm_fst_le", "product_norm_snd_le", "product_norm_pair_le_add", "product_norm_add_le", "product_dist_pair_le_add"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Analysis.NormedSpace.LinearMap"
@@ -344,14 +344,14 @@ meta = "Mathlib/Analysis/NormedSpace/LinearMap/meta.json"
 replay = "Mathlib/Analysis/NormedSpace/LinearMap/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:88c16f3f5c9a14ca4d7794f937fe84e85887d5535813815030a7ed55f001cf14"
-expected_certificate_file_hash = "sha256:ab1ddc4ad705df6172a271a6dd72e688a7125bb3c442524a5cc0fe91cab87b89"
+expected_certificate_file_hash = "sha256:28b2b10272c8c5be3803885deae6be0a82d187fcf0d0a6271b2e7462d449dc9f"
 expected_export_hash = "sha256:7bec106b4bff6c5f3cbb16f482f3876edba008ed8f238e879f9166ff2746543a"
 expected_axiom_report_hash = "sha256:baf69fb307b5263ee1a8d7b94c8f3e8072680b801274a99eb85a955a3e1b50ff"
-expected_certificate_hash = "sha256:ac9aa361cabbe1ebeeeb0f90639d0c0f32c75699c838d94baa0c8d4a0a873214"
+expected_certificate_hash = "sha256:7cc3399a7e7c9265bd4e4433a710941ed2f15768c9cf9c02701abbc4b9229e20"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic"]
 definitions = ["OperatorNormBound", "LinearMapLawArgs", "BoundedLinearMapArgs", "LinearIsoArgs", "LinearIdentity", "LinearComp", "LinearInv", "BlockTriangularMap", "BlockTriangularInverse", "BlockTriangularIsoArgs"]
 theorems = ["operator_norm_bound_apply", "linear_map_zero", "linear_map_add", "linear_map_neg", "linear_map_smul", "bounded_linear_map_linear", "bounded_linear_map_bound", "bounded_linear_map_bound_apply", "linear_iso_forward_linear", "linear_iso_inverse_linear", "linear_iso_forward_bound", "linear_iso_inverse_bound", "linear_iso_left_inverse", "linear_iso_right_inverse", "linear_identity_def", "linear_identity_zero", "linear_identity_add", "linear_identity_neg", "linear_identity_smul", "linear_identity_law_args", "linear_comp_def", "linear_comp_law_args", "linear_inv_def", "linear_inv_left_inverse", "linear_inv_right_inverse", "block_triangular_map_def", "block_triangular_inverse_def", "block_triangular_b_iso", "block_triangular_left_inverse", "block_triangular_right_inverse"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Analysis.Calculus.Derivative"
@@ -361,10 +361,10 @@ meta = "Mathlib/Analysis/Calculus/Derivative/meta.json"
 replay = "Mathlib/Analysis/Calculus/Derivative/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:8e20037f63071c6ea7b0cd92b46c53ab20a05275e98c21dc44cee250e8de5a7f"
-expected_certificate_file_hash = "sha256:0c580cd8d3eeb6d6d2f0083467fc3beed1c95902574f6790907778ac81e2bdd6"
+expected_certificate_file_hash = "sha256:cf5cec227b6b30e19d7e806dc7acc473a4846511b95b87f6ecc4319d6b20370d"
 expected_export_hash = "sha256:73aa37ac821e133031b2e7b6acc5752d1a03ba21b87b6ff90a38f51b575f7743"
 expected_axiom_report_hash = "sha256:aacbe01532a99d075e6a5943c920c51381fff510fd7e56959ab34351a9b96090"
-expected_certificate_hash = "sha256:7e4af22ddf93df44cbe18897b63dd43c9fb12bff03e04eb9f160de7a57bae423"
+expected_certificate_hash = "sha256:8b77a269619bfccff03ab566ee3b4e2a56aa75604610488fc730ea1e10d55364"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Topology.Metric.Local", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.NormedSpace.LinearMap"]
 definitions = ["FrechetRemainder", "FrechetDerivativeAt", "FrechetDifferentiableAt", "FrechetDifferentiableOn", "DerivativeUniqueArgs", "ConstMap", "ZeroMap", "PairMap", "PartialXMap", "PartialYMap", "PartialXDerivativeMap", "PartialYDerivativeMap", "DerivativeConstRuleArgs", "DerivativeIdentityRuleArgs", "DerivativeFstRuleArgs", "DerivativeSndRuleArgs", "DerivativePairRuleArgs", "DerivativeCompRuleArgs", "PartialDerivativeRuleArgs"]
 theorems = ["frechet_remainder_def", "frechet_derivative_at_intro", "frechet_derivative_linear_from_at", "frechet_derivative_bound_from_at", "frechet_derivative_remainder_from_at", "frechet_differentiable_at_intro", "frechet_differentiable_at_elim", "frechet_differentiable_on_apply", "derivative_unique", "const_map_def", "zero_map_def", "pair_map_def", "derivative_const", "derivative_identity", "derivative_fst", "derivative_snd", "derivative_pair", "derivative_comp", "partial_x_map_def", "partial_y_map_def", "partial_x_derivative_map_def", "partial_y_derivative_map_def", "partial_x_derivative", "partial_y_derivative"]
@@ -378,10 +378,10 @@ meta = "Mathlib/Analysis/FixedPoint/Banach/meta.json"
 replay = "Mathlib/Analysis/FixedPoint/Banach/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:bfd80b561becabe6950fde3604da77fbe6d17af2c5de255a347cb0deccc5815a"
-expected_certificate_file_hash = "sha256:68e884c1d919abadca6ae5365917c9f0476179550aac083078a60bbbe9119e23"
+expected_certificate_file_hash = "sha256:c9063b70d012953c966fdf7c8ffd82a9525de30daa3b30a495744c441d7e8db1"
 expected_export_hash = "sha256:5382251e30f15dd137ce051b20c5c1840ecbb3959fe31f08a1f37928c01287b1"
 expected_axiom_report_hash = "sha256:aa19bce6d8162a8b9cbf3d4c5c9b7076a45a326d4ab073bcbb2177328a00ae12"
-expected_certificate_hash = "sha256:4800b43a25c1c69fddf50b627d76ec83e7f15f983ccb1862bca8475b2ec18acb"
+expected_certificate_hash = "sha256:aa75c2244c080566b516248f41be932422fb7df460366b6d48f8b4ef2c590046"
 imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Local", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic"]
 definitions = ["CauchySeq", "ConvergesTo", "CompleteMetricArgs", "SelfMapOn", "ContractiveOn", "FixedPoint", "FixedPointStability", "FixedPointWitness", "FixedPointResult", "BanachFixedPointArgs"]
 theorems = ["cauchy_seq_intro", "cauchy_seq_apply", "converges_to_intro", "converges_to_apply", "complete_metric_limit", "self_map_on_apply", "contractive_on_apply", "fixed_point_def", "fixed_point_stability_apply", "fixed_point_witness_intro", "fixed_point_witness_elim", "fixed_point_mem", "fixed_point_eq", "fixed_point_unique", "fixed_point_stability", "fixed_point_result_intro", "fixed_point_result_elim", "banach_fixed_point"]
@@ -395,10 +395,10 @@ meta = "Mathlib/Analysis/Calculus/InverseFunction/meta.json"
 replay = "Mathlib/Analysis/Calculus/InverseFunction/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:740111800ed6ed053f216447f102d53be1d4437ebb96b21ab5340dfa502d34a3"
-expected_certificate_file_hash = "sha256:79446db3171880d4758d386d4253697bcda54db1423f8fc8d4a869fffc465d50"
+expected_certificate_file_hash = "sha256:6a0e432d57936398344b52a0da9efe99e46d84875ce87ce881c24bd03eda71d6"
 expected_export_hash = "sha256:7a346e80ec9d2bd70e065f854c57adf1329d43a4467cd3cf867fde6578a0eb51"
 expected_axiom_report_hash = "sha256:4ce54129453ca5f2cc9726d9e809e739b6640402d7515115c64b8169ae6c93a6"
-expected_certificate_hash = "sha256:1dc1feed53a8f446468d7c67b76203ed7080724b31e8976813d2c3d3c7094b0f"
+expected_certificate_hash = "sha256:d611688927c7945144ab9c369f1d4b63970d4675e6cdc41812b728a61f4cdcaf"
 imports = ["Std.Logic.Eq", "Mathlib.Topology.Metric.Local", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.NormedSpace.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.FixedPoint.Banach"]
 definitions = ["InverseResidual", "InverseNewtonMap", "LocalInverseWitness", "LocalInverseResult", "QuantitativeInverseFunctionArgs"]
 theorems = ["inverse_residual_def", "inverse_newton_map_def", "local_inverse_witness_intro", "local_inverse_witness_elim", "local_inverse_base_mem", "local_inverse_image_mem", "local_inverse_maps", "local_inverse_left", "local_inverse_right", "local_inverse_unique", "local_inverse_fixed_point", "local_inverse_derivative", "local_inverse_linear_iso", "local_inverse_result_intro", "local_inverse_result_elim", "quantitative_inverse_function"]
@@ -412,14 +412,14 @@ meta = "Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/meta.json"
 replay = "Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:d84b44864a1913b6715cc167baac737fe0948b9f2e231256663516130fc47ff6"
-expected_certificate_file_hash = "sha256:ca6eb950cfd6f6baebfaac69ef9d3d0ad0c22d72cfb90b75b59fb8786ed5b11c"
+expected_certificate_file_hash = "sha256:2294e58f0659eac5fdf765ad0ea12af41ce626e3de383dc788a73201e1bef71c"
 expected_export_hash = "sha256:c23d9f7de17b05a8787d29355eb82d416de77e00c685ee377f769d397d8af9b3"
 expected_axiom_report_hash = "sha256:9f292648aa00dddbe49e31f78bc11448b5ee88db69aba9ec37edaa67a112d59b"
-expected_certificate_hash = "sha256:d1b228830b168175484c04948176e552696a834b648e31315c5bd8f73fccef14"
+expected_certificate_hash = "sha256:df89a44d6153e2006b104b319692c4d3c252029f01c5230ea9a46afdec188d11"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.NormedSpace.LinearMap", "Mathlib.Analysis.Calculus.Derivative"]
 definitions = ["ImplicitAugmentedMapCoord", "ImplicitAugmentedMap", "ImplicitAugmentedMapDerivativeMap", "ImplicitAugmentedMapDerivativeArgs", "ImplicitAugmentedMapIsoArgs"]
 theorems = ["implicit_augmented_map_coord_def", "implicit_augmented_map_def", "implicit_augmented_map_coord_base_value", "implicit_augmented_map_derivative_map_def", "implicit_augmented_map_full_derivative", "implicit_augmented_map_partial_x_derivative", "implicit_augmented_map_partial_y_derivative", "implicit_augmented_map_derivative", "implicit_augmented_map_dy_iso", "implicit_augmented_map_block_triangular_args", "implicit_augmented_map_linear_iso", "implicit_augmented_map_block_left_inverse", "implicit_augmented_map_block_right_inverse"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Analysis.Calculus.ImplicitFunction"
@@ -429,14 +429,14 @@ meta = "Mathlib/Analysis/Calculus/ImplicitFunction/meta.json"
 replay = "Mathlib/Analysis/Calculus/ImplicitFunction/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:88c219e1249d0e5a725bf7a3e5563bfcd610a9ba75c8884163668d1affd1f2a5"
-expected_certificate_file_hash = "sha256:6705fef0b323e384ee61aa50dc6b02ab8ded616188df6339b8a9f8dff5b3c91c"
+expected_certificate_file_hash = "sha256:7b3695c3e1da866a0d5f2bff03287a37096ac06b8a1ab6c830e458de5a43524a"
 expected_export_hash = "sha256:546dc5a52c41a45ef28d5f27e827b2ede8579dbe6ef974cf0b9fb66030d21eba"
 expected_axiom_report_hash = "sha256:0d1690c6eba73dbd259c7cfc6f42702c48cb349a31bca7078cd2a76bb5ac6fcf"
-expected_certificate_hash = "sha256:ab53af6aeb800e9972d525496ec39497113aeb532fc60c1c028a851a57872e05"
+expected_certificate_hash = "sha256:2ac59f6026425f38368d8ab23d51e43a9668afd77ce1872b8cf54bf42848ce22"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.Analysis.NormedSpace.Basic", "Mathlib.Analysis.NormedSpace.LinearMap", "Mathlib.Analysis.Calculus.Derivative", "Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap"]
 definitions = ["ImplicitTargetPoint", "ImplicitFunction", "ImplicitGraphPoint", "ImplicitTargetDerivativeMap", "ImplicitFunctionDerivativeChainMap", "ImplicitFunctionDerivativeFormulaMap", "ImplicitAugmentedMapLocalInverseLaws", "ImplicitFunctionExtractionArgs", "ImplicitFunctionDerivativeArgs", "ImplicitFunctionWitness", "ImplicitFunctionDerivativeWitness"]
 theorems = ["implicit_target_point_def", "implicit_function_def", "implicit_graph_point_def", "implicit_target_derivative_map_def", "implicit_function_derivative_chain_map_def", "implicit_function_derivative_formula_map_def", "implicit_extraction_local_inverse", "implicit_extraction_target_mem", "implicit_function_value_mem", "implicit_function_zero", "implicit_function_unique", "implicit_function_derivative_extraction_args", "implicit_function_target_derivative", "implicit_function_partial_x", "implicit_function_partial_y", "implicit_function_dy_iso", "implicit_function_augmented_map_inverse_derivative", "implicit_function_snd_projection_derivative", "implicit_function_derivative", "implicit_function_differentiable", "implicit_function_derivative_formula", "implicit_function_theorem_args", "implicit_function_theorem_target_mem", "implicit_function_theorem_value_mem", "implicit_function_theorem_zero", "implicit_function_theorem_unique", "implicit_function_theorem", "implicit_function_derivative_witness_args", "implicit_function_derivative_witness_basic", "implicit_function_derivative_witness_differentiable", "implicit_function_derivative_witness_derivative", "implicit_function_derivative_witness_formula", "implicit_function_derivative_theorem"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.LinearAlgebra.InnerProduct"
@@ -445,14 +445,14 @@ certificate = "Mathlib/LinearAlgebra/InnerProduct/certificate.npcert"
 meta = "Mathlib/LinearAlgebra/InnerProduct/meta.json"
 replay = "Mathlib/LinearAlgebra/InnerProduct/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:f51f15453cb708f9b7782605166b3cc1ee667668a1b95f0037cedbfdefaaa934"
-expected_certificate_file_hash = "sha256:33eb1d4c6820c5221d3727cec4fee4d69ed83beaee09b2d3ad1c7b493a1dacfa"
-expected_export_hash = "sha256:fd0cf1fe98a78a5c3f2d589938dd75483f5e210a56d2ab9c3a2ef27ff111fb4b"
-expected_axiom_report_hash = "sha256:b77f3c86856e05f2733c7652d6c3e85e91668d19ed18a1c42004749a8eddf0e8"
-expected_certificate_hash = "sha256:8ce21489b0f104d3fdf131098e4171117e61324616f2e6ea648402592f03ddf8"
+expected_source_hash = "sha256:878453c77bc23c07c956c5a5793d53d13d4f7c47b0996c2e379d0dd208d5c552"
+expected_certificate_file_hash = "sha256:5fb99a266c3c72c2ee8c0f4bbd0b83403ac19ec8e6a82f6934afd5a1a60bba2d"
+expected_export_hash = "sha256:b146f1bf4da1faa4597d8e470fb8b9584ab708bacf5e22a7de4a713a5054b419"
+expected_axiom_report_hash = "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36"
+expected_certificate_hash = "sha256:d6ec3196182fd032210eb3d2bff64947f4994a9f68705850570f307c294d70ed"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace"]
 definitions = ["dot", "norm_sq", "dist_sq", "PerpVec", "InnerProductLawArgs"]
-theorems = ["dot_comm", "dot_add_left", "dot_add_right", "dot_neg_left", "dot_neg_right", "dot_sub_left", "dot_sub_right", "norm_sq_def", "dist_sq_def", "dot_self_eq_norm_sq", "norm_sq_add", "norm_sq_sub", "norm_sq_add_of_dot_zero", "norm_sq_sub_of_dot_zero", "norm_sq_nonneg", "parallelogram_law", "polarization_identity", "cauchy_schwarz", "perp_vec_iff_dot_eq_zero", "perp_vec_symm", "norm_sq_zero_iff", "dist_sq_nonneg", "norm_sq_add_of_perp", "norm_sq_sub_of_perp", "quadratic_norm_nonneg"]
+theorems = ["norm_sq_def", "dist_sq_def", "dot_self_eq_norm_sq", "perp_vec_iff_dot_eq_zero"]
 axioms = []
 
 [[modules]]
@@ -463,10 +463,10 @@ meta = "Mathlib/LinearAlgebra/InnerProduct/Derived/meta.json"
 replay = "Mathlib/LinearAlgebra/InnerProduct/Derived/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:439f4cc5950db686b6ffbde5ec3275891695664fca7e8382a3c6a1e2db6c0604"
-expected_certificate_file_hash = "sha256:22e34f6728ca14af6e095acbaad5d0031b8b66a7d0bfeffd2d29342af610fe8c"
-expected_export_hash = "sha256:5d40e4b82023eaf565ae2a6204c53e6e1ef0eafbc8acd2f2fa1ca89bb038e04d"
+expected_certificate_file_hash = "sha256:59f92269e2f1a9c3a838d271ede5a4db591c926c962d949bc9b3e990c51b5546"
+expected_export_hash = "sha256:dfccedd20eff7bcf6eba54666aca00c44161439e667540182bdad9214882298c"
 expected_axiom_report_hash = "sha256:a932e43d59afb7af1fd32a8680d65c057b745979ae169927e86d27984c9e3144"
-expected_certificate_hash = "sha256:02c08ee5d14e5d3bd79d94a2c9059062f8eb2c7947a504ddddbd9cab027d97be"
+expected_certificate_hash = "sha256:557f36c78a269549a2148d667c09b3477a9778b519df2241a4ba4d93e3b83f02"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.Logic.EqReasoning", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct"]
 definitions = []
 theorems = ["inner_product_norm_sq_add", "inner_product_norm_sq_sub", "inner_product_parallelogram_law", "inner_product_polarization_identity", "inner_product_dot_neg_left", "inner_product_norm_sq_neg", "inner_product_norm_sq_add_of_dot_zero", "inner_product_norm_sq_add_of_perp", "inner_product_norm_sq_add_neg_left", "inner_product_dot_zero_left", "inner_product_dot_zero_right", "inner_product_dot_eq_zero_of_norm_sq_zero_left", "inner_product_dot_eq_zero_of_norm_sq_zero_right", "inner_product_cauchy_schwarz_zero_left", "inner_product_cauchy_schwarz_zero_right", "inner_product_cauchy_schwarz", "inner_product_norm_sq_nonneg", "inner_product_dot_le_mul_sqrt_norm_sq", "inner_product_norm_sq_add_le_square_sum_norms"]
@@ -479,14 +479,14 @@ certificate = "Mathlib/Geometry/Affine/certificate.npcert"
 meta = "Mathlib/Geometry/Affine/meta.json"
 replay = "Mathlib/Geometry/Affine/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:a87474c5961d38f64ede2005e16cdc3c129e358e1ad067459403e8cf8872a9a8"
-expected_certificate_file_hash = "sha256:4103ac7bad5ff7caa538509b5b51bf38257968ecae4c191dbe25d81ad693a295"
-expected_export_hash = "sha256:475b7dbb030e651c36ce3f6e0462a9c73a416ffb114b66cd963745eabd606a63"
-expected_axiom_report_hash = "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e"
-expected_certificate_hash = "sha256:ea6696568f922dbccbf894dbde9b394e831fb8de3682adc522829b45e289a929"
+expected_source_hash = "sha256:2b23344d28a90c857b6433c2a1a69778cad4498d72f706b31e9e9f792dbae3c4"
+expected_certificate_file_hash = "sha256:58b980d15833e4ea1af4b5c1ec6de01f854d34c915ad59b517eb7c55887fa58f"
+expected_export_hash = "sha256:d47119be9c8b4d19ace8addd1e18bfbe5784c7f6fe45119bc609cc7a1c5265b8"
+expected_axiom_report_hash = "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839"
+expected_certificate_hash = "sha256:ead1b9a7eccab6c62e771979fc27f187dd3a6696f3148e3c472573e842b377c7"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct"]
 definitions = ["Point", "disp", "dist_sq_points", "translate", "midpoint", "collinear", "AffineLawArgs"]
-theorems = ["disp_self", "disp_reverse", "disp_comp", "hypotenuse_vector_eq_sub_legs", "dist_sq_points_def", "point_ext_of_zero_disp", "dist_sq_symm", "dist_sq_zero_iff_eq"]
+theorems = ["dist_sq_points_def"]
 axioms = []
 
 [[modules]]
@@ -497,10 +497,10 @@ meta = "Mathlib/Geometry/Affine/Derived/meta.json"
 replay = "Mathlib/Geometry/Affine/Derived/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:bbc698e9011a6e1ce21045be3d64906163e2894e8f5841ec83d8ad0f3160d84f"
-expected_certificate_file_hash = "sha256:50dd047fd61eeac545b9bcf2ab52fae189b0380c5c7b9bb45d7d2d566a8dc4a6"
-expected_export_hash = "sha256:73b9fa7db6fbf5ea228bf596360d012ccba55dd445e648c1ee2aa7220bb59aee"
+expected_certificate_file_hash = "sha256:6c40a41827549e3195772902a8060133fe8c5ad6116bacb9b03fa828d0d1bfcf"
+expected_export_hash = "sha256:fec1e1189162e50813debb665c1c05ff849f7c6f860f04382589193e29a7d377"
 expected_axiom_report_hash = "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c"
-expected_certificate_hash = "sha256:c20cd58c4801ca51ca73c4ccbc130f255e881bf032aa8a0f602689c262bdbbb0"
+expected_certificate_hash = "sha256:debc3b11ea469d7debefcdcade890c54adcc8d6cea0946912c66b20e3386010b"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.Geometry.Affine"]
 definitions = []
 theorems = ["affine_vec_add_comm", "affine_disp_reverse", "affine_disp_comp", "affine_dist_sq_points_def", "affine_hypotenuse_vector_eq_neg_left_add_right", "affine_hypotenuse_vector_eq_sub_legs", "affine_dist_sq_hypotenuse_norm_neg_left_add_right", "affine_dist_sq_hypotenuse_norm_sub_legs"]
@@ -513,14 +513,14 @@ certificate = "Mathlib/Geometry/RightTriangle/Carrier/certificate.npcert"
 meta = "Mathlib/Geometry/RightTriangle/Carrier/meta.json"
 replay = "Mathlib/Geometry/RightTriangle/Carrier/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:60c39f89bec4253137f052fcff08149613286dc16dfb8e5cbe3e22e15eb71ae8"
-expected_certificate_file_hash = "sha256:1253d2afa5475587cd27599a42fc3248969cf03a3dcfd4fcca212b92b711ffd2"
-expected_export_hash = "sha256:1e793046cc134cdffb7c33a315e6169c9e5993367cef2a2b75fd6c98f520ebb6"
-expected_axiom_report_hash = "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07"
-expected_certificate_hash = "sha256:aa550dd64c124f2ffec926efa2e23056bc7441c1b650c0114d01cd60331bfac9"
+expected_source_hash = "sha256:b0766e51c45a5306f789d7a572dcef54fd1929433458bdeab1c12d19c7079de1"
+expected_certificate_file_hash = "sha256:396db9a581c946cebd5f515e97b33d77d5b1f1ec4bfc6a7db574e6c57358d52d"
+expected_export_hash = "sha256:60e55fcc9ded451dd32c9ad2db05a4ffa046804c9cd6fec9abeda0aaf00dec41"
+expected_axiom_report_hash = "sha256:5179d6cbb5510b049ee53c122a9481529db7972f0da0ff0a594070d1d8106526"
+expected_certificate_hash = "sha256:bfd558e4039fc1a87ed6e30f98a025116286ee2f7e522bc8fad6a7681859a41f"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.Geometry.Affine"]
 definitions = ["Perp", "RightTriangle", "AngleRight", "Area2", "FootOnHypotenuse"]
-theorems = ["perp_iff_dot_eq_zero", "perp_symm", "right_triangle_legs_perp", "pythagorean_distance_sq_law", "law_of_cosines_sq_law", "right_triangle_area_sq_law", "median_to_hypotenuse_sq_law"]
+theorems = ["perp_iff_dot_eq_zero", "right_triangle_legs_perp"]
 axioms = []
 
 [[modules]]
@@ -531,10 +531,10 @@ meta = "Mathlib/Geometry/RightTriangle/Derived/meta.json"
 replay = "Mathlib/Geometry/RightTriangle/Derived/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:1d412feb97d4752995d0658eecce25367ca184d8397c6cc1d25edc5b0fb28385"
-expected_certificate_file_hash = "sha256:9e9ddf0828c4a49b160da5247bf8aba38181324c0d1d6bd90d22839da0743e1d"
-expected_export_hash = "sha256:1969711e60e0d8ab03fede531b922ee93b64d29a6591c7ba1a5d8656fd90798f"
+expected_certificate_file_hash = "sha256:43222cc246f736a6c048ebb6ed7e5d36f1e80fcdfe654e179a9dc0c96a5a2546"
+expected_export_hash = "sha256:741286980005f0a31b90e6dfd4303816f9dc7822824211d3fc2aaa1bfcd51233"
 expected_axiom_report_hash = "sha256:9deb93395a1420d707809d0629416863854e22fe64ca6eac9fd723dfffbb2515"
-expected_certificate_hash = "sha256:91d0335c7ba95bc87b34e8392c67e18adeabcc644883f70c7658e2680a0a7a6d"
+expected_certificate_hash = "sha256:8bf1c237e69d9f1cd87c66f4eab6a434693811724aed1c89fb2eb3740c873b64"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Carrier"]
 definitions = []
 theorems = ["right_triangle_neg_zero", "right_triangle_legs_perp_vec", "right_triangle_legs_dot_zero", "right_triangle_neg_left_dot_zero", "right_triangle_neg_left_perp_vec", "right_triangle_affine_additive_perp_bridge"]
@@ -547,14 +547,14 @@ certificate = "Mathlib/Geometry/Metric/Carrier/certificate.npcert"
 meta = "Mathlib/Geometry/Metric/Carrier/meta.json"
 replay = "Mathlib/Geometry/Metric/Carrier/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:69d9c123e85b6013f73d2a84fcc86fedd397e69573c78cea9be015a8d97ddea7"
-expected_certificate_file_hash = "sha256:b1f2fe00b9a44cdd0c529a7bfbf11d1bc89d77e924211eb3c48948c3e3ac68bf"
-expected_export_hash = "sha256:07175503959836715d898577299d1652fdc1e4bcb446a57dc90a648748e79743"
-expected_axiom_report_hash = "sha256:b683ec26dd9da17affedaeb69c226b9b8b3a3dd7bc68442117e84b903240ec1b"
-expected_certificate_hash = "sha256:a27a892a8e2f78dbc1444098ebe0bcab13e7e0f19415d68158ed5f20fd34abb0"
+expected_source_hash = "sha256:4327c21882d9af05f5c949535f80f3443ef8b37dd6087fd766ae119e60fd3d01"
+expected_certificate_file_hash = "sha256:5d0c995465535c91694ba008f65104e083b6a2e37b9f10435dbe62095e418561"
+expected_export_hash = "sha256:d80d3434b99710bbe196eeac798accca05b0af1be6395e540f23648c38878f02"
+expected_axiom_report_hash = "sha256:0ae085612d6240236b3e42ba55aa2b65ba17ab7bb0efa7bb5201598ea282e839"
+expected_certificate_hash = "sha256:1795a0308edcf73ecbfa068f5ce6e29b0e9fead85826249d2c8e4d9cbb03feac"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Carrier"]
 definitions = ["dist", "MetricSpaceLawArgs", "Ball"]
-theorems = ["dist_def", "point_dist_sq_nonneg", "square_dist_eq_dist_sq", "dist_sq_eq_square_dist_of_sqrt_sq", "dist_sq_eq_square_dist", "dist_sq_points_le_square_sum_dist", "dist_nonneg_of_sqrt_nonneg", "triangle_inequality_of_dist_sq_bound", "dist_nonneg", "distance_symm", "distance_zero_iff_eq", "pythagorean_distance_law", "triangle_inequality"]
+theorems = ["dist_def", "point_dist_sq_nonneg", "square_dist_eq_dist_sq", "dist_sq_eq_square_dist_of_sqrt_sq", "dist_sq_eq_square_dist", "dist_sq_points_le_square_sum_dist", "dist_nonneg_of_sqrt_nonneg", "triangle_inequality_of_dist_sq_bound"]
 axioms = ["Eq.rec"]
 
 [[modules]]
@@ -564,15 +564,15 @@ certificate = "Mathlib/Geometry/Pythagorean/certificate.npcert"
 meta = "Mathlib/Geometry/Pythagorean/meta.json"
 replay = "Mathlib/Geometry/Pythagorean/replay.json"
 producer_profile = "human-surface-explicit-term"
-expected_source_hash = "sha256:c11e89c639027ed3f976f7e500b31112559d31f0ab3a6000d5f689105350f348"
-expected_certificate_file_hash = "sha256:41724ee89a5ee3b387f7e36b394364b8a6f83149547dcb110705dcd4bcd8a694"
-expected_export_hash = "sha256:6eced160d84dec9566aeb27abd45c51422e454f67356bf45d70d2feee1aa43ef"
-expected_axiom_report_hash = "sha256:17ecb11b616e9ee8e49162b79b996da7567201892f1a83e255b69403a0822596"
-expected_certificate_hash = "sha256:8acdc0542a1b23ef19fe2eb8bf6e4be9d8b260807b93faf9bbc2eff98a2a0c64"
+expected_source_hash = "sha256:88c711ddf196e52efa0a7e37a294cfdaf072f51b85791f3fcfb8df958468250b"
+expected_certificate_file_hash = "sha256:742cb2b7cacf80a334beb51ab440b92e0564fd93afd0c59c82038e8f76d7aed2"
+expected_export_hash = "sha256:b67afd3a2974b7df850144c3120725dccd201e5b5ddae151de18d50d4377f74b"
+expected_axiom_report_hash = "sha256:630e21628c1bc6c54e3a88a122b057d41260d3ccf80f8098156397424ecabea1"
+expected_certificate_hash = "sha256:a3b06ff7c7b4a5818b39ea8c0e71b59891992196e65ad54825799831b87ddfe5"
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Ring.Basic", "Mathlib.Algebra.OrderedField.Basic", "Mathlib.Algebra.OrderedField.Square", "Mathlib.Algebra.OrderedField.ScalarIdentities", "Mathlib.LinearAlgebra.VectorSpace", "Mathlib.LinearAlgebra.InnerProduct", "Mathlib.LinearAlgebra.InnerProduct.Derived", "Mathlib.Geometry.Affine", "Mathlib.Geometry.Affine.Derived", "Mathlib.Geometry.RightTriangle.Carrier", "Mathlib.Geometry.RightTriangle.Derived", "Mathlib.Geometry.Metric.Carrier"]
 definitions = []
-theorems = ["pythagorean_dist_sq_symm", "pythagorean_dist_sq_reverse_norm_neg", "pythagorean_left_leg_norm_neg", "law_of_cosines_sq_core", "law_of_cosines_sq", "law_of_cosines_dist_sq", "pythagorean_distance_sq", "pythagorean_theorem_sq", "pythagorean_theorem_dist_sq", "pythagorean_converse_sq", "law_of_cosines_right_angle_specialization_sq", "law_of_cosines_right_angle_specialization", "pythagorean_theorem", "metric_space_laws_self"]
-axioms = ["Eq.rec"]
+theorems = ["pythagorean_dist_sq_symm", "pythagorean_dist_sq_reverse_norm_neg", "pythagorean_left_leg_norm_neg", "law_of_cosines_sq_core", "law_of_cosines_sq", "law_of_cosines_dist_sq", "pythagorean_distance_sq", "pythagorean_theorem_sq", "pythagorean_theorem_dist_sq", "law_of_cosines_right_angle_specialization_sq", "law_of_cosines_right_angle_specialization", "pythagorean_theorem", "metric_space_laws_self"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Ring.UnitModel.Square"
@@ -606,7 +606,7 @@ expected_certificate_hash = "sha256:ae0e5ac36b7f4c2729fb4f202627afd575763927db61
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning"]
 definitions = ["GroupLawArgs", "GroupHomLawArgs", "KernelPred", "KerRel"]
 theorems = ["group_mul_assoc", "group_one_mul", "group_mul_one", "group_inv_mul", "group_mul_inv", "group_left_cancel", "group_inv_inv", "group_inv_mul_left_reassoc", "group_conj_slide", "group_product_mul_reassoc", "group_mul_inv_rev", "group_product_inv_reassoc", "group_inv_rel_symm_reassoc", "group_rel_trans_reassoc", "group_rel_mul_reassoc", "group_rel_inv_reassoc", "hom_mul", "hom_one", "hom_inv", "kernel_one", "ker_rel_refl", "ker_rel_symm", "ker_rel_trans"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Subgroup"
@@ -623,7 +623,7 @@ expected_certificate_hash = "sha256:b3b47c9d314d69594d1c80e24fd4d1954c242ef289e2
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
 definitions = ["SubgroupLawArgs", "NormalSubgroupLawArgs", "SubgroupInterPred", "SubgroupProductPred", "NormalRel"]
 theorems = ["subgroup_one", "subgroup_mul_closed", "subgroup_inv_closed", "normal_subgroup_laws", "normal_conj_closed", "normal_inv_conj_closed", "subgroup_inter_intro", "subgroup_inter_left", "subgroup_inter_right", "subgroup_inter_one", "subgroup_inter_mul_closed", "subgroup_inter_inv_closed", "subgroup_inter_normal_in_left", "subgroup_product_intro", "subgroup_product_elim", "subgroup_product_one", "subgroup_product_mul_closed", "subgroup_product_inv_closed", "subgroup_product_laws", "normal_rel_refl", "normal_rel_symm", "normal_rel_trans", "normal_rel_of_eq", "normal_rel_mul_compat", "normal_rel_inv_compat", "normal_rel_one_of_mem", "normal_rel_one_to_mem", "normal_rel_product_right"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Subgroup.Order"
@@ -657,7 +657,7 @@ expected_certificate_hash = "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56f
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
 definitions = []
 theorems = ["kernel_mul_closed", "kernel_inv_closed", "kernel_conj_closed"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Image"
@@ -674,7 +674,7 @@ expected_certificate_hash = "sha256:6b69557ec90109fac32db07e78f35a2150dbda092294
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic"]
 definitions = ["ImagePred"]
 theorems = ["image_intro", "image_elim", "image_one", "image_mul_closed", "image_inv_closed"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient"
@@ -691,7 +691,7 @@ expected_certificate_hash = "sha256:2b83a38a3dfc925de2f34b6de693c3002137823d5234
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic"]
 definitions = ["KernelSetoid", "KernelQuotient", "KernelQuotientMk", "KernelQuotientToH"]
 theorems = ["kernel_quotient_sound", "kernel_quotient_to_h_mk", "kernel_quotient_to_h_mul_mk"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Mul"
@@ -708,7 +708,7 @@ expected_certificate_hash = "sha256:f9850fecdafc215387aed0f68923af755dce0a50aaf2
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient"]
 definitions = ["KernelQuotientMulRep"]
 theorems = ["kernel_quotient_mul_rep_compat"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Group"
@@ -725,7 +725,7 @@ expected_certificate_hash = "sha256:4b671e6f81759f0106dcaed06c3189ed3e1c18e5f981
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul"]
 definitions = ["KernelQuotientMul", "KernelQuotientOne", "KernelQuotientInv"]
 theorems = ["kernel_quotient_mul_mk", "kernel_quotient_inv_mk", "kernel_quotient_mul_assoc", "kernel_quotient_one_mul", "kernel_quotient_mul_one", "kernel_quotient_inv_mul", "kernel_quotient_mul_inv"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Kernel.Quotient.Hom"
@@ -742,7 +742,7 @@ expected_certificate_hash = "sha256:5e758029449be99ca69267c4a2a32b01304201e997aa
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group"]
 definitions = []
 theorems = ["kernel_quotient_to_h_mul"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.FirstIsomorphism"
@@ -759,7 +759,7 @@ expected_certificate_hash = "sha256:5a7f3d09374804bf8a07a00dcc2295bea862b592cf67
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Image", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Kernel.Quotient.Mul", "Mathlib.Algebra.Group.Kernel.Quotient.Group", "Mathlib.Algebra.Group.Kernel.Quotient.Hom"]
 definitions = []
 theorems = ["first_iso_map_mul", "first_iso_map_injective", "first_iso_map_hits_image", "first_iso_map_surj_image", "first_isomorphism_image_facts"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.FirstIsomorphism.Image"
@@ -777,7 +777,7 @@ imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.B
 inductives = ["FirstIsoQuotientAssocFacts", "FirstIsoQuotientOneMulFacts", "FirstIsoQuotientMulOneFacts", "FirstIsoQuotientInvMulFacts", "FirstIsoQuotientMulInvFacts", "FirstIsoQuotientGroupFacts", "FirstIsoImageGroupClosureFacts", "FirstIsoTheoremFacts"]
 definitions = ["FirstIsoImageGroupFacts", "FirstIsoImage"]
 theorems = ["first_iso_quotient_assoc_facts", "first_iso_quotient_one_mul_facts", "first_iso_quotient_mul_one_facts", "first_iso_quotient_inv_mul_facts", "first_iso_quotient_mul_inv_facts", "first_iso_quotient_group_facts", "first_iso_image_group_closure_facts", "first_iso_image_group_facts", "first_isomorphism_theorem_facts", "first_isomorphism_to_image"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Quotient"
@@ -794,7 +794,7 @@ expected_certificate_hash = "sha256:a1b4e961a00fc0a7315f39edda223094da0eeefa8134
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup"]
 definitions = ["NormalSetoid", "NormalQuotient", "NormalQuotientMk"]
 theorems = ["normal_quot_sound"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Quotient.Mul"
@@ -811,7 +811,7 @@ expected_certificate_hash = "sha256:2c166888c06b0417e2ce53c05f9c8177e0f41ef807d8
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient"]
 definitions = ["NormalQuotientMulRep"]
 theorems = ["normal_quot_mul_rep_compat"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Quotient.Group"
@@ -828,7 +828,7 @@ expected_certificate_hash = "sha256:d0d7edf8ae5f149b382fbd0677c632ba409ea310e50e
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul"]
 definitions = ["NormalQuotientMul", "NormalQuotientOne", "NormalQuotientInv"]
 theorems = ["normal_quot_mul_mk", "normal_quot_inv_mk", "normal_quot_mul_assoc", "normal_quot_one_mul", "normal_quot_mul_one", "normal_quot_inv_mul", "normal_quot_mul_inv"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.SecondIsomorphism.Map"
@@ -845,7 +845,7 @@ expected_certificate_hash = "sha256:04eebb174df24ab67df884f7610c3f5168ef83bb44b3
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group"]
 definitions = ["SecondIsoMap"]
 theorems = ["second_iso_map_mk", "second_iso_map_mul", "second_iso_map_one", "second_iso_augmented_map_inv"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.SecondIsomorphism.Kernel"
@@ -862,7 +862,7 @@ expected_certificate_hash = "sha256:b8848445a44814946c67f61fb12c2e9db0b853803433
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.SecondIsomorphism.Map"]
 definitions = ["SecondIsoKernelPred"]
 theorems = ["second_iso_kernel_sound", "second_iso_kernel_to_inter", "second_iso_inter_to_kernel"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.SecondIsomorphism.Image"
@@ -879,7 +879,7 @@ expected_certificate_hash = "sha256:8d6fa6ac5e23f714abc05eca3848c72d7a80a2a018ad
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.SecondIsomorphism.Map"]
 definitions = ["SecondIsoImagePred", "SecondIsoProductQuotPred"]
 theorems = ["second_iso_image_intro", "second_iso_image_elim", "second_iso_product_quot_intro", "second_iso_product_quot_elim", "second_iso_image_to_product_quot", "second_iso_product_quot_to_image"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.SecondIsomorphism"
@@ -896,7 +896,7 @@ expected_certificate_hash = "sha256:05c4293ae8936d6c583f9946d9241c86e6be3b981f1f
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.SecondIsomorphism.Map", "Mathlib.Algebra.Group.SecondIsomorphism.Kernel", "Mathlib.Algebra.Group.SecondIsomorphism.Image"]
 definitions = ["SecondIsoKernelFacts", "SecondIsoImageFacts", "SecondIsoTheoremFacts"]
 theorems = ["second_iso_kernel_facts", "second_iso_image_facts", "second_isomorphism_theorem"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.ThirdIsomorphism"
@@ -913,7 +913,7 @@ expected_certificate_hash = "sha256:ad006debb1586229743cd23ef61d6863d33a72821ead
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Kernel.Quotient", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group"]
 definitions = ["ThirdIsoQuotientByN", "ThirdIsoQuotientByNOne", "ThirdIsoQuotientByNMul", "ThirdIsoQuotientByNInv", "ThirdIsoSubquotientPred", "ThirdIsoSubquotientSubgroupLawArgs", "ThirdIsoSubquotientNormalSubgroupLawArgs", "ThirdIsoMap", "ThirdIsoMapKernelQuotient", "ThirdIsoKernelPred", "ThirdIsoKernelFacts", "ThirdIsoTheoremFacts"]
 theorems = ["third_iso_rel_lift", "third_iso_subquotient_intro", "third_iso_subquotient_elim", "third_iso_subquotient_one", "third_iso_subquotient_mul_closed", "third_iso_subquotient_inv_closed", "third_iso_subquotient_conj_closed", "third_iso_map_mk", "third_iso_map_mul", "third_iso_map_one", "third_iso_augmented_map_inv", "third_iso_map_surjective", "third_iso_subquotient_to_kernel_sound", "third_iso_kernel_intro", "third_iso_kernel_facts", "third_isomorphism_theorem"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Correspondence.Basic"
@@ -930,7 +930,7 @@ expected_certificate_hash = "sha256:24bee46a973397428e38c02a134ab334c4d95090c5ab
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group"]
 definitions = ["CorrespondenceImagePred", "CorrespondencePreimagePred", "CorrespondenceSaturationPred", "CorrespondenceImageSubgroupMk", "CorrespondencePreimageSubgroupMk", "CorrespondenceImageSubgroupLawArgs", "CorrespondencePreimageSubgroupLawArgs", "CorrespondenceTheoremMk"]
 theorems = ["correspondence_group_mul_inv_left_reassoc", "correspondence_subgroup_saturates", "correspondence_image_intro", "correspondence_saturation_intro", "correspondence_saturation_elim", "correspondence_image_elim", "correspondence_image_one", "correspondence_image_mul_closed", "correspondence_image_inv_closed", "correspondence_preimage_one", "correspondence_preimage_mul_closed", "correspondence_preimage_inv_closed", "correspondence_preimage_contains_normal", "correspondence_subgroup_to_preimage_image", "correspondence_subgroup_to_saturation", "correspondence_saturation_to_subgroup", "correspondence_quotient_to_image_preimage", "correspondence_image_preimage_to_quotient"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Correspondence.Order"
@@ -947,7 +947,7 @@ expected_certificate_hash = "sha256:808013b657c1f0a2bdd3aa5e8ebcbca49c2b518a902b
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Subgroup.Order", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.Correspondence.Basic"]
 definitions = []
 theorems = ["correspondence_image_mono", "correspondence_preimage_mono", "correspondence_image_respects_equiv", "correspondence_preimage_respects_equiv"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Correspondence"
@@ -965,7 +965,7 @@ imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.B
 inductives = ["CorrespondenceImageSubgroupFacts", "CorrespondencePreimageSubgroupFacts", "CorrespondenceContainmentFacts", "CorrespondenceSubgroupSaturationFacts", "CorrespondenceQuotientRoundTripFacts", "CorrespondenceTheoremFacts"]
 definitions = []
 theorems = ["correspondence_image_subgroup_law_args", "correspondence_preimage_subgroup_law_args", "correspondence_image_subgroup_facts", "correspondence_preimage_subgroup_facts", "correspondence_containment_facts", "correspondence_subgroup_saturation_facts", "correspondence_quotient_round_trip_facts", "subgroup_correspondence_theorem"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.Group.Correspondence.OrderFacts"
@@ -982,7 +982,7 @@ expected_certificate_hash = "sha256:980501e64472021b7b8228d06411c044d243b2e3781f
 imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.Subgroup", "Mathlib.Algebra.Group.Subgroup.Order", "Mathlib.Algebra.Group.Quotient", "Mathlib.Algebra.Group.Quotient.Mul", "Mathlib.Algebra.Group.Quotient.Group", "Mathlib.Algebra.Group.Correspondence.Basic", "Mathlib.Algebra.Group.Correspondence.Order", "Mathlib.Algebra.Group.Correspondence"]
 definitions = ["CorrespondenceOrderFacts"]
 theorems = ["correspondence_order_facts"]
-axioms = ["Eq.rec"]
+axioms = []
 
 [[modules]]
 module = "Mathlib.Algebra.OrderedField.UnitModel"
@@ -1078,10 +1078,10 @@ meta = "Mathlib/Algebra/Field/Basic/meta.json"
 replay = "Mathlib/Algebra/Field/Basic/replay.json"
 producer_profile = "human-surface-explicit-term"
 expected_source_hash = "sha256:2f03f5f56d4aecec1c0a27234a877438893a1b235bee099ec8044e2a1cbc8903"
-expected_certificate_file_hash = "sha256:bc9987144ffb7997a759b752ebb92a6a3d9c4a0284081c954f791e18a2c5fc72"
+expected_certificate_file_hash = "sha256:1620fd00eb3bb5ae50073847e50de7aad8fae342618490528715d082c4d991e0"
 expected_export_hash = "sha256:777de3ddecd35e7f14255d942b5e4e31896a22fee9fd47e0b7669a52c8070c35"
 expected_axiom_report_hash = "sha256:6fb10daa6bb059bfea6535d1d96e9ae73c2da1aee15921bf824480bbeee32550"
-expected_certificate_hash = "sha256:be49329fb3c992cf1d5e592c83f79c125c8be9697eb2acc001f7b345b0df92ed"
+expected_certificate_hash = "sha256:6fd8762a5f98c53868757616b82c7e63c3dc289ba529177187f5ca33db3a9e36"
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
 definitions = ["FieldFalse", "FieldNot", "Nonzero", "div", "FieldLawArgs"]
 theorems = ["field_ring_laws", "field_zero_ne_one", "field_inv_mul_cancel", "field_mul_inv_cancel", "field_div_eq_mul_inv", "field_inv_one", "field_div_one", "field_div_self_nonzero", "field_zero_div", "field_mul_left_cancel_nonzero", "field_mul_right_cancel_nonzero", "field_nonzero_mul_closed", "field_mul_eq_zero_cases"]
