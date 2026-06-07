@@ -5,11 +5,11 @@
   "certificate": "Mathlib/LinearAlgebra/VectorSpace/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:17429b12b99e8cd2c034155c60da2c51a5253bee925afb365edcf9ec2c18ff5d",
-  "certificate_file_sha256": "sha256:62de5ab69e5174d57fb395ae9a0ac7f1f401be1f8c8c30553228efc65d6e3e5e",
-  "export_hash": "sha256:34ff78798631f0da81a876a76e4b13c947f28bb059407792c2bc5441bcb68b05",
+  "source_sha256": "sha256:0524f18b2931950aefa0a108c1980f926935cd74ef2a773c6440c1b35ea308c2",
+  "certificate_file_sha256": "sha256:b94c3a65e2d5405e89332904ee431ec5b93791a8ec09aaea8d2981cdd074b8ab",
+  "export_hash": "sha256:e2eff01267f2e7bc556bccbc79af0d6b6adeba94bc12b470a5fe2ae7281d258e",
   "axiom_report_hash": "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839",
-  "certificate_hash": "sha256:abaaa95f8a0c50cdb4eaa6f723143694fd5101370e0e87ead76633e4fe86d053",
+  "certificate_hash": "sha256:8e7bbafb6cdfcf7fc31db0ff31e6148a9dcb090e33c73af6c49dfe55f2d6c049",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -37,19 +37,19 @@
       "kind": "def"
     },
     {
-      "name": "vec_sub_def",
+      "name": "vector_space_vec_sub_def",
       "kind": "theorem"
     },
     {
-      "name": "vec_sub_eq_add_neg",
+      "name": "vector_space_vec_sub_eq_add_neg",
       "kind": "theorem"
     },
     {
-      "name": "linear_comb2_ext",
+      "name": "vector_space_linear_comb2_ext",
       "kind": "theorem"
     },
     {
-      "name": "linear_comb3_ext",
+      "name": "vector_space_linear_comb3_ext",
       "kind": "theorem"
     }
   ],

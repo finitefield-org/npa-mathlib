@@ -5,11 +5,11 @@
   "certificate": "Mathlib/LinearAlgebra/InnerProduct/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:878453c77bc23c07c956c5a5793d53d13d4f7c47b0996c2e379d0dd208d5c552",
-  "certificate_file_sha256": "sha256:5fb99a266c3c72c2ee8c0f4bbd0b83403ac19ec8e6a82f6934afd5a1a60bba2d",
-  "export_hash": "sha256:b146f1bf4da1faa4597d8e470fb8b9584ab708bacf5e22a7de4a713a5054b419",
+  "source_sha256": "sha256:41f12079458206f4bc57bc9fe0c4dc71456c95f6bf9fbbf0dbf2df8cf41ccd1e",
+  "certificate_file_sha256": "sha256:8dbbd54e3697a46e0526ab46b854d25901650c4276dc47d696c1a19ebee56048",
+  "export_hash": "sha256:e4b7dbe1f70c8f052671498e037876ef9693261a7d415ac8a6ba71ff52e04adb",
   "axiom_report_hash": "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36",
-  "certificate_hash": "sha256:d6ec3196182fd032210eb3d2bff64947f4994a9f68705850570f307c294d70ed",
+  "certificate_hash": "sha256:a75b345e7cf7ea36e8453dd5e26566f61fe08683a66437ed8372b1b2debf6169",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -42,19 +42,19 @@
       "kind": "def"
     },
     {
-      "name": "norm_sq_def",
+      "name": "inner_product_norm_sq_def",
       "kind": "theorem"
     },
     {
-      "name": "dist_sq_def",
+      "name": "inner_product_dist_sq_def",
       "kind": "theorem"
     },
     {
-      "name": "dot_self_eq_norm_sq",
+      "name": "inner_product_dot_self_eq_norm_sq",
       "kind": "theorem"
     },
     {
-      "name": "perp_vec_iff_dot_eq_zero",
+      "name": "inner_product_perp_vec_iff_dot_eq_zero",
       "kind": "theorem"
     }
   ],

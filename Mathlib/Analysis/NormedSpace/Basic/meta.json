@@ -5,17 +5,19 @@
   "certificate": "Mathlib/Analysis/NormedSpace/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:2152518532c89e59bfa0b85419a424dd43e550668104c092e73fcdb9f33ffbe3",
-  "certificate_file_sha256": "sha256:7538a523a73c6e52aee5fc838b53d271fd69882cacc7ffccd36c91cd345b4853",
-  "export_hash": "sha256:ccf1146511d85eb42fdafb49d708269e57ca1fa18ee1c59ff6ea084c6acd3077",
+  "source_sha256": "sha256:b181e0cd612a25f04702b8ee78517efe8e618843b069b437e20d5aaef6fa5c65",
+  "certificate_file_sha256": "sha256:e50c992a7dade80c60e066fa6f47c167b8149a300bac75f7c04e2cdb2604d3db",
+  "export_hash": "sha256:da3b57e33d83539ff0fa2cd25f42f066b836518ac3a03780d42ac59a9409a0a6",
   "axiom_report_hash": "sha256:4ffc0ac83684ca65d83296a7fb4b8104c1099ad79204df7e4efd1f430359d3c0",
-  "certificate_hash": "sha256:0b66ff38dffb9d04a4765bc20865fc94f7f034ce0aa3a956315bb75a2ff1989e",
+  "certificate_hash": "sha256:bdd010dbb440a8746697b50bba71291d37bb82fcdb59360d8fbc071c26044b82",
   "imports": [
     "Std.Logic.Eq",
     "Mathlib.Logic.EqReasoning",
     "Mathlib.LinearAlgebra.VectorSpace"
   ],
-  "axioms": [],
+  "axioms": [
+
+  ],
   "declarations": [
     {
       "name": "NormDist",
@@ -58,115 +60,115 @@
       "kind": "def"
     },
     {
-      "name": "norm_dist_def",
+      "name": "normed_space_norm_dist_def",
       "kind": "theorem"
     },
     {
-      "name": "norm_nonneg",
+      "name": "normed_space_norm_nonneg",
       "kind": "theorem"
     },
     {
-      "name": "norm_zero",
+      "name": "normed_space_norm_zero",
       "kind": "theorem"
     },
     {
-      "name": "norm_triangle",
+      "name": "normed_space_norm_triangle",
       "kind": "theorem"
     },
     {
-      "name": "norm_neg",
+      "name": "normed_space_norm_neg",
       "kind": "theorem"
     },
     {
-      "name": "norm_dist_self",
+      "name": "normed_space_norm_dist_self",
       "kind": "theorem"
     },
     {
-      "name": "norm_dist_symm",
+      "name": "normed_space_norm_dist_symm",
       "kind": "theorem"
     },
     {
-      "name": "norm_dist_triangle",
+      "name": "normed_space_norm_dist_triangle",
       "kind": "theorem"
     },
     {
-      "name": "product_zero_def",
+      "name": "normed_space_product_zero_def",
       "kind": "theorem"
     },
     {
-      "name": "product_add_def",
+      "name": "normed_space_product_add_def",
       "kind": "theorem"
     },
     {
-      "name": "product_neg_def",
+      "name": "normed_space_product_neg_def",
       "kind": "theorem"
     },
     {
-      "name": "product_smul_def",
+      "name": "normed_space_product_smul_def",
       "kind": "theorem"
     },
     {
-      "name": "product_sub_def",
+      "name": "normed_space_product_sub_def",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_def",
+      "name": "normed_space_product_norm_def",
       "kind": "theorem"
     },
     {
-      "name": "product_dist_def",
+      "name": "normed_space_product_dist_def",
       "kind": "theorem"
     },
     {
-      "name": "product_fst_pair",
+      "name": "normed_space_product_fst_pair",
       "kind": "theorem"
     },
     {
-      "name": "product_snd_pair",
+      "name": "normed_space_product_snd_pair",
       "kind": "theorem"
     },
     {
-      "name": "product_pair_eta",
+      "name": "normed_space_product_pair_eta",
       "kind": "theorem"
     },
     {
-      "name": "product_add_fst",
+      "name": "normed_space_product_add_fst",
       "kind": "theorem"
     },
     {
-      "name": "product_add_snd",
+      "name": "normed_space_product_add_snd",
       "kind": "theorem"
     },
     {
-      "name": "product_smul_fst",
+      "name": "normed_space_product_smul_fst",
       "kind": "theorem"
     },
     {
-      "name": "product_smul_snd",
+      "name": "normed_space_product_smul_snd",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_pair_eq",
+      "name": "normed_space_product_norm_pair_eq",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_fst_le",
+      "name": "normed_space_product_norm_fst_le",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_snd_le",
+      "name": "normed_space_product_norm_snd_le",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_pair_le_add",
+      "name": "normed_space_product_norm_pair_le_add",
       "kind": "theorem"
     },
     {
-      "name": "product_norm_add_le",
+      "name": "normed_space_product_norm_add_le",
       "kind": "theorem"
     },
     {
-      "name": "product_dist_pair_le_add",
+      "name": "normed_space_product_dist_pair_le_add",
       "kind": "theorem"
     }
   ],

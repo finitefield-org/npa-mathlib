@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/Pythagorean/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:88c711ddf196e52efa0a7e37a294cfdaf072f51b85791f3fcfb8df958468250b",
-  "certificate_file_sha256": "sha256:742cb2b7cacf80a334beb51ab440b92e0564fd93afd0c59c82038e8f76d7aed2",
-  "export_hash": "sha256:b67afd3a2974b7df850144c3120725dccd201e5b5ddae151de18d50d4377f74b",
+  "source_sha256": "sha256:f045e386885a7dd51fe51eaf28600384ac1485303637073878d24ceaa20bb5ed",
+  "certificate_file_sha256": "sha256:fafd6fda9b244ed73921516578c61311c3798ed002b84d038f21d3b4775f0c2f",
+  "export_hash": "sha256:de5400e0ffb348e2d4f7ada5240f700d16d595d8a6b6f259cedff13fb81ac2f4",
   "axiom_report_hash": "sha256:630e21628c1bc6c54e3a88a122b057d41260d3ccf80f8098156397424ecabea1",
-  "certificate_hash": "sha256:a3b06ff7c7b4a5818b39ea8c0e71b59891992196e65ad54825799831b87ddfe5",
+  "certificate_hash": "sha256:3f28e4de8072dd2075e14ea0f163bb098fc664199ff125ede4d90465b3704866",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -35,11 +35,11 @@
       "kind": "theorem"
     },
     {
-      "name": "pythagorean_dist_sq_reverse_norm_neg",
+      "name": "pythagorean_dist_sq_reverse_normed_space_norm_neg",
       "kind": "theorem"
     },
     {
-      "name": "pythagorean_left_leg_norm_neg",
+      "name": "pythagorean_left_leg_normed_space_norm_neg",
       "kind": "theorem"
     },
     {

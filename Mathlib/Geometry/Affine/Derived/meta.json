@@ -5,11 +5,11 @@
   "certificate": "Mathlib/Geometry/Affine/Derived/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:bbc698e9011a6e1ce21045be3d64906163e2894e8f5841ec83d8ad0f3160d84f",
-  "certificate_file_sha256": "sha256:6c40a41827549e3195772902a8060133fe8c5ad6116bacb9b03fa828d0d1bfcf",
-  "export_hash": "sha256:fec1e1189162e50813debb665c1c05ff849f7c6f860f04382589193e29a7d377",
+  "source_sha256": "sha256:ee8f3eb06ab9006013f23e9126e4c4a771329a647201988955336d93a9673281",
+  "certificate_file_sha256": "sha256:2c74fba1c98c25cf5a351196ee3bf04dc32b5a4b76f8a605da38f418d18b2f7a",
+  "export_hash": "sha256:3c9e896cc92f293265638336d454ffbbcf8b7c34e1224d581e6c1779b8eb00d8",
   "axiom_report_hash": "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c",
-  "certificate_hash": "sha256:debc3b11ea469d7debefcdcade890c54adcc8d6cea0946912c66b20e3386010b",
+  "certificate_hash": "sha256:226db2ec160cf9913f6c18afc2659a38b6ef3c2d36238d3627cfac180ffd8727",
   "imports": [
     "Mathlib.Algebra.OrderedField.Basic",
     "Mathlib.Algebra.Ring.Basic",
@@ -48,7 +48,7 @@
       "kind": "theorem"
     },
     {
-      "name": "affine_dist_sq_hypotenuse_norm_neg_left_add_right",
+      "name": "affine_dist_sq_hypotenuse_normed_space_norm_neg_left_add_right",
       "kind": "theorem"
     },
     {
