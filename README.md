@@ -13,8 +13,7 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the analysis implicit-function closure public
-package:
+This repository contains the abstract field foundation public package:
 
 ```text
 Mathlib.Algebra.Group.Correspondence.OrderFacts
@@ -44,6 +43,7 @@ Mathlib.Logic.EqReasoning
 Mathlib.Topology.Metric.Local
 Mathlib.Algebra.Group.Basic
 Mathlib.Algebra.Ring.Basic
+Mathlib.Algebra.Field.Basic
 Mathlib.Algebra.Ring.FirstIsomorphism.Basic
 Mathlib.Algebra.Ring.FirstIsomorphism
 Mathlib.Algebra.Ring.ChineseRemainder
@@ -84,7 +84,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.27"
+version = "0.1.28"
 schema = "npa.package.v0.1"
 ```
 

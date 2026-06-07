@@ -265,6 +265,12 @@ Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap
 Mathlib.Analysis.Calculus.ImplicitFunction
 ```
 
+The `v0.1.28` release adds this abstract field foundation module:
+
+```text
+Mathlib.Algebra.Field.Basic
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -382,6 +388,12 @@ The abstract ring foundation mapping is fixed:
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractRing` | `Mathlib.Algebra.Ring.Basic` | `Mathlib/Algebra/Ring/Basic/` |
+
+The abstract field foundation mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.Algebra.AbstractField` | `Mathlib.Algebra.Field.Basic` | `Mathlib/Algebra/Field/Basic/` |
 
 The ring first-isomorphism and CRT mapping is fixed:
 
@@ -511,6 +523,13 @@ declaration names such as `add_assoc` and `ring_reorder_three_mul_terms`;
 downstream packages should import the abstract foundation or the concrete route
 according to the proof surface they need, not both in the same source module
 unless they have a deliberate disambiguation plan.
+
+The abstract field foundation uses `Mathlib.Algebra.Field.Basic` for arbitrary
+`Scalar` field-law package facts. It imports `Std.Logic.Eq` and
+`Mathlib.Algebra.Ring.Basic` directly and exposes `FieldLawArgs`,
+`Nonzero`, `div`, and the `field_*` projection/cancellation facts. Field
+homomorphism, extension, ideal, polynomial quotient, and finite-field routes
+remain separate future promotion layers.
 
 The v0.1.16 ring first-isomorphism and CRT route does not introduce a separate
 `Mathlib.Algebra.Ring.Hom` module. The checked corpus base module bundles the

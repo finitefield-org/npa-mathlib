@@ -9,9 +9,9 @@ Consumed package artifact:
 
 - release metadata: `../../generated/publish-plan.json`
 - downstream import bundle module:
-  `Mathlib.Analysis.Calculus.ImplicitFunction`
+  `Mathlib.Algebra.Field.Basic`
 - source-free proof artifact:
-  `../../Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert`
+  `../../Mathlib/Algebra/Field/Basic/certificate.npcert`
 
 The fixture vendors the source-free certificate import closure for
 `Mathlib.Analysis.Calculus.ImplicitFunction`:
@@ -20,6 +20,7 @@ The fixture vendors the source-free certificate import closure for
 - `vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Topology/Metric/Local/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert`
+- `vendor/npa-mathlib/Mathlib/Algebra/Field/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert`
 - `vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert`
@@ -39,7 +40,7 @@ are not proof evidence for this fixture. They are deliberately absent from the
 vendored dependency tree; source-free verification reads only the hash-pinned
 certificate bytes and the downstream package certificate.
 
-The local theorems in `Downstream.ImplicitFunction` import the implicit-function
-closure and apply the exported `implicit_augmented_map_derivative`,
-`implicit_function_theorem`, and `implicit_function_derivative_theorem`
-surfaces.
+The local theorems in `Downstream.ImplicitFunction` import the field and
+implicit-function closures and apply the exported `field_div_eq_mul_inv`,
+`implicit_augmented_map_derivative`, `implicit_function_theorem`, and
+`implicit_function_derivative_theorem` surfaces.

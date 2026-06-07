@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.27"
+version = "0.1.28"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib analysis implicit-function closure."
+description = "Public theorem-library package for NPA mathlib abstract field foundation."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -1068,4 +1068,21 @@ expected_certificate_hash = "sha256:97ecdd01f0141fa7e078e5e91e9210d763c66a5b05c5
 imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.UnitModel", "Mathlib.Algebra.Ring.UnitModel.Square", "Mathlib.Algebra.OrderedField.UnitModel", "Mathlib.LinearAlgebra.Vector.UnitModel", "Mathlib.LinearAlgebra.InnerProduct.UnitModel", "Mathlib.Geometry.RightTriangle.UnitModel"]
 definitions = ["dist"]
 theorems = ["dist_def", "dist_sq_eq_square_dist", "dist_nonneg", "distance_symm", "distance_zero_iff_eq", "pythagorean_distance", "cauchy_schwarz", "triangle_inequality"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.Algebra.Field.Basic"
+source = "Mathlib/Algebra/Field/Basic/source.npa"
+certificate = "Mathlib/Algebra/Field/Basic/certificate.npcert"
+meta = "Mathlib/Algebra/Field/Basic/meta.json"
+replay = "Mathlib/Algebra/Field/Basic/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:2f03f5f56d4aecec1c0a27234a877438893a1b235bee099ec8044e2a1cbc8903"
+expected_certificate_file_hash = "sha256:bc9987144ffb7997a759b752ebb92a6a3d9c4a0284081c954f791e18a2c5fc72"
+expected_export_hash = "sha256:777de3ddecd35e7f14255d942b5e4e31896a22fee9fd47e0b7669a52c8070c35"
+expected_axiom_report_hash = "sha256:6fb10daa6bb059bfea6535d1d96e9ae73c2da1aee15921bf824480bbeee32550"
+expected_certificate_hash = "sha256:be49329fb3c992cf1d5e592c83f79c125c8be9697eb2acc001f7b345b0df92ed"
+imports = ["Std.Logic.Eq", "Mathlib.Algebra.Ring.Basic"]
+definitions = ["FieldFalse", "FieldNot", "Nonzero", "div", "FieldLawArgs"]
+theorems = ["field_ring_laws", "field_zero_ne_one", "field_inv_mul_cancel", "field_mul_inv_cancel", "field_div_eq_mul_inv", "field_inv_one", "field_div_one", "field_div_self_nonzero", "field_zero_div", "field_mul_left_cancel_nonzero", "field_mul_right_cancel_nonzero", "field_nonzero_mul_closed", "field_mul_eq_zero_cases"]
 axioms = []
