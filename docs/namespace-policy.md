@@ -277,6 +277,12 @@ The `v0.1.29` release adds this linear algebra matrix foundation module:
 Mathlib.LinearAlgebra.Matrix.Basic
 ```
 
+The `v0.1.30` release adds this linear algebra matrix determinant module:
+
+```text
+Mathlib.LinearAlgebra.Matrix.Determinant
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -436,6 +442,12 @@ The linear algebra matrix foundation mapping is fixed:
 | --- | --- | --- |
 | `Proofs.Ai.LinearAlgebra.Matrix.Basic` | `Mathlib.LinearAlgebra.Matrix.Basic` | `Mathlib/LinearAlgebra/Matrix/Basic/` |
 
+The linear algebra matrix determinant mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.LinearAlgebra.Matrix.Determinant` | `Mathlib.LinearAlgebra.Matrix.Determinant` | `Mathlib/LinearAlgebra/Matrix/Determinant/` |
+
 The geometry Pythagorean closure mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -586,6 +598,13 @@ example `Mathlib.LinearAlgebra.Matrix.Determinant`,
 `Mathlib.LinearAlgebra.Matrix.Rank`, or
 `Mathlib.LinearAlgebra.Matrix.Representation`, instead of overloading the
 foundation module.
+
+The v0.1.30 determinant route uses
+`Mathlib.LinearAlgebra.Matrix.Determinant` for determinant normalization,
+transpose invariance, multilinear/alternating evidence, and determinant product
+theorem projections. Adjugate, Cramer, rank-minor, eigenvalue, and exterior
+determinant bridge routes should import this module instead of redefining
+determinant product facts.
 
 The v0.1.20 geometry Pythagorean closure uses `Mathlib.Geometry.Affine` for
 the abstract point/displacement surface and `Mathlib.Geometry.Pythagorean` for

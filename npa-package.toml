@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.1.29"
+version = "0.1.30"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib linear algebra matrix foundation."
+description = "Public theorem-library package for NPA mathlib linear algebra matrix determinant foundation."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -1102,4 +1102,21 @@ expected_certificate_hash = "sha256:f6e25b4a787b0c468da309b0b02e2a7764e706ad5b6c
 imports = ["Std.Logic.Eq"]
 definitions = ["Matrix", "MatrixEq", "MatrixAdd", "MatrixTranspose", "MatrixProductEvidence", "SquareMatrixMulLawArgs"]
 theorems = ["matrix_intro", "matrix_eq_intro", "matrix_eq_apply", "matrix_add_entry", "matrix_transpose_entry", "matrix_product_evidence_intro", "matrix_product_eq", "square_matrix_mul_law_args_intro", "square_matrix_mul_assoc", "square_matrix_left_unit", "square_matrix_right_unit"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.LinearAlgebra.Matrix.Determinant"
+source = "Mathlib/LinearAlgebra/Matrix/Determinant/source.npa"
+certificate = "Mathlib/LinearAlgebra/Matrix/Determinant/certificate.npcert"
+meta = "Mathlib/LinearAlgebra/Matrix/Determinant/meta.json"
+replay = "Mathlib/LinearAlgebra/Matrix/Determinant/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:447702e9ed1427c85562e6c0ff8bc95e63c2206c3238b3fcb14d491a06066ed2"
+expected_certificate_file_hash = "sha256:1dd9b1f9d53c405aeb643da672251a7c4a92b3113d850641246f9a9ed77dd8bc"
+expected_export_hash = "sha256:b3758548406298afcae732d201b5c631a0b89efe46e957977169a4f26d14233c"
+expected_axiom_report_hash = "sha256:4ce54129453ca5f2cc9726d9e809e739b6640402d7515115c64b8169ae6c93a6"
+expected_certificate_hash = "sha256:bc7aae940a6f0fe171c1ed51403d3c47d0525e9bd006dc1f2c99ef9877c879d9"
+imports = ["Std.Logic.Eq", "Mathlib.LinearAlgebra.Matrix.Basic"]
+definitions = ["DeterminantIdentityNormalized", "DeterminantTransposeInvariant", "DeterminantBasicProperties", "DeterminantProductDerivationEvidence"]
+theorems = ["determinant_identity_normalized_intro", "determinant_identity_normalized_eq", "determinant_transpose_invariant_intro", "determinant_transpose", "determinant_basic_properties_intro", "determinant_basic_identity_normalized", "determinant_basic_identity_eq", "determinant_basic_transpose", "determinant_basic_transpose_eq", "determinant_basic_multilinear", "determinant_basic_alternating", "determinant_product_derivation_evidence_intro", "determinant_product_basic_properties", "determinant_product_matrix_mul_laws", "determinant_product_from_derivation", "determinant_product_theorem", "determinant_product"]
 axioms = []
