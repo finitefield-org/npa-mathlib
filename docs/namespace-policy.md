@@ -698,6 +698,20 @@ useful during proof construction, keep them as internal helpers and export
 content-oriented aliases such as `pythagorean_theorem_sq`, `law_of_cosines_sq`,
 or `law_of_cosines_sq_core`.
 
+For public theorems exported by abstract law-package APIs, prefer the form
+`<category>_<statement>` when the bare statement name could be confused with a
+concrete model, a neighboring structure, or a derived theorem layer. Examples
+include `field_inv_mul_cancel`, `ring_add_assoc`, and
+`ordered_field_le_refl`. Treat the category prefix as part of the mathematical
+surface, not as proof provenance.
+
+Facts that project a component out of a law package should still use
+content-oriented public names. Do not add public suffixes such as `_projection`,
+`_accessor`, `_from_args`, or `_from_law_package` only to reveal that the proof
+is an elimination of a packed law argument. Record projection/accessor roles in
+`generated/theorem-index.json` or module metadata when tooling needs that
+classification.
+
 When two candidate names are both accurate, prefer the one that helps import
 selection. A downstream author should be able to tell from the name whether they
 are importing a concrete model, an abstract law-package API, a
@@ -900,6 +914,10 @@ Before adding a public module, check:
   standard names.
 - Public theorem names describe the statement and do not expose proof
   provenance or package plumbing suffixes.
+- Public theorem names exported by abstract law-package APIs use a category
+  prefix when that is needed to distinguish the mathematical surface, while
+  projection/accessor status is kept in index or metadata rather than the public
+  declaration name.
 - The module is closed over declared package imports.
 - No public artifact contains stale `Proofs.Ai.*` or seed names.
 - The module can be consumed source-free by downstream packages.
