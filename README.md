@@ -13,46 +13,24 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the linear algebra matrix determinant public package:
+This repository contains the public package after the v0.2.0 breaking quotient
+cleanup:
 
 ```text
-Mathlib.Algebra.Group.Correspondence.OrderFacts
-Mathlib.Algebra.Group.Correspondence
-Mathlib.Algebra.Group.Correspondence.Order
-Mathlib.Algebra.Group.Correspondence.Basic
-Mathlib.Algebra.Group.ThirdIsomorphism
-Mathlib.Algebra.Group.SecondIsomorphism
-Mathlib.Algebra.Group.SecondIsomorphism.Image
-Mathlib.Algebra.Group.SecondIsomorphism.Kernel
-Mathlib.Algebra.Group.SecondIsomorphism.Map
-Mathlib.Algebra.Group.Quotient.Group
-Mathlib.Algebra.Group.Quotient.Mul
-Mathlib.Algebra.Group.Quotient
-Mathlib.Algebra.Group.FirstIsomorphism.Image
-Mathlib.Algebra.Group.FirstIsomorphism
-Mathlib.Algebra.Group.Kernel.Quotient.Hom
-Mathlib.Algebra.Group.Kernel.Quotient.Group
-Mathlib.Algebra.Group.Kernel.Quotient.Mul
-Mathlib.Algebra.Group.Kernel.Quotient
-Mathlib.Algebra.Group.Image
-Mathlib.Algebra.Group.Kernel
-Mathlib.Algebra.Group.Subgroup.Order
-Mathlib.Algebra.Group.Subgroup
-Mathlib.Logic.PropConnectives
+Mathlib.Logic.Basic
+Mathlib.Logic.Implication
+Mathlib.Logic.Eq
 Mathlib.Logic.EqReasoning
 Mathlib.Topology.Metric.Local
-Mathlib.Algebra.Group.Basic
+Mathlib.Logic.PropConnectives
+Mathlib.Data.Nat.Basic
+Mathlib.Core.Reduction
+Mathlib.Algebra.Ring.UnitModel
 Mathlib.Algebra.Ring.Basic
-Mathlib.Algebra.Field.Basic
-Mathlib.Algebra.Ring.FirstIsomorphism.Basic
-Mathlib.Algebra.Ring.FirstIsomorphism
-Mathlib.Algebra.Ring.ChineseRemainder
 Mathlib.Algebra.OrderedField.Basic
 Mathlib.Algebra.OrderedField.Square
 Mathlib.Algebra.OrderedField.ScalarIdentities
 Mathlib.LinearAlgebra.VectorSpace
-Mathlib.LinearAlgebra.Matrix.Basic
-Mathlib.LinearAlgebra.Matrix.Determinant
 Mathlib.Analysis.NormedSpace.Basic
 Mathlib.Analysis.NormedSpace.LinearMap
 Mathlib.Analysis.Calculus.Derivative
@@ -68,25 +46,27 @@ Mathlib.Geometry.RightTriangle.Carrier
 Mathlib.Geometry.RightTriangle.Derived
 Mathlib.Geometry.Metric.Carrier
 Mathlib.Geometry.Pythagorean
-Mathlib.Geometry.RightTriangle.UnitModel
-Mathlib.Geometry.Metric.UnitModel
+Mathlib.Algebra.Ring.UnitModel.Square
+Mathlib.Algebra.Group.Basic
+Mathlib.Algebra.Group.Subgroup
+Mathlib.Algebra.Group.Subgroup.Order
+Mathlib.Algebra.Group.Kernel
+Mathlib.Algebra.Group.Image
+Mathlib.Algebra.OrderedField.UnitModel
 Mathlib.LinearAlgebra.Vector.UnitModel
 Mathlib.LinearAlgebra.InnerProduct.UnitModel
-Mathlib.Algebra.Ring.UnitModel
-Mathlib.Algebra.Ring.UnitModel.Square
-Mathlib.Algebra.OrderedField.UnitModel
-Mathlib.Logic.Basic
-Mathlib.Logic.Implication
-Mathlib.Logic.Eq
-Mathlib.Data.Nat.Basic
-Mathlib.Core.Reduction
+Mathlib.Geometry.RightTriangle.UnitModel
+Mathlib.Geometry.Metric.UnitModel
+Mathlib.Algebra.Field.Basic
+Mathlib.LinearAlgebra.Matrix.Basic
+Mathlib.LinearAlgebra.Matrix.Determinant
 ```
 
 Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.1.30"
+version = "0.2.0"
 schema = "npa.package.v0.1"
 ```
 
@@ -196,23 +176,15 @@ data, and release audit evidence.
 Custom axioms are not allowed. The package permits the built-in `Eq.rec` axiom
 surface because `Mathlib.Logic.EqReasoning` and
 `Mathlib.Algebra.Group.Basic` / `Mathlib.Algebra.Group.Subgroup` expose
-equality reasoning certificates that use it explicitly. Layer 3D-C keeps the
-homomorphism law surface in `Mathlib.Algebra.Group.Basic` and adds the
-first isomorphism-to-image route under
-`Mathlib.Algebra.Group.FirstIsomorphism.*` on top of the Layer 3D-B kernel
-quotient closure. Layer 3D-F adds the third isomorphism theorem-evidence route
-on top of the normal quotient and kernel quotient surfaces. The package direct
-axiom surface remains policy-approved, and the new modules only carry the
-expected `Eq.rec` equality-reasoning dependency where their proofs require
-transport. Layer 3D-G adds the correspondence theorem and order-evidence route
-for normal-subgroup quotients on top of the public quotient, subgroup, and
-subgroup-order surfaces. The v0.1.16 release adds the ring first-isomorphism
-and CRT route, including `RingHomLawArgs`, `RingFirstIso`, and
-`RingChineseRemainder`, with the same policy-approved `Eq.rec`
-equality-reasoning dependency. The v0.1.17 release adds the abstract ordered
-field, square-normalization, and scalar-identity route. The first two modules
-carry no custom axioms; `Mathlib.Algebra.OrderedField.ScalarIdentities` carries
-the expected `Eq.rec` dependency through equality transport. The v0.1.18
+equality reasoning certificates that use it explicitly. The v0.2.0 breaking
+cleanup removes public modules whose certificates rely on the core `Quotient`
+surface. The package direct axiom surface remains policy-approved for the
+remaining modules, and they only carry the expected `Eq.rec` equality-reasoning
+dependency where their proofs require transport. The v0.1.17 release adds the
+abstract ordered field, square-normalization, and scalar-identity route. The
+first two modules carry no custom axioms;
+`Mathlib.Algebra.OrderedField.ScalarIdentities` carries the expected `Eq.rec`
+dependency through equality transport. The v0.1.18
 release adds the abstract vector-space foundation route, and
 `Mathlib.LinearAlgebra.VectorSpace` carries no custom axioms. The v0.1.19
 release adds the abstract inner-product route. `Mathlib.LinearAlgebra.InnerProduct`

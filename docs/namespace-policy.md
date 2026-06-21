@@ -121,54 +121,6 @@ Mathlib.Algebra.Group.Kernel
 Mathlib.Algebra.Group.Image
 ```
 
-The `v0.1.8` release adds these Layer 3D-B modules:
-
-```text
-Mathlib.Algebra.Group.Kernel.Quotient
-Mathlib.Algebra.Group.Kernel.Quotient.Mul
-Mathlib.Algebra.Group.Kernel.Quotient.Group
-Mathlib.Algebra.Group.Kernel.Quotient.Hom
-```
-
-The `v0.1.9` release adds these Layer 3D-C modules:
-
-```text
-Mathlib.Algebra.Group.FirstIsomorphism
-Mathlib.Algebra.Group.FirstIsomorphism.Image
-```
-
-The `v0.1.10` release adds these Layer 3D-D modules:
-
-```text
-Mathlib.Algebra.Group.Quotient
-Mathlib.Algebra.Group.Quotient.Mul
-Mathlib.Algebra.Group.Quotient.Group
-```
-
-The `v0.1.11` release adds these Layer 3D-E modules:
-
-```text
-Mathlib.Algebra.Group.SecondIsomorphism
-Mathlib.Algebra.Group.SecondIsomorphism.Map
-Mathlib.Algebra.Group.SecondIsomorphism.Kernel
-Mathlib.Algebra.Group.SecondIsomorphism.Image
-```
-
-The `v0.1.12` release adds this Layer 3D-F module:
-
-```text
-Mathlib.Algebra.Group.ThirdIsomorphism
-```
-
-The `v0.1.13` release adds these Layer 3D-G modules:
-
-```text
-Mathlib.Algebra.Group.Correspondence.Basic
-Mathlib.Algebra.Group.Correspondence.Order
-Mathlib.Algebra.Group.Correspondence
-Mathlib.Algebra.Group.Correspondence.OrderFacts
-```
-
 The `v0.1.14` release adds this Layer 3E module:
 
 ```text
@@ -179,14 +131,6 @@ The `v0.1.15` release adds this abstract ring foundation module:
 
 ```text
 Mathlib.Algebra.Ring.Basic
-```
-
-The `v0.1.16` release adds these ring first-isomorphism and CRT modules:
-
-```text
-Mathlib.Algebra.Ring.FirstIsomorphism.Basic
-Mathlib.Algebra.Ring.FirstIsomorphism
-Mathlib.Algebra.Ring.ChineseRemainder
 ```
 
 The `v0.1.17` release adds these ordered algebra and square-normalization
@@ -283,6 +227,10 @@ The `v0.1.30` release adds this linear algebra matrix determinant module:
 Mathlib.LinearAlgebra.Matrix.Determinant
 ```
 
+The `v0.2.0` breaking cleanup removes public modules whose certificates rely
+on the removed core `Quotient` surface. Do not add new quotient-backed public
+modules until a replacement quotient API has an L2 derived certificate route.
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -341,54 +289,6 @@ The Layer 3D-A mapping is fixed:
 | `Proofs.Ai.Algebra.AbstractGroupKernel` | `Mathlib.Algebra.Group.Kernel` | `Mathlib/Algebra/Group/Kernel/` |
 | `Proofs.Ai.Algebra.AbstractGroupImage` | `Mathlib.Algebra.Group.Image` | `Mathlib/Algebra/Group/Image/` |
 
-The Layer 3D-B mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupQuotient` | `Mathlib.Algebra.Group.Kernel.Quotient` | `Mathlib/Algebra/Group/Kernel/Quotient/` |
-| `Proofs.Ai.Algebra.AbstractGroupQuotientMul` | `Mathlib.Algebra.Group.Kernel.Quotient.Mul` | `Mathlib/Algebra/Group/Kernel/Quotient/Mul/` |
-| `Proofs.Ai.Algebra.AbstractGroupQuotientGroup` | `Mathlib.Algebra.Group.Kernel.Quotient.Group` | `Mathlib/Algebra/Group/Kernel/Quotient/Group/` |
-| `Proofs.Ai.Algebra.AbstractGroupQuotientHom` | `Mathlib.Algebra.Group.Kernel.Quotient.Hom` | `Mathlib/Algebra/Group/Kernel/Quotient/Hom/` |
-
-The Layer 3D-C mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupFirstIsoFull` | `Mathlib.Algebra.Group.FirstIsomorphism` | `Mathlib/Algebra/Group/FirstIsomorphism/` |
-| `Proofs.Ai.Algebra.AbstractGroupFirstIsoImage` | `Mathlib.Algebra.Group.FirstIsomorphism.Image` | `Mathlib/Algebra/Group/FirstIsomorphism/Image/` |
-
-The Layer 3D-D mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupNormalQuotient` | `Mathlib.Algebra.Group.Quotient` | `Mathlib/Algebra/Group/Quotient/` |
-| `Proofs.Ai.Algebra.AbstractGroupNormalQuotientMul` | `Mathlib.Algebra.Group.Quotient.Mul` | `Mathlib/Algebra/Group/Quotient/Mul/` |
-| `Proofs.Ai.Algebra.AbstractGroupNormalQuotientGroup` | `Mathlib.Algebra.Group.Quotient.Group` | `Mathlib/Algebra/Group/Quotient/Group/` |
-
-The Layer 3D-E mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupSecondIsoMap` | `Mathlib.Algebra.Group.SecondIsomorphism.Map` | `Mathlib/Algebra/Group/SecondIsomorphism/Map/` |
-| `Proofs.Ai.Algebra.AbstractGroupSecondIsoKernel` | `Mathlib.Algebra.Group.SecondIsomorphism.Kernel` | `Mathlib/Algebra/Group/SecondIsomorphism/Kernel/` |
-| `Proofs.Ai.Algebra.AbstractGroupSecondIsoImage` | `Mathlib.Algebra.Group.SecondIsomorphism.Image` | `Mathlib/Algebra/Group/SecondIsomorphism/Image/` |
-| `Proofs.Ai.Algebra.AbstractGroupSecondIsoFinal` | `Mathlib.Algebra.Group.SecondIsomorphism` | `Mathlib/Algebra/Group/SecondIsomorphism/` |
-
-The Layer 3D-F mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupThirdIso` | `Mathlib.Algebra.Group.ThirdIsomorphism` | `Mathlib/Algebra/Group/ThirdIsomorphism/` |
-
-The Layer 3D-G mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractGroupCorrespondence` | `Mathlib.Algebra.Group.Correspondence.Basic` | `Mathlib/Algebra/Group/Correspondence/Basic/` |
-| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrder` | `Mathlib.Algebra.Group.Correspondence.Order` | `Mathlib/Algebra/Group/Correspondence/Order/` |
-| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceFinal` | `Mathlib.Algebra.Group.Correspondence` | `Mathlib/Algebra/Group/Correspondence/` |
-| `Proofs.Ai.Algebra.AbstractGroupCorrespondenceOrderFinal` | `Mathlib.Algebra.Group.Correspondence.OrderFacts` | `Mathlib/Algebra/Group/Correspondence/OrderFacts/` |
-
 The Layer 3E mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -406,14 +306,6 @@ The abstract field foundation mapping is fixed:
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
 | `Proofs.Ai.Algebra.AbstractField` | `Mathlib.Algebra.Field.Basic` | `Mathlib/Algebra/Field/Basic/` |
-
-The ring first-isomorphism and CRT mapping is fixed:
-
-| Source corpus module | Public module | Public path |
-| --- | --- | --- |
-| `Proofs.Ai.Algebra.AbstractRingFirstIsoBase` | `Mathlib.Algebra.Ring.FirstIsomorphism.Basic` | `Mathlib/Algebra/Ring/FirstIsomorphism/Basic/` |
-| `Proofs.Ai.Algebra.AbstractRingFirstIso` | `Mathlib.Algebra.Ring.FirstIsomorphism` | `Mathlib/Algebra/Ring/FirstIsomorphism/` |
-| `Proofs.Ai.Algebra.AbstractRingChineseRemainder` | `Mathlib.Algebra.Ring.ChineseRemainder` | `Mathlib/Algebra/Ring/ChineseRemainder/` |
 
 The ordered algebra and square-normalization mapping is fixed:
 
@@ -506,35 +398,6 @@ No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
 The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
 
-Layer 3D-B intentionally uses `Mathlib.Algebra.Group.Kernel.Quotient.*`
-instead of a broad `Mathlib.Algebra.Group.Quotient.*` surface. The exported
-definitions and theorems are specialized to quotienting by a homomorphism
-kernel and should not be treated as the general normal-subgroup quotient API.
-
-Layer 3D-C intentionally uses `FirstIsomorphism` instead of `FirstIso` in
-public module names. `Proofs.Ai.Algebra.AbstractGroupFirstIso` remains
-unpublished because it exposes the provisional `FirstIsoRepMvp` surface.
-
-Layer 3D-D intentionally uses `Mathlib.Algebra.Group.Quotient.*` for quotient
-groups by normal subgroups. The already released
-`Mathlib.Algebra.Group.Kernel.Quotient.*` surface remains the specialized
-kernel-relation quotient route for homomorphisms.
-
-Layer 3D-E intentionally uses `SecondIsomorphism` instead of `SecondIso` in
-public module names. `Proofs.Ai.Algebra.AbstractGroupSecondIsoMap` is published
-as `Mathlib.Algebra.Group.SecondIsomorphism.Map` so Greek-letter
-implementation terminology does not become a public module identifier.
-
-Layer 3D-F intentionally keeps the third-isomorphism route in one
-`Mathlib.Algebra.Group.ThirdIsomorphism` module. The checked-in corpus route is
-a single theorem-evidence module, and its helper definitions are tightly
-coupled to the final evidence surface.
-
-Layer 3D-G uses `Correspondence.Basic` for the normal-quotient image/preimage
-construction surface, `Correspondence.Order` for monotonicity/equivalence facts,
-`Correspondence` for the theorem-evidence surface, and
-`Correspondence.OrderFacts` for the final order-specific correspondence facts.
-
 Layer 3E keeps `PropIff`, `PropAnd`, `PropOr`, `PropFalse`, and `PropNot`
 together in `Mathlib.Logic.PropConnectives`. A future
 `Mathlib.Logic.Connectives` split is deferred until another checked corpus route
@@ -554,13 +417,6 @@ The abstract field foundation uses `Mathlib.Algebra.Field.Basic` for arbitrary
 `Nonzero`, `div`, and the `field_*` projection/cancellation facts. Field
 homomorphism, extension, ideal, polynomial quotient, and finite-field routes
 remain separate future promotion layers.
-
-The v0.1.16 ring first-isomorphism and CRT route does not introduce a separate
-`Mathlib.Algebra.Ring.Hom` module. The checked corpus base module bundles the
-ring homomorphism law surface, image predicate, and kernel quotient
-construction, so the public `RingHomLawArgs`, `RingImagePred`, and
-`RingKernelQuotient*` names remain in
-`Mathlib.Algebra.Ring.FirstIsomorphism.Basic`.
 
 The v0.1.17 ordered algebra route uses `Mathlib.Algebra.OrderedField.Basic`
 for the abstract ordered-field law-package surface.
