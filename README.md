@@ -13,8 +13,8 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the public package after the v0.2.0 breaking quotient
-cleanup:
+This repository contains the public package through the v0.2.1
+Riemann-hypothesis candidate-proof audit boundary:
 
 ```text
 Mathlib.Logic.Basic
@@ -60,13 +60,14 @@ Mathlib.Geometry.Metric.UnitModel
 Mathlib.Algebra.Field.Basic
 Mathlib.LinearAlgebra.Matrix.Basic
 Mathlib.LinearAlgebra.Matrix.Determinant
+Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit
 ```
 
 Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 schema = "npa.package.v0.1"
 ```
 
@@ -130,13 +131,19 @@ These vendored certificates are pinned to the `npa-std v0.1.0` release bundle:
 
 `fixtures/downstream-smoke/` models a downstream package that consumes the
 vendored `Mathlib.Analysis.Calculus.ImplicitFunction` implicit-function import
-closure, the `Mathlib.LinearAlgebra.Matrix.Basic` matrix foundation, and
-`Mathlib.LinearAlgebra.Matrix.Determinant`. It applies `matrix_intro`,
-`determinant_product`, `implicit_augmented_map_derivative`,
+closure, the `Mathlib.LinearAlgebra.Matrix.Basic` matrix foundation,
+`Mathlib.LinearAlgebra.Matrix.Determinant`, and the source-free
+`Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit` certificate. It applies
+`matrix_intro`, `determinant_product`, `implicit_augmented_map_derivative`,
 `implicit_function_theorem`, and `implicit_function_derivative_theorem`. It
 vendors the full source-free certificate import closure, but not
 `npa-mathlib` source, replay, meta, theorem index, registry state, or package
 source tree.
+
+The `Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit` module is an audit
+workflow boundary. It records checked gates for classifying and blocking
+candidate RH proofs, and it includes a `no_rh_conclusion` projection. It does
+not prove RH or any RH-equivalent criterion.
 
 To verify it:
 
@@ -220,6 +227,10 @@ v0.1.27 release adds the analysis implicit-function route.
 `Mathlib.Analysis.Calculus.ImplicitFunction` carry no direct custom axioms and
 have the expected transitive `Eq.rec` dependency through equality-reasoning and
 analysis foundation imports.
+The v0.2.1 release adds
+`Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit`, which carries no
+direct or transitive custom axioms and explicitly preserves the no-RH-conclusion
+boundary.
 
 ## License
 

@@ -1,8 +1,8 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 license = "Apache-2.0"
-description = "Public theorem-library package for NPA mathlib after quotient-dependent API removal."
+description = "Public theorem-library package for NPA mathlib with the RH candidate-proof audit boundary."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -760,4 +760,21 @@ expected_certificate_hash = "sha256:24f810dbffd3e0e36ea4b6b886353cda9db44dbbcad1
 imports = ["Std.Logic.Eq", "Mathlib.LinearAlgebra.Matrix.Basic"]
 definitions = ["DeterminantIdentityNormalized", "DeterminantTransposeInvariant", "DeterminantBasicProperties", "DeterminantProductDerivationEvidence"]
 theorems = ["determinant_identity_normalized_intro", "determinant_identity_normalized_eq", "determinant_transpose_invariant_intro", "determinant_transpose", "determinant_basic_properties_intro", "determinant_basic_identity_normalized", "determinant_basic_identity_eq", "determinant_basic_transpose", "determinant_basic_transpose_eq", "determinant_basic_multilinear", "determinant_basic_alternating", "determinant_product_derivation_evidence_intro", "determinant_product_basic_properties", "determinant_product_matrix_mul_laws", "determinant_product_from_derivation", "determinant_product_theorem", "determinant_product"]
+axioms = []
+
+[[modules]]
+module = "Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit"
+source = "Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/source.npa"
+certificate = "Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/certificate.npcert"
+meta = "Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/meta.json"
+replay = "Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:f94d7040faf0d6370ef5242e6fed2b39be6c455f354d7b37964b93354ed37aaf"
+expected_certificate_file_hash = "sha256:8680132f8df9dcd1751f38563cda6a71d67387055b91c697c5d58fc6ad86eb10"
+expected_export_hash = "sha256:7f62b02088d28e1ba43e14a9f7c3b4065cd764fffae42530035b93657ce26c2d"
+expected_axiom_report_hash = "sha256:9721e3ec3ef6ad1547c1dce0d0d3267992294d0e4837110c2285ab89f7d2cba1"
+expected_certificate_hash = "sha256:8a1289dbc536a64a63c3822392327302276c04f79dbfefd73d5b91805530d414"
+imports = []
+definitions = ["RiemannHypothesisCandidateProofAudit", "Rh14CandidateProofAuditWorkflowCompletionEvidence"]
+theorems = ["riemann_hypothesis_candidate_proof_audit_intro", "candidate_proof_claim_classified_projection", "candidate_proof_rh_equivalent_flagged_projection", "candidate_proof_finite_verification_projection", "candidate_proof_assumption_registry_projection", "candidate_proof_circular_dependency_search_projection", "candidate_proof_analytic_operation_checklist_projection", "candidate_proof_unsupported_step_obligation_projection", "candidate_proof_falsification_model_projection", "candidate_proof_critical_path_projection", "candidate_proof_blocker_projection", "candidate_proof_no_authoring_without_audit_projection", "candidate_proof_no_rh_conclusion_projection", "rh14_candidate_proof_audit_workflow_completion_intro", "rh14_candidate_proof_audit_workflow_completion_l2_certificate_from_audit_workflow_gates_and_blocker_controls_without_rh_assumption", "rh14_completion_candidate_proof_audit_projection", "rh14_completion_audit_template_instantiated_projection", "rh14_completion_assumption_registry_expansion_projection", "rh14_completion_circularity_search_procedure_projection", "rh14_completion_analytic_operation_obligation_naming_projection", "rh14_completion_falsification_adversarial_tests_projection", "rh14_completion_finite_critical_path_gate_projection", "rh14_completion_no_l1_scaffold_from_unsupported_obligation_projection", "rh14_completion_claim_classified_projection", "rh14_completion_rh_equivalent_flagged_projection", "rh14_completion_finite_verification_projection", "rh14_completion_assumption_registry_projection", "rh14_completion_circular_dependency_search_projection", "rh14_completion_analytic_operation_checklist_projection", "rh14_completion_unsupported_step_obligation_projection", "rh14_completion_falsification_model_projection", "rh14_completion_critical_path_projection", "rh14_completion_blocker_projection", "rh14_completion_no_authoring_without_audit_projection", "rh14_completion_no_rh_conclusion_projection"]
 axioms = []

@@ -2,7 +2,7 @@ schema = "npa.package.v0.1"
 package = "npa-mathlib-downstream"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "Downstream import fixture for public npa-mathlib matrix, abstract field, and analysis implicit-function closure artifacts."
+description = "Downstream import fixture for public npa-mathlib matrix, abstract field, analysis implicit-function, and RH candidate-audit closure artifacts."
 
 core_spec = "npa.core.v0.1"
 kernel_profile = "npa.kernel.v0.1"
@@ -24,7 +24,7 @@ certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6b
 [[imports]]
 module = "Mathlib.Logic.EqReasoning"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
 export_hash = "sha256:2868c3353e9ebce2235560237dbab45d8d1ab70b2b7f18d907aaf1876c32d430"
 certificate_hash = "sha256:c7f227ff9b86deccea34ba8ed4b2a196630fedbd2509203ca68dfa7b5b3aa69e"
@@ -32,7 +32,7 @@ certificate_hash = "sha256:c7f227ff9b86deccea34ba8ed4b2a196630fedbd2509203ca68df
 [[imports]]
 module = "Mathlib.Topology.Metric.Local"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Topology/Metric/Local/certificate.npcert"
 export_hash = "sha256:991b7fff24c94d14a147f11443a43f2fec1ca61bb22ebd2bc65396a48b8dcb6d"
 certificate_hash = "sha256:6fbe5b949036b2a778fa4331387537c086da2466eb586efd63a91574470149ac"
@@ -40,7 +40,7 @@ certificate_hash = "sha256:6fbe5b949036b2a778fa4331387537c086da2466eb586efd63a91
 [[imports]]
 module = "Mathlib.Algebra.Ring.Basic"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
 export_hash = "sha256:3bd3e4ec66ff87f34f9c6c179e398790219c7d96d24e03c100dae862e0a0271c"
 certificate_hash = "sha256:dc7403cd47e56a4b142ae53694d52e2e7bbcba1af041b3fd91f3c90fa88e7ff4"
@@ -48,7 +48,7 @@ certificate_hash = "sha256:dc7403cd47e56a4b142ae53694d52e2e7bbcba1af041b3fd91f3c
 [[imports]]
 module = "Mathlib.Algebra.Field.Basic"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/Field/Basic/certificate.npcert"
 export_hash = "sha256:e2c6edc55ef2bb752f19481028ed79eea0a241054fce2f09d7f75dacc7f25357"
 certificate_hash = "sha256:2fd75d561d574ecc5465f5862f592e82cf478bc205ffac93a7fc0dd678c3ad2a"
@@ -56,7 +56,7 @@ certificate_hash = "sha256:2fd75d561d574ecc5465f5862f592e82cf478bc205ffac93a7fc0
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Basic"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Basic/certificate.npcert"
 export_hash = "sha256:b6f435dee19127eb75e66a017bd8ff9e55de5a945543654b4c096ce28fce6a42"
 certificate_hash = "sha256:40389f3d32ddeeb560d51dfe1af8158a30045348e4aefb3e8988d0f555a0e02a"
@@ -64,7 +64,7 @@ certificate_hash = "sha256:40389f3d32ddeeb560d51dfe1af8158a30045348e4aefb3e8988d
 [[imports]]
 module = "Mathlib.Algebra.OrderedField.Square"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Square/certificate.npcert"
 export_hash = "sha256:6a573469b099a3044222dcd6f547d10d47f598b00ac279871d470f0380ef494a"
 certificate_hash = "sha256:f433cd46a880b2d89d4e8f9b826947026e9c309d806bcdf14219888483aede5b"
@@ -72,7 +72,7 @@ certificate_hash = "sha256:f433cd46a880b2d89d4e8f9b826947026e9c309d806bcdf142198
 [[imports]]
 module = "Mathlib.LinearAlgebra.VectorSpace"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/VectorSpace/certificate.npcert"
 export_hash = "sha256:ea0bf459499c43c49c6489a3ca3e240974cae4e6bcf3ad043fc57d1698f8610c"
 certificate_hash = "sha256:1f1f83f9d79412723ee8e1f214027af23869f18de4593b4181f8b6d97f411b8f"
@@ -80,7 +80,7 @@ certificate_hash = "sha256:1f1f83f9d79412723ee8e1f214027af23869f18de4593b4181f8b
 [[imports]]
 module = "Mathlib.LinearAlgebra.Matrix.Basic"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/Matrix/Basic/certificate.npcert"
 export_hash = "sha256:71845bf6813234b30f5763e0d92c00b5264ff21efe9e60410e6817d96d59b692"
 certificate_hash = "sha256:626d0654ddf3b275af37cf34efaf6e9ef6e6f3a8ea9b8565b21bf4b3d2361e47"
@@ -88,7 +88,7 @@ certificate_hash = "sha256:626d0654ddf3b275af37cf34efaf6e9ef6e6f3a8ea9b8565b21bf
 [[imports]]
 module = "Mathlib.LinearAlgebra.Matrix.Determinant"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/LinearAlgebra/Matrix/Determinant/certificate.npcert"
 export_hash = "sha256:9d0f26d0d1354864d8ae319242984d2ce898de47688376f84aac440c1231b438"
 certificate_hash = "sha256:24f810dbffd3e0e36ea4b6b886353cda9db44dbbcad10af1d234f826b011ef5e"
@@ -96,7 +96,7 @@ certificate_hash = "sha256:24f810dbffd3e0e36ea4b6b886353cda9db44dbbcad10af1d234f
 [[imports]]
 module = "Mathlib.Analysis.NormedSpace.Basic"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/Basic/certificate.npcert"
 export_hash = "sha256:50f9e43b7d5187c2fd1b035bb2bf16c06bc809761f5880271acd6f7ea0129705"
 certificate_hash = "sha256:543824cc7102e2f25bec65934b257ca4ac4fb987d4dce236156e214c811f5922"
@@ -104,7 +104,7 @@ certificate_hash = "sha256:543824cc7102e2f25bec65934b257ca4ac4fb987d4dce236156e2
 [[imports]]
 module = "Mathlib.Analysis.NormedSpace.LinearMap"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/NormedSpace/LinearMap/certificate.npcert"
 export_hash = "sha256:362a6a0bb40569e6f6015435e8b0e70765d4bb74bacc8fe68684121fa681e635"
 certificate_hash = "sha256:6d32ed02fc6ef7b50337021d92c11ae1835b4743501326da19785692f0b6aab3"
@@ -112,7 +112,7 @@ certificate_hash = "sha256:6d32ed02fc6ef7b50337021d92c11ae1835b4743501326da19785
 [[imports]]
 module = "Mathlib.Analysis.Calculus.Derivative"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/Derivative/certificate.npcert"
 export_hash = "sha256:2717bee785767f665976ea5b0b2cacdf6c342e31b5671b2a5d9a367249e94bc3"
 certificate_hash = "sha256:bf2e47946b1e94bd7cc56115edd3f03b88f6751f4d086694acc924c5dfb90576"
@@ -120,7 +120,7 @@ certificate_hash = "sha256:bf2e47946b1e94bd7cc56115edd3f03b88f6751f4d086694acc92
 [[imports]]
 module = "Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/AugmentedMap/certificate.npcert"
 export_hash = "sha256:e8f3337f78a054e06655172a752fb570e30cda77170a4516fe1973b092454452"
 certificate_hash = "sha256:86e44b0499d1f4a7aa42233af2d0edf32212468676be9af471fe3ed0f080ef9d"
@@ -128,10 +128,18 @@ certificate_hash = "sha256:86e44b0499d1f4a7aa42233af2d0edf32212468676be9af471fe3
 [[imports]]
 module = "Mathlib.Analysis.Calculus.ImplicitFunction"
 package = "npa-mathlib"
-version = "0.2.0"
+version = "0.2.1"
 certificate = "vendor/npa-mathlib/Mathlib/Analysis/Calculus/ImplicitFunction/certificate.npcert"
 export_hash = "sha256:985bc4fd192e3759430cbcbf5c1cf73df1c75711fcbd06121ec738c35803d453"
 certificate_hash = "sha256:f99f90b5f152c841937dcbb6ab6fe18920577cbfa7145af4ebedfc9ac3f2a38f"
+
+[[imports]]
+module = "Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit"
+package = "npa-mathlib"
+version = "0.2.1"
+certificate = "vendor/npa-mathlib/Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/certificate.npcert"
+export_hash = "sha256:7f62b02088d28e1ba43e14a9f7c3b4065cd764fffae42530035b93657ce26c2d"
+certificate_hash = "sha256:8a1289dbc536a64a63c3822392327302276c04f79dbfefd73d5b91805530d414"
 
 [[modules]]
 module = "Downstream.ImplicitFunction"

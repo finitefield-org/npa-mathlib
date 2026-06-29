@@ -231,6 +231,12 @@ The `v0.2.0` breaking cleanup removes public modules whose certificates rely
 on the removed core `Quotient` surface. Do not add new quotient-backed public
 modules until a replacement quotient API has an L2 derived certificate route.
 
+The `v0.2.1` release adds this Riemann-hypothesis audit workflow boundary:
+
+```text
+Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit
+```
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -339,6 +345,12 @@ The linear algebra matrix determinant mapping is fixed:
 | Source corpus module | Public module | Public path |
 | --- | --- | --- |
 | `Proofs.Ai.LinearAlgebra.Matrix.Determinant` | `Mathlib.LinearAlgebra.Matrix.Determinant` | `Mathlib/LinearAlgebra/Matrix/Determinant/` |
+
+The Riemann-hypothesis candidate-proof audit mapping is fixed:
+
+| Source corpus module | Public module | Public path |
+| --- | --- | --- |
+| `Proofs.Ai.NumberTheory.RiemannHypothesisCandidateAudit` | `Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit` | `Mathlib/NumberTheory/RiemannHypothesis/CandidateAudit/` |
 
 The geometry Pythagorean closure mapping is fixed:
 
@@ -461,6 +473,15 @@ transpose invariance, multilinear/alternating evidence, and determinant product
 theorem projections. Adjugate, Cramer, rank-minor, eigenvalue, and exterior
 determinant bridge routes should import this module instead of redefining
 determinant product facts.
+
+The v0.2.1 RH candidate-proof audit route uses
+`Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit` for public audit-gate
+evidence around candidate RH proofs. The module records classification,
+RH-equivalence/consequence flagging, finite-verification separation,
+assumption-registry linkage, circularity search, analytic-operation checklists,
+unsupported-step obligations, falsification records, critical paths, blockers,
+and no-authoring-without-audit / no-RH-conclusion boundaries. It is not an RH
+proof and must not be imported as evidence for RH or any RH-equivalent target.
 
 The v0.1.20 geometry Pythagorean closure uses `Mathlib.Geometry.Affine` for
 the abstract point/displacement surface and `Mathlib.Geometry.Pythagorean` for
