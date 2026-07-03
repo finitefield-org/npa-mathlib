@@ -80,7 +80,7 @@ are stable package identifiers and must not be renamed casually.
 Package CI builds `npa` from the current public toolchain ref:
 
 ```text
-NPA_GIT_TAG = v0.1.1
+NPA_GIT_TAG = v0.2.0
 RUST_TOOLCHAIN_VERSION = 1.95.0
 NPA_ENABLE_PUBLISH_PLAN = true
 ```
