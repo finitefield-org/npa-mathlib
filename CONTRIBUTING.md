@@ -1,8 +1,8 @@
 # Contributing
 
 `npa-mathlib` is certificate-first. Changes are accepted by source-free package
-verification, not by parser, elaborator, tactic, automation, CI status, or
-GitHub metadata.
+verification, not by parser, elaborator, tactic, automation, command status, or
+release metadata.
 
 Before opening a pull request, run:
 

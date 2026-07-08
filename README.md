@@ -8,7 +8,7 @@ family.
 
 Related repositories:
 
-- [npa](https://github.com/finitefield-org/npa): kernel, certificate format,
+- [npa-core](https://github.com/finitefield-org/npa-core): kernel, certificate format,
   checker, frontend, tactic, and package CLI
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
@@ -75,19 +75,18 @@ The public module namespace policy is fixed in
 [`docs/namespace-policy.md`](docs/namespace-policy.md). Released module names
 are stable package identifiers and must not be renamed casually.
 
-## Toolchain Pin
+## Toolchain Reference
 
-Package CI builds `npa` from the current public toolchain ref:
+Use an `npa` binary built from the current public toolchain ref:
 
 ```text
-NPA_GIT_TAG = v0.2.0
 RUST_TOOLCHAIN_VERSION = 1.95.0
+NPA_GIT_TAG = v0.2.0
 NPA_ENABLE_PUBLISH_PLAN = true
 ```
 
-The workflows require exactly one pinned `npa` source: `NPA_BINARY_PATH`,
-`NPA_GIT_TAG`, or `NPA_GIT_COMMIT`. `NPA_VERSION` is reserved for a later
-release-download mode and is rejected by the current setup helper.
+`NPA_VERSION` is reserved for a later release-download mode and is not a valid
+current package-command pin.
 
 ## Verification
 
@@ -103,8 +102,8 @@ npa package index --root . --check --json
 npa package publish-plan --root . --check --json
 ```
 
-The PR workflow runs the reference-checker package gate. The release workflow
-also uploads package artifacts and records fast-kernel diagnostics.
+For release review, archive the generated package artifacts and any optional
+fast-kernel diagnostics explicitly.
 
 ## External Imports
 
@@ -171,7 +170,7 @@ Untrusted helper data remains:
 - package manifest
 - theorem index
 - publish plan
-- CI status
+- command status
 - Git tags and release pages
 
 This package does not emit `verified_high_trust`. High-trust evidence requires
