@@ -17,11 +17,13 @@ Related repositories:
 - [npa-std](https://github.com/finitefield-org/npa-std): small standard-library
   package
 
-This repository contains the mutable public package target at version `0.2.6`.
+This repository contains the mutable public package target at version `0.2.7`.
 The target preserves the v0.2.4 two-element group theorem boundary and includes
 the independently authored `Mathlib.Logic.Function.Basic` interface-adoption
 pilot together with the adopted `Mathlib.Category.Basic` category-law
-foundation:
+foundation. The v0.2.7 snapshot retains the same verified public catalog as
+v0.2.6 and corrects the release checksum sidecar to use a portable relative
+archive name; the immutable v0.2.6 release is unchanged:
 
 ```text
 Mathlib.Logic.Basic
@@ -78,7 +80,7 @@ Package metadata:
 
 ```text
 package = "npa-mathlib"
-version = "0.2.6"
+version = "0.2.7"
 schema = "npa.package.v0.1"
 ```
 
@@ -108,7 +110,9 @@ transaction attestation, and target-owned registry entry are respectively
 `docs/promotion/function-comp-assoc-reconciliation.json`, and
 `promotion-origins.json`. All proposal and governance sidecars retain
 `proof_evidence = false`; no L2 `reviewed` or `recommended` decision was
-created. The pilot is included in the v0.2.6 snapshot described below.
+created. The pilot is included in the v0.2.7 snapshot described below. The
+v0.2.6 snapshot remains immutable and is retained as the historical package
+release.
 
 The canonical theorem-level, hash-bound L2 authority policy is
 [`policy/l2-acceptance-policy.json`](policy/l2-acceptance-policy.json). The
@@ -364,6 +368,9 @@ consumes the public field no-zero-product eliminator.
 The v0.2.6 release adds `Mathlib.Category.Basic`, whose category-law
 certificate carries the expected `Eq.rec` equality-transport dependency and
 no custom axioms.
+The v0.2.7 release retains this verified catalog surface without changing any
+proof source or certificate bytes; it is a corrective package snapshot with a
+portable release checksum sidecar.
 
 ## License
 

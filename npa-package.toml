@@ -1,6 +1,6 @@
 schema = "npa.package.v0.1"
 package = "npa-mathlib"
-version = "0.2.6"
+version = "0.2.7"
 license = "Apache-2.0"
 description = "Public theorem-library package for NPA mathlib with strict ordered-field positivity and proof-audit boundaries."
 

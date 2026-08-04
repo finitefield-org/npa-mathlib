@@ -302,6 +302,11 @@ Mathlib.Category.Basic
 Its public surface is the adopted seven-declaration interface recorded by the
 `Mathlib.Category.Basic` proposal and its target-owned catalog reconciliation.
 
+The `v0.2.7` release retains the v0.2.6 public catalog and proof artifact
+identities. It is a corrective immutable snapshot whose release checksum
+sidecar uses a portable relative archive name; the v0.2.6 tag and assets are
+not rewritten.
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
