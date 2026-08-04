@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Category.Basic",
+  "source": "Mathlib/Category/Basic/source.npa",
+  "certificate": "Mathlib/Category/Basic/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:3c753fbca599bb572b98a62fc158ff1a7340e9bec6804067510ca144cab44bf9",
+  "certificate_file_sha256": "sha256:75effd5c2e7abb96a7ca8c0ae02bc0c33eb5a94d56624dc62ad1dbee5b5fe8eb",
+  "export_hash": "sha256:dc3c33b93717abdfffe78d599dc53eb852ceb84e8f413b5845213331b7b9c736",
+  "axiom_report_hash": "sha256:ca8c17e4fd5704de9fcbf752e350162e7c79a827f7c1184a68b8bc8a4aea25be",
+  "certificate_hash": "sha256:6f2dd1d4b3b97af7bac3a8b28ccae6ff621163562a430d3611b176d4b5731c28",
+  "imports": ["Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"CategoryLawArgs","kind":"def"},{"name":"category_definition_intro","kind":"theorem"},{"name":"category_comp_assoc_law","kind":"theorem"},{"name":"category_comp_id","kind":"theorem"},{"name":"category_id_comp","kind":"theorem"},{"name":"category_comp_assoc","kind":"theorem"},{"name":"opposite_category_laws","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

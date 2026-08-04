@@ -1,0 +1,11 @@
+{
+  "schema": "npa-proof-replay-v0.1",
+  "module": "Mathlib.Logic.Function.Basic",
+  "trusted": false,
+  "profile": "explicit_term_source_certificate_handoff",
+  "attempts": [
+    {"declaration":"comp","strategy":"explicit-definition","result":"accepted"},
+    {"declaration":"comp_assoc","strategy":"reflexivity","result":"accepted"}
+  ],
+  "trust_boundary": "replay is an untrusted authoring sidecar; only canonical certificate verification is proof evidence"
+}

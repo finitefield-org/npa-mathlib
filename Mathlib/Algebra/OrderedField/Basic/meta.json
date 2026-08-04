@@ -5,67 +5,13 @@
   "certificate": "Mathlib/Algebra/OrderedField/Basic/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:44f46821adf103d68482b4a3ad033c10c6f6198f5ca495bed1f9e0efddd06a62",
-  "certificate_file_sha256": "sha256:e7eeff3c9ffd7006c24d1c7ffcc685b8a3af2c4f9ad24f2c6a9c18235a705979",
-  "export_hash": "sha256:c35ef2f2cef95072020725e3f8f0ec438ecc5a408ade332c30513b6a55c081de",
+  "source_sha256": "sha256:0349c01d18141ae97fb66abc63d8a115d1ba35817f824dc3e37c410d50d5969a",
+  "certificate_file_sha256": "sha256:24791481e7fe3d9ba5ad2a820bd1bf66fd886e99dfb4af266c86e11459808f95",
+  "export_hash": "sha256:59359c3df1aaf6e446f34710966094e2707bc5252f9bedefbc165e1aa8f6b595",
   "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
-  "certificate_hash": "sha256:913a104f1900807445efd0e7f22acddf55644f58fae26b4980547a1f8b949b37",
-  "imports": [
-    "Mathlib.Algebra.Ring.Basic",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "le",
-      "kind": "def"
-    },
-    {
-      "name": "lt",
-      "kind": "def"
-    },
-    {
-      "name": "sqrt",
-      "kind": "def"
-    },
-    {
-      "name": "Nonneg",
-      "kind": "def"
-    },
-    {
-      "name": "Positive",
-      "kind": "def"
-    },
-    {
-      "name": "OrderedFieldLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "ordered_field_square_completion_bound",
-      "kind": "theorem"
-    },
-    {
-      "name": "ordered_field_le_of_sq_le_sq_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "ordered_field_add_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "ordered_field_sqrt_sum_square_bound",
-      "kind": "theorem"
-    },
-    {
-      "name": "ordered_field_le_mul_sqrt_of_sq_le_mul_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "ordered_field_add_two_mul_le_sq_add_sqrt",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:661add0efa585b86745408df644cdb6c37e66d1ec2831de818332149d1cc7637",
+  "imports": ["Mathlib.Algebra.Ring.Basic","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"le","kind":"def"},{"name":"lt","kind":"def"},{"name":"sqrt","kind":"def"},{"name":"Nonneg","kind":"def"},{"name":"Positive","kind":"def"},{"name":"OrderedFieldLawArgs","kind":"def"},{"name":"ordered_field_square_completion_bound","kind":"theorem"},{"name":"ordered_field_le_of_sq_le_sq_nonneg","kind":"theorem"},{"name":"ordered_field_add_nonneg","kind":"theorem"},{"name":"ordered_field_sqrt_sum_square_bound","kind":"theorem"},{"name":"ordered_field_le_mul_sqrt_of_sq_le_mul_nonneg","kind":"theorem"},{"name":"ordered_field_add_two_mul_le_sq_add_sqrt","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

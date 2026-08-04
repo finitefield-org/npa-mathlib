@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Group.TwoElement",
+  "source": "Mathlib/Algebra/Group/TwoElement/source.npa",
+  "certificate": "Mathlib/Algebra/Group/TwoElement/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:751600b2b7cc6f0fcc58b6dcc292054f03cf1c34c3beba1f9e99dd3c944bfb95",
+  "certificate_file_sha256": "sha256:bf09d134a7348b63c007886e52fd737e8277ae79bebaf978fd054d5f0d5ae42b",
+  "export_hash": "sha256:b7e3c14e9292bdd56eb71f97c3fd22e0c96ad6c7295d0cfa854efef726cb2f06",
+  "axiom_report_hash": "sha256:e73446550ebd2b8f59300fca0b3c3199e0a7a6f7722008c664f50b8a67fd00b9",
+  "certificate_hash": "sha256:b4bf27c20da6051a8b79c20de6b000166ab61d7e724d73db468ab790f9bf24ad",
+  "imports": ["Mathlib.Algebra.Group.Basic","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"Z2","kind":"inductive"},{"name":"Z2.one","kind":"def"},{"name":"Z2.mul","kind":"def"},{"name":"Z2.inv","kind":"def"},{"name":"z2_mul_assoc","kind":"theorem"},{"name":"z2_one_mul","kind":"theorem"},{"name":"z2_mul_one","kind":"theorem"},{"name":"z2_inv_mul","kind":"theorem"},{"name":"z2_mul_inv","kind":"theorem"},{"name":"z2_inverse_eq_self","kind":"theorem"},{"name":"z2_mul_self_eq_one","kind":"theorem"},{"name":"z2_mul_comm","kind":"theorem"},{"name":"z2_group_law_args","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

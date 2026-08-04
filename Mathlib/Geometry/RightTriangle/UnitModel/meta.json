@@ -6,80 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:64afed8b5e5972c4288d72ba4f8ccc57b7ee268ad505f1b84dbdb62084ef49c8",
-  "certificate_file_sha256": "sha256:dd86403845d1621bda969b7fe3505bb8de68e80e461e8376fe489c2dae84fc1e",
-  "export_hash": "sha256:84bfdc7b992f860b92e9ee5e0b380329792003cede431667d7a8e4f0ad2a0c9e",
+  "certificate_file_sha256": "sha256:203f453faac4caa77f81eb59ef6021b4caaca526c57f34a92f917df84dd92014",
+  "export_hash": "sha256:23acf56d87344305faa30c2ef8a82d3b67af995d491ecfdb0d0533dee92d9007",
   "axiom_report_hash": "sha256:3d3fdbf6a3ca4756ceaac9853e839a84878b24c0f6290e2246a78c6184b31e0e",
-  "certificate_hash": "sha256:b89cd077a7f9c2c2bf6e01a34a4e2b372d35a3eb76b3806b6da7e07aeea94e98",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Algebra.Ring.UnitModel",
-    "Mathlib.Algebra.Ring.UnitModel.Square",
-    "Mathlib.Algebra.OrderedField.UnitModel",
-    "Mathlib.LinearAlgebra.Vector.UnitModel",
-    "Mathlib.LinearAlgebra.InnerProduct.UnitModel"
-  ],
+  "certificate_hash": "sha256:84e343e232c27568e102e0cf7f4b1ed065541e9c0aa2cb4e85beac8aada7d250",
+  "imports": ["Mathlib.Algebra.OrderedField.UnitModel","Mathlib.Algebra.Ring.UnitModel","Mathlib.Algebra.Ring.UnitModel.Square","Mathlib.LinearAlgebra.InnerProduct.UnitModel","Mathlib.LinearAlgebra.Vector.UnitModel","Std.Logic.Eq"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "Perp",
-      "kind": "def"
-    },
-    {
-      "name": "RightTriangle",
-      "kind": "def"
-    },
-    {
-      "name": "perp_iff_dot_eq_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "perp_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "right_triangle_legs_perp",
-      "kind": "theorem"
-    },
-    {
-      "name": "hypotenuse_vector_eq_sub_legs",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_leg_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_leg_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_hypotenuse",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_distance_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines",
-      "kind": "theorem"
-    },
-    {
-      "name": "right_triangle_area",
-      "kind": "theorem"
-    },
-    {
-      "name": "median_to_hypotenuse",
-      "kind": "theorem"
-    },
-    {
-      "name": "altitude_on_hypotenuse",
-      "kind": "theorem"
-    },
-    {
-      "name": "thales_theorem",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"Perp","kind":"def"},{"name":"RightTriangle","kind":"def"},{"name":"perp_iff_dot_eq_zero","kind":"theorem"},{"name":"perp_symm","kind":"theorem"},{"name":"right_triangle_legs_perp","kind":"theorem"},{"name":"hypotenuse_vector_eq_sub_legs","kind":"theorem"},{"name":"dist_sq_leg_left","kind":"theorem"},{"name":"dist_sq_leg_right","kind":"theorem"},{"name":"dist_sq_hypotenuse","kind":"theorem"},{"name":"pythagorean_distance_sq","kind":"theorem"},{"name":"law_of_cosines","kind":"theorem"},{"name":"right_triangle_area","kind":"theorem"},{"name":"median_to_hypotenuse","kind":"theorem"},{"name":"altitude_on_hypotenuse","kind":"theorem"},{"name":"thales_theorem","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

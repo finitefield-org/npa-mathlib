@@ -1,0 +1,142 @@
+schema = "npa.mathlib.interface_proposal.v1"
+proposal_id = "Mathlib.Logic.Function.Basic"
+proposal_revision = 3
+previous_proposal_hash = "sha256:aad7f6c6dd9802ee7c832b5f2274d8e4041be31cfa469fbb1dd9c172ed30f9d1"
+module = "Mathlib.Logic.Function.Basic"
+change_kind = "add"
+source_modules = []
+interface_status = "adopted"
+proof_evidence = false
+summary = "Adds the function-composition associativity identity to the first public NPA function foundation."
+scope = "Adopt only the exact comp_assoc theorem closure and its exported composition foundation in the Mathlib.Logic.Function.Basic target; exclude the other upstream Function.Defs constructions and theorem families until separately evidenced."
+imports = ["Mathlib.Logic.Eq", "Std.Logic.Eq"]
+adoption_date = "2026-08-02"
+adoption_rationale = "Re-adopted after owner qualification established both the explicit Std.Logic.Eq import boundary and the owner-exported public comp foundation; the exact function-equality surface remains independently authored and constrained to the selected two-declaration module."
+re_adoption_rationale = "Implementation qualification first showed that Mathlib.Logic.Eq does not re-export the Std.Logic.Eq equality declaration, so revision 2 added the required direct equality import. Target qualification then showed that the owner certificate exports every top-level declaration, including comp, so the original support-only surface could not pass the exact target gate. Revision 3 promotes comp to an explicit public foundation with a foundation exception, retains the exact declaration terms and imports, and was re-adopted after both transition checks."
+alternatives_review = "Reviewed the upstream Defs target, an Algebra.Function.Basic placement, the compose_assoc name, pointwise equality, complete-file copying, relying on Mathlib.Logic.Eq's transitive import alone, and hiding comp as a private support declaration. The selected Basic module, comp_assoc name, explicit Std.Logic.Eq boundary, and public comp foundation are the only surface representable by the owner certificate while preserving the observed function-equality API. No material bundled, setoid, or quotient alternative applies."
+supersedes = []
+
+[[declarations]]
+name = "comp"
+kind = "definition"
+surface = "public"
+signature = "forall (alpha : Sort u1), forall (beta : Sort u2), forall (gamma : Sort u3), forall (f : forall (x : beta), gamma), forall (g : forall (x : alpha), beta), forall (x : alpha), gamma"
+body = "fun alpha => fun beta => fun gamma => fun f => fun g => fun x => f (g x)"
+semantic_role = "Provides the locally authored ordinary function-composition operation as the public foundation needed to express the associativity theorem without assuming an unavailable Function.comp core primitive."
+depends_on = []
+evidence_ids = []
+foundation_exception = "The owner certificate exports every top-level declaration, so this independently authored composition primitive is an explicit public foundation for the public comp_assoc theorem even though direct downstream use targets the theorem."
+
+[[declarations]]
+name = "comp_assoc"
+kind = "theorem"
+surface = "public"
+signature = "forall (alpha : Sort u1), forall (beta : Sort u2), forall (phi : Sort u3), forall (delta : Sort u4), forall (f : forall (x : phi), delta), forall (g : forall (x : beta), phi), forall (h : forall (x : alpha), beta), @Eq.{imax u1 u4} (forall (x : alpha), delta) (@comp.{u1,u2,u4} alpha beta delta (@comp.{u2,u3,u4} beta phi delta f g) h) (@comp.{u1,u3,u4} alpha phi delta f (@comp.{u1,u2,u3} alpha beta phi g h))"
+semantic_role = "Associates three ordinary function compositions as an equality of functions, matching the pinned downstream rewrite surface."
+depends_on = ["comp"]
+evidence_ids = ["mathlib-defs-declaration", "mathlib-iterate-rewrite"]
+proof_reference_ids = ["mathlib-comp-assoc-proof-structure"]
+
+[[observations]]
+id = "mathlib-defs-layout"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Defs.lean"
+source_module = "Mathlib.Logic.Function.Defs"
+usage_kind = "module_layout"
+notes = "The upstream function structural-logic definitions boundary contains comp_assoc; the NPA target places the selected closure in the policy-preferred Mathlib.Logic.Function.Basic module."
+
+[[observations]]
+id = "mathlib-defs-declaration"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Defs.lean"
+source_module = "Mathlib.Logic.Function.Defs"
+source_declaration = "Function.comp_assoc"
+usage_kind = "declaration"
+notes = "At lines 65-66 the theorem has four Sort parameters, ordered arguments f, g, h, and the exact function-equality statement recorded in the declaration signature."
+
+[[observations]]
+id = "mathlib-defs-import-init"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Defs.lean"
+source_module = "Mathlib.Logic.Function.Defs"
+usage_kind = "module_import"
+notes = "The source imports Mathlib.Init publicly and Mathlib.Tactic.Attr.Register privately; the NPA boundary maps the unavailable core Function.comp name to the locally authored composition foundation."
+
+[[observations]]
+id = "mathlib-iterate-import"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Iterate.lean"
+source_module = "Mathlib.Logic.Function.Iterate"
+usage_kind = "module_import"
+notes = "The downstream file reaches the selected function layer through Mathlib.Logic.Function.Conjugate and Mathlib.Logic.Function.Basic, which publicly imports the upstream Defs layer."
+
+[[observations]]
+id = "mathlib-iterate-rewrite"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Iterate.lean"
+source_module = "Mathlib.Logic.Function.Iterate"
+source_declaration = "Function.iterate_invariant"
+usage_kind = "rewrite"
+notes = "At lines 96-98 the successor branch rewrites with reverse comp_assoc to reassociate g composed with the successor iterate and f; the rewrite consumes the exact function-equality shape."
+
+[[proof_references]]
+id = "mathlib-comp-assoc-proof-structure"
+repository = "https://github.com/leanprover-community/mathlib4"
+revision_kind = "git_commit"
+revision = "c5ea00351c28e24afc9f0f84379aa41082b1188f"
+license = "Apache-2.0"
+path = "Mathlib/Logic/Function/Defs.lean"
+source_module = "Mathlib.Logic.Function.Defs"
+source_declaration = "Function.comp_assoc"
+reference_role = "proof_structure"
+notes = "The pinned source records a reflexivity proof for the composition identity. It guides independent proof design only; no external proof term or source block is copied."
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Logic.Function.Defs"
+disposition = "rejected"
+rationale = "This mirrors the upstream file too literally; the NPA namespace policy prefers Basic for the first public abstract function foundation, while Defs remains the immutable declaration evidence location."
+evidence_ids = ["mathlib-defs-layout", "mathlib-iterate-import"]
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Algebra.Function.Basic"
+disposition = "rejected"
+rationale = "Function composition is structural logic rather than an algebraic law package, so the namespace policy places it under Mathlib.Logic.*."
+evidence_ids = ["mathlib-defs-layout"]
+
+[[alternatives]]
+kind = "declaration_name"
+candidate = "compose_assoc"
+disposition = "rejected"
+rationale = "The current catalog already has the application-level Mathlib.Logic.Basic.compose_assoc theorem; comp_assoc preserves the observed API name without a misleading semantic duplicate."
+evidence_ids = ["mathlib-defs-declaration"]
+
+[[alternatives]]
+kind = "signature"
+candidate = "forall (x : alpha), ..."
+disposition = "rejected"
+rationale = "A pointwise equality would weaken the observed function-equality rewrite surface and require a fresh point argument at every use."
+evidence_ids = ["mathlib-defs-declaration", "mathlib-iterate-rewrite"]
+
+[[alternatives]]
+kind = "module_boundary"
+candidate = "complete Mathlib.Logic.Function.Defs surface"
+disposition = "rejected"
+rationale = "The pilot is limited to one evidence-backed theorem closure; dcomp, prod, onFun, Bijective, and other unobserved declarations are excluded."
+evidence_ids = ["mathlib-defs-layout"]

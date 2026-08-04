@@ -5,58 +5,13 @@
   "certificate": "Mathlib/LinearAlgebra/InnerProduct/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:41f12079458206f4bc57bc9fe0c4dc71456c95f6bf9fbbf0dbf2df8cf41ccd1e",
-  "certificate_file_sha256": "sha256:8dbbd54e3697a46e0526ab46b854d25901650c4276dc47d696c1a19ebee56048",
-  "export_hash": "sha256:e4b7dbe1f70c8f052671498e037876ef9693261a7d415ac8a6ba71ff52e04adb",
+  "source_sha256": "sha256:122e2967240cd20d9a8d772389c1550e07462da3760b287c81bf03aec252ae9a",
+  "certificate_file_sha256": "sha256:60948b60a518537c0fd03b575be572d7d300c96ba302ab701a4115aaafc1a188",
+  "export_hash": "sha256:1dd02d286d5e7d9fdc9eb58ac4d66ee72b9889376f5b017d3f22b9f20fe01a3f",
   "axiom_report_hash": "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36",
-  "certificate_hash": "sha256:a75b345e7cf7ea36e8453dd5e26566f61fe08683a66437ed8372b1b2debf6169",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "dot",
-      "kind": "def"
-    },
-    {
-      "name": "norm_sq",
-      "kind": "def"
-    },
-    {
-      "name": "dist_sq",
-      "kind": "def"
-    },
-    {
-      "name": "PerpVec",
-      "kind": "def"
-    },
-    {
-      "name": "InnerProductLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "inner_product_norm_sq_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dist_sq_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_self_eq_norm_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_perp_vec_iff_dot_eq_zero",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:d1457f9c7cad21b04b011420d12b2f2707073c4f4269aa05f0c1e96a2de8f841",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.LinearAlgebra.VectorSpace","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"dot","kind":"def"},{"name":"norm_sq","kind":"def"},{"name":"dist_sq","kind":"def"},{"name":"PerpVec","kind":"def"},{"name":"InnerProductLawArgs","kind":"def"},{"name":"inner_product_norm_sq_def","kind":"theorem"},{"name":"inner_product_dist_sq_def","kind":"theorem"},{"name":"inner_product_dot_self_eq_norm_sq","kind":"theorem"},{"name":"inner_product_perp_vec_iff_dot_eq_zero","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

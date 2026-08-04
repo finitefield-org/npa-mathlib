@@ -1,0 +1,11 @@
+import Std.Logic.Eq
+import Std.Nat.Basic
+import Mathlib.Algebra.Monoid.Power
+
+theorem monoid_pow_zero_passthrough.{u} :
+  forall (Carrier : Sort u), forall (one : Carrier), forall (mul : forall (left : Carrier), forall (right : Carrier), Carrier), forall (x : Carrier), @Eq.{u} Carrier (@monoidPow.{u} Carrier one mul x Nat.zero) one :=
+  fun Carrier => fun one => fun mul => fun x => @monoid_pow_zero.{u} Carrier one mul x
+
+theorem monoid_pow_succ_passthrough.{u} :
+  forall (Carrier : Sort u), forall (one : Carrier), forall (mul : forall (left : Carrier), forall (right : Carrier), Carrier), forall (x : Carrier), forall (n : Nat), @Eq.{u} Carrier (@monoidPow.{u} Carrier one mul x (Nat.succ n)) (mul (@monoidPow.{u} Carrier one mul x n) x) :=
+  fun Carrier => fun one => fun mul => fun x => fun n => @monoid_pow_succ.{u} Carrier one mul x n

@@ -6,65 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:2e87780056857ca1623262c2c963322c11adb35f576c3ce047f09706676aaa53",
-  "certificate_file_sha256": "sha256:a13d37242c608365e2c3ac71834c2ec23c2f38899d1357332997b9bbb333afea",
-  "export_hash": "sha256:d6b08e865fb570cb11e57e903463edcd77f6f821126d9375dde24d73055ebf3f",
+  "certificate_file_sha256": "sha256:ca25fe51818e4dde1627a56828171a2de9587cc07885cc6c1a056278d00f89b5",
+  "export_hash": "sha256:58b2c3552b6cfc44fd983092f0d53877be2d993a9e6febd50c891f22edcb3dc2",
   "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
-  "certificate_hash": "sha256:c466e52baf9ed34fb572e9408915028295382085133548d998e7fd15cff576aa",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Algebra.Ring.UnitModel",
-    "Mathlib.Algebra.Ring.UnitModel.Square"
-  ],
+  "certificate_hash": "sha256:9cf5db758f7946a37d1035170c33baef3f6db4ae6aa783a823824a973cdd97e5",
+  "imports": ["Mathlib.Algebra.Ring.UnitModel","Mathlib.Algebra.Ring.UnitModel.Square","Std.Logic.Eq"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "le",
-      "kind": "def"
-    },
-    {
-      "name": "lt",
-      "kind": "def"
-    },
-    {
-      "name": "sqrt",
-      "kind": "def"
-    },
-    {
-      "name": "le_refl",
-      "kind": "theorem"
-    },
-    {
-      "name": "le_trans",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "le_square_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_square_of_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "sqrt_mul_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_of_square_eq_square_nonneg",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"le","kind":"def"},{"name":"lt","kind":"def"},{"name":"sqrt","kind":"def"},{"name":"le_refl","kind":"theorem"},{"name":"le_trans","kind":"theorem"},{"name":"add_nonneg","kind":"theorem"},{"name":"mul_nonneg","kind":"theorem"},{"name":"le_square_nonneg","kind":"theorem"},{"name":"sqrt_nonneg","kind":"theorem"},{"name":"sqrt_square_of_nonneg","kind":"theorem"},{"name":"sqrt_mul_self","kind":"theorem"},{"name":"eq_of_square_eq_square_nonneg","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

@@ -1,12 +1,14 @@
 # Namespace Policy
 
-This document fixes the public module namespace policy for `npa-mathlib`.
+This document defines namespace ownership, filesystem layout, and identifier
+evolution for the mutable `npa-mathlib` catalog. Read it with
+[`catalog-policy.md`](catalog-policy.md).
 
 Module names are proof-relevant package identifiers. They affect certificate
 identity, export hashes, package locks, axiom reports, theorem indexes, publish
-plans, release bundles, and downstream import fixtures. Starting with version
-1.0.0, treat a released module name as stable public API within the same major
-version.
+plans, release bundles, and downstream import fixtures. They are exact artifact
+identifiers within one immutable snapshot, but catalog HEAD does not promise
+name or source compatibility with later snapshots.
 
 ## Top-Level Boundary
 
@@ -20,23 +22,59 @@ in public `npa-mathlib` manifests, package locks, publish plans, source
 modules, or downstream smoke fixtures.
 
 Downstream packages should use their own package-local namespace. They should
-not define new local `Mathlib.*` modules unless they are becoming part of
-`npa-mathlib`.
+not define new local `Mathlib.*` modules. They consume catalog modules through
+hash-pinned vendored package imports from an immutable snapshot.
 
-## Stability Rules
+## Admission Boundary
 
-Starting with version 1.0.0, released module names are stable within the same
-major version.
+This document chooses names and paths; it does not authorize mathematical
+content for catalog admission. New or changed modules must satisfy
+`catalog-policy.md` and `AGENTS.md`. Canonical certificate and package gates
+establish `verified` maturity. The canonical L2 policy establishes the optional
+`reviewed` label. A suitable `Mathlib.*` name is not a substitute for either
+kind of evidence.
 
-Before version 1.0.0, breaking module-name, declaration-name, and organization
-changes are allowed when they improve the public API.
+## Declaration-Selection Boundary
 
-Within a stable major version, do not rename, move, or repurpose a released
-module to mean something else. If a better organization becomes necessary, add a
-new module and keep the old module available until a separately documented
-breaking release policy exists.
+A selected declaration subset is materialized in one new meaning-first
+`Mathlib.*` module. Its public path follows the ordinary module/path rule, and
+its package version and certificate identity are new even when every retained
+declaration keeps the same unqualified name. The selection is closed over
+required same-module support declarations and complete certificate-validated
+declaration families; it is never a textual copy of only the named theorem
+blocks.
 
-Adding a module requires the generated package artifacts to be refreshed:
+Declaration deletion or a module split is not namespace-only transport.
+`npa.l2_namespace_transport_request.v1` must not be used for such a subset, and
+source L2 acceptance does not make the new target theorem `reviewed`. Use the
+verified declaration materialization route, then obtain fresh exact-target L2
+acceptance separately if the target theorem is to receive the `reviewed` label.
+
+## Evolution Rules
+
+Catalog HEAD may add, remove, rename, move, split, merge, or replace public
+modules and declarations at any package version. Choose meaning-first names for
+the current surface, but do not keep an ill-fitting name solely for downstream
+compatibility.
+
+Every released version, tag, bundle, checksum, and recorded artifact identity
+is immutable. A later catalog change creates a new snapshot; it must never
+rewrite an earlier release or retag different bytes under an existing version.
+
+A rename, move, declaration change, import change, or proof change creates a
+new artifact identity. Update the package version and generated projections,
+and record the origin-registry revision or replacement relation. Removing a
+module retires it only from current HEAD and later snapshots; retain the old
+route, hashes, and release artifact as historical provenance. Do not silently
+reuse a retired identifier for unrelated mathematics.
+
+Package versions identify immutable snapshots rather than compatibility
+families. Consumers that require an older surface should continue using its
+vendored certificate closure or check out that exact release. They must not
+depend on a floating latest catalog version.
+
+Adding, removing, or changing a module requires the generated package artifacts
+to be refreshed:
 
 - `generated/package-lock.json`
 - `generated/axiom-report.json`
@@ -237,6 +275,33 @@ The `v0.2.1` release adds this Riemann-hypothesis audit workflow boundary:
 Mathlib.NumberTheory.RiemannHypothesis.CandidateAudit
 ```
 
+The `v0.2.2` release adds this strict ordered-field theorem layer:
+
+```text
+Mathlib.Algebra.OrderedField.Strict
+```
+
+The `v0.2.3` release adds this monoid natural-power layer:
+
+```text
+Mathlib.Algebra.Monoid.Power
+```
+
+The `v0.2.4` release extends `Mathlib.Algebra.Group.TwoElement` with the
+meaning-first theorems `z2_inverse_eq_self`, `z2_mul_self_eq_one`, and
+`z2_mul_comm`; the public module name and existing declarations are unchanged
+within that snapshot.
+
+The `v0.2.6` release adds this independently authored category-law foundation
+module:
+
+```text
+Mathlib.Category.Basic
+```
+
+Its public surface is the adopted seven-declaration interface recorded by the
+`Mathlib.Category.Basic` proposal and its target-owned catalog reconciliation.
+
 The Layer 0 mapping is fixed:
 
 | Source corpus module | Public module | Public path |
@@ -407,7 +472,7 @@ The analysis implicit-function closure mapping is fixed:
 | `Proofs.Ai.Analysis.AbstractImplicitFunction` | `Mathlib.Analysis.Calculus.ImplicitFunction` | `Mathlib/Analysis/Calculus/ImplicitFunction/` |
 
 No separate `Mathlib.Algebra.Group.Hom` module is introduced in Layer 3D-A.
-The stable homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
+The public homomorphism surface, including `GroupHomLawArgs`, `hom_mul`,
 `hom_one`, and `hom_inv`, remains in `Mathlib.Algebra.Group.Basic`.
 
 Layer 3E keeps `PropIff`, `PropAnd`, `PropOr`, `PropFalse`, and `PropNot`
@@ -437,6 +502,9 @@ ordered-field route. `Mathlib.Algebra.OrderedField.Square` contains the
 abstract square-normalization facts, while
 `Mathlib.Algebra.OrderedField.ScalarIdentities` contains derived scalar RHS
 identities used by later inner-product and geometry routes.
+`Mathlib.Algebra.OrderedField.Strict` contains derived strict-order facts whose
+proofs use explicit additive, multiplicative, and order compatibility laws
+without changing or duplicating the existing `OrderedFieldLawArgs` foundation.
 
 The v0.1.18 vector-space foundation route uses
 `Mathlib.LinearAlgebra.VectorSpace` for the abstract vector-space law-package
@@ -532,7 +600,7 @@ The v0.1.26 analysis inverse-function closure uses
 local inverse evidence, local inverse results, and the quantitative
 inverse-function theorem route. It extends the calculus namespace after
 derivative and fixed-point foundations are public, and gives the later
-implicit-function route a stable public inverse-function dependency.
+implicit-function route a shared public inverse-function dependency.
 
 The v0.1.27 analysis implicit-function closure uses
 `Mathlib.Analysis.Calculus.ImplicitFunction.AugmentedMap` for the auxiliary
@@ -631,7 +699,7 @@ use `Mathlib.Ai.*`, `Mathlib.Generated.*`, `Mathlib.Release0.*`, or
 
 ## Common Module Shape Examples
 
-Use `Basic` for the first stable module in a domain when a more specific name
+Use `Basic` for the first general-purpose module in a domain when a more specific name
 would be premature:
 
 ```text
@@ -776,6 +844,35 @@ only.
 | `93` | Systems theory and control | `Mathlib.Control.Basic`, `Mathlib.Control.LinearSystems`, `Mathlib.Control.DynamicalSystems`. |
 | `94` | Information theory, communication, and circuits | `Mathlib.InformationTheory.Basic`, `Mathlib.InformationTheory.CodingTheory`, `Mathlib.InformationTheory.Cryptography`, `Mathlib.Circuits.Basic`. |
 | `97` | Mathematics education | Normally documentation, not theorem modules. If formalized as mathematics, place the theorem under its mathematical domain instead of `Mathlib.Education.*`. |
+
+## Catalog Provenance Registry Gate
+
+Every catalog module must be represented by the canonical
+`promotion-origins.json` provenance registry. Before introducing, revising, or
+retiring a module, validate the current registry and use the transaction that
+owns that change. Source-backed admission uses a hash-bound promotion plan and
+the tracked generic materializer. Direct catalog addition, revision, rename,
+replacement, split, merge, or retirement uses the versioned registry v3
+reconciliation transaction and an explicit lifecycle request where required.
+The promotion materializer owns its target artifacts and registry change
+together. Reconciliation instead validates an already-prepared, unpublished
+target and makes its attestation-plus-registry update one recoverable change
+set; it does not write or roll back target artifacts. Complete L2 namespace
+transport only when preserving the optional `reviewed` maturity label.
+Existing public modules are reserved by the audited version 0.2.1 legacy
+bootstrap; missing historical source provenance must not be guessed.
+
+Registry v1 and v2 do not represent recurring direct catalog change events.
+The reconciliation command migrates either format to registry v3 and may
+append later v3 events at any strictly newer validated catalog version. Do not
+bypass or hand-edit the registry.
+
+Registry metadata is not proof evidence. Canonical certificates and cache-off
+source-free verification remain the proof authority. A registry collision is
+nevertheless a snapshot blocker because it indicates a duplicate or already
+reserved catalog route.
+
+See `docs/promotion-origin-registry.md` for validation and transition commands.
 
 ## Naming Checklist
 

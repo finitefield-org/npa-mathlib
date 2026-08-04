@@ -5,56 +5,13 @@
   "certificate": "Mathlib/Geometry/Affine/Derived/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:ee8f3eb06ab9006013f23e9126e4c4a771329a647201988955336d93a9673281",
-  "certificate_file_sha256": "sha256:2c74fba1c98c25cf5a351196ee3bf04dc32b5a4b76f8a605da38f418d18b2f7a",
-  "export_hash": "sha256:3c9e896cc92f293265638336d454ffbbcf8b7c34e1224d581e6c1779b8eb00d8",
+  "source_sha256": "sha256:13156491650e489786c9edc27dc22c0bd247d3dffdffdad83cb60b49210543f7",
+  "certificate_file_sha256": "sha256:15102bebad729c1f2c1e862b8ba90bc77a272005c7340007789b5e23da2a7d2e",
+  "export_hash": "sha256:2ee39e5540a529c7ccb831a41138545c3160fee275dc8cd57e19fb3da734f9a3",
   "axiom_report_hash": "sha256:31ec1ff27164f1a9d7251898656c6888bcda59666472aac23aac45eca8a6f44c",
-  "certificate_hash": "sha256:226db2ec160cf9913f6c18afc2659a38b6ef3c2d36238d3627cfac180ffd8727",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.Geometry.Affine",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-    "Eq.rec"
-  ],
-  "declarations": [
-    {
-      "name": "affine_vec_add_comm",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_disp_reverse",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_disp_comp",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_dist_sq_points_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_hypotenuse_vector_eq_neg_left_add_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_hypotenuse_vector_eq_sub_legs",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_dist_sq_hypotenuse_normed_space_norm_neg_left_add_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "affine_dist_sq_hypotenuse_norm_sub_legs",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:d6b180456c8eb5a850d6d34ba75d604a61f55493b5e51578a2affd5ac46bcc57",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.Geometry.Affine","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.VectorSpace","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"affine_vec_add_comm","kind":"theorem"},{"name":"affine_disp_reverse","kind":"theorem"},{"name":"affine_disp_comp","kind":"theorem"},{"name":"affine_dist_sq_points_def","kind":"theorem"},{"name":"affine_hypotenuse_vector_eq_neg_left_add_right","kind":"theorem"},{"name":"affine_hypotenuse_vector_eq_sub_legs","kind":"theorem"},{"name":"affine_dist_sq_hypotenuse_normed_space_norm_neg_left_add_right","kind":"theorem"},{"name":"affine_dist_sq_hypotenuse_norm_sub_legs","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

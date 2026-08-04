@@ -1,0 +1,10 @@
+{
+  "schema": "npa-proof-replay-v0.1",
+  "module": "Mathlib.Algebra.Monoid.Power",
+  "attempts": [
+    {"declaration":"monoidPow","strategy":"explicit-term","result":"accepted"},
+    {"declaration":"monoid_pow_zero","strategy":"reflexivity","result":"accepted"},
+    {"declaration":"monoid_pow_succ","strategy":"reflexivity","result":"accepted"}
+  ],
+  "trust_boundary": "replay is an untrusted authoring sidecar; only canonical certificate verification is proof evidence"
+}

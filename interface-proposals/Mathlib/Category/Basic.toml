@@ -1,0 +1,377 @@
+schema = "npa.mathlib.interface_proposal.v1"
+proposal_id = "Mathlib.Category.Basic"
+proposal_revision = 5
+previous_proposal_hash = "sha256:d2bcaffa27e5ae8b99bc82b3cc1df8078b4a08fc3d1cf5f194ca48b613ea4713"
+module = "Mathlib.Category.Basic"
+change_kind = "add"
+source_modules = []
+interface_status = "adopted"
+proof_evidence = false
+summary = "Adopts the exact category-law foundation used by the NPA category and arithmetic-geometry corpus."
+scope = "Adopt the exact seven-declaration category-law foundation in Mathlib.Category.Basic, with all seven declarations public; exclude functor laws, natural transformations, concrete category constructions, and implementation artifacts."
+imports = ["Mathlib.Logic.EqReasoning", "Std.Logic.Eq"]
+adoption_date = "2026-08-04"
+adoption_rationale = "The exact target surface now follows the canonical certificate declaration order while preserving the seven public declarations, exact signatures and definition body, direct imports, dependency graph, and reviewed module boundary."
+re_adoption_rationale = "Revision 4 could not pass the exact-surface gate because its declaration rows followed source-semantic order while canonical certificate reconstruction requires dependency-safe name order. Revision 5 changes only the declaration row order, retains all seven public declarations, signatures, body, dependencies, imports, evidence, proof references, alternatives, and namespace decision, and is re-adopted after the temporary target reports surface parity."
+alternatives_review = "Reviewed Mathlib.Category.Defs and Mathlib.Category.Theory.Basic as module names, category_compose_assoc as a theorem name, a bundled category structure as a signature alternative, and folding the directly dependent Functor surface into this module. Basic is the namespace-policy foundation name, the source declaration names preserve the observed semantic surface, and the 20 plus 263 pinned downstream imports establish broad reuse of the category-law foundation while the directly imported Functor module remains a separate boundary. No material alternative remains for this proposed category-law boundary; quotient-backed interfaces are excluded by repository policy."
+supersedes = []
+
+[[declarations]]
+name = "CategoryLawArgs"
+kind = "definition"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), Prop"
+body = "fun Obj => fun Hom => fun id => fun comp => forall (P : Prop), forall (mk : forall (comp_id_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A A B f (id A)) f), forall (id_comp_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A B B (id B) f) f), forall (comp_assoc_law : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (D : Obj), forall (h : Hom C D), forall (g : Hom B C), forall (f : Hom A B), @Eq.{v} (Hom A D) (comp A B D (comp B C D h g) f) (comp A C D h (comp A B C g f))), P), P"
+semantic_role = "Bundles the identity and composition laws used as the reusable category foundation."
+depends_on = []
+evidence_ids = ["npa-corpus-category-law-args"]
+
+[[declarations]]
+name = "category_comp_assoc"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (D : Obj), forall (h : Hom C D), forall (g : Hom B C), forall (f : Hom A B), @Eq.{v} (Hom A D) (comp A B D (comp B C D h g) f) (comp A C D h (comp A B C g f))"
+semantic_role = "Provides the category composition associativity theorem as a direct public rewrite surface."
+depends_on = ["CategoryLawArgs"]
+evidence_ids = ["npa-corpus-category-comp-assoc"]
+proof_reference_ids = ["npa-corpus-category-comp-assoc-proof"]
+
+[[declarations]]
+name = "category_comp_assoc_law"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (D : Obj), forall (h : Hom C D), forall (g : Hom B C), forall (f : Hom A B), @Eq.{v} (Hom A D) (comp A B D (comp B C D h g) f) (comp A C D h (comp A B C g f))"
+semantic_role = "Projects associativity of composition from the category-law bundle."
+depends_on = ["CategoryLawArgs"]
+evidence_ids = ["npa-corpus-category-comp-assoc-law"]
+proof_reference_ids = ["npa-corpus-category-comp-assoc-law-proof"]
+
+[[declarations]]
+name = "category_comp_id"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A A B f (id A)) f"
+semantic_role = "Projects composition with the source identity from the category-law bundle."
+depends_on = ["CategoryLawArgs"]
+evidence_ids = ["npa-corpus-category-comp-id"]
+proof_reference_ids = ["npa-corpus-category-comp-id-proof"]
+
+[[declarations]]
+name = "category_definition_intro"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (comp_id_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A A B f (id A)) f), forall (id_comp_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A B B (id B) f) f), forall (comp_assoc_law : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (D : Obj), forall (h : Hom C D), forall (g : Hom B C), forall (f : Hom A B), @Eq.{v} (Hom A D) (comp A B D (comp B C D h g) f) (comp A C D h (comp A B C g f))), @CategoryLawArgs.{u,v} Obj Hom id comp"
+semantic_role = "Introduces the category-law bundle from its three defining laws."
+depends_on = ["CategoryLawArgs"]
+evidence_ids = ["npa-corpus-category-definition-intro"]
+proof_reference_ids = ["npa-corpus-category-definition-intro-proof"]
+
+[[declarations]]
+name = "category_id_comp"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A B B (id B) f) f"
+semantic_role = "Projects composition with the target identity from the category-law bundle."
+depends_on = ["CategoryLawArgs"]
+evidence_ids = ["npa-corpus-category-id-comp"]
+proof_reference_ids = ["npa-corpus-category-id-comp-proof"]
+
+[[declarations]]
+name = "opposite_category_laws"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), @CategoryLawArgs.{u,v} Obj (fun (A : Obj) => fun (B : Obj) => Hom B A) id (fun (A : Obj) => fun (B : Obj) => fun (C : Obj) => fun (g : Hom C B) => fun (f : Hom B A) => comp C B A f g)"
+semantic_role = "Transforms category laws into the opposite-category law bundle."
+depends_on = ["CategoryLawArgs", "category_id_comp", "category_comp_id", "category_comp_assoc"]
+evidence_ids = ["npa-corpus-opposite-category-laws"]
+proof_reference_ids = ["npa-corpus-opposite-category-laws-proof"]
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Category.Defs"
+disposition = "rejected"
+rationale = "The namespace policy prefers Basic for the first public abstract foundation, while Defs would mirror the source file boundary too literally."
+evidence_ids = ["npa-corpus-category-basic-layout"]
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Category.Theory.Basic"
+disposition = "rejected"
+rationale = "The proposed surface is a general category-law foundation, not a specialized category-theory subfield."
+evidence_ids = ["npa-corpus-category-basic-layout"]
+
+[[alternatives]]
+kind = "declaration_name"
+candidate = "category_compose_assoc"
+disposition = "rejected"
+rationale = "The pinned NPA source and downstream imports observe category_comp_assoc, which states the operation and its semantic role directly."
+evidence_ids = ["npa-corpus-category-comp-assoc"]
+
+[[alternatives]]
+kind = "signature"
+candidate = "A bundled category structure with fields for objects, homs, identities, and composition"
+disposition = "deferred"
+rationale = "The pinned corpus surface uses explicit parameters and a Prop-valued law bundle; a bundled structure would be a new interface choice requiring separate usage evidence."
+evidence_ids = ["npa-corpus-category-law-args", "npa-corpus-category-basic-consumer-count"]
+
+[[alternatives]]
+kind = "module_boundary"
+candidate = "Include the functor-law declarations in Mathlib.Category.Basic"
+disposition = "rejected"
+rationale = "Functor is a separately declared and directly imported module that depends on Category.Basic; its broader downstream usage evidence remains in the Category.Functor proposal."
+evidence_ids = ["npa-project-iut-category-functor-consumer"]
+
+[[observations]]
+id = "npa-corpus-category-basic-layout"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_layout"
+notes = "The pinned NPA source defines the category-law foundation under the category namespace."
+
+[[observations]]
+id = "npa-corpus-category-basic-import-std-eq"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Std.Logic.Eq"
+usage_kind = "module_import"
+notes = "The source directly imports the standard equality interface."
+
+[[observations]]
+id = "npa-corpus-category-basic-import-eq-reasoning"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.EqReasoning"
+usage_kind = "module_import"
+notes = "The source imports the NPA equality-reasoning helper; the eventual Mathlib boundary requires a separate namespace mapping review."
+
+[[observations]]
+id = "npa-corpus-category-law-args"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "CategoryLawArgs"
+usage_kind = "declaration"
+notes = "The source declares the category identity and composition law bundle."
+
+[[observations]]
+id = "npa-corpus-category-definition-intro"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_definition_intro"
+usage_kind = "declaration"
+notes = "The source exposes an introduction theorem for the category-law bundle."
+
+[[observations]]
+id = "npa-corpus-category-comp-assoc-law"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_assoc_law"
+usage_kind = "declaration"
+notes = "The source exposes the associativity-law projection from the category-law bundle."
+
+[[observations]]
+id = "npa-corpus-category-comp-id"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_id"
+usage_kind = "declaration"
+notes = "The source exposes the composition-with-identity projection."
+
+[[observations]]
+id = "npa-corpus-category-id-comp"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_id_comp"
+usage_kind = "declaration"
+notes = "The source exposes the identity-with-composition projection."
+
+[[observations]]
+id = "npa-corpus-category-comp-assoc"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_assoc"
+usage_kind = "declaration"
+notes = "The source exposes the associativity theorem for category composition."
+
+[[observations]]
+id = "npa-corpus-opposite-category-laws"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "opposite_category_laws"
+usage_kind = "declaration"
+notes = "The source exposes the law transformation for the opposite category."
+
+[[observations]]
+id = "npa-corpus-category-basic-consumer-count"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_import"
+notes = "A direct downstream import; a pinned source scan finds 20 unique npa-corpus source files importing Proofs.Ai.Category.Basic."
+
+[[observations]]
+id = "npa-project-iut-category-basic-layout"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_layout"
+notes = "The IUT project carries the same category-law foundation as a separately pinned source consumer."
+
+[[observations]]
+id = "npa-project-iut-category-basic-import-std-eq"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Std.Logic.Eq"
+usage_kind = "module_import"
+notes = "The IUT source directly imports the standard equality interface."
+
+[[observations]]
+id = "npa-project-iut-category-basic-import-eq-reasoning"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.EqReasoning"
+usage_kind = "module_import"
+notes = "The IUT source imports the same NPA equality-reasoning helper boundary."
+
+[[observations]]
+id = "npa-project-iut-category-basic-consumer-count"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Iut/Foundation/Frobenioid/CategoryConstruction/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_import"
+notes = "A direct IUT downstream import; a pinned source scan finds 263 unique npa-project-iut source files importing Proofs.Ai.Category.Basic."
+
+[[observations]]
+id = "npa-project-iut-category-functor-consumer"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_import"
+notes = "The IUT Functor module directly depends on the category-law foundation."
+
+[[proof_references]]
+id = "npa-corpus-category-definition-intro-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_definition_intro"
+reference_role = "proof_structure"
+notes = "The pinned source provides the constructor-style proof structure for the category-law bundle; no source proof text is NPA proof evidence."
+
+[[proof_references]]
+id = "npa-corpus-category-comp-assoc-law-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_assoc_law"
+reference_role = "proof_structure"
+notes = "The pinned source projects associativity through the category-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-category-comp-id-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_id"
+reference_role = "proof_structure"
+notes = "The pinned source projects source-identity composition through the category-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-category-id-comp-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_id_comp"
+reference_role = "proof_structure"
+notes = "The pinned source projects target-identity composition through the category-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-category-comp-assoc-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "category_comp_assoc"
+reference_role = "proof_structure"
+notes = "The pinned source projects associativity through the category-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-opposite-category-laws-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Basic/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+source_declaration = "opposite_category_laws"
+reference_role = "proof_structure"
+notes = "The pinned source constructs opposite-category laws from projections and symmetry; it is implementation guidance only."

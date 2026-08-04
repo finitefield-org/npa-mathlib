@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Downstream.OrderedFieldStrict",
+  "source": "Downstream/OrderedFieldStrict/source.npa",
+  "certificate": "Downstream/OrderedFieldStrict/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:d15c22bae372f30803a88cf9fa76b4321c3e9a7690095868236171461bd4dccc",
+  "certificate_file_sha256": "sha256:84c455be737b4f80833da8f923b19dfa534e48a8715c3ae19dc52f82cc8d44a8",
+  "export_hash": "sha256:b1c1ce7e73b503799a6ed18479dbe99e0a6dda245dead8a82113962c17da6a1c",
+  "axiom_report_hash": "sha256:aa98844696696152a3be27a4eaa1e124c7c103d0d91edc68bdea8f3129aba273",
+  "certificate_hash": "sha256:b3a1699e6ab5fea42faed7aa724dd883ab9722df7872a763939313deb088bfd0",
+  "imports": ["Mathlib.Algebra.Field.Basic","Mathlib.Algebra.OrderedField.Strict","Mathlib.Algebra.Ring.Basic","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"downstream_ordered_field_one_sub_pos_of_lt_one","kind":"theorem"},{"name":"downstream_ordered_field_square_lt_one_of_pos_lt_one","kind":"theorem"},{"name":"downstream_ordered_field_one_sub_square_pos","kind":"theorem"},{"name":"downstream_ordered_field_two_ne_zero","kind":"theorem"},{"name":"downstream_ordered_field_four_ne_zero","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

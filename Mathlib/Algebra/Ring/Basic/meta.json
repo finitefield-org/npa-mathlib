@@ -6,29 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:8d127b0e3d073bcf32a9b805532e5ed8d151c1a27d1de23946ef2484ba4bc4cb",
-  "certificate_file_sha256": "sha256:a56c8f37e94b44542f13bde942708182346df0669170564e7e1485d038da55cf",
-  "export_hash": "sha256:0907bfd1cd3566b5c97034003469cd69cad2e16e045511fb0e471af4bfed6cc0",
+  "certificate_file_sha256": "sha256:9155aa3e8d633253d4c118be05d699e3ee192214f3ef41fe99ccc2ec35261030",
+  "export_hash": "sha256:d0c44c0c457f286c3f82d91e10e8af4d162199290f40a1876f4d9960b4ffb58c",
   "axiom_report_hash": "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb",
-  "certificate_hash": "sha256:17b2de7737cef73dcc427fb2883445e37430f6dbdd2dacf04cd4495ac9f32d91",
-  "imports": [
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "two",
-      "kind": "def"
-    },
-    {
-      "name": "sq",
-      "kind": "def"
-    },
-    {
-      "name": "RingLawArgs",
-      "kind": "def"
-    }
-  ],
+  "certificate_hash": "sha256:f4fb856e4723fee2f3c6a57525c42602b0d14412a6b398048745122944f93e9a",
+  "imports": ["Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"two","kind":"def"},{"name":"sq","kind":"def"},{"name":"RingLawArgs","kind":"def"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

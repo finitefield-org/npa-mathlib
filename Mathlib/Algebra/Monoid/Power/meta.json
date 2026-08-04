@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.Monoid.Power",
+  "source": "Mathlib/Algebra/Monoid/Power/source.npa",
+  "certificate": "Mathlib/Algebra/Monoid/Power/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:12ea3cee35ec1201cf529455cfb5da978bc2a3c2411dda4ba6b8b915d1843a5e",
+  "certificate_file_sha256": "sha256:e200ae9f7c7bab50f543a60426b484904d6d7355d27ba3081238fa4b6f8b0c02",
+  "export_hash": "sha256:8dd2eb12b7eb113de5197972ec28d9a052175995ba32224a4b3c9e0016990c5f",
+  "axiom_report_hash": "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb",
+  "certificate_hash": "sha256:20ce282310d0680a08267cacd49e0ebd5ca6caf5ec688c593f8700a8abf7fae9",
+  "imports": ["Std.Logic.Eq","Std.Nat.Basic"],
+  "axioms": [],
+  "declarations": [{"name":"monoidPow","kind":"def"},{"name":"monoid_pow_zero","kind":"theorem"},{"name":"monoid_pow_succ","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

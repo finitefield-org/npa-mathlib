@@ -6,29 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:962c2db5be02218d92e681a9d92035d12cd06f23515aafad793dd5612ae14736",
-  "certificate_file_sha256": "sha256:66724ebc31b2a845aa5e91dc9468f5470ee1b6ecb22b7b5632dfc912b3f96d0c",
-  "export_hash": "sha256:5c1a39b0e9f82dc1014e3e63549c71eab3db6383024a87408e4e95e06bc33fbb",
+  "certificate_file_sha256": "sha256:f8646a2fa4cb6746326de4f1131b16a9825f26a86dce296cc3f5c267bc771f4c",
+  "export_hash": "sha256:31ab67199f2802bccbac68d28cd37ed4ebce2c05b59a223b650166ece436bd95",
   "axiom_report_hash": "sha256:39f92e3a74edf201d900d93abeebb9c404ea8c141bfc46761f7e889c9f8cf9f7",
-  "certificate_hash": "sha256:8d1c72935c2c22edd3911a907df17b3e84b95ebae56fb27f4f514dcd6dbef14d",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Logic.EqReasoning",
-    "Mathlib.Algebra.Group.Basic"
-  ],
-  "axioms": [],
-  "declarations": [
-    {
-      "name": "kernel_mul_closed",
-      "kind": "theorem"
-    },
-    {
-      "name": "kernel_inv_closed",
-      "kind": "theorem"
-    },
-    {
-      "name": "kernel_conj_closed",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:c11deac4c744787d6c98a0b8c161763e7146866c5e13198576c29d8d7dcfad0a",
+  "imports": ["Mathlib.Algebra.Group.Basic","Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"kernel_mul_closed","kind":"theorem"},{"name":"kernel_inv_closed","kind":"theorem"},{"name":"kernel_conj_closed","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

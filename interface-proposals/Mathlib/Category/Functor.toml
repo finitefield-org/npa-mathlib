@@ -1,0 +1,416 @@
+schema = "npa.mathlib.interface_proposal.v1"
+proposal_id = "Mathlib.Category.Functor"
+proposal_revision = 3
+previous_proposal_hash = "sha256:2855c846b9e6f4854a983bac790cc3540e926f5f98be7d76dae0243aff78bff8"
+module = "Mathlib.Category.Functor"
+change_kind = "add"
+source_modules = []
+interface_status = "adopted"
+proof_evidence = false
+summary = "Adopts the exact functor-law foundation layered on Mathlib.Category.Basic for the NPA category and arithmetic-geometry corpus."
+scope = "Adopt the exact eight-declaration functor-law foundation in Mathlib.Category.Functor, with all eight declarations public and a direct dependency on Mathlib.Category.Basic; exclude natural transformations, concrete functors, and implementation artifacts."
+imports = ["Mathlib.Category.Basic", "Mathlib.Logic.EqReasoning", "Std.Logic.Eq"]
+adoption_date = "2026-08-04"
+adoption_rationale = "The pinned npa-corpus and npa-project-iut sources expose the same eight-declaration explicit functor-law surface, and pinned downstream scans show 16 and 191 direct Functor imports respectively. The exact law-bundle bodies, explicit Category.Basic dependency, public declaration boundary, and reviewed alternatives are sufficiently precise for independent NPA implementation while keeping natural transformations and concrete functors outside this module."
+alternatives_review = "Reviewed Mathlib.Category.Functor.Basic and Mathlib.Category.Morphism.Functor as module names, map_id and map_comp as theorem names, bundled functor records as a signature alternative, and folding the hom-functor and identity/composite functor results into Category.Basic. The namespace policy lists Mathlib.Category.Functor, the pinned source preserves the functor-law names, and separate downstream usage supports this boundary. No material alternative remains for this proposed functor-law surface; quotient-backed interfaces are excluded by repository policy."
+supersedes = []
+
+[[declarations]]
+name = "FunctorLawArgs"
+kind = "definition"
+surface = "public"
+signature = "forall (ObjC : Sort u), forall (HomC : forall (A : ObjC), forall (B : ObjC), Sort v), forall (idC : forall (A : ObjC), HomC A A), forall (compC : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), HomC A C), forall (ObjD : Sort w), forall (HomD : forall (X : ObjD), forall (Y : ObjD), Sort z), forall (idD : forall (X : ObjD), HomD X X), forall (compD : forall (X : ObjD), forall (Y : ObjD), forall (Z : ObjD), forall (g : HomD Y Z), forall (f : HomD X Y), HomD X Z), forall (source_args : @CategoryLawArgs.{u,v} ObjC HomC idC compC), forall (target_args : @CategoryLawArgs.{w,z} ObjD HomD idD compD), forall (obj_map : forall (A : ObjC), ObjD), forall (hom_map : forall (A : ObjC), forall (B : ObjC), forall (f : HomC A B), HomD (obj_map A) (obj_map B)), Prop"
+body = "fun ObjC => fun HomC => fun idC => fun compC => fun ObjD => fun HomD => fun idD => fun compD => fun source_args => fun target_args => fun obj_map => fun hom_map => forall (P : Prop), forall (mk : forall (map_id_law : forall (A : ObjC), @Eq.{z} (HomD (obj_map A) (obj_map A)) (hom_map A A (idC A)) (idD (obj_map A))), forall (map_comp_law : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), @Eq.{z} (HomD (obj_map A) (obj_map C)) (hom_map A C (compC A B C g f)) (compD (obj_map A) (obj_map B) (obj_map C) (hom_map B C g) (hom_map A B f))), P), P"
+semantic_role = "Bundles identity and composition preservation laws for an explicit object and hom map between categories."
+depends_on = []
+evidence_ids = ["npa-corpus-functor-law-args"]
+
+[[declarations]]
+name = "HomFunctorLawArgs"
+kind = "definition"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), Prop"
+body = "fun Obj => fun Hom => fun id => fun comp => fun category_args => forall (P : Prop), forall (mk : forall (covariant_id_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A B B (id B) f) f), forall (covariant_comp_law : forall (X : Obj), forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), forall (h : Hom X A), @Eq.{v} (Hom X C) (comp X A C (comp A B C g f) h) (comp X B C g (comp X A B f h))), forall (contravariant_id_law : forall (A : Obj), forall (B : Obj), forall (f : Hom A B), @Eq.{v} (Hom A B) (comp A A B f (id A)) f), forall (contravariant_comp_law : forall (T : Obj), forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B A), forall (f : Hom C B), forall (h : Hom A T), @Eq.{v} (Hom C T) (comp C A T h (comp C B A g f)) (comp C B T (comp B A T h g) f)), P), P"
+semantic_role = "Bundles the covariant and contravariant law obligations for hom functors."
+depends_on = []
+evidence_ids = ["npa-corpus-hom-functor-law-args"]
+
+[[declarations]]
+name = "functor_definition_intro"
+kind = "theorem"
+surface = "public"
+signature = "forall (ObjC : Sort u), forall (HomC : forall (A : ObjC), forall (B : ObjC), Sort v), forall (idC : forall (A : ObjC), HomC A A), forall (compC : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), HomC A C), forall (ObjD : Sort w), forall (HomD : forall (X : ObjD), forall (Y : ObjD), Sort z), forall (idD : forall (X : ObjD), HomD X X), forall (compD : forall (X : ObjD), forall (Y : ObjD), forall (Z : ObjD), forall (g : HomD Y Z), forall (f : HomD X Y), HomD X Z), forall (source_args : @CategoryLawArgs.{u,v} ObjC HomC idC compC), forall (target_args : @CategoryLawArgs.{w,z} ObjD HomD idD compD), forall (obj_map : forall (A : ObjC), ObjD), forall (hom_map : forall (A : ObjC), forall (B : ObjC), forall (f : HomC A B), HomD (obj_map A) (obj_map B)), forall (map_id_law : forall (A : ObjC), @Eq.{z} (HomD (obj_map A) (obj_map A)) (hom_map A A (idC A)) (idD (obj_map A))), forall (map_comp_law : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), @Eq.{z} (HomD (obj_map A) (obj_map C)) (hom_map A C (compC A B C g f)) (compD (obj_map A) (obj_map B) (obj_map C) (hom_map B C g) (hom_map A B f))), @FunctorLawArgs.{u,v,w,z} ObjC HomC idC compC ObjD HomD idD compD source_args target_args obj_map hom_map"
+semantic_role = "Introduces a functor law bundle from identity and composition preservation proofs."
+depends_on = ["FunctorLawArgs"]
+evidence_ids = ["npa-corpus-functor-definition-intro"]
+proof_reference_ids = ["npa-corpus-functor-definition-intro-proof"]
+
+[[declarations]]
+name = "functor_preserves_id"
+kind = "theorem"
+surface = "public"
+signature = "forall (ObjC : Sort u), forall (HomC : forall (A : ObjC), forall (B : ObjC), Sort v), forall (idC : forall (A : ObjC), HomC A A), forall (compC : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), HomC A C), forall (ObjD : Sort w), forall (HomD : forall (X : ObjD), forall (Y : ObjD), Sort z), forall (idD : forall (X : ObjD), HomD X X), forall (compD : forall (X : ObjD), forall (Y : ObjD), forall (Z : ObjD), forall (g : HomD Y Z), forall (f : HomD X Y), HomD X Z), forall (source_args : @CategoryLawArgs.{u,v} ObjC HomC idC compC), forall (target_args : @CategoryLawArgs.{w,z} ObjD HomD idD compD), forall (obj_map : forall (A : ObjC), ObjD), forall (hom_map : forall (A : ObjC), forall (B : ObjC), forall (f : HomC A B), HomD (obj_map A) (obj_map B)), forall (functor_args : @FunctorLawArgs.{u,v,w,z} ObjC HomC idC compC ObjD HomD idD compD source_args target_args obj_map hom_map), forall (A : ObjC), @Eq.{z} (HomD (obj_map A) (obj_map A)) (hom_map A A (idC A)) (idD (obj_map A))"
+semantic_role = "Projects identity preservation from the functor law bundle."
+depends_on = ["FunctorLawArgs"]
+evidence_ids = ["npa-corpus-functor-preserves-id"]
+proof_reference_ids = ["npa-corpus-functor-preserves-id-proof"]
+
+[[declarations]]
+name = "functor_preserves_comp"
+kind = "theorem"
+surface = "public"
+signature = "forall (ObjC : Sort u), forall (HomC : forall (A : ObjC), forall (B : ObjC), Sort v), forall (idC : forall (A : ObjC), HomC A A), forall (compC : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), HomC A C), forall (ObjD : Sort w), forall (HomD : forall (X : ObjD), forall (Y : ObjD), Sort z), forall (idD : forall (X : ObjD), HomD X X), forall (compD : forall (X : ObjD), forall (Y : ObjD), forall (Z : ObjD), forall (g : HomD Y Z), forall (f : HomD X Y), HomD X Z), forall (source_args : @CategoryLawArgs.{u,v} ObjC HomC idC compC), forall (target_args : @CategoryLawArgs.{w,z} ObjD HomD idD compD), forall (obj_map : forall (A : ObjC), ObjD), forall (hom_map : forall (A : ObjC), forall (B : ObjC), forall (f : HomC A B), HomD (obj_map A) (obj_map B)), forall (functor_args : @FunctorLawArgs.{u,v,w,z} ObjC HomC idC compC ObjD HomD idD compD source_args target_args obj_map hom_map), forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), @Eq.{z} (HomD (obj_map A) (obj_map C)) (hom_map A C (compC A B C g f)) (compD (obj_map A) (obj_map B) (obj_map C) (hom_map B C g) (hom_map A B f))"
+semantic_role = "Projects composition preservation from the functor law bundle."
+depends_on = ["FunctorLawArgs"]
+evidence_ids = ["npa-corpus-functor-preserves-comp"]
+proof_reference_ids = ["npa-corpus-functor-preserves-comp-proof"]
+
+[[declarations]]
+name = "hom_functor_theorem"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), @HomFunctorLawArgs.{u,v} Obj Hom id comp category_args"
+semantic_role = "Derives the covariant and contravariant hom-functor laws from category laws."
+depends_on = ["HomFunctorLawArgs"]
+evidence_ids = ["npa-corpus-hom-functor-theorem"]
+proof_reference_ids = ["npa-corpus-hom-functor-theorem-proof"]
+
+[[declarations]]
+name = "identity_functor_theorem"
+kind = "theorem"
+surface = "public"
+signature = "forall (Obj : Sort u), forall (Hom : forall (A : Obj), forall (B : Obj), Sort v), forall (id : forall (A : Obj), Hom A A), forall (comp : forall (A : Obj), forall (B : Obj), forall (C : Obj), forall (g : Hom B C), forall (f : Hom A B), Hom A C), forall (category_args : @CategoryLawArgs.{u,v} Obj Hom id comp), @FunctorLawArgs.{u,v,u,v} Obj Hom id comp Obj Hom id comp category_args category_args (fun (A : Obj) => A) (fun (A : Obj) => fun (B : Obj) => fun (f : Hom A B) => f)"
+semantic_role = "Provides the identity functor's law bundle."
+depends_on = ["FunctorLawArgs"]
+evidence_ids = ["npa-corpus-identity-functor-theorem"]
+proof_reference_ids = ["npa-corpus-identity-functor-theorem-proof"]
+
+[[declarations]]
+name = "composite_functor_theorem"
+kind = "theorem"
+surface = "public"
+signature = "forall (ObjC : Sort u), forall (HomC : forall (A : ObjC), forall (B : ObjC), Sort v), forall (idC : forall (A : ObjC), HomC A A), forall (compC : forall (A : ObjC), forall (B : ObjC), forall (C : ObjC), forall (g : HomC B C), forall (f : HomC A B), HomC A C), forall (source_args : @CategoryLawArgs.{u,v} ObjC HomC idC compC), forall (ObjD : Sort w), forall (HomD : forall (X : ObjD), forall (Y : ObjD), Sort x), forall (idD : forall (X : ObjD), HomD X X), forall (compD : forall (X : ObjD), forall (Y : ObjD), forall (Z : ObjD), forall (g : HomD Y Z), forall (f : HomD X Y), HomD X Z), forall (mid_args : @CategoryLawArgs.{w,x} ObjD HomD idD compD), forall (ObjE : Sort y), forall (HomE : forall (X : ObjE), forall (Y : ObjE), Sort z), forall (idE : forall (X : ObjE), HomE X X), forall (compE : forall (X : ObjE), forall (Y : ObjE), forall (Z : ObjE), forall (g : HomE Y Z), forall (f : HomE X Y), HomE X Z), forall (target_args : @CategoryLawArgs.{y,z} ObjE HomE idE compE), forall (objF : forall (A : ObjC), ObjD), forall (homF : forall (A : ObjC), forall (B : ObjC), forall (f : HomC A B), HomD (objF A) (objF B)), forall (functorF_args : @FunctorLawArgs.{u,v,w,x} ObjC HomC idC compC ObjD HomD idD compD source_args mid_args objF homF), forall (objG : forall (X : ObjD), ObjE), forall (homG : forall (X : ObjD), forall (Y : ObjD), forall (f : HomD X Y), HomE (objG X) (objG Y)), forall (functorG_args : @FunctorLawArgs.{w,x,y,z} ObjD HomD idD compD ObjE HomE idE compE mid_args target_args objG homG), @FunctorLawArgs.{u,v,y,z} ObjC HomC idC compC ObjE HomE idE compE source_args target_args (fun (A : ObjC) => objG (objF A)) (fun (A : ObjC) => fun (B : ObjC) => fun (f : HomC A B) => homG (objF A) (objF B) (homF A B f))"
+semantic_role = "Provides the law bundle for the composite of two functors."
+depends_on = ["FunctorLawArgs"]
+evidence_ids = ["npa-corpus-composite-functor-theorem"]
+proof_reference_ids = ["npa-corpus-composite-functor-theorem-proof"]
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Category.Functor.Basic"
+disposition = "rejected"
+rationale = "The namespace policy lists Mathlib.Category.Functor as the first public functor module; Basic would add an unnecessary extra segment."
+evidence_ids = ["npa-corpus-category-functor-layout"]
+
+[[alternatives]]
+kind = "module_name"
+candidate = "Mathlib.Category.Morphism.Functor"
+disposition = "rejected"
+rationale = "The proposed surface concerns functor laws generally, not only morphism-level functor operations."
+evidence_ids = ["npa-corpus-category-functor-layout"]
+
+[[alternatives]]
+kind = "declaration_name"
+candidate = "map_id"
+disposition = "rejected"
+rationale = "The pinned source uses functor_preserves_id for the public identity-preservation theorem; map_id would narrow the name to a conventional bundled-functor API that is not the observed explicit-parameter surface."
+evidence_ids = ["npa-corpus-functor-preserves-id"]
+
+[[alternatives]]
+kind = "declaration_name"
+candidate = "map_comp"
+disposition = "rejected"
+rationale = "The pinned source uses functor_preserves_comp for the public composition-preservation theorem; map_comp would narrow the name to a conventional bundled-functor API that is not the observed explicit-parameter surface."
+evidence_ids = ["npa-corpus-functor-preserves-comp"]
+
+[[alternatives]]
+kind = "signature"
+candidate = "A bundled functor structure with object and hom maps as fields"
+disposition = "deferred"
+rationale = "The pinned corpus surface uses explicit category parameters and a Prop-valued law bundle; a bundled structure would require separate usage evidence."
+evidence_ids = ["npa-corpus-functor-law-args", "npa-corpus-category-functor-consumer-count"]
+
+[[alternatives]]
+kind = "module_boundary"
+candidate = "Include the functor declarations in Mathlib.Category.Basic"
+disposition = "rejected"
+rationale = "The source is a separate direct-imported module with independent declaration and downstream usage evidence, and it depends on Category.Basic."
+evidence_ids = ["npa-corpus-category-functor-import-basic", "npa-corpus-category-functor-consumer-count"]
+
+[[observations]]
+id = "npa-corpus-category-functor-layout"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+usage_kind = "module_layout"
+notes = "The pinned NPA source defines the functor-law foundation and its basic derived theorems."
+
+[[observations]]
+id = "npa-corpus-category-functor-import-std-eq"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Std.Logic.Eq"
+usage_kind = "module_import"
+notes = "The source directly imports the standard equality interface."
+
+[[observations]]
+id = "npa-corpus-category-functor-import-eq-reasoning"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.EqReasoning"
+usage_kind = "module_import"
+notes = "The source imports the NPA equality-reasoning helper; the eventual Mathlib boundary requires a separate namespace mapping review."
+
+[[observations]]
+id = "npa-corpus-category-functor-import-basic"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_import"
+notes = "The functor surface directly depends on the category-law foundation."
+
+[[observations]]
+id = "npa-corpus-functor-law-args"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "FunctorLawArgs"
+usage_kind = "declaration"
+notes = "The source declares the functor identity- and composition-preservation law bundle."
+
+[[observations]]
+id = "npa-corpus-hom-functor-law-args"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "HomFunctorLawArgs"
+usage_kind = "declaration"
+notes = "The source declares the covariant and contravariant hom-functor law bundle."
+
+[[observations]]
+id = "npa-corpus-functor-definition-intro"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_definition_intro"
+usage_kind = "declaration"
+notes = "The source exposes an introduction theorem for the functor-law bundle."
+
+[[observations]]
+id = "npa-corpus-functor-preserves-id"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_preserves_id"
+usage_kind = "declaration"
+notes = "The source exposes identity preservation for a functor."
+
+[[observations]]
+id = "npa-corpus-functor-preserves-comp"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_preserves_comp"
+usage_kind = "declaration"
+notes = "The source exposes composition preservation for a functor."
+
+[[observations]]
+id = "npa-corpus-hom-functor-theorem"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "hom_functor_theorem"
+usage_kind = "declaration"
+notes = "The source derives the hom-functor law bundle from the category laws."
+
+[[observations]]
+id = "npa-corpus-identity-functor-theorem"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "identity_functor_theorem"
+usage_kind = "declaration"
+notes = "The source derives the identity functor law bundle."
+
+[[observations]]
+id = "npa-corpus-composite-functor-theorem"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "composite_functor_theorem"
+usage_kind = "declaration"
+notes = "The source derives composition of functors using equality congruence and transitivity."
+
+[[observations]]
+id = "npa-corpus-category-functor-consumer-count"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/AlgebraicGeometry/CotangentComplex/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+usage_kind = "module_import"
+notes = "A direct downstream import; a pinned source scan finds 16 unique npa-corpus source files importing Proofs.Ai.Category.Functor."
+
+[[observations]]
+id = "npa-project-iut-category-functor-layout"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+usage_kind = "module_layout"
+notes = "The IUT project carries the same functor-law foundation as a separately pinned source consumer."
+
+[[observations]]
+id = "npa-project-iut-category-functor-import-std-eq"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Std.Logic.Eq"
+usage_kind = "module_import"
+notes = "The IUT source directly imports the standard equality interface."
+
+[[observations]]
+id = "npa-project-iut-category-functor-import-eq-reasoning"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.EqReasoning"
+usage_kind = "module_import"
+notes = "The IUT source imports the same NPA equality-reasoning helper boundary."
+
+[[observations]]
+id = "npa-project-iut-category-functor-import-basic"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Basic"
+usage_kind = "module_import"
+notes = "The IUT functor surface directly depends on the category-law foundation."
+
+[[observations]]
+id = "npa-project-iut-category-functor-consumer-count"
+repository = "npa-project-iut"
+revision_kind = "git_commit"
+revision = "ce41d241b8d9718f3648bf2c295a8f330057f220"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Iut/Foundation/ArithmeticGeometry/CuspidalizationFunctoriality/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+usage_kind = "module_import"
+notes = "A direct IUT downstream import; a pinned source scan finds 191 unique npa-project-iut source files importing Proofs.Ai.Category.Functor."
+
+[[proof_references]]
+id = "npa-corpus-functor-definition-intro-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_definition_intro"
+reference_role = "proof_structure"
+notes = "The pinned source provides the constructor-style proof structure for the functor-law bundle; no source proof text is NPA proof evidence."
+
+[[proof_references]]
+id = "npa-corpus-functor-preserves-id-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_preserves_id"
+reference_role = "proof_structure"
+notes = "The pinned source projects identity preservation through the functor-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-functor-preserves-comp-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "functor_preserves_comp"
+reference_role = "proof_structure"
+notes = "The pinned source projects composition preservation through the functor-law eliminator; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-hom-functor-theorem-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "hom_functor_theorem"
+reference_role = "proof_structure"
+notes = "The pinned source constructs covariant and contravariant hom-functor laws from Category.Basic projections; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-identity-functor-theorem-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "identity_functor_theorem"
+reference_role = "proof_structure"
+notes = "The pinned source constructs the identity functor law bundle from reflexivity and the functor introduction theorem; it is implementation guidance only."
+
+[[proof_references]]
+id = "npa-corpus-composite-functor-theorem-proof"
+repository = "npa-corpus"
+revision_kind = "git_commit"
+revision = "abbd773c160fe5f1938caf5800af2b621cb5bed8"
+license = "Apache-2.0"
+path = "proofs/Proofs/Ai/Category/Functor/source.npa"
+source_module = "Proofs.Ai.Category.Functor"
+source_declaration = "composite_functor_theorem"
+reference_role = "proof_structure"
+notes = "The pinned source constructs composite functor laws using identity/composition projections and equality congruence; it is implementation guidance only."

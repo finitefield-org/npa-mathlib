@@ -1,0 +1,14 @@
+import Std.Logic.Eq
+import Std.Nat.Basic
+
+def monoidPow.{u} :
+  forall (Carrier : Sort u), forall (one : Carrier), forall (mul : forall (left : Carrier), forall (right : Carrier), Carrier), forall (x : Carrier), forall (n : Nat), Carrier :=
+  fun Carrier => fun one => fun mul => fun x => fun n => @Nat.rec.{u} (fun (current : Nat) => Carrier) one (fun (current : Nat) => fun (current_power : Carrier) => mul current_power x) n
+
+theorem monoid_pow_zero.{u} :
+  forall (Carrier : Sort u), forall (one : Carrier), forall (mul : forall (left : Carrier), forall (right : Carrier), Carrier), forall (x : Carrier), @Eq.{u} Carrier (@monoidPow.{u} Carrier one mul x Nat.zero) one :=
+  fun Carrier => fun one => fun mul => fun x => @Eq.refl.{u} Carrier one
+
+theorem monoid_pow_succ.{u} :
+  forall (Carrier : Sort u), forall (one : Carrier), forall (mul : forall (left : Carrier), forall (right : Carrier), Carrier), forall (x : Carrier), forall (n : Nat), @Eq.{u} Carrier (@monoidPow.{u} Carrier one mul x (Nat.succ n)) (mul (@monoidPow.{u} Carrier one mul x n) x) :=
+  fun Carrier => fun one => fun mul => fun x => fun n => @Eq.refl.{u} Carrier (mul (@monoidPow.{u} Carrier one mul x n) x)

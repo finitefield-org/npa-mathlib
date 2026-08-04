@@ -5,71 +5,13 @@
   "certificate": "Mathlib/Geometry/Metric/Carrier/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:8dbe12eb17f345d01fc280744d6a12c3894b712079006e2b6394ab3693892fc1",
-  "certificate_file_sha256": "sha256:cf862a39f90158e930ea621711f78a5346f982a34473d21a1dab05e1cababe6c",
-  "export_hash": "sha256:18c318aaccb2c8e27a00bb907c03b7f53030540f406772039c0eb84e7e0f3864",
+  "source_sha256": "sha256:17bf998aac58ea9a8ba24f3db14797faf53694be55d9d11b2e30d44827fbae39",
+  "certificate_file_sha256": "sha256:823b0af44ed9bebcb7554b47ce41ac96e6592c04226dc868ad34db74f5bd1a25",
+  "export_hash": "sha256:6c0cb34decbd2bfc870c0ccb82241fe0680c73f730ae532e7032a5548c9b538d",
   "axiom_report_hash": "sha256:0ae085612d6240236b3e42ba55aa2b65ba17ab7bb0efa7bb5201598ea282e839",
-  "certificate_hash": "sha256:40073c44dde1c007ac66a865bca7ad7ba7220bacfd173dabb5c3d0cf7a60aa52",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.Geometry.RightTriangle.Carrier",
-    "Mathlib.Geometry.Affine",
-    "Mathlib.Geometry.Affine.Derived",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.InnerProduct.Derived",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-    "Eq.rec"
-  ],
-  "declarations": [
-    {
-      "name": "dist",
-      "kind": "def"
-    },
-    {
-      "name": "MetricSpaceLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "Ball",
-      "kind": "def"
-    },
-    {
-      "name": "dist_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "point_dist_sq_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "square_dist_eq_dist_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_eq_square_dist_of_sqrt_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_eq_square_dist",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_points_le_square_sum_dist",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_nonneg_of_sqrt_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "triangle_inequality_of_dist_sq_bound",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:295c5164710d633593ba570eeb751d0e615b91642993cbfccbe46d8f40f5a1d7",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.Geometry.Affine","Mathlib.Geometry.Affine.Derived","Mathlib.Geometry.RightTriangle.Carrier","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.InnerProduct.Derived","Mathlib.LinearAlgebra.VectorSpace","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"dist","kind":"def"},{"name":"MetricSpaceLawArgs","kind":"def"},{"name":"Ball","kind":"def"},{"name":"dist_def","kind":"theorem"},{"name":"point_dist_sq_nonneg","kind":"theorem"},{"name":"square_dist_eq_dist_sq","kind":"theorem"},{"name":"dist_sq_eq_square_dist_of_sqrt_sq","kind":"theorem"},{"name":"dist_sq_eq_square_dist","kind":"theorem"},{"name":"dist_sq_points_le_square_sum_dist","kind":"theorem"},{"name":"dist_nonneg_of_sqrt_nonneg","kind":"theorem"},{"name":"triangle_inequality_of_dist_sq_bound","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

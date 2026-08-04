@@ -6,93 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:63ea7cd9fd70167d9ea1548c3ac4402fd1d36e7b6aed6fdb8f70514e0142d890",
-  "certificate_file_sha256": "sha256:e6b965989f18ae133431b18136560a13c5762234d04fd46f1639c1a21a24d342",
-  "export_hash": "sha256:0eee1b508b26607b2118f1f80de695161e13faf30a2f07cb666fb30cf7adc1b2",
+  "certificate_file_sha256": "sha256:675bd39feca83c97ca1c3da6139e07e6bd122bf40814292c70a8e191fa6f1d36",
+  "export_hash": "sha256:6e66f696f0f38e296f37e26837ffea2db9a5c21618d6e048faf5fea489f84228",
   "axiom_report_hash": "sha256:fed11e73accfbfb0dfc28b4f510e151fa33d8af82d58fdb23b92567e04e59e40",
-  "certificate_hash": "sha256:86a5610a67ed22de7981688d852a779061b6b3595f780bf138fe336b6fd8bec7",
+  "certificate_hash": "sha256:45af10cc84054cf7273306b2754cd91847c83e52a82eec19df4c5d982ef4dbc3",
   "imports": [],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "identity",
-      "kind": "theorem"
-    },
-    {
-      "name": "const_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "const_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "apply_fn",
-      "kind": "theorem"
-    },
-    {
-      "name": "compose",
-      "kind": "theorem"
-    },
-    {
-      "name": "flip",
-      "kind": "theorem"
-    },
-    {
-      "name": "duplicate",
-      "kind": "theorem"
-    },
-    {
-      "name": "prop_identity",
-      "kind": "theorem"
-    },
-    {
-      "name": "modus_ponens",
-      "kind": "theorem"
-    },
-    {
-      "name": "imp_trans",
-      "kind": "theorem"
-    },
-    {
-      "name": "compose_assoc",
-      "kind": "theorem"
-    },
-    {
-      "name": "apply_twice",
-      "kind": "theorem"
-    },
-    {
-      "name": "ignore_middle",
-      "kind": "theorem"
-    },
-    {
-      "name": "select_middle",
-      "kind": "theorem"
-    },
-    {
-      "name": "select_last",
-      "kind": "theorem"
-    },
-    {
-      "name": "imp_swap",
-      "kind": "theorem"
-    },
-    {
-      "name": "imp_compose",
-      "kind": "theorem"
-    },
-    {
-      "name": "imp_ignore",
-      "kind": "theorem"
-    },
-    {
-      "name": "imp_duplicate",
-      "kind": "theorem"
-    },
-    {
-      "name": "higher_apply",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"identity","kind":"theorem"},{"name":"const_left","kind":"theorem"},{"name":"const_right","kind":"theorem"},{"name":"apply_fn","kind":"theorem"},{"name":"compose","kind":"theorem"},{"name":"flip","kind":"theorem"},{"name":"duplicate","kind":"theorem"},{"name":"prop_identity","kind":"theorem"},{"name":"modus_ponens","kind":"theorem"},{"name":"imp_trans","kind":"theorem"},{"name":"compose_assoc","kind":"theorem"},{"name":"apply_twice","kind":"theorem"},{"name":"ignore_middle","kind":"theorem"},{"name":"select_middle","kind":"theorem"},{"name":"select_last","kind":"theorem"},{"name":"imp_swap","kind":"theorem"},{"name":"imp_compose","kind":"theorem"},{"name":"imp_ignore","kind":"theorem"},{"name":"imp_duplicate","kind":"theorem"},{"name":"higher_apply","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

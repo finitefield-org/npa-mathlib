@@ -5,52 +5,13 @@
   "certificate": "Mathlib/Geometry/RightTriangle/Carrier/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:b0766e51c45a5306f789d7a572dcef54fd1929433458bdeab1c12d19c7079de1",
-  "certificate_file_sha256": "sha256:8caa1bd8adca8c75bd2a666451a9fb989d952371165fd7aef9d12067dc42f997",
-  "export_hash": "sha256:60e55fcc9ded451dd32c9ad2db05a4ffa046804c9cd6fec9abeda0aaf00dec41",
+  "source_sha256": "sha256:ed2ea19f2ed2e229724378f71a454a197fc975651a0cda1e127d292f353d5a5d",
+  "certificate_file_sha256": "sha256:f4dde8f65a35c97bf2d2513eda816736138d7ae0ac5885a2cfb6146ae7079d89",
+  "export_hash": "sha256:d00036198ab410e6931fd1c8bad33912d6e4ed657a657bc52c3a74a4f1092d5a",
   "axiom_report_hash": "sha256:5179d6cbb5510b049ee53c122a9481529db7972f0da0ff0a594070d1d8106526",
-  "certificate_hash": "sha256:8b05adb465010d0b6292230ea0f2a7c6805051321945ac90fa36378136f05933",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.Geometry.Affine",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "Perp",
-      "kind": "def"
-    },
-    {
-      "name": "RightTriangle",
-      "kind": "def"
-    },
-    {
-      "name": "AngleRight",
-      "kind": "def"
-    },
-    {
-      "name": "Area2",
-      "kind": "def"
-    },
-    {
-      "name": "FootOnHypotenuse",
-      "kind": "def"
-    },
-    {
-      "name": "perp_iff_dot_eq_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "right_triangle_legs_perp",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:b9b0da2f3535037fe1a55ee806ca73c620bd3929bdf7ecb55cc68e021866331c",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.Geometry.Affine","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.VectorSpace","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"Perp","kind":"def"},{"name":"RightTriangle","kind":"def"},{"name":"AngleRight","kind":"def"},{"name":"Area2","kind":"def"},{"name":"FootOnHypotenuse","kind":"def"},{"name":"perp_iff_dot_eq_zero","kind":"theorem"},{"name":"right_triangle_legs_perp","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

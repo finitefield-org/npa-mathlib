@@ -1,0 +1,10 @@
+import Mathlib.Logic.Eq
+import Std.Logic.Eq
+
+def comp.{u1,u2,u3} :
+  forall (alpha : Sort u1), forall (beta : Sort u2), forall (gamma : Sort u3), forall (f : forall (x : beta), gamma), forall (g : forall (x : alpha), beta), forall (x : alpha), gamma :=
+  fun alpha => fun beta => fun gamma => fun f => fun g => fun x => f (g x)
+
+theorem comp_assoc.{u1,u2,u3,u4} :
+  forall (alpha : Sort u1), forall (beta : Sort u2), forall (phi : Sort u3), forall (delta : Sort u4), forall (f : forall (x : phi), delta), forall (g : forall (x : beta), phi), forall (h : forall (x : alpha), beta), @Eq.{imax u1 u4} (forall (x : alpha), delta) (@comp.{u1,u2,u4} alpha beta delta (@comp.{u2,u3,u4} beta phi delta f g) h) (@comp.{u1,u3,u4} alpha phi delta f (@comp.{u1,u2,u3} alpha beta phi g h)) :=
+  fun alpha => fun beta => fun phi => fun delta => fun f => fun g => fun h => @Eq.refl.{imax u1 u4} (forall (x : alpha), delta) (@comp.{u1,u2,u4} alpha beta delta (@comp.{u2,u3,u4} beta phi delta f g) h)

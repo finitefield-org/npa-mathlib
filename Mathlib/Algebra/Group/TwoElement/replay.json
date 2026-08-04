@@ -1,0 +1,21 @@
+{
+  "schema": "npa-ai-proof-replay-v0.1",
+  "module": "Mathlib.Algebra.Group.TwoElement",
+  "trusted": false,
+  "profile": "explicit_term_source_certificate_handoff",
+  "steps": [
+    {"declaration":"Z2","source_kind":"explicit_inductive","term":"inductive Z2 : Type with constructors Z2.plus and Z2.minus"},
+    {"declaration":"Z2.one","source_kind":"explicit_def_value","term":"Z2.plus"},
+    {"declaration":"Z2.mul","source_kind":"explicit_def_value","term":"plus is the identity branch; minus toggles plus and minus"},
+    {"declaration":"Z2.inv","source_kind":"explicit_def_value","term":"fun value => value"},
+    {"declaration":"z2_mul_assoc","source_kind":"constructor_case_analysis","term":"plus branch is definitional; minus-plus is definitional; minus-minus eliminates c"},
+    {"declaration":"z2_one_mul","source_kind":"explicit_term","term":"fun a => @Eq.refl.{1} Z2 a"},
+    {"declaration":"z2_mul_one","source_kind":"constructor_case_analysis","term":"eliminate a"},
+    {"declaration":"z2_inv_mul","source_kind":"constructor_case_analysis","term":"eliminate a"},
+    {"declaration":"z2_mul_inv","source_kind":"constructor_case_analysis","term":"eliminate a"},
+    {"declaration":"z2_inverse_eq_self","source_kind":"definitional_equality","term":"fun a => @Eq.refl.{1} Z2 a"},
+    {"declaration":"z2_mul_self_eq_one","source_kind":"constructor_case_analysis","term":"eliminate a; both branches reduce to plus"},
+    {"declaration":"z2_mul_comm","source_kind":"constructor_case_analysis","term":"eliminate both inputs; all four branches are reflexive"},
+    {"declaration":"z2_group_law_args","source_kind":"explicit_term","term":"fun P => fun mk => mk z2_mul_assoc z2_one_mul z2_mul_one z2_inv_mul z2_mul_inv"}
+  ]
+}

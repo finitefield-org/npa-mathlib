@@ -6,57 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:1bbe1bc44c0d4a2b14e0b76ffc453efc83ae576f3a85517b1644450c11ed80b1",
-  "certificate_file_sha256": "sha256:39685839b29b3225786e3c3551a675d333ccc5b5294737ee573e88d7eb76665d",
-  "export_hash": "sha256:3dac93cc2dfe1d045ce01a44b52e86a69071d9915e511394a2fb63001ac2470d",
+  "certificate_file_sha256": "sha256:382f593c01e0eb930e2e50d9cb2dd1282245a169ccdb5569d89f21726fb0ae99",
+  "export_hash": "sha256:b2c9c7def2f26f39452e11001b452eec51397f575b6bc118d508fdb3553450e9",
   "axiom_report_hash": "sha256:c94182a358767e0d7e1bb5c488e82696570a5f6d442295c34fe105cf99c73a36",
-  "certificate_hash": "sha256:97ecdd01f0141fa7e078e5e91e9210d763c66a5b05c51b5c868c46156e0df902",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Algebra.Ring.UnitModel",
-    "Mathlib.Algebra.Ring.UnitModel.Square",
-    "Mathlib.Algebra.OrderedField.UnitModel",
-    "Mathlib.LinearAlgebra.Vector.UnitModel",
-    "Mathlib.LinearAlgebra.InnerProduct.UnitModel",
-    "Mathlib.Geometry.RightTriangle.UnitModel"
-  ],
+  "certificate_hash": "sha256:2a5ab25ce9a27e87ef8fd8397075607fc6fdaf1975fdd07141b114c90c85c380",
+  "imports": ["Mathlib.Algebra.OrderedField.UnitModel","Mathlib.Algebra.Ring.UnitModel","Mathlib.Algebra.Ring.UnitModel.Square","Mathlib.Geometry.RightTriangle.UnitModel","Mathlib.LinearAlgebra.InnerProduct.UnitModel","Mathlib.LinearAlgebra.Vector.UnitModel","Std.Logic.Eq"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "dist",
-      "kind": "def"
-    },
-    {
-      "name": "dist_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_sq_eq_square_dist",
-      "kind": "theorem"
-    },
-    {
-      "name": "dist_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "distance_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "distance_zero_iff_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_distance",
-      "kind": "theorem"
-    },
-    {
-      "name": "cauchy_schwarz",
-      "kind": "theorem"
-    },
-    {
-      "name": "triangle_inequality",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"dist","kind":"def"},{"name":"dist_def","kind":"theorem"},{"name":"dist_sq_eq_square_dist","kind":"theorem"},{"name":"dist_nonneg","kind":"theorem"},{"name":"distance_symm","kind":"theorem"},{"name":"distance_zero_iff_eq","kind":"theorem"},{"name":"pythagorean_distance","kind":"theorem"},{"name":"cauchy_schwarz","kind":"theorem"},{"name":"triangle_inequality","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

@@ -5,28 +5,13 @@
   "certificate": "Mathlib/Algebra/OrderedField/Square/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:9303ab210fb953642fab3e90ff4289223ba39cb08925dfde37a6138f2e241704",
-  "certificate_file_sha256": "sha256:a0eb32ae9c67c2ce3db0669a072e4477351ddd804f9a91dc6249ec7051956c13",
-  "export_hash": "sha256:072726c4a00a9dffdfa569d09653b1f23040b8d67b7c095185e5be8feb411dc3",
+  "source_sha256": "sha256:97902b05091deff14cd239a6e570edb005e926cf19548383d80c41eba4ee8369",
+  "certificate_file_sha256": "sha256:c9b2473633447ce9ff2008a08728ec48df628ec50b389177e13a5f33866d374b",
+  "export_hash": "sha256:02be0281478e1db0dab58c507f85293794ee6bfdea8914978dfc78ed89877d20",
   "axiom_report_hash": "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b",
-  "certificate_hash": "sha256:07f986e6d749fe7c500038c79d8476ad9070467cc0f339a0ca6fb25e1c6f5771",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "square_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_self_eq_square",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:ba23ec302584eb9d9e7b4bdfbceb00dda758a626718cb027c884f73b7f428298",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.Ring.Basic","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"square_def","kind":"theorem"},{"name":"mul_self_eq_square","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

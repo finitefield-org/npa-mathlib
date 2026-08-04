@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Algebra.OrderedField.Strict",
+  "source": "Mathlib/Algebra/OrderedField/Strict/source.npa",
+  "certificate": "Mathlib/Algebra/OrderedField/Strict/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:d6ed6b8e605ec9f7c3435ac9eab63b40b891d17ba722418ee8c61e3ac0e32be7",
+  "certificate_file_sha256": "sha256:ff75b33dde3234c10652f771eec3e68050224d630cc45a44c66aa7eb38f675a0",
+  "export_hash": "sha256:594b83891fcc0b06a2ed279786de76ff7d02740f1d0157774e4e50f0b6e6973a",
+  "axiom_report_hash": "sha256:abe49d9ab0b914bbca0e26b81f74acc1f93867bfc4fa4bf0e40584e124efb656",
+  "certificate_hash": "sha256:dfcea175a1c70ea8f2d67bdb7a6daf59b5469e34404af80a95f6e8d63e415604",
+  "imports": ["Mathlib.Algebra.Field.Basic","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"ordered_field_one_sub_pos_of_lt_one","kind":"theorem"},{"name":"ordered_field_square_lt_one_of_pos_lt_one","kind":"theorem"},{"name":"ordered_field_one_sub_square_pos","kind":"theorem"},{"name":"ordered_field_two_ne_zero","kind":"theorem"},{"name":"ordered_field_four_ne_zero","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

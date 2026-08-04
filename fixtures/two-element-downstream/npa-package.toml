@@ -1,0 +1,61 @@
+schema = "npa.package.v0.1"
+package = "npa-mathlib-two-element-downstream"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Source-free downstream smoke for the public two-element group."
+
+core_spec = "npa.core.v0.1"
+kernel_profile = "npa.kernel.v0.1"
+certificate_format = "npa.certificate.canonical.v0.1"
+checker_profile = "npa.checker.reference.v0.1"
+
+[policy]
+allow_custom_axioms = false
+allowed_axioms = ["Eq.rec"]
+
+[[imports]]
+module = "Std.Logic.Eq"
+package = "npa-std"
+version = "0.1.0"
+certificate = "vendor/npa-std/Std/Logic/Eq/certificate.npcert"
+export_hash = "sha256:b78b442d5f593458cc12f079b59e3c70259c0bec4967511e1a01d262d2f0e874"
+certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6bf10058054aa"
+
+[[imports]]
+module = "Mathlib.Logic.EqReasoning"
+package = "npa-mathlib"
+version = "0.2.4"
+certificate = "vendor/npa-mathlib/Mathlib/Logic/EqReasoning/certificate.npcert"
+export_hash = "sha256:4727d19030aece233f2fc0e44ea6a0bff83bf8347fabb0232ea2b52cfc1d10d7"
+certificate_hash = "sha256:343183abadfce8548d1d5a49c71603a94116806a1b7609b79c8b40a57dddddf1"
+
+[[imports]]
+module = "Mathlib.Algebra.Group.Basic"
+package = "npa-mathlib"
+version = "0.2.4"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/Basic/certificate.npcert"
+export_hash = "sha256:6a8a08770d9106f13ff3fc3534ecdaf47b8cdab11e98b0375f23267a30318283"
+certificate_hash = "sha256:e0b18b98c64eb0afbceb58fa5bfe5924228a5381a32d7e871df4a828c5f84166"
+
+[[imports]]
+module = "Mathlib.Algebra.Group.TwoElement"
+package = "npa-mathlib"
+version = "0.2.4"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Group/TwoElement/certificate.npcert"
+export_hash = "sha256:b7e3c14e9292bdd56eb71f97c3fd22e0c96ad6c7295d0cfa854efef726cb2f06"
+certificate_hash = "sha256:b4bf27c20da6051a8b79c20de6b000166ab61d7e724d73db468ab790f9bf24ad"
+
+[[modules]]
+module = "Downstream.TwoElement"
+source = "Downstream/TwoElement/source.npa"
+certificate = "Downstream/TwoElement/certificate.npcert"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:2d3f1e5055c78d748374d09305d9351b370ca5ab0233ceb2d06bd3d6e936448e"
+expected_certificate_file_hash = "sha256:650a32d635cd7eb1f5ed95f300663648c4a91f8cb5041678566b6f7e1adff40a"
+expected_export_hash = "sha256:d3961b73d14511d34ce1ccf9f5221a65ec1f3070f58ec7c4642024f31685bfe3"
+expected_axiom_report_hash = "sha256:0544a7cbc8ae41c11f909366f72b2c80b48b4429ded309accea7370850df08bb"
+expected_certificate_hash = "sha256:82d11b7637a8aa30e7c7d21c1979d36b73d582b59e664446dcde7da41ccb33eb"
+imports = ["Std.Logic.Eq", "Mathlib.Logic.EqReasoning", "Mathlib.Algebra.Group.Basic", "Mathlib.Algebra.Group.TwoElement"]
+definitions = []
+theorems = ["z2_inverse_eq_self_passthrough", "z2_mul_self_eq_one_passthrough", "z2_mul_comm_passthrough"]
+axioms = []

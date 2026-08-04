@@ -1,0 +1,40 @@
+{
+  "schema": "npa-ai-proof-replay-v0.1",
+  "module": "Mathlib.Algebra.OrderedField.Strict",
+  "trusted": false,
+  "profile": "explicit_term_source_certificate_handoff",
+  "steps": [
+    {
+      "declaration": "ordered_field_one_sub_pos_of_lt_one",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun lt_rel => fun sub_eq_add_neg => fun add_neg_cancel => fun add_lt_add_right => fun x => fun x_lt_one => @Eq.rec.{u,0} Scalar (sub one x) (fun (right : Scalar) => fun (right_eq : @Eq.{u} Scalar (sub one x) right) => forall (translated_lt : lt_rel zero right), lt_rel zero (sub one x)) (fun (translated_lt : lt_rel zero (sub one x)) => translated_lt) (add one (neg x)) (sub_eq_add_neg one x) (@Eq.rec.{u,0} Scalar (add x (neg x)) (fun (left : Scalar) => fun (left_eq : @Eq.{u} Scalar (add x (neg x)) left) => lt_rel left (add one (neg x))) (add_lt_add_right x one (neg x) x_lt_one) zero (add_neg_cancel x))"
+    },
+    {
+      "declaration": "ordered_field_square_lt_one_of_pos_lt_one",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun mul => fun lt_rel => fun mul_one => fun lt_trans => fun mul_lt_mul_of_pos_left => fun x => fun x_pos => fun x_lt_one => lt_trans (mul x x) x one (@Eq.rec.{u,0} Scalar (mul x one) (fun (right : Scalar) => fun (right_eq : @Eq.{u} Scalar (mul x one) right) => lt_rel (mul x x) right) (mul_lt_mul_of_pos_left x one x x_lt_one x_pos) x (mul_one x)) x_lt_one"
+    },
+    {
+      "declaration": "ordered_field_one_sub_square_pos",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun lt_rel => fun sub_eq_add_neg => fun add_neg_cancel => fun add_lt_add_right => fun mul_one => fun lt_trans => fun mul_lt_mul_of_pos_left => fun x => fun x_pos => fun x_lt_one => @ordered_field_one_sub_pos_of_lt_one.{u} Scalar zero one add neg sub lt_rel sub_eq_add_neg add_neg_cancel add_lt_add_right (mul x x) (@ordered_field_square_lt_one_of_pos_lt_one.{u} Scalar zero one mul lt_rel mul_one lt_trans mul_lt_mul_of_pos_left x x_pos x_lt_one)"
+    },
+    {
+      "declaration": "ordered_field_two_ne_zero",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun lt_rel => fun zero_add => fun add_lt_add_right => fun lt_trans => fun lt_irrefl => fun zero_lt_one => fun two_eq_zero => fun P => lt_irrefl zero (lt_trans zero one zero zero_lt_one (@Eq.rec.{u,0} Scalar (add one one) (fun (right : Scalar) => fun (right_eq : @Eq.{u} Scalar (add one one) right) => lt_rel one right) (@Eq.rec.{u,0} Scalar (add zero one) (fun (left : Scalar) => fun (left_eq : @Eq.{u} Scalar (add zero one) left) => lt_rel left (add one one)) (add_lt_add_right zero one one zero_lt_one) one (zero_add one)) zero two_eq_zero)) P"
+    },
+    {
+      "declaration": "ordered_field_four_ne_zero",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun inv => fun field_args => fun lt_rel => fun zero_add => fun add_lt_add_right => fun lt_trans => fun lt_irrefl => fun zero_lt_one => fun (four_eq_zero : @Eq.{u} Scalar (mul (add one one) (add one one)) zero) => @field_mul_eq_zero_cases.{u} Scalar zero one add neg sub mul inv field_args (add one one) (add one one) four_eq_zero FieldFalse (fun (left_two_eq_zero : @Eq.{u} Scalar (add one one) zero) => @ordered_field_two_ne_zero.{u} Scalar zero one add lt_rel zero_add add_lt_add_right lt_trans lt_irrefl zero_lt_one left_two_eq_zero FieldFalse) (fun (right_two_eq_zero : @Eq.{u} Scalar (add one one) zero) => @ordered_field_two_ne_zero.{u} Scalar zero one add lt_rel zero_add add_lt_add_right lt_trans lt_irrefl zero_lt_one right_two_eq_zero FieldFalse)"
+    }
+  ],
+  "acceptance": {
+    "required": [
+      "decode_module_cert",
+      "verify_module_cert"
+    ],
+    "accepted_artifact": "Mathlib.Algebra.OrderedField.Strict/certificate.npcert"
+  }
+}

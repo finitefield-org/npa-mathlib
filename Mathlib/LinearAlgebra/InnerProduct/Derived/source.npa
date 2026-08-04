@@ -1,3 +1,4 @@
+import Std.Logic.Eq
 import Mathlib.Algebra.Ring.Basic
 import Mathlib.Algebra.OrderedField.Basic
 import Mathlib.Algebra.OrderedField.ScalarIdentities

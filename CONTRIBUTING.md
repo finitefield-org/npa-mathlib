@@ -35,16 +35,16 @@ version resolution, hidden package caches, plugin loading, or network package
 fetching as part of proof acceptance.
 
 Follow the public module namespace policy in
-[`docs/namespace-policy.md`](docs/namespace-policy.md). In particular, local
-modules in this package must use `Mathlib.*`; `Std.*` stays in `npa-std`; and
-released module names should be treated as stable public API.
+[`docs/namespace-policy.md`](docs/namespace-policy.md) and the mutable-catalog
+contract in [`docs/catalog-policy.md`](docs/catalog-policy.md). Local modules in
+this package use `Mathlib.*`, while `Std.*` stays in `npa-std`. Catalog HEAD is
+not stable API; released snapshots and their artifact bytes are immutable.
 
-For this initial release, keep the public module set limited to:
-
-```text
-Mathlib.Logic.Basic
-Mathlib.Logic.Implication
-Mathlib.Logic.Eq
-Mathlib.Data.Nat.Basic
-Mathlib.Core.Reduction
-```
+The current released public module set and package version are enumerated in
+[`README.md`](README.md) and `npa-package.toml`; the five-module initial-release
+list is historical and is not the current boundary. New and changed catalog
+entries must satisfy `AGENTS.md`: certificate-first verification, deterministic
+hashes, explicit imports and axioms, accurate current naming, provenance, and
+package gates establish `verified` maturity. L2 acceptance establishes the
+optional `reviewed` label. If current registry tooling cannot represent the
+entry, stop as `tooling-blocked`; do not bypass the canonical registry.

@@ -1,0 +1,63 @@
+schema = "npa.package.v0.1"
+package = "npa-mathlib-ordered-field-strict-downstream"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Downstream source-free smoke for strict ordered-field positivity."
+
+core_spec = "npa.core.v0.1"
+kernel_profile = "npa.kernel.v0.1"
+certificate_format = "npa.certificate.canonical.v0.1"
+checker_profile = "npa.checker.reference.v0.1"
+
+[policy]
+allow_custom_axioms = false
+allowed_axioms = ["Eq.rec"]
+
+[[imports]]
+module = "Std.Logic.Eq"
+package = "npa-std"
+version = "0.1.0"
+certificate = "vendor/npa-std/Std/Logic/Eq/certificate.npcert"
+export_hash = "sha256:b78b442d5f593458cc12f079b59e3c70259c0bec4967511e1a01d262d2f0e874"
+certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6bf10058054aa"
+
+[[imports]]
+module = "Mathlib.Algebra.Ring.Basic"
+package = "npa-mathlib"
+version = "0.2.2"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Ring/Basic/certificate.npcert"
+export_hash = "sha256:d0c44c0c457f286c3f82d91e10e8af4d162199290f40a1876f4d9960b4ffb58c"
+certificate_hash = "sha256:f4fb856e4723fee2f3c6a57525c42602b0d14412a6b398048745122944f93e9a"
+
+[[imports]]
+module = "Mathlib.Algebra.Field.Basic"
+package = "npa-mathlib"
+version = "0.2.2"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Field/Basic/certificate.npcert"
+export_hash = "sha256:97d68a0ca81bd07ceeeae018c2a99009585e8fa0f6e331b0009c2404f7f4adc7"
+certificate_hash = "sha256:ea7468e136149f473ccc18d475ab1fd8187ea2feac48a216bbac57e0e2e136f0"
+
+[[imports]]
+module = "Mathlib.Algebra.OrderedField.Strict"
+package = "npa-mathlib"
+version = "0.2.2"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/OrderedField/Strict/certificate.npcert"
+export_hash = "sha256:594b83891fcc0b06a2ed279786de76ff7d02740f1d0157774e4e50f0b6e6973a"
+certificate_hash = "sha256:dfcea175a1c70ea8f2d67bdb7a6daf59b5469e34404af80a95f6e8d63e415604"
+
+[[modules]]
+module = "Downstream.OrderedFieldStrict"
+source = "Downstream/OrderedFieldStrict/source.npa"
+certificate = "Downstream/OrderedFieldStrict/certificate.npcert"
+meta = "Downstream/OrderedFieldStrict/meta.json"
+replay = "Downstream/OrderedFieldStrict/replay.json"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:d15c22bae372f30803a88cf9fa76b4321c3e9a7690095868236171461bd4dccc"
+expected_certificate_file_hash = "sha256:84c455be737b4f80833da8f923b19dfa534e48a8715c3ae19dc52f82cc8d44a8"
+expected_export_hash = "sha256:b1c1ce7e73b503799a6ed18479dbe99e0a6dda245dead8a82113962c17da6a1c"
+expected_axiom_report_hash = "sha256:aa98844696696152a3be27a4eaa1e124c7c103d0d91edc68bdea8f3129aba273"
+expected_certificate_hash = "sha256:b3a1699e6ab5fea42faed7aa724dd883ab9722df7872a763939313deb088bfd0"
+imports = ["Mathlib.Algebra.OrderedField.Strict", "Mathlib.Algebra.Field.Basic"]
+definitions = []
+theorems = ["downstream_ordered_field_one_sub_pos_of_lt_one", "downstream_ordered_field_square_lt_one_of_pos_lt_one", "downstream_ordered_field_one_sub_square_pos", "downstream_ordered_field_two_ne_zero", "downstream_ordered_field_four_ne_zero"]
+axioms = ["Eq.rec"]

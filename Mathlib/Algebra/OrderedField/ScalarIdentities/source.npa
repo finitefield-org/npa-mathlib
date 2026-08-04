@@ -1,6 +1,7 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
 import Mathlib.Algebra.Ring.Basic
 import Mathlib.Algebra.OrderedField.Square
-import Mathlib.Logic.EqReasoning
 
 theorem scalar_mul_two_zero_term.{u} :
   forall (Scalar : Sort u), forall (zero : Scalar), forall (one : Scalar), forall (add : forall (a : Scalar), forall (b : Scalar), Scalar), forall (neg : forall (a : Scalar), Scalar), forall (sub : forall (a : Scalar), forall (b : Scalar), Scalar), forall (mul : forall (a : Scalar), forall (b : Scalar), Scalar), forall (ring_args : @RingLawArgs.{u} Scalar zero one add neg sub mul), forall (x : Scalar), forall (hzero : @Eq.{u} Scalar x zero), @Eq.{u} Scalar (mul (@two.{u} Scalar one add) x) zero :=

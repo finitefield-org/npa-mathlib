@@ -1,0 +1,40 @@
+{
+  "schema": "npa-ai-proof-replay-v0.1",
+  "module": "Downstream.OrderedFieldStrict",
+  "trusted": false,
+  "profile": "explicit_term_source_certificate_handoff",
+  "steps": [
+    {
+      "declaration": "downstream_ordered_field_one_sub_pos_of_lt_one",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun lt_rel => fun sub_eq_add_neg => fun add_neg_cancel => fun add_lt_add_right => fun x => fun x_lt_one => @ordered_field_one_sub_pos_of_lt_one.{u} Scalar zero one add neg sub lt_rel sub_eq_add_neg add_neg_cancel add_lt_add_right x x_lt_one"
+    },
+    {
+      "declaration": "downstream_ordered_field_square_lt_one_of_pos_lt_one",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun mul => fun lt_rel => fun mul_one => fun lt_trans => fun mul_lt_mul_of_pos_left => fun x => fun x_pos => fun x_lt_one => @ordered_field_square_lt_one_of_pos_lt_one.{u} Scalar zero one mul lt_rel mul_one lt_trans mul_lt_mul_of_pos_left x x_pos x_lt_one"
+    },
+    {
+      "declaration": "downstream_ordered_field_one_sub_square_pos",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun lt_rel => fun sub_eq_add_neg => fun add_neg_cancel => fun add_lt_add_right => fun mul_one => fun lt_trans => fun mul_lt_mul_of_pos_left => fun x => fun x_pos => fun x_lt_one => @ordered_field_one_sub_square_pos.{u} Scalar zero one add neg sub mul lt_rel sub_eq_add_neg add_neg_cancel add_lt_add_right mul_one lt_trans mul_lt_mul_of_pos_left x x_pos x_lt_one"
+    },
+    {
+      "declaration": "downstream_ordered_field_two_ne_zero",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun lt_rel => fun zero_add => fun add_lt_add_right => fun lt_trans => fun lt_irrefl => fun zero_lt_one => fun two_eq_zero => fun P => @ordered_field_two_ne_zero.{u} Scalar zero one add lt_rel zero_add add_lt_add_right lt_trans lt_irrefl zero_lt_one two_eq_zero P"
+    },
+    {
+      "declaration": "downstream_ordered_field_four_ne_zero",
+      "source_kind": "explicit_term",
+      "term": "fun Scalar => fun zero => fun one => fun add => fun neg => fun sub => fun mul => fun inv => fun field_args => fun lt_rel => fun zero_add => fun add_lt_add_right => fun lt_trans => fun lt_irrefl => fun zero_lt_one => @ordered_field_four_ne_zero.{u} Scalar zero one add neg sub mul inv field_args lt_rel zero_add add_lt_add_right lt_trans lt_irrefl zero_lt_one"
+    }
+  ],
+  "acceptance": {
+    "required": [
+      "decode_module_cert",
+      "verify_module_cert"
+    ],
+    "accepted_artifact": "Downstream/OrderedFieldStrict/certificate.npcert"
+  }
+}

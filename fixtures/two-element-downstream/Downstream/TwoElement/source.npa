@@ -1,0 +1,16 @@
+import Std.Logic.Eq
+import Mathlib.Logic.EqReasoning
+import Mathlib.Algebra.Group.Basic
+import Mathlib.Algebra.Group.TwoElement
+
+theorem z2_inverse_eq_self_passthrough :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.inv a) a :=
+  fun a => z2_inverse_eq_self a
+
+theorem z2_mul_self_eq_one_passthrough :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul a a) Z2.one :=
+  fun a => z2_mul_self_eq_one a
+
+theorem z2_mul_comm_passthrough :
+  forall (a : Z2), forall (b : Z2), @Eq.{1} Z2 (Z2.mul a b) (Z2.mul b a) :=
+  fun a => fun b => z2_mul_comm a b

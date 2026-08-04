@@ -6,60 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:c09eccdc82718b7b929b8b190dc487e615d3be639f99407996d5e30cfd60579a",
-  "certificate_file_sha256": "sha256:cbdfeea3e294647581dbd63d744940af6582f30da6dd4902bdd716ce9b0dad6e",
-  "export_hash": "sha256:c117452574d636683e7973622f65debe3723ab3ba2f14151dbdefcaa80b3c710",
+  "certificate_file_sha256": "sha256:1b13bc02dc5a9715c5f26ab89d58e72500c9371fe701b23b58843840e95ea676",
+  "export_hash": "sha256:83f0980d6b029776896b5ca987c427f4a3ef6e8a30647e72a566ad273317e254",
   "axiom_report_hash": "sha256:bc3aec4eabbf2c61f399239a21f359b264c36873e750ed25c9059fee86484bea",
-  "certificate_hash": "sha256:174e26d153546f5ff5fe6088a73ee063bd2dfe2706e3b3b92726f1732d20dfda",
-  "imports": [
-    "Std.Logic.Eq",
-    "Std.Nat.Basic"
-  ],
+  "certificate_hash": "sha256:ebfa4da30357025cf8de383b87b7369f8e18ee8dd2c15becf170ac25288dd74e",
+  "imports": ["Std.Logic.Eq","Std.Nat.Basic"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "eq_refl_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_fn_app",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_compose",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_self_imp",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_prop",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_apply_twice",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_higher_apply",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_nested_compose",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_prop_apply",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_self_of_eq_self",
-      "kind": "theorem"
-    },
-    {
-      "name": "eq_refl_nat_function",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"eq_refl_self","kind":"theorem"},{"name":"eq_refl_fn_app","kind":"theorem"},{"name":"eq_refl_compose","kind":"theorem"},{"name":"eq_self_imp","kind":"theorem"},{"name":"eq_refl_prop","kind":"theorem"},{"name":"eq_refl_apply_twice","kind":"theorem"},{"name":"eq_refl_higher_apply","kind":"theorem"},{"name":"eq_refl_nested_compose","kind":"theorem"},{"name":"eq_refl_prop_apply","kind":"theorem"},{"name":"eq_self_of_eq_self","kind":"theorem"},{"name":"eq_refl_nat_function","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

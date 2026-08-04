@@ -1,0 +1,54 @@
+import Std.Logic.Eq
+import Mathlib.Algebra.Group.Basic
+
+inductive Z2 :
+  Type where
+| plus : Z2
+| minus : Z2
+
+def Z2.one : Z2 :=
+  Z2.plus
+
+def Z2.mul :
+  forall (left : Z2), forall (right : Z2), Z2 :=
+  fun left => fun right => @Z2.rec.{1} (fun (current : Z2) => Z2) right (@Z2.rec.{1} (fun (current : Z2) => Z2) Z2.minus Z2.plus right) left
+
+def Z2.inv :
+  forall (value : Z2), Z2 :=
+  fun value => value
+
+theorem z2_mul_assoc :
+  forall (a : Z2), forall (b : Z2), forall (c : Z2), @Eq.{1} Z2 (Z2.mul (Z2.mul a b) c) (Z2.mul a (Z2.mul b c)) :=
+  fun a => @Z2.rec.{0} (fun (current_a : Z2) => forall (b : Z2), forall (c : Z2), @Eq.{1} Z2 (Z2.mul (Z2.mul current_a b) c) (Z2.mul current_a (Z2.mul b c))) (fun (b : Z2) => fun (c : Z2) => @Eq.refl.{1} Z2 (Z2.mul b c)) (fun (b : Z2) => @Z2.rec.{0} (fun (current_b : Z2) => forall (c : Z2), @Eq.{1} Z2 (Z2.mul (Z2.mul Z2.minus current_b) c) (Z2.mul Z2.minus (Z2.mul current_b c))) (fun (c : Z2) => @Eq.refl.{1} Z2 (Z2.mul Z2.minus c)) (fun (c : Z2) => @Z2.rec.{0} (fun (current_c : Z2) => @Eq.{1} Z2 (Z2.mul (Z2.mul Z2.minus Z2.minus) current_c) (Z2.mul Z2.minus (Z2.mul Z2.minus current_c))) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.minus) c) b) a
+
+theorem z2_one_mul :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul Z2.one a) a :=
+  fun a => @Eq.refl.{1} Z2 a
+
+theorem z2_mul_one :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul a Z2.one) a :=
+  fun a => @Z2.rec.{0} (fun (current : Z2) => @Eq.{1} Z2 (Z2.mul current Z2.one) current) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.minus) a
+
+theorem z2_inv_mul :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul (Z2.inv a) a) Z2.one :=
+  fun a => @Z2.rec.{0} (fun (current : Z2) => @Eq.{1} Z2 (Z2.mul (Z2.inv current) current) Z2.one) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.plus) a
+
+theorem z2_mul_inv :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul a (Z2.inv a)) Z2.one :=
+  fun a => @Z2.rec.{0} (fun (current : Z2) => @Eq.{1} Z2 (Z2.mul current (Z2.inv current)) Z2.one) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.plus) a
+
+theorem z2_inverse_eq_self :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.inv a) a :=
+  fun a => @Eq.refl.{1} Z2 a
+
+theorem z2_mul_self_eq_one :
+  forall (a : Z2), @Eq.{1} Z2 (Z2.mul a a) Z2.one :=
+  fun a => @Z2.rec.{0} (fun (current : Z2) => @Eq.{1} Z2 (Z2.mul current current) Z2.one) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.plus) a
+
+theorem z2_mul_comm :
+  forall (a : Z2), forall (b : Z2), @Eq.{1} Z2 (Z2.mul a b) (Z2.mul b a) :=
+  fun a => @Z2.rec.{0} (fun (current_a : Z2) => forall (b : Z2), @Eq.{1} Z2 (Z2.mul current_a b) (Z2.mul b current_a)) (fun (b : Z2) => @Z2.rec.{0} (fun (current_b : Z2) => @Eq.{1} Z2 (Z2.mul Z2.plus current_b) (Z2.mul current_b Z2.plus)) (@Eq.refl.{1} Z2 Z2.plus) (@Eq.refl.{1} Z2 Z2.minus) b) (fun (b : Z2) => @Z2.rec.{0} (fun (current_b : Z2) => @Eq.{1} Z2 (Z2.mul Z2.minus current_b) (Z2.mul current_b Z2.minus)) (@Eq.refl.{1} Z2 Z2.minus) (@Eq.refl.{1} Z2 Z2.plus) b) a
+
+theorem z2_group_law_args :
+  @GroupLawArgs.{1} Z2 Z2.one Z2.mul Z2.inv :=
+  fun (P : Prop) => fun (mk : forall (mul_assoc_law : forall (a : Z2), forall (b : Z2), forall (c : Z2), @Eq.{1} Z2 (Z2.mul (Z2.mul a b) c) (Z2.mul a (Z2.mul b c))), forall (one_mul_law : forall (a : Z2), @Eq.{1} Z2 (Z2.mul Z2.one a) a), forall (mul_one_law : forall (a : Z2), @Eq.{1} Z2 (Z2.mul a Z2.one) a), forall (inv_mul_law : forall (a : Z2), @Eq.{1} Z2 (Z2.mul (Z2.inv a) a) Z2.one), forall (mul_inv_law : forall (a : Z2), @Eq.{1} Z2 (Z2.mul a (Z2.inv a)) Z2.one), P) => mk z2_mul_assoc z2_one_mul z2_mul_one z2_inv_mul z2_mul_inv

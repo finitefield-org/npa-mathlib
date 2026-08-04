@@ -5,83 +5,13 @@
   "certificate": "Mathlib/Geometry/Pythagorean/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:f045e386885a7dd51fe51eaf28600384ac1485303637073878d24ceaa20bb5ed",
-  "certificate_file_sha256": "sha256:fafd6fda9b244ed73921516578c61311c3798ed002b84d038f21d3b4775f0c2f",
-  "export_hash": "sha256:de5400e0ffb348e2d4f7ada5240f700d16d595d8a6b6f259cedff13fb81ac2f4",
+  "source_sha256": "sha256:df4e525d658a562ffcf54a30c0d01bc355182eb17b0670152b2d9b67e37b482c",
+  "certificate_file_sha256": "sha256:dadfcae63c3d4cd5a14f0ba09dd245394494411f0d5c32866267567d3893486b",
+  "export_hash": "sha256:fa748230ad932893e0a99a8a5c057f294a62fa81562bca0c2788b0c7d0f5b132",
   "axiom_report_hash": "sha256:630e21628c1bc6c54e3a88a122b057d41260d3ccf80f8098156397424ecabea1",
-  "certificate_hash": "sha256:3f28e4de8072dd2075e14ea0f163bb098fc664199ff125ede4d90465b3704866",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.ScalarIdentities",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.Logic.EqReasoning",
-    "Mathlib.Geometry.Metric.Carrier",
-    "Mathlib.Geometry.RightTriangle.Carrier",
-    "Mathlib.Geometry.RightTriangle.Derived",
-    "Mathlib.Geometry.Affine",
-    "Mathlib.Geometry.Affine.Derived",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.InnerProduct.Derived",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "pythagorean_dist_sq_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_dist_sq_reverse_normed_space_norm_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_left_leg_normed_space_norm_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_sq_core",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_dist_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_distance_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_theorem_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_theorem_dist_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_right_angle_specialization_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_right_angle_specialization",
-      "kind": "theorem"
-    },
-    {
-      "name": "pythagorean_theorem",
-      "kind": "theorem"
-    },
-    {
-      "name": "metric_space_laws_self",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:6fafe0239285dd7eef37a0858ae0cd237fcd0957323a3f8056d8fa9463ffb6e9",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.ScalarIdentities","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.Geometry.Affine","Mathlib.Geometry.Affine.Derived","Mathlib.Geometry.Metric.Carrier","Mathlib.Geometry.RightTriangle.Carrier","Mathlib.Geometry.RightTriangle.Derived","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.InnerProduct.Derived","Mathlib.LinearAlgebra.VectorSpace","Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"pythagorean_dist_sq_symm","kind":"theorem"},{"name":"pythagorean_dist_sq_reverse_normed_space_norm_neg","kind":"theorem"},{"name":"pythagorean_left_leg_normed_space_norm_neg","kind":"theorem"},{"name":"law_of_cosines_sq_core","kind":"theorem"},{"name":"law_of_cosines_sq","kind":"theorem"},{"name":"law_of_cosines_dist_sq","kind":"theorem"},{"name":"pythagorean_distance_sq","kind":"theorem"},{"name":"pythagorean_theorem_sq","kind":"theorem"},{"name":"pythagorean_theorem_dist_sq","kind":"theorem"},{"name":"law_of_cosines_right_angle_specialization_sq","kind":"theorem"},{"name":"law_of_cosines_right_angle_specialization","kind":"theorem"},{"name":"pythagorean_theorem","kind":"theorem"},{"name":"metric_space_laws_self","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

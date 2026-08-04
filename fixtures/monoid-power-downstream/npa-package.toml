@@ -1,0 +1,53 @@
+schema = "npa.package.v0.1"
+package = "npa-mathlib-monoid-power-downstream"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Source-free downstream smoke for public monoid natural powers."
+
+core_spec = "npa.core.v0.1"
+kernel_profile = "npa.kernel.v0.1"
+certificate_format = "npa.certificate.canonical.v0.1"
+checker_profile = "npa.checker.reference.v0.1"
+
+[policy]
+allow_custom_axioms = false
+allowed_axioms = []
+
+[[imports]]
+module = "Std.Logic.Eq"
+package = "npa-std"
+version = "0.1.0"
+certificate = "vendor/npa-std/Std/Logic/Eq/certificate.npcert"
+export_hash = "sha256:b78b442d5f593458cc12f079b59e3c70259c0bec4967511e1a01d262d2f0e874"
+certificate_hash = "sha256:5a5b68a51b3e90223f1e0cca730f8b155c79f881b9dca70d67e6bf10058054aa"
+
+[[imports]]
+module = "Std.Nat.Basic"
+package = "npa-std"
+version = "0.1.0"
+certificate = "vendor/npa-std/Std/Nat/Basic/certificate.npcert"
+export_hash = "sha256:30c432b4f2fc69e1e2414f556096e9d067d8e3d8e44f98bee1326169cccb5e4d"
+certificate_hash = "sha256:8a477f8d2becb4cfcb6a6baa1c79bc0112840cfe658302f47c9cf3dfd084d84e"
+
+[[imports]]
+module = "Mathlib.Algebra.Monoid.Power"
+package = "npa-mathlib"
+version = "0.2.3"
+certificate = "vendor/npa-mathlib/Mathlib/Algebra/Monoid/Power/certificate.npcert"
+export_hash = "sha256:8dd2eb12b7eb113de5197972ec28d9a052175995ba32224a4b3c9e0016990c5f"
+certificate_hash = "sha256:20ce282310d0680a08267cacd49e0ebd5ca6caf5ec688c593f8700a8abf7fae9"
+
+[[modules]]
+module = "Downstream.MonoidPower"
+source = "Downstream/MonoidPower/source.npa"
+certificate = "Downstream/MonoidPower/certificate.npcert"
+producer_profile = "human-surface-explicit-term"
+expected_source_hash = "sha256:41ebba9b4c0cc9a5c60ae65840f2a261905393f2a11f5639e8298e72b0ae84ba"
+expected_certificate_file_hash = "sha256:b5580046fa6c50d391da9803c185976343ffac54fe4aebc477642a982f422aa4"
+expected_export_hash = "sha256:6068ed4688844cf9655df29c1f6143d17d56c2e60a5cba32a90e3674aa3dcc0d"
+expected_axiom_report_hash = "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b"
+expected_certificate_hash = "sha256:8ecd5b84d9dbb5a0121aa82fe3b98a95140ec2155f7b334b6e70a21c201dd7fd"
+imports = ["Std.Logic.Eq", "Std.Nat.Basic", "Mathlib.Algebra.Monoid.Power"]
+definitions = []
+theorems = ["monoid_pow_zero_passthrough", "monoid_pow_succ_passthrough"]
+axioms = []

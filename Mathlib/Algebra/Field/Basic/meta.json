@@ -6,88 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:2f03f5f56d4aecec1c0a27234a877438893a1b235bee099ec8044e2a1cbc8903",
-  "certificate_file_sha256": "sha256:1620fd00eb3bb5ae50073847e50de7aad8fae342618490528715d082c4d991e0",
-  "export_hash": "sha256:777de3ddecd35e7f14255d942b5e4e31896a22fee9fd47e0b7669a52c8070c35",
+  "certificate_file_sha256": "sha256:7afd01dae32e91566300e6f67495ff3169901879a8b9caa3c272e7e80fbf6ddc",
+  "export_hash": "sha256:97d68a0ca81bd07ceeeae018c2a99009585e8fa0f6e331b0009c2404f7f4adc7",
   "axiom_report_hash": "sha256:6fb10daa6bb059bfea6535d1d96e9ae73c2da1aee15921bf824480bbeee32550",
-  "certificate_hash": "sha256:6fd8762a5f98c53868757616b82c7e63c3dc289ba529177187f5ca33db3a9e36",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Algebra.Ring.Basic"
-  ],
+  "certificate_hash": "sha256:ea7468e136149f473ccc18d475ab1fd8187ea2feac48a216bbac57e0e2e136f0",
+  "imports": ["Mathlib.Algebra.Ring.Basic","Std.Logic.Eq"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "FieldFalse",
-      "kind": "def"
-    },
-    {
-      "name": "FieldNot",
-      "kind": "def"
-    },
-    {
-      "name": "Nonzero",
-      "kind": "def"
-    },
-    {
-      "name": "div",
-      "kind": "def"
-    },
-    {
-      "name": "FieldLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "field_ring_laws",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_zero_ne_one",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_inv_mul_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_mul_inv_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_div_eq_mul_inv",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_inv_one",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_div_one",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_div_self_nonzero",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_zero_div",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_mul_left_cancel_nonzero",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_mul_right_cancel_nonzero",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_nonzero_mul_closed",
-      "kind": "theorem"
-    },
-    {
-      "name": "field_mul_eq_zero_cases",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"FieldFalse","kind":"def"},{"name":"FieldNot","kind":"def"},{"name":"Nonzero","kind":"def"},{"name":"div","kind":"def"},{"name":"FieldLawArgs","kind":"def"},{"name":"field_ring_laws","kind":"theorem"},{"name":"field_zero_ne_one","kind":"theorem"},{"name":"field_inv_mul_cancel","kind":"theorem"},{"name":"field_mul_inv_cancel","kind":"theorem"},{"name":"field_div_eq_mul_inv","kind":"theorem"},{"name":"field_inv_one","kind":"theorem"},{"name":"field_div_one","kind":"theorem"},{"name":"field_div_self_nonzero","kind":"theorem"},{"name":"field_zero_div","kind":"theorem"},{"name":"field_mul_left_cancel_nonzero","kind":"theorem"},{"name":"field_mul_right_cancel_nonzero","kind":"theorem"},{"name":"field_nonzero_mul_closed","kind":"theorem"},{"name":"field_mul_eq_zero_cases","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

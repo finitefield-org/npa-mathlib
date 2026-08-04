@@ -6,64 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:4df7e1f10136d432ba998602c184e91ccbc77113e664c7663d05b0bbaf2e25f4",
-  "certificate_file_sha256": "sha256:feba9e01c0e6e8b72af6697eee085fde54a6053b52401321e756cd9a297b3d08",
-  "export_hash": "sha256:183359958fedaf7a3f9ec69ea70eba46ab1a6116e8815b4d1259b6bcae56d692",
+  "certificate_file_sha256": "sha256:8cd11d825ae466bf788bc8d270385aeb66f6cc35279dbbab0da1a17d5289b48a",
+  "export_hash": "sha256:5e16618b5b603e40a84c4d0acf9112c7ba67a60965c0931a523cf032c4904fc1",
   "axiom_report_hash": "sha256:7715c06c634de0020345067c58ecf3bd23c10e71d84f4b97cd4c2e00e82c1a07",
-  "certificate_hash": "sha256:d7761f53f7a3732f14fe792425381ed7aae70a0774194ccdc7e1801b3b3bbeaa",
-  "imports": [
-    "Std.Logic.Eq",
-    "Std.Nat.Basic"
-  ],
+  "certificate_hash": "sha256:59698e04b9c180e6f998d95dcb7b3d8e8e33861e9b21eae01bcd37e8eb26622f",
+  "imports": ["Std.Logic.Eq","Std.Nat.Basic"],
   "axioms": [],
-  "declarations": [
-    {
-      "name": "nat_zero_self_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_succ_zero_self_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_identity",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_const_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_apply_fn",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_const_succ_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_apply_twice",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_compose",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_ignore_middle",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_select_middle",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_select_last",
-      "kind": "theorem"
-    },
-    {
-      "name": "nat_succ_self_eq",
-      "kind": "theorem"
-    }
-  ],
+  "declarations": [{"name":"nat_zero_self_eq","kind":"theorem"},{"name":"nat_succ_zero_self_eq","kind":"theorem"},{"name":"nat_identity","kind":"theorem"},{"name":"nat_const_zero","kind":"theorem"},{"name":"nat_apply_fn","kind":"theorem"},{"name":"nat_const_succ_zero","kind":"theorem"},{"name":"nat_apply_twice","kind":"theorem"},{"name":"nat_compose","kind":"theorem"},{"name":"nat_ignore_middle","kind":"theorem"},{"name":"nat_select_middle","kind":"theorem"},{"name":"nat_select_last","kind":"theorem"},{"name":"nat_succ_self_eq","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

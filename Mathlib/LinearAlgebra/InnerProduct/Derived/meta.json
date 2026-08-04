@@ -5,100 +5,13 @@
   "certificate": "Mathlib/LinearAlgebra/InnerProduct/Derived/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:ea8454ed88c17fc364fa96441ccadf7b61eebc21932c3bff2b47057edd94a140",
-  "certificate_file_sha256": "sha256:5ff25cc7be911e4208f0e6dd9b517e3e78f58be02144d399fe5681c1e3ae1244",
-  "export_hash": "sha256:375e065156c5565c8504946f45cfe90166f4b427f0347b6cfef5fbdef83a0313",
+  "source_sha256": "sha256:f4f423537c41240e8785bc82a92f05f1b973195c8aa1a050ba1650e19612c894",
+  "certificate_file_sha256": "sha256:5918f80b94364bd2cca3341acc8e6e0a5eec4fe1803680df20a6a037864161e6",
+  "export_hash": "sha256:a80dc5079275f83b4364cc9c3fe42eff621b272dde85c6ce48304434ab9d9d34",
   "axiom_report_hash": "sha256:a932e43d59afb7af1fd32a8680d65c057b745979ae169927e86d27984c9e3144",
-  "certificate_hash": "sha256:bcd37f6db6748852ba56fe1178f92dd3d14dc825bab13a709b7010f7c8f4de71",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.ScalarIdentities",
-    "Mathlib.Logic.EqReasoning",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-    "Eq.rec"
-  ],
-  "declarations": [
-    {
-      "name": "inner_product_norm_sq_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_sub",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_parallelogram_law",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_polarization_identity",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_neg_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_add_of_dot_zero",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_add_of_perp",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_add_neg_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_zero_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_zero_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_eq_zero_of_norm_sq_zero_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_eq_zero_of_norm_sq_zero_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_cauchy_schwarz_zero_left",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_cauchy_schwarz_zero_right",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_cauchy_schwarz",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_nonneg",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_dot_le_mul_sqrt_norm_sq",
-      "kind": "theorem"
-    },
-    {
-      "name": "inner_product_norm_sq_add_le_square_sum_norms",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:9c9c9bbd8960b88e430562072f9568020012a9f4b641a00c060728a8c32b4a1e",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.ScalarIdentities","Mathlib.Algebra.Ring.Basic","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.VectorSpace","Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"inner_product_norm_sq_add","kind":"theorem"},{"name":"inner_product_norm_sq_sub","kind":"theorem"},{"name":"inner_product_parallelogram_law","kind":"theorem"},{"name":"inner_product_polarization_identity","kind":"theorem"},{"name":"inner_product_dot_neg_left","kind":"theorem"},{"name":"inner_product_norm_sq_neg","kind":"theorem"},{"name":"inner_product_norm_sq_add_of_dot_zero","kind":"theorem"},{"name":"inner_product_norm_sq_add_of_perp","kind":"theorem"},{"name":"inner_product_norm_sq_add_neg_left","kind":"theorem"},{"name":"inner_product_dot_zero_left","kind":"theorem"},{"name":"inner_product_dot_zero_right","kind":"theorem"},{"name":"inner_product_dot_eq_zero_of_norm_sq_zero_left","kind":"theorem"},{"name":"inner_product_dot_eq_zero_of_norm_sq_zero_right","kind":"theorem"},{"name":"inner_product_cauchy_schwarz_zero_left","kind":"theorem"},{"name":"inner_product_cauchy_schwarz_zero_right","kind":"theorem"},{"name":"inner_product_cauchy_schwarz","kind":"theorem"},{"name":"inner_product_norm_sq_nonneg","kind":"theorem"},{"name":"inner_product_dot_le_mul_sqrt_norm_sq","kind":"theorem"},{"name":"inner_product_norm_sq_add_le_square_sum_norms","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

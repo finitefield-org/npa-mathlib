@@ -1,0 +1,17 @@
+{
+  "schema": "npa-ai-proof-meta-v0.1",
+  "module": "Mathlib.Logic.Function.Basic",
+  "source": "Mathlib/Logic/Function/Basic/source.npa",
+  "certificate": "Mathlib/Logic/Function/Basic/certificate.npcert",
+  "producer_profile": "human-surface-explicit-term",
+  "trusted_status": "verified_by_certificate",
+  "source_sha256": "sha256:f291adabbdb16222185e539fac8cdb82809df5e3b2630a9496a4a908ad5b7dac",
+  "certificate_file_sha256": "sha256:c9ad4665f2fac3aa5220908896c3ea2bb9641d14f2149cb3e4355c22cc642573",
+  "export_hash": "sha256:6a982156a124a9750b2fd165cf2eea3694280ea66ee1242dd6a3b52ce6541f02",
+  "axiom_report_hash": "sha256:1b1a79456ee1ba2bc13de73e311a14ccd977b26904fabc748558b5350010ab1b",
+  "certificate_hash": "sha256:6be8f43875855b0aa4693fc0979bdbf6dd3642867d6987e3cb2dc71b57cf2e22",
+  "imports": ["Mathlib.Logic.Eq","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"comp","kind":"def"},{"name":"comp_assoc","kind":"theorem"}],
+  "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
+}

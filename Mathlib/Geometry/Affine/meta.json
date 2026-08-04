@@ -5,55 +5,13 @@
   "certificate": "Mathlib/Geometry/Affine/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:2b23344d28a90c857b6433c2a1a69778cad4498d72f706b31e9e9f792dbae3c4",
-  "certificate_file_sha256": "sha256:533a60169b9c9d45ccba9c2416c3d71dda5fc4789797fffcb54f7d400fdefff9",
-  "export_hash": "sha256:d47119be9c8b4d19ace8addd1e18bfbe5784c7f6fe45119bc609cc7a1c5265b8",
+  "source_sha256": "sha256:f5cacf9cbe6dbd275e54f773beec2ff0d297b2e4800c13e373274de5f8a35beb",
+  "certificate_file_sha256": "sha256:a55c9918ca83e467a5691ccb331d7f1027603dba292d7909dd770e619e744395",
+  "export_hash": "sha256:330b400a425517fd31c5d3765649ed97649b67c3ba76feb504452c7138b3a2f4",
   "axiom_report_hash": "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839",
-  "certificate_hash": "sha256:cd0103edb8d7700a365428243d22cfc40ae0ffea7c57d2d6f287f5067982cd21",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.LinearAlgebra.InnerProduct",
-    "Mathlib.LinearAlgebra.VectorSpace",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "Point",
-      "kind": "def"
-    },
-    {
-      "name": "disp",
-      "kind": "def"
-    },
-    {
-      "name": "dist_sq_points",
-      "kind": "def"
-    },
-    {
-      "name": "translate",
-      "kind": "def"
-    },
-    {
-      "name": "midpoint",
-      "kind": "def"
-    },
-    {
-      "name": "collinear",
-      "kind": "def"
-    },
-    {
-      "name": "AffineLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "dist_sq_points_def",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:1a67524cc740e3e7b220e6ce6007bbf685d092e41d74863c9fd3191bae130992",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.LinearAlgebra.InnerProduct","Mathlib.LinearAlgebra.VectorSpace","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"Point","kind":"def"},{"name":"disp","kind":"def"},{"name":"dist_sq_points","kind":"def"},{"name":"translate","kind":"def"},{"name":"midpoint","kind":"def"},{"name":"collinear","kind":"def"},{"name":"AffineLawArgs","kind":"def"},{"name":"dist_sq_points_def","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

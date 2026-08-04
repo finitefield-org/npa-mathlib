@@ -5,53 +5,13 @@
   "certificate": "Mathlib/LinearAlgebra/VectorSpace/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:0524f18b2931950aefa0a108c1980f926935cd74ef2a773c6440c1b35ea308c2",
-  "certificate_file_sha256": "sha256:b94c3a65e2d5405e89332904ee431ec5b93791a8ec09aaea8d2981cdd074b8ab",
-  "export_hash": "sha256:e2eff01267f2e7bc556bccbc79af0d6b6adeba94bc12b470a5fe2ae7281d258e",
+  "source_sha256": "sha256:c1106473e71ba4a777a66ab8eac00388942d555a1bb594a476897d69feae95fd",
+  "certificate_file_sha256": "sha256:c11a33a4ffbe30e95e54ebd3bdc38df71a612540fdaa7cca342774db97676601",
+  "export_hash": "sha256:a787ec42eb6912cb50d374e91a0bdbc847c2066332a5b2aa765cd6a622e9c2af",
   "axiom_report_hash": "sha256:fc1362a9dc3edba66b0970deaeffe74335bb3490e59532e77f1dbe96cd5e1839",
-  "certificate_hash": "sha256:8e7bbafb6cdfcf7fc31db0ff31e6148a9dcb090e33c73af6c49dfe55f2d6c049",
-  "imports": [
-    "Mathlib.Algebra.OrderedField.Basic",
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-
-  ],
-  "declarations": [
-    {
-      "name": "vsub",
-      "kind": "def"
-    },
-    {
-      "name": "linear_comb2",
-      "kind": "def"
-    },
-    {
-      "name": "linear_comb3",
-      "kind": "def"
-    },
-    {
-      "name": "VectorSpaceLawArgs",
-      "kind": "def"
-    },
-    {
-      "name": "vector_space_vec_sub_def",
-      "kind": "theorem"
-    },
-    {
-      "name": "vector_space_vec_sub_eq_add_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "vector_space_linear_comb2_ext",
-      "kind": "theorem"
-    },
-    {
-      "name": "vector_space_linear_comb3_ext",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:f5315576469af02b07cdf73a7f31ecc8db1b5d6d6555b2d850e1a72f09716c5f",
+  "imports": ["Mathlib.Algebra.OrderedField.Basic","Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Std.Logic.Eq"],
+  "axioms": [],
+  "declarations": [{"name":"vsub","kind":"def"},{"name":"linear_comb2","kind":"def"},{"name":"linear_comb3","kind":"def"},{"name":"VectorSpaceLawArgs","kind":"def"},{"name":"vector_space_vec_sub_def","kind":"theorem"},{"name":"vector_space_vec_sub_eq_add_neg","kind":"theorem"},{"name":"vector_space_linear_comb2_ext","kind":"theorem"},{"name":"vector_space_linear_comb3_ext","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

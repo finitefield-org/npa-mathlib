@@ -5,73 +5,13 @@
   "certificate": "Mathlib/Algebra/OrderedField/ScalarIdentities/certificate.npcert",
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
-  "source_sha256": "sha256:71038779a86c11014d078d15691cb30c51472dfb30618148d0651ad50d187c11",
-  "certificate_file_sha256": "sha256:edcb1ba15fb2fc35590c980b8a4fbcc59d8e921588e2f147eacc0dd773fbe426",
-  "export_hash": "sha256:eb421eb1eb97d3f71173f0778fe803584b8677a27acbd3eba3a9ff94d6683835",
+  "source_sha256": "sha256:6c52048af660f0d59eee3b8e252d17edf2a04328ae8a656dd1c13df67fd9204d",
+  "certificate_file_sha256": "sha256:21959c991d81802fe488ec05c210197366314c7c0779c9f4fcf0a5a7924f9a10",
+  "export_hash": "sha256:c27ca1464bbbe2d2da28d9c5faef1d0b2084ba22b105b3df50fb7e5854aa98ac",
   "axiom_report_hash": "sha256:bb204700bd905645de400797f926e91fffa6b384f0e8ce1c66162d4aa10a9d0c",
-  "certificate_hash": "sha256:16a52936758f7f7e5474d116b46e6590dc4d15ffddd9d2c170d84944f5944676",
-  "imports": [
-    "Mathlib.Algebra.Ring.Basic",
-    "Mathlib.Algebra.OrderedField.Square",
-    "Mathlib.Logic.EqReasoning",
-    "Std.Logic.Eq"
-  ],
-  "axioms": [
-    "Eq.rec"
-  ],
-  "declarations": [
-    {
-      "name": "scalar_mul_two_zero_term",
-      "kind": "theorem"
-    },
-    {
-      "name": "scalar_cancel_double_zero_term",
-      "kind": "theorem"
-    },
-    {
-      "name": "scalar_normalize_add_with_zero_cross_term",
-      "kind": "theorem"
-    },
-    {
-      "name": "mul_two_neg",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_neg_cross_term_to_sub_sum",
-      "kind": "theorem"
-    },
-    {
-      "name": "law_of_cosines_scalar_rhs",
-      "kind": "theorem"
-    },
-    {
-      "name": "scalar_two_mul",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_sub_cross_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_pairwise_commute",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_cross_and_sub_cross_cancel",
-      "kind": "theorem"
-    },
-    {
-      "name": "parallelogram_scalar_rhs",
-      "kind": "theorem"
-    },
-    {
-      "name": "add_middle_to_front",
-      "kind": "theorem"
-    },
-    {
-      "name": "polarization_scalar_rhs",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:f1df2eee8cd6154132ce2d851180cbf440ec4c9eb4f2a47abb6c3f60ccd3fbe8",
+  "imports": ["Mathlib.Algebra.OrderedField.Square","Mathlib.Algebra.Ring.Basic","Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"scalar_mul_two_zero_term","kind":"theorem"},{"name":"scalar_cancel_double_zero_term","kind":"theorem"},{"name":"scalar_normalize_add_with_zero_cross_term","kind":"theorem"},{"name":"mul_two_neg","kind":"theorem"},{"name":"add_neg_cross_term_to_sub_sum","kind":"theorem"},{"name":"law_of_cosines_scalar_rhs","kind":"theorem"},{"name":"scalar_two_mul","kind":"theorem"},{"name":"add_sub_cross_cancel","kind":"theorem"},{"name":"add_pairwise_commute","kind":"theorem"},{"name":"add_cross_and_sub_cross_cancel","kind":"theorem"},{"name":"parallelogram_scalar_rhs","kind":"theorem"},{"name":"add_middle_to_front","kind":"theorem"},{"name":"polarization_scalar_rhs","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }

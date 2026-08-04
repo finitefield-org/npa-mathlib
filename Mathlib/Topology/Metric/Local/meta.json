@@ -6,100 +6,12 @@
   "producer_profile": "human-surface-explicit-term",
   "trusted_status": "verified_by_certificate",
   "source_sha256": "sha256:e3188913d905dfb7d529806a568df95c201bef8174143e06ee37c4f1c2147860",
-  "certificate_file_sha256": "sha256:6a9f62c86cde57c09dad7b3593b10d3dd77e05274ea2fa63c228aae15dc37682",
-  "export_hash": "sha256:e2c7132ac63593d59bd905ce657c8f8a2d8f66bc3a940f5f5ad9451996afbf36",
+  "certificate_file_sha256": "sha256:e4b75b0f4ae1e7e109533d4ed90503f447b517a4cc9cb3a40c5fa47d7a91cca5",
+  "export_hash": "sha256:6d484d16c3d57ef630db4264d7f63237c3a7a515af7522ca197c7f8e7f6194f5",
   "axiom_report_hash": "sha256:6821508440c560fb4a20c6b8dde9b28116f41a1733e43c2dd5163cd66c37b969",
-  "certificate_hash": "sha256:239456d3d8d69e87a8502f99a22fb3dfd7d1f303752026ce0709cda5579fdb7a",
-  "imports": [
-    "Std.Logic.Eq",
-    "Mathlib.Logic.EqReasoning"
-  ],
-  "axioms": [],
-  "declarations": [
-    {
-      "name": "MetricBall",
-      "kind": "def"
-    },
-    {
-      "name": "Neighborhood",
-      "kind": "def"
-    },
-    {
-      "name": "LocalMem",
-      "kind": "def"
-    },
-    {
-      "name": "LocalPred",
-      "kind": "def"
-    },
-    {
-      "name": "LocalEq",
-      "kind": "def"
-    },
-    {
-      "name": "LocalUnique",
-      "kind": "def"
-    },
-    {
-      "name": "metric_ball_intro",
-      "kind": "theorem"
-    },
-    {
-      "name": "metric_ball_elim",
-      "kind": "theorem"
-    },
-    {
-      "name": "neighborhood_intro",
-      "kind": "theorem"
-    },
-    {
-      "name": "neighborhood_center",
-      "kind": "theorem"
-    },
-    {
-      "name": "neighborhood_shrink",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_mem_intro",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_mem_elim",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_pred_intro",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_pred_apply",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_pred_shrink",
-      "kind": "theorem"
-    },
-    {
-      "name": "metric_ball_mono",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_eq_refl",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_eq_symm",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_eq_trans",
-      "kind": "theorem"
-    },
-    {
-      "name": "local_unique_apply",
-      "kind": "theorem"
-    }
-  ],
+  "certificate_hash": "sha256:bea5faa2fa7b369149b24c801aa16059762341176273953eff6283148b419c70",
+  "imports": ["Mathlib.Logic.EqReasoning","Std.Logic.Eq"],
+  "axioms": ["Eq.rec"],
+  "declarations": [{"name":"MetricBall","kind":"def"},{"name":"Neighborhood","kind":"def"},{"name":"LocalMem","kind":"def"},{"name":"LocalPred","kind":"def"},{"name":"LocalEq","kind":"def"},{"name":"LocalUnique","kind":"def"},{"name":"metric_ball_intro","kind":"theorem"},{"name":"metric_ball_elim","kind":"theorem"},{"name":"neighborhood_intro","kind":"theorem"},{"name":"neighborhood_center","kind":"theorem"},{"name":"neighborhood_shrink","kind":"theorem"},{"name":"local_mem_intro","kind":"theorem"},{"name":"local_mem_elim","kind":"theorem"},{"name":"local_pred_intro","kind":"theorem"},{"name":"local_pred_apply","kind":"theorem"},{"name":"local_pred_shrink","kind":"theorem"},{"name":"metric_ball_mono","kind":"theorem"},{"name":"local_eq_refl","kind":"theorem"},{"name":"local_eq_symm","kind":"theorem"},{"name":"local_eq_trans","kind":"theorem"},{"name":"local_unique_apply","kind":"theorem"}],
   "trust_boundary": "source, replay, and metadata are non-trusted sidecars; only the canonical certificate verified by npa-cert is accepted"
 }
